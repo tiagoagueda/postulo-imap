@@ -1,0 +1,60 @@
+{
+  "language": "pt",
+  "name": "Português",
+  "dates": [
+    "\\b(\\d{1,2}[./-]\\d{1,2}[./-]\\d{2,4})(?:\\s*,?\\s*(?:[àa]s\\s*)?(\\d{1,2}[:h]\\d{2}))?",
+    "\\b(\\d{4}-\\d{2}-\\d{2})(?:[ T](\\d{1,2}:\\d{2}))?",
+    "\\b(\\d{1,2}\\s+de\\s+(?:janeiro|fevereiro|mar[çc]o|abril|maio|junho|julho|agosto|setembro|outubro|novembro|dezembro)(?:\\s+de\\s+\\d{4})?)(?:\\s*,?\\s*(?:[àa]s\\s*)?(\\d{1,2}[:h]\\d{2}))?"
+  ],
+  "kinds": [
+    {
+      "kind": "offer",
+      "patterns": [
+        "temos o prazer de lhe (oferecer|propor)",
+        "proposta de (trabalho|emprego|contrata[çc][ãa]o)",
+        "gostar[íi]amos de lhe oferecer",
+        "oferta de emprego"
+      ]
+    },
+    {
+      "kind": "rejected",
+      "patterns": [
+        "lamentamos informar",
+        "a sua candidatura n[ãa]o foi (selecionada|seleccionada|considerada)",
+        "n[ãa]o (iremos|vamos) avan[çc]ar",
+        "optámos por (outro|outra) candidat",
+        "n[ãa]o corresponde ao perfil",
+        "manter o seu (cv|curr[íi]culo) na nossa base"
+      ]
+    },
+    {
+      "kind": "interview",
+      "patterns": [
+        "convid[áa]-l[oa] para (uma )?entrevista",
+        "convite para (uma )?entrevista",
+        "agendar (uma )?(entrevista|conversa|reuni[ãa]o)",
+        "entrevista (telef[óo]nica|presencial|por v[íi]deo)",
+        "tem disponibilidade"
+      ]
+    },
+    {
+      "kind": "assessment",
+      "patterns": [
+        "teste (t[ée]cnico|online|escrito|de personalidade)",
+        "avalia[çc][ãa]o (t[ée]cnica|online)",
+        "exerc[íi]cio (t[ée]cnico|pr[áa]tico)",
+        "question[áa]rio para preencher"
+      ]
+    },
+    {
+      "kind": "acknowledged",
+      "patterns": [
+        "recebemos a sua candidatura",
+        "obrigad[oa] pela sua candidatura",
+        "a sua candidatura foi (recebida|registada)",
+        "confirma[çc][ãa]o de candidatura",
+        "estamos a analisar a sua candidatura"
+      ]
+    }
+  ]
+}

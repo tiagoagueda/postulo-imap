@@ -1,0 +1,120 @@
+# French translations for postulo-imap.
+# This file is distributed under the same license as the postulo-imap package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: postulo-imap 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Mailbox (IMAP)"
+msgstr "Boîte aux lettres (IMAP)"
+
+msgid "Server"
+msgstr "Serveur"
+
+msgid "For example imap.example.org."
+msgstr "Par exemple imap.example.org."
+
+msgid "Port"
+msgstr "Port"
+
+msgid "Security"
+msgstr "Sécurité"
+
+msgid "TLS (port 993)"
+msgstr "TLS (port 993)"
+
+msgid "STARTTLS (port 143)"
+msgstr "STARTTLS (port 143)"
+
+msgid "Username"
+msgstr "Nom d'utilisateur"
+
+msgid "Password or app password"
+msgstr "Mot de passe ou mot de passe d'application"
+
+msgid ""
+"An app password wherever the server offers one; Gmail requires it with two-factor "
+"authentication on. Stored encrypted."
+msgstr ""
+"Un mot de passe d'application partout où le serveur en propose ; Gmail l'exige "
+"lorsque la double authentification est activée. Conservé chiffré."
+
+msgid "Folder to read"
+msgstr "Dossier à lire"
+
+msgid ""
+"One folder, never the inbox. Make a rule on your mail server that files recruiter "
+"mail here; Postulo reads nothing else."
+msgstr ""
+"Un seul dossier, jamais la boîte de réception. Créez une règle sur votre serveur de "
+"messagerie pour y classer le courrier des recruteurs ; Postulo ne lit rien d'autre."
+
+msgid "Once read"
+msgstr "Une fois lu"
+
+msgid "Flag it with %(keyword)s"
+msgstr "Le marquer avec %(keyword)s"
+
+msgid "Move it to a subfolder"
+msgstr "Le déplacer dans un sous-dossier"
+
+msgid "Leave the mailbox untouched"
+msgstr "Ne rien changer dans la boîte"
+
+msgid ""
+"Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox "
+"untouched means every recent message is read again; nothing is suggested twice either "
+"way."
+msgstr ""
+"Le marquage est invisible dans la plupart des clients et raccourcit chaque passage. "
+"Ne rien changer signifie relire chaque message récent ; dans les deux cas, rien n'est "
+"proposé deux fois."
+
+msgid "Subfolder"
+msgstr "Sous-dossier"
+
+msgid "Used only when messages are moved. Created if missing."
+msgstr "Utilisé uniquement en cas de déplacement. Créé s'il n'existe pas."
+
+msgid "Look back"
+msgstr "Remonter sur"
+
+msgid "How many days of mail a pass considers."
+msgstr "Le nombre de jours de courrier examinés à chaque passage."
+
+msgid "Name the subfolder to move messages to."
+msgstr "Indiquez le sous-dossier où déplacer les messages."
+
+msgid "Name the folder to read. Postulo never reads the inbox."
+msgstr "Indiquez le dossier à lire. Postulo ne lit jamais la boîte de réception."
+
+msgid "Signed in, but there is no folder called “%(folder)s”."
+msgstr "Connexion réussie, mais il n'y a aucun dossier nommé « %(folder)s »."
+
+msgid "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
+msgstr "Connecté. %(count)d messages attendent d'être lus dans « %(folder)s »."
+
+msgid "A message with no subject"
+msgstr "Un message sans objet"
+
+msgid "From"
+msgstr "De"
+
+msgid "Matched by"
+msgstr "Rapproché par"
+
+msgid "nothing yet"
+msgstr "rien pour l'instant"
+
+msgid "Recognised"
+msgstr "Reconnu"
+
+msgid "%(count)d could not be matched to an application; attach them by hand."
+msgstr ""
+"%(count)d n'ont pas pu être rattachés à une candidature ; rattachez-les à la main."

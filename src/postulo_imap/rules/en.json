@@ -1,0 +1,68 @@
+{
+  "language": "en",
+  "name": "English",
+  "dates": [
+    "\\b(\\d{1,2}[./-]\\d{1,2}[./-]\\d{2,4})(?:\\s*,?\\s*(?:at\\s*)?(\\d{1,2}[:h]\\d{2}))?",
+    "\\b(\\d{4}-\\d{2}-\\d{2})(?:[ T](\\d{1,2}:\\d{2}))?",
+    "\\b(\\d{1,2}(?:st|nd|rd|th)?\\s+(?:January|February|March|April|May|June|July|August|September|October|November|December)(?:\\s+\\d{4})?)(?:\\s*,?\\s*(?:at\\s*)?(\\d{1,2}[:h.]\\d{2}\\s*(?:am|pm)?))?",
+    "\\b((?:January|February|March|April|May|June|July|August|September|October|November|December)\\s+\\d{1,2}(?:st|nd|rd|th)?(?:,?\\s+\\d{4})?)(?:\\s*,?\\s*(?:at\\s*)?(\\d{1,2}[:h.]\\d{2}\\s*(?:am|pm)?))?"
+  ],
+  "kinds": [
+    {
+      "kind": "offer",
+      "patterns": [
+        "pleased to offer you",
+        "delighted to offer you",
+        "we would like to offer you",
+        "offer of employment",
+        "job offer",
+        "your offer letter"
+      ]
+    },
+    {
+      "kind": "rejected",
+      "patterns": [
+        "we regret to inform",
+        "unfortunately.{0,80}(not|unable) to (proceed|take|move)",
+        "we (have )?decided (to move forward|to proceed) with (other|another)",
+        "not (been )?(selected|successful|shortlisted)",
+        "will not be (proceeding|moving forward)",
+        "your application (has been )?(unsuccessful|rejected)",
+        "we are not able to offer you",
+        "keep your (cv|r[ée]sum[ée]) on file"
+      ]
+    },
+    {
+      "kind": "interview",
+      "patterns": [
+        "invite you to (an? )?(interview|conversation|call|chat)",
+        "would like to (invite|meet|speak|talk|arrange)",
+        "schedule (an? )?(interview|call|conversation|meeting)",
+        "(interview|call) (invitation|invite)",
+        "book a time",
+        "are you available (on|for)",
+        "next (step|stage).{0,40}(interview|call)"
+      ]
+    },
+    {
+      "kind": "assessment",
+      "patterns": [
+        "(technical|coding|online|written|skills) (test|assessment|exercise|challenge)",
+        "take[- ]home (test|assignment|exercise)",
+        "please complete the (assessment|test|questionnaire)",
+        "assessment (link|invitation)"
+      ]
+    },
+    {
+      "kind": "acknowledged",
+      "patterns": [
+        "thank you for (your )?(applying|application|interest)",
+        "we have received your application",
+        "your application (has been )?received",
+        "we are reviewing your application",
+        "application confirmation",
+        "acknowledge receipt of your application"
+      ]
+    }
+  ]
+}

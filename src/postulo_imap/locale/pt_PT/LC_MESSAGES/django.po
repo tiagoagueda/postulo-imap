@@ -1,0 +1,119 @@
+# Portuguese (Portugal) translations for postulo-imap.
+# This file is distributed under the same license as the postulo-imap package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: postulo-imap 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Language: pt_PT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Mailbox (IMAP)"
+msgstr "Caixa de correio (IMAP)"
+
+msgid "Server"
+msgstr "Servidor"
+
+msgid "For example imap.example.org."
+msgstr "Por exemplo imap.example.org."
+
+msgid "Port"
+msgstr "Porta"
+
+msgid "Security"
+msgstr "Segurança"
+
+msgid "TLS (port 993)"
+msgstr "TLS (porta 993)"
+
+msgid "STARTTLS (port 143)"
+msgstr "STARTTLS (porta 143)"
+
+msgid "Username"
+msgstr "Nome de utilizador"
+
+msgid "Password or app password"
+msgstr "Palavra-passe ou palavra-passe de aplicação"
+
+msgid ""
+"An app password wherever the server offers one; Gmail requires it with two-factor "
+"authentication on. Stored encrypted."
+msgstr ""
+"Uma palavra-passe de aplicação sempre que o servidor a ofereça; o Gmail exige-a com "
+"a autenticação em dois passos activa. Guardada cifrada."
+
+msgid "Folder to read"
+msgstr "Pasta a ler"
+
+msgid ""
+"One folder, never the inbox. Make a rule on your mail server that files recruiter "
+"mail here; Postulo reads nothing else."
+msgstr ""
+"Uma pasta, nunca a caixa de entrada. Crie uma regra no seu servidor de correio que "
+"arquive aqui o correio dos recrutadores; o Postulo não lê mais nada."
+
+msgid "Once read"
+msgstr "Depois de lido"
+
+msgid "Flag it with %(keyword)s"
+msgstr "Marcá-lo com %(keyword)s"
+
+msgid "Move it to a subfolder"
+msgstr "Movê-lo para uma subpasta"
+
+msgid "Leave the mailbox untouched"
+msgstr "Não mexer na caixa de correio"
+
+msgid ""
+"Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox "
+"untouched means every recent message is read again; nothing is suggested twice either "
+"way."
+msgstr ""
+"A marca é invisível na maioria dos clientes e mantém cada passagem curta. Não mexer "
+"na caixa significa reler todas as mensagens recentes; de qualquer forma, nada é "
+"sugerido duas vezes."
+
+msgid "Subfolder"
+msgstr "Subpasta"
+
+msgid "Used only when messages are moved. Created if missing."
+msgstr "Usada apenas quando as mensagens são movidas. Criada se faltar."
+
+msgid "Look back"
+msgstr "Recuar"
+
+msgid "How many days of mail a pass considers."
+msgstr "Quantos dias de correio cada passagem considera."
+
+msgid "Name the subfolder to move messages to."
+msgstr "Indique a subpasta para onde mover as mensagens."
+
+msgid "Name the folder to read. Postulo never reads the inbox."
+msgstr "Indique a pasta a ler. O Postulo nunca lê a caixa de entrada."
+
+msgid "Signed in, but there is no folder called “%(folder)s”."
+msgstr "Sessão iniciada, mas não existe nenhuma pasta chamada «%(folder)s»."
+
+msgid "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
+msgstr "Sessão iniciada. %(count)d mensagens em «%(folder)s» esperam ser lidas."
+
+msgid "A message with no subject"
+msgstr "Uma mensagem sem assunto"
+
+msgid "From"
+msgstr "De"
+
+msgid "Matched by"
+msgstr "Associado por"
+
+msgid "nothing yet"
+msgstr "ainda nada"
+
+msgid "Recognised"
+msgstr "Reconhecido"
+
+msgid "%(count)d could not be matched to an application; attach them by hand."
+msgstr "%(count)d não puderam ser associadas a uma candidatura; associe-as à mão."

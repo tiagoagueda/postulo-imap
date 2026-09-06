@@ -1,0 +1,63 @@
+{
+  "language": "fr",
+  "name": "Français",
+  "dates": [
+    "\\b(\\d{1,2}[./-]\\d{1,2}[./-]\\d{2,4})(?:\\s*,?\\s*(?:à\\s*)?(\\d{1,2}[:h]\\d{2}))?",
+    "\\b(\\d{4}-\\d{2}-\\d{2})(?:[ T](\\d{1,2}:\\d{2}))?",
+    "\\b(\\d{1,2}(?:er)?\\s+(?:janvier|février|fevrier|mars|avril|mai|juin|juillet|août|aout|septembre|octobre|novembre|décembre|decembre)(?:\\s+\\d{4})?)(?:\\s*,?\\s*(?:à\\s*)?(\\d{1,2}\\s*[h:]\\s*\\d{0,2}))?"
+  ],
+  "kinds": [
+    {
+      "kind": "offer",
+      "patterns": [
+        "nous avons le plaisir de vous proposer",
+        "proposition d'embauche",
+        "offre d'emploi ferme",
+        "promesse d'embauche",
+        "nous vous proposons le poste"
+      ]
+    },
+    {
+      "kind": "rejected",
+      "patterns": [
+        "nous avons le regret",
+        "votre candidature n'a pas été retenue",
+        "n'a pas ét[ée] retenue",
+        "nous ne donnerons pas suite",
+        "ne correspond pas (au profil|à nos besoins)",
+        "nous avons retenu (un|une) autre candidat",
+        "conserver votre (cv|candidature) dans notre vivier"
+      ]
+    },
+    {
+      "kind": "interview",
+      "patterns": [
+        "vous (rencontrer|proposer un entretien)",
+        "invit(er|ation).{0,40}entretien",
+        "entretien (t[ée]l[ée]phonique|physique|visio|en visioconf[ée]rence)",
+        "convier à un entretien",
+        "fixer un (entretien|rendez-vous|cr[ée]neau)",
+        "(seriez|êtes)-vous disponible"
+      ]
+    },
+    {
+      "kind": "assessment",
+      "patterns": [
+        "test (technique|de personnalit[ée]|[ée]crit|en ligne)",
+        "[ée]valuation (technique|en ligne)",
+        "exercice (technique|à réaliser)",
+        "questionnaire à compléter"
+      ]
+    },
+    {
+      "kind": "acknowledged",
+      "patterns": [
+        "nous avons (bien )?re[çc]u votre candidature",
+        "accus[ée] de r[ée]ception",
+        "merci (pour|de) votre candidature",
+        "votre candidature est (bien )?enregistr[ée]e",
+        "nous [ée]tudions votre candidature"
+      ]
+    }
+  ]
+}
