@@ -1,0 +1,148 @@
+# Afrikaans translation of postulo-imap.
+# This file is distributed under the same license as Postulo (AGPL-3.0-or-later).
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Postulo\n"
+"Report-Msgid-Bugs-To: https://source.tiagoagueda.com/postulo/postulo/issues\n"
+"POT-Creation-Date: 2026-09-13 04:02+0000\n"
+"PO-Revision-Date: 2026-09-13 04:02+0000\n"
+"Last-Translator: Postulo contributors\n"
+"Language-Team: Afrikaans\n"
+"Language: af\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: postulo scripts/messages.py\n"
+
+#: src/postulo_imap/sync.py:221
+#, python-format
+msgid "%(count)d could not be matched to an application; attach them by hand."
+msgstr ""
+
+#: src/postulo_imap/sync.py:194
+msgid "A message with no subject"
+msgstr ""
+
+#: src/postulo_imap/sync.py:65
+msgid ""
+"An app password wherever the server offers one; Gmail requires it with two-factor authentication on. Stored encrypted."
+msgstr ""
+
+#: src/postulo_imap/sync.py:88
+#, python-format
+msgid "Flag it with %(keyword)s"
+msgstr ""
+
+#: src/postulo_imap/sync.py:94
+msgid ""
+"Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means every recent message is read again; nothing is suggested twice either way."
+msgstr ""
+
+#: src/postulo_imap/sync.py:73
+msgid "Folder to read"
+msgstr ""
+
+#: src/postulo_imap/sync.py:45
+msgid "For example imap.example.org."
+msgstr ""
+
+#: src/postulo_imap/sync.py:200
+msgid "From"
+msgstr ""
+
+#: src/postulo_imap/sync.py:115
+msgid "How many days of mail a pass considers."
+msgstr ""
+
+#: src/postulo_imap/sync.py:90
+msgid "Leave the mailbox untouched"
+msgstr ""
+
+#: src/postulo_imap/sync.py:111
+msgid "Look back"
+msgstr ""
+
+#: src/postulo_imap/sync.py:40
+msgid "Mailbox (IMAP)"
+msgstr ""
+
+#: src/postulo_imap/sync.py:201
+msgid "Matched by"
+msgstr ""
+
+#: src/postulo_imap/sync.py:89
+msgid "Move it to a subfolder"
+msgstr ""
+
+#: src/postulo_imap/sync.py:128
+msgid "Name the folder to read. Postulo never reads the inbox."
+msgstr ""
+
+#: src/postulo_imap/sync.py:126
+msgid "Name the subfolder to move messages to."
+msgstr ""
+
+#: src/postulo_imap/sync.py:201
+msgid "nothing yet"
+msgstr ""
+
+#: src/postulo_imap/sync.py:85
+msgid "Once read"
+msgstr ""
+
+#: src/postulo_imap/sync.py:77
+msgid ""
+"One folder, never the inbox. Make a rule on your mail server that files recruiter mail here; Postulo reads nothing else."
+msgstr ""
+
+#: src/postulo_imap/sync.py:61
+msgid "Password or app password"
+msgstr ""
+
+#: src/postulo_imap/sync.py:47
+msgid "Port"
+msgstr ""
+
+#: src/postulo_imap/sync.py:203
+msgid "Recognised"
+msgstr ""
+
+#: src/postulo_imap/sync.py:50
+msgid "Security"
+msgstr ""
+
+#: src/postulo_imap/sync.py:45
+msgid "Server"
+msgstr ""
+
+#: src/postulo_imap/sync.py:143
+#, python-format
+msgid "Signed in, but there is no folder called “%(folder)s”."
+msgstr ""
+
+#: src/postulo_imap/sync.py:158
+#, python-format
+msgid "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
+msgstr ""
+
+#: src/postulo_imap/sync.py:54
+msgid "STARTTLS (port 143)"
+msgstr ""
+
+#: src/postulo_imap/sync.py:103
+msgid "Subfolder"
+msgstr ""
+
+#: src/postulo_imap/sync.py:53
+msgid "TLS (port 993)"
+msgstr ""
+
+#: src/postulo_imap/sync.py:107
+msgid "Used only when messages are moved. Created if missing."
+msgstr ""
+
+#: src/postulo_imap/sync.py:58
+msgid "Username"
+msgstr ""
