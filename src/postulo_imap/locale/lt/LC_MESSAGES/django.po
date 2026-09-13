@@ -17,132 +17,163 @@ msgstr ""
 "X-Generator: postulo scripts/messages.py\n"
 
 #: src/postulo_imap/sync.py:221
-#, python-format
+#, python-format, draft
 msgid "%(count)d could not be matched to an application; attach them by hand."
-msgstr ""
+msgstr "%(count)d nepavyko susieti su paraiška; pridėkite juos rankiniu būdu."
 
 #: src/postulo_imap/sync.py:194
+#, draft
 msgid "A message with no subject"
-msgstr ""
+msgstr "Laiškas be temos"
 
 #: src/postulo_imap/sync.py:65
+#, draft
 msgid ""
 "An app password wherever the server offers one; Gmail requires it with two-factor authentication on. Stored encrypted."
 msgstr ""
+"Programos slaptažodis, kai serveris jį siūlo; Gmail jo reikalauja, kai įjungta dviejų veiksnių autentifikacija. Saugomas užšifruotas."
 
 #: src/postulo_imap/sync.py:88
-#, python-format
+#, python-format, draft
 msgid "Flag it with %(keyword)s"
-msgstr ""
+msgstr "Pažymėti žyme %(keyword)s"
 
 #: src/postulo_imap/sync.py:94
+#, draft
 msgid ""
 "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means every recent message is read again; nothing is suggested twice either way."
 msgstr ""
+"Žymėjimas daugumoje klientų nematomas ir kiekvieną peržiūrą daro trumpą. Paliekant pašto dėžutę nepaliestą, kiekvienas naujas laiškas skaitomas iš naujo; bet kuriuo atveju niekas nesiūloma dukart."
 
 #: src/postulo_imap/sync.py:73
+#, draft
 msgid "Folder to read"
-msgstr ""
+msgstr "Skaitomas aplankas"
 
 #: src/postulo_imap/sync.py:45
+#, draft
 msgid "For example imap.example.org."
-msgstr ""
+msgstr "Pavyzdžiui, imap.example.org."
 
 #: src/postulo_imap/sync.py:200
+#, draft
 msgid "From"
-msgstr ""
+msgstr "Nuo"
 
 #: src/postulo_imap/sync.py:115
+#, draft
 msgid "How many days of mail a pass considers."
-msgstr ""
+msgstr "Kiek dienų pašto apima viena peržiūra."
 
 #: src/postulo_imap/sync.py:90
+#, draft
 msgid "Leave the mailbox untouched"
-msgstr ""
+msgstr "Palikti pašto dėžutę nepaliestą"
 
 #: src/postulo_imap/sync.py:111
+#, draft
 msgid "Look back"
-msgstr ""
+msgstr "Laikotarpis atgal"
 
 #: src/postulo_imap/sync.py:40
+#, draft
 msgid "Mailbox (IMAP)"
-msgstr ""
+msgstr "Pašto dėžutė (IMAP)"
 
 #: src/postulo_imap/sync.py:201
+#, draft
 msgid "Matched by"
-msgstr ""
+msgstr "Susieta pagal"
 
 #: src/postulo_imap/sync.py:89
+#, draft
 msgid "Move it to a subfolder"
-msgstr ""
+msgstr "Perkelti į poaplankį"
 
 #: src/postulo_imap/sync.py:128
+#, draft
 msgid "Name the folder to read. Postulo never reads the inbox."
 msgstr ""
+"Nurodykite skaitomą aplanką. Postulo niekada neskaito gautųjų laiškų aplanko."
 
 #: src/postulo_imap/sync.py:126
+#, draft
 msgid "Name the subfolder to move messages to."
-msgstr ""
+msgstr "Nurodykite poaplankį, į kurį perkelti laiškus."
 
 #: src/postulo_imap/sync.py:201
+#, draft
 msgid "nothing yet"
-msgstr ""
+msgstr "kol kas nieko"
 
 #: src/postulo_imap/sync.py:85
+#, draft
 msgid "Once read"
-msgstr ""
+msgstr "Perskaičius"
 
 #: src/postulo_imap/sync.py:77
+#, draft
 msgid ""
 "One folder, never the inbox. Make a rule on your mail server that files recruiter mail here; Postulo reads nothing else."
 msgstr ""
+"Vienas aplankas, niekada ne gautieji laiškai. Savo pašto serveryje sukurkite taisyklę, kuri čia perkelia įdarbintojų laiškus; Postulo daugiau nieko neskaito."
 
 #: src/postulo_imap/sync.py:61
+#, draft
 msgid "Password or app password"
-msgstr ""
+msgstr "Slaptažodis arba programos slaptažodis"
 
 #: src/postulo_imap/sync.py:47
+#, draft
 msgid "Port"
-msgstr ""
+msgstr "Prievadas"
 
 #: src/postulo_imap/sync.py:203
+#, draft
 msgid "Recognised"
-msgstr ""
+msgstr "Atpažinta"
 
 #: src/postulo_imap/sync.py:50
+#, draft
 msgid "Security"
-msgstr ""
+msgstr "Saugumas"
 
 #: src/postulo_imap/sync.py:45
+#, draft
 msgid "Server"
-msgstr ""
+msgstr "Serveris"
 
 #: src/postulo_imap/sync.py:143
-#, python-format
+#, python-format, draft
 msgid "Signed in, but there is no folder called “%(folder)s”."
-msgstr ""
+msgstr "Prisijungta, bet aplanko „%(folder)s“ nėra."
 
 #: src/postulo_imap/sync.py:158
-#, python-format
+#, python-format, draft
 msgid "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
-msgstr ""
+msgstr "Prisijungta. Aplanke „%(folder)s“ laukia %(count)d laiškų."
 
 #: src/postulo_imap/sync.py:54
+#, draft
 msgid "STARTTLS (port 143)"
-msgstr ""
+msgstr "STARTTLS (143 prievadas)"
 
 #: src/postulo_imap/sync.py:103
+#, draft
 msgid "Subfolder"
-msgstr ""
+msgstr "Poaplankis"
 
 #: src/postulo_imap/sync.py:53
+#, draft
 msgid "TLS (port 993)"
-msgstr ""
+msgstr "TLS (993 prievadas)"
 
 #: src/postulo_imap/sync.py:107
+#, draft
 msgid "Used only when messages are moved. Created if missing."
-msgstr ""
+msgstr "Naudojamas tik perkeliant laiškus. Sukuriamas, jei jo nėra."
 
 #: src/postulo_imap/sync.py:58
+#, draft
 msgid "Username"
-msgstr ""
+msgstr "Naudotojo vardas"

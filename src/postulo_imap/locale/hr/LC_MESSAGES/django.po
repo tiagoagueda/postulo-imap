@@ -17,132 +17,162 @@ msgstr ""
 "X-Generator: postulo scripts/messages.py\n"
 
 #: src/postulo_imap/sync.py:221
-#, python-format
+#, python-format, draft
 msgid "%(count)d could not be matched to an application; attach them by hand."
-msgstr ""
+msgstr "%(count)d nije bilo moguće povezati s prijavom; priložite ih ručno."
 
 #: src/postulo_imap/sync.py:194
+#, draft
 msgid "A message with no subject"
-msgstr ""
+msgstr "Poruka bez predmeta"
 
 #: src/postulo_imap/sync.py:65
+#, draft
 msgid ""
 "An app password wherever the server offers one; Gmail requires it with two-factor authentication on. Stored encrypted."
 msgstr ""
+"Lozinka aplikacije gdje god je poslužitelj nudi; Gmail je zahtijeva kad je uključena dvofaktorska provjera. Sprema se šifrirano."
 
 #: src/postulo_imap/sync.py:88
-#, python-format
+#, python-format, draft
 msgid "Flag it with %(keyword)s"
-msgstr ""
+msgstr "Označi zastavicom %(keyword)s"
 
 #: src/postulo_imap/sync.py:94
+#, draft
 msgid ""
 "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means every recent message is read again; nothing is suggested twice either way."
 msgstr ""
+"Zastavica je nevidljiva u većini klijenata i svaki prolaz ostaje kratak. Ako sandučić ostane netaknut, svaka nedavna poruka čita se iznova; ni u jednom slučaju ništa se ne predlaže dvaput."
 
 #: src/postulo_imap/sync.py:73
+#, draft
 msgid "Folder to read"
-msgstr ""
+msgstr "Mapa za čitanje"
 
 #: src/postulo_imap/sync.py:45
+#, draft
 msgid "For example imap.example.org."
-msgstr ""
+msgstr "Na primjer imap.example.org."
 
 #: src/postulo_imap/sync.py:200
+#, draft
 msgid "From"
-msgstr ""
+msgstr "Od"
 
 #: src/postulo_imap/sync.py:115
+#, draft
 msgid "How many days of mail a pass considers."
-msgstr ""
+msgstr "Koliko dana pošte jedan prolaz uzima u obzir."
 
 #: src/postulo_imap/sync.py:90
+#, draft
 msgid "Leave the mailbox untouched"
-msgstr ""
+msgstr "Ostavi sandučić netaknutim"
 
 #: src/postulo_imap/sync.py:111
+#, draft
 msgid "Look back"
-msgstr ""
+msgstr "Razdoblje unatrag"
 
 #: src/postulo_imap/sync.py:40
+#, draft
 msgid "Mailbox (IMAP)"
-msgstr ""
+msgstr "Poštanski sandučić (IMAP)"
 
 #: src/postulo_imap/sync.py:201
+#, draft
 msgid "Matched by"
-msgstr ""
+msgstr "Povezano prema"
 
 #: src/postulo_imap/sync.py:89
+#, draft
 msgid "Move it to a subfolder"
-msgstr ""
+msgstr "Premjesti u podmapu"
 
 #: src/postulo_imap/sync.py:128
+#, draft
 msgid "Name the folder to read. Postulo never reads the inbox."
-msgstr ""
+msgstr "Navedite mapu za čitanje. Postulo nikada ne čita ulaznu poštu."
 
 #: src/postulo_imap/sync.py:126
+#, draft
 msgid "Name the subfolder to move messages to."
-msgstr ""
+msgstr "Navedite podmapu u koju se poruke premještaju."
 
 #: src/postulo_imap/sync.py:201
+#, draft
 msgid "nothing yet"
-msgstr ""
+msgstr "još ništa"
 
 #: src/postulo_imap/sync.py:85
+#, draft
 msgid "Once read"
-msgstr ""
+msgstr "Nakon čitanja"
 
 #: src/postulo_imap/sync.py:77
+#, draft
 msgid ""
 "One folder, never the inbox. Make a rule on your mail server that files recruiter mail here; Postulo reads nothing else."
 msgstr ""
+"Jedna mapa, nikada ulazna pošta. Napravite pravilo na svom poslužitelju pošte koje ovdje sprema poštu regrutera; Postulo ne čita ništa drugo."
 
 #: src/postulo_imap/sync.py:61
+#, draft
 msgid "Password or app password"
-msgstr ""
+msgstr "Lozinka ili lozinka aplikacije"
 
 #: src/postulo_imap/sync.py:47
+#, draft
 msgid "Port"
-msgstr ""
+msgstr "Port"
 
 #: src/postulo_imap/sync.py:203
+#, draft
 msgid "Recognised"
-msgstr ""
+msgstr "Prepoznato"
 
 #: src/postulo_imap/sync.py:50
+#, draft
 msgid "Security"
-msgstr ""
+msgstr "Sigurnost"
 
 #: src/postulo_imap/sync.py:45
+#, draft
 msgid "Server"
-msgstr ""
+msgstr "Poslužitelj"
 
 #: src/postulo_imap/sync.py:143
-#, python-format
+#, python-format, draft
 msgid "Signed in, but there is no folder called “%(folder)s”."
-msgstr ""
+msgstr "Prijava uspjela, ali ne postoji mapa pod nazivom „%(folder)s”."
 
 #: src/postulo_imap/sync.py:158
-#, python-format
+#, python-format, draft
 msgid "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
-msgstr ""
+msgstr "Prijava uspjela. %(count)d poruka u mapi „%(folder)s” čeka na čitanje."
 
 #: src/postulo_imap/sync.py:54
+#, draft
 msgid "STARTTLS (port 143)"
-msgstr ""
+msgstr "STARTTLS (port 143)"
 
 #: src/postulo_imap/sync.py:103
+#, draft
 msgid "Subfolder"
-msgstr ""
+msgstr "Podmapa"
 
 #: src/postulo_imap/sync.py:53
+#, draft
 msgid "TLS (port 993)"
-msgstr ""
+msgstr "TLS (port 993)"
 
 #: src/postulo_imap/sync.py:107
+#, draft
 msgid "Used only when messages are moved. Created if missing."
-msgstr ""
+msgstr "Koristi se samo kad se poruke premještaju. Stvara se ako ne postoji."
 
 #: src/postulo_imap/sync.py:58
+#, draft
 msgid "Username"
-msgstr ""
+msgstr "Korisničko ime"

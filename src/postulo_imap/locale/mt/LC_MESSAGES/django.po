@@ -17,132 +17,162 @@ msgstr ""
 "X-Generator: postulo scripts/messages.py\n"
 
 #: src/postulo_imap/sync.py:221
-#, python-format
+#, python-format, draft
 msgid "%(count)d could not be matched to an application; attach them by hand."
-msgstr ""
+msgstr "%(count)d ma setgħux jitqabblu ma' applikazzjoni; ehmiżhom manwalment."
 
 #: src/postulo_imap/sync.py:194
+#, draft
 msgid "A message with no subject"
-msgstr ""
+msgstr "Messaġġ mingħajr suġġett"
 
 #: src/postulo_imap/sync.py:65
+#, draft
 msgid ""
 "An app password wherever the server offers one; Gmail requires it with two-factor authentication on. Stored encrypted."
 msgstr ""
+"Password tal-app kull fejn is-server joffri waħda; Gmail jeħtieġha meta l-awtentikazzjoni b'żewġ fatturi tkun mixgħula. Maħżuna kriptata."
 
 #: src/postulo_imap/sync.py:88
-#, python-format
+#, python-format, draft
 msgid "Flag it with %(keyword)s"
-msgstr ""
+msgstr "Immarkah b'%(keyword)s"
 
 #: src/postulo_imap/sync.py:94
+#, draft
 msgid ""
 "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means every recent message is read again; nothing is suggested twice either way."
 msgstr ""
+"L-immarkar ma jidhirx fil-biċċa l-kbira tal-klijenti u jżomm kull passata qasira. Jekk il-kaxxa tal-posta titħalla kif inhi, kull messaġġ riċenti jinqara mill-ġdid; fiż-żewġ każi xejn ma jiġi ssuġġerit darbtejn."
 
 #: src/postulo_imap/sync.py:73
+#, draft
 msgid "Folder to read"
-msgstr ""
+msgstr "Folder x'taqra"
 
 #: src/postulo_imap/sync.py:45
+#, draft
 msgid "For example imap.example.org."
-msgstr ""
+msgstr "Pereżempju imap.example.org."
 
 #: src/postulo_imap/sync.py:200
+#, draft
 msgid "From"
-msgstr ""
+msgstr "Minn"
 
 #: src/postulo_imap/sync.py:115
+#, draft
 msgid "How many days of mail a pass considers."
-msgstr ""
+msgstr "Kemm-il jum ta' posta tqis passata."
 
 #: src/postulo_imap/sync.py:90
+#, draft
 msgid "Leave the mailbox untouched"
-msgstr ""
+msgstr "Ħalli l-kaxxa tal-posta kif inhi"
 
 #: src/postulo_imap/sync.py:111
+#, draft
 msgid "Look back"
-msgstr ""
+msgstr "Ħares lura"
 
 #: src/postulo_imap/sync.py:40
+#, draft
 msgid "Mailbox (IMAP)"
-msgstr ""
+msgstr "Kaxxa tal-posta (IMAP)"
 
 #: src/postulo_imap/sync.py:201
+#, draft
 msgid "Matched by"
-msgstr ""
+msgstr "Imqabbel minn"
 
 #: src/postulo_imap/sync.py:89
+#, draft
 msgid "Move it to a subfolder"
-msgstr ""
+msgstr "Mexxih f'subfolder"
 
 #: src/postulo_imap/sync.py:128
+#, draft
 msgid "Name the folder to read. Postulo never reads the inbox."
-msgstr ""
+msgstr "Semmi l-folder x'taqra. Postulo qatt ma jaqra l-inbox."
 
 #: src/postulo_imap/sync.py:126
+#, draft
 msgid "Name the subfolder to move messages to."
-msgstr ""
+msgstr "Semmi s-subfolder fejn jitmexxew il-messaġġi."
 
 #: src/postulo_imap/sync.py:201
+#, draft
 msgid "nothing yet"
-msgstr ""
+msgstr "xejn s'issa"
 
 #: src/postulo_imap/sync.py:85
+#, draft
 msgid "Once read"
-msgstr ""
+msgstr "Ladarba jinqara"
 
 #: src/postulo_imap/sync.py:77
+#, draft
 msgid ""
 "One folder, never the inbox. Make a rule on your mail server that files recruiter mail here; Postulo reads nothing else."
 msgstr ""
+"Folder wieħed, qatt l-inbox. Agħmel regola fuq is-server tal-posta tiegħek li tpoġġi l-posta tar-recruiters hawn; Postulo ma jaqra xejn iktar."
 
 #: src/postulo_imap/sync.py:61
+#, draft
 msgid "Password or app password"
-msgstr ""
+msgstr "Password jew password tal-app"
 
 #: src/postulo_imap/sync.py:47
+#, draft
 msgid "Port"
-msgstr ""
+msgstr "Port"
 
 #: src/postulo_imap/sync.py:203
+#, draft
 msgid "Recognised"
-msgstr ""
+msgstr "Magħruf"
 
 #: src/postulo_imap/sync.py:50
+#, draft
 msgid "Security"
-msgstr ""
+msgstr "Sigurtà"
 
 #: src/postulo_imap/sync.py:45
+#, draft
 msgid "Server"
-msgstr ""
+msgstr "Server"
 
 #: src/postulo_imap/sync.py:143
-#, python-format
+#, python-format, draft
 msgid "Signed in, but there is no folder called “%(folder)s”."
-msgstr ""
+msgstr "Dħalt, imma m'hemm l-ebda folder jismu “%(folder)s”."
 
 #: src/postulo_imap/sync.py:158
-#, python-format
+#, python-format, draft
 msgid "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
-msgstr ""
+msgstr "Dħalt. %(count)d messaġġi f'“%(folder)s” qed jistennew li jinqraw."
 
 #: src/postulo_imap/sync.py:54
+#, draft
 msgid "STARTTLS (port 143)"
-msgstr ""
+msgstr "STARTTLS (port 143)"
 
 #: src/postulo_imap/sync.py:103
+#, draft
 msgid "Subfolder"
-msgstr ""
+msgstr "Subfolder"
 
 #: src/postulo_imap/sync.py:53
+#, draft
 msgid "TLS (port 993)"
-msgstr ""
+msgstr "TLS (port 993)"
 
 #: src/postulo_imap/sync.py:107
+#, draft
 msgid "Used only when messages are moved. Created if missing."
-msgstr ""
+msgstr "Jintuża biss meta l-messaġġi jitmexxew. Jinħoloq jekk ma jkunx hemm."
 
 #: src/postulo_imap/sync.py:58
+#, draft
 msgid "Username"
-msgstr ""
+msgstr "Isem tal-utent"
