@@ -1,4 +1,14 @@
 # Runs the plugin's tests inside a real Postulo, fetched from its repository by uv.
+#
+# The job image is Node rather than Python, which looks backwards and is not: Forgejo runs
+# `actions/checkout` as JavaScript *inside the job container*, so a container without
+# `node` fails the checkout before a single step of this file runs — which is what every
+# run here did, on `python:3.14-slim-bookworm` (postulo-imap#1). uv brings its own Python,
+# so the image only has to carry Node, git and curl. Postulo's own CI is Node for the same
+# reason and says so.
+#
+# `runs-on` must name a label the runner actually advertises. A label no runner has does
+# not fail the job: it queues for ever, which looks exactly like CI passing.
 name: CI
 
 on:
@@ -7,21 +17,29 @@ on:
     tags: ["v*"]
   pull_request:
 
+# Every job here only reads the repository.
+permissions:
+  contents: read
+
 jobs:
   test:
     runs-on: ubuntu-latest
     container:
-      image: python:3.14-slim-bookworm
+      # Debian with Node, git and curl already present.
+      image: node:22-bookworm
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          # The token is not needed after the checkout; leaving it in .git/config would
+          # hand it to every later step.
+          persist-credentials: false
 
-      - name: Install git and WeasyPrint's libraries
-        # git for the Postulo dependency; the libraries because Postulo's settings import
-        # its PDF backend, which loads Pango.
+      - name: Install WeasyPrint's libraries
+        # Postulo's settings import its PDF backend, which loads Pango.
         run: |
           apt-get update
-          apt-get install -y --no-install-recommends git curl libpango-1.0-0 libpangoft2-1.0-0 libharfbuzz0b libfontconfig1
+          apt-get install -y --no-install-recommends libpango-1.0-0 libpangoft2-1.0-0 libharfbuzz0b libfontconfig1
           rm -rf /var/lib/apt/lists/*
 
       - name: Install uv
@@ -30,16 +48,19 @@ jobs:
           echo "$HOME/.local/bin" >> "$GITHUB_PATH"
 
       - name: Install the plugin, Postulo and the test tools
-        run: uv sync
+        # --locked: the lock names the Postulo this plugin is released beside, and a lock
+        # that no longer matches pyproject.toml is a resolution nobody reviewed.
+        run: uv sync --locked --python 3.14
 
       - name: Lint
-        run: uv run ruff check .
+        run: |
+          uv run ruff check --output-format=full .
+          uv run ruff format --check .
 
       - name: Fail if the compiled catalogues are out of date
         # `postulo-messages` is the console script Postulo installs, and the same tool the
-        # tests call. There has never been a `scripts/` directory here: what stood here
-        # before named one, so every run of this job failed before it reached the tests
-        # (postulo-imap#1).
+        # tests call. What stood here named `scripts/compile_messages.py`, which has never
+        # existed in this repository (postulo-imap#1).
         run: |
           uv run postulo-messages compile
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
@@ -50,21 +71,23 @@ jobs:
 
   release:
     # The promises that have to hold in a published version rather than in every commit:
-    # the twenty-four European Union catalogues complete, and the core actually present
-    # rather than skipped past. A tag is the only thing that asks for them.
+    # the twenty-four European Union catalogues complete, and the catalogue tool actually
+    # present rather than skipped past. A tag is the only thing that asks for them.
     if: startsWith(github.ref, 'refs/tags/')
     needs: test
     runs-on: ubuntu-latest
     container:
-      image: python:3.14-slim-bookworm
+      image: node:22-bookworm
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
 
-      - name: Install git and WeasyPrint's libraries
+      - name: Install WeasyPrint's libraries
         run: |
           apt-get update
-          apt-get install -y --no-install-recommends git curl libpango-1.0-0 libpangoft2-1.0-0 libharfbuzz0b libfontconfig1
+          apt-get install -y --no-install-recommends libpango-1.0-0 libpangoft2-1.0-0 libharfbuzz0b libfontconfig1
           rm -rf /var/lib/apt/lists/*
 
       - name: Install uv
@@ -73,7 +96,7 @@ jobs:
           echo "$HOME/.local/bin" >> "$GITHUB_PATH"
 
       - name: Install the plugin, Postulo and the test tools
-        run: uv sync
+        run: uv sync --locked --python 3.14
 
       - name: The release gate
         run: uv run pytest -m release
