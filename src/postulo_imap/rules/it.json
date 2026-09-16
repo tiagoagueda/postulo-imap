@@ -1,0 +1,60 @@
+{
+  "language": "it",
+  "name": "Italiano",
+  "dates": [
+    "\\b(\\d{1,2}[/.-]\\d{1,2}[/.-]\\d{2,4})(?:\\s*,?\\s*(?:alle\\s*)?(\\d{1,2}[:.]\\d{2}))?",
+    "\\b(\\d{4}-\\d{2}-\\d{2})(?:[ T](\\d{1,2}:\\d{2}))?",
+    "\\b(\\d{1,2}\\s+(?:gennaio|febbraio|marzo|aprile|maggio|giugno|luglio|agosto|settembre|ottobre|novembre|dicembre)(?:\\s+\\d{4})?)(?:\\s*,?\\s*(?:alle\\s*)?(\\d{1,2}[:.]\\d{2}))?"
+  ],
+  "kinds": [
+    {
+      "kind": "offer",
+      "patterns": [
+        "siamo lieti di offrir(ti|le)",
+        "vorremmo offrir(ti|le) (la posizione|il ruolo|il posto)",
+        "offerta di (lavoro|impiego|assunzione)",
+        "lettera di offerta"
+      ]
+    },
+    {
+      "kind": "rejected",
+      "patterns": [
+        "ci dispiace (comunicar|informar)(ti|le|vi)",
+        "non (è|e') stat(a|o) selezionat",
+        "non proseguiremo",
+        "abbiamo scelto (un altro|un'altra) candidat",
+        "non corrisponde al profilo",
+        "conserveremo il (tuo|suo) (cv|curriculum)"
+      ]
+    },
+    {
+      "kind": "interview",
+      "patterns": [
+        "invitar(ti|la|le|vi) a un colloquio",
+        "invito a (un )?colloquio",
+        "fissare un (colloquio|appuntamento|incontro)",
+        "colloquio (telefonico|conoscitivo|in videochiamata)",
+        "(sei|è|e') disponibile (il|per|nella)"
+      ]
+    },
+    {
+      "kind": "assessment",
+      "patterns": [
+        "test (tecnico|online|scritto|attitudinale)",
+        "valutazione (tecnica|online)",
+        "esercizio (tecnico|pratico)",
+        "questionario da compilare"
+      ]
+    },
+    {
+      "kind": "acknowledged",
+      "patterns": [
+        "grazie per (la tua|la sua) candidatura",
+        "abbiamo ricevuto la (tua|sua) candidatura",
+        "la (tua|sua) candidatura (è|e') stata ricevuta",
+        "conferma di candidatura",
+        "stiamo (esaminando|valutando) la (tua|sua) candidatura"
+      ]
+    }
+  ]
+}

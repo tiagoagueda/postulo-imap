@@ -1,0 +1,67 @@
+{
+  "language": "de",
+  "name": "Deutsch",
+  "dates": [
+    "\\b(\\d{1,2}\\.\\d{1,2}\\.\\d{2,4})(?:\\s*,?\\s*(?:um\\s*)?(\\d{1,2}[:.]\\d{2}))?",
+    "\\b(\\d{4}-\\d{2}-\\d{2})(?:[ T](\\d{1,2}:\\d{2}))?",
+    "\\b(\\d{1,2}\\.\\s*(?:januar|februar|m[äa]rz|april|mai|juni|juli|august|september|oktober|november|dezember)(?:\\s+\\d{4})?)(?:\\s*,?\\s*(?:um\\s*)?(\\d{1,2}[:.]\\d{2}))?"
+  ],
+  "kinds": [
+    {
+      "kind": "offer",
+      "patterns": [
+        "freuen uns.{0,40}anbieten zu k[öo]nnen",
+        "m[öo]chten ihnen (die|diese) (stelle|position) anbieten",
+        "vertragsangebot",
+        "einstellungsangebot",
+        "unser angebot f[üu]r die (stelle|position)"
+      ]
+    },
+    {
+      "kind": "rejected",
+      "patterns": [
+        "leider m[üu]ssen wir ihnen mitteilen",
+        "(k[öo]nnen|werden) wir ihre bewerbung nicht",
+        "nicht weiter ber[üu]cksichtigen",
+        "haben wir uns f[üu]r (eine andere|einen anderen) (bewerberin|bewerber|kandidat)",
+        "ihre bewerbung war (leider )?nicht erfolgreich",
+        "\\babsage\\b",
+        "ihre unterlagen .{0,30}zur[üu]ck"
+      ]
+    },
+    {
+      "kind": "interview",
+      "patterns": [
+        "zu einem (vorstellungsgespr[äa]ch|gespr[äa]ch|interview) ein(zu)?laden",
+        "einladung zum (vorstellungsgespr[äa]ch|gespr[äa]ch|interview)",
+        "(vorstellungs|kennenlern)gespr[äa]ch",
+        "w[üu]rden sie gerne (kennenlernen|pers[öo]nlich treffen)",
+        "einen termin .{0,30}(vereinbaren|abstimmen|vorschlagen)",
+        "h[äa]tten sie am .{0,30}zeit"
+      ]
+    },
+    {
+      "kind": "assessment",
+      "patterns": [
+        "online-?(test|assessment)",
+        "(technischen|technischer|fachlichen|schriftlichen)\\s+(test|aufgabe)",
+        "test(aufgabe|verfahren)",
+        "(eignungs|auswahl)test",
+        "programmieraufgabe",
+        "arbeitsprobe",
+        "assessment[-\\s]?center",
+        "fragebogen .{0,30}ausf[üu]llen"
+      ]
+    },
+    {
+      "kind": "acknowledged",
+      "patterns": [
+        "(vielen )?dank f[üu]r ihre bewerbung",
+        "ihre bewerbung .{0,30}(eingegangen|erhalten)",
+        "eingangsbest[äa]tigung",
+        "bewerbungseingang",
+        "wir (pr[üu]fen|sichten) ihre (bewerbung|unterlagen)"
+      ]
+    }
+  ]
+}

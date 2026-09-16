@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Postulo\n"
 "Report-Msgid-Bugs-To: https://source.tiagoagueda.com/postulo/postulo/issues\n"
-"POT-Creation-Date: 2026-09-13 04:02+0000\n"
+"POT-Creation-Date: 2026-09-16 08:39+0000\n"
 "PO-Revision-Date: 2026-09-13 04:02+0000\n"
 "Last-Translator: Postulo contributors\n"
 "Language-Team: slovenčina\n"
@@ -16,163 +16,185 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: postulo scripts/messages.py\n"
 
-#: src/postulo_imap/sync.py:221
+#: src/postulo_imap/sync.py:217
 #, python-format, draft
 msgid "%(count)d could not be matched to an application; attach them by hand."
 msgstr "%(count)d sa nepodarilo priradiť k žiadosti; pripojte ich ručne."
 
-#: src/postulo_imap/sync.py:194
+#: src/postulo_imap/sync.py:190
 #, draft
 msgid "A message with no subject"
 msgstr "Správa bez predmetu"
 
-#: src/postulo_imap/sync.py:65
+#: src/postulo_imap/sync.py:61
 #, draft
 msgid ""
 "An app password wherever the server offers one; Gmail requires it with two-factor authentication on. Stored encrypted."
 msgstr ""
 "Heslo aplikácie všade, kde ho server ponúka; Gmail ho vyžaduje pri zapnutom dvojfaktorovom overení. Uložené šifrovane."
 
-#: src/postulo_imap/sync.py:88
+#: src/postulo_imap/mailbox.py:282
+msgid ""
+"Could not reach the server. Check the address, the port and the security."
+msgstr ""
+
+#: src/postulo_imap/sync.py:84
 #, python-format, draft
 msgid "Flag it with %(keyword)s"
 msgstr "Označiť príznakom %(keyword)s"
 
-#: src/postulo_imap/sync.py:94
+#: src/postulo_imap/sync.py:90
 #, draft
 msgid ""
 "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means every recent message is read again; nothing is suggested twice either way."
 msgstr ""
 "Označenie príznakom je vo väčšine klientov neviditeľné a udržiava každý prechod krátky. Ponechanie schránky nedotknutej znamená, že každá nedávna správa sa číta znova; v oboch prípadoch sa nič nenavrhne dvakrát."
 
-#: src/postulo_imap/sync.py:73
+#: src/postulo_imap/sync.py:69
 #, draft
 msgid "Folder to read"
 msgstr "Priečinok na čítanie"
 
-#: src/postulo_imap/sync.py:45
+#: src/postulo_imap/sync.py:41
 #, draft
 msgid "For example imap.example.org."
 msgstr "Napríklad imap.example.org."
 
-#: src/postulo_imap/sync.py:200
+#: src/postulo_imap/sync.py:196
 #, draft
 msgid "From"
 msgstr "Od"
 
-#: src/postulo_imap/sync.py:115
+#: src/postulo_imap/sync.py:111
 #, draft
 msgid "How many days of mail a pass considers."
 msgstr "Koľko dní pošty jeden prechod zohľadňuje."
 
-#: src/postulo_imap/sync.py:90
+#: src/postulo_imap/sync.py:86
 #, draft
 msgid "Leave the mailbox untouched"
 msgstr "Nechať schránku nedotknutú"
 
-#: src/postulo_imap/sync.py:111
+#: src/postulo_imap/sync.py:107
 #, draft
 msgid "Look back"
 msgstr "Spätný rozsah"
 
-#: src/postulo_imap/sync.py:40
+#: src/postulo_imap/sync.py:36
 #, draft
 msgid "Mailbox (IMAP)"
 msgstr "Schránka (IMAP)"
 
-#: src/postulo_imap/sync.py:201
+#: src/postulo_imap/sync.py:197
 #, draft
 msgid "Matched by"
 msgstr "Priradené podľa"
 
-#: src/postulo_imap/sync.py:89
+#: src/postulo_imap/sync.py:85
 #, draft
 msgid "Move it to a subfolder"
 msgstr "Presunúť do podpriečinka"
 
-#: src/postulo_imap/sync.py:128
+#: src/postulo_imap/sync.py:124
 #, draft
 msgid "Name the folder to read. Postulo never reads the inbox."
 msgstr "Uveďte priečinok na čítanie. Postulo nikdy nečíta doručenú poštu."
 
-#: src/postulo_imap/sync.py:126
+#: src/postulo_imap/sync.py:122
 #, draft
 msgid "Name the subfolder to move messages to."
 msgstr "Uveďte podpriečinok, do ktorého sa správy presunú."
 
-#: src/postulo_imap/sync.py:201
+#: src/postulo_imap/sync.py:197
 #, draft
 msgid "nothing yet"
 msgstr "zatiaľ nič"
 
-#: src/postulo_imap/sync.py:85
+#: src/postulo_imap/sync.py:81
 #, draft
 msgid "Once read"
 msgstr "Po prečítaní"
 
-#: src/postulo_imap/sync.py:77
+#: src/postulo_imap/sync.py:73
 #, draft
 msgid ""
 "One folder, never the inbox. Make a rule on your mail server that files recruiter mail here; Postulo reads nothing else."
 msgstr ""
 "Jeden priečinok, nikdy nie doručená pošta. Vytvorte na poštovom serveri pravidlo, ktoré sem ukladá poštu od náborárov; Postulo nečíta nič iné."
 
-#: src/postulo_imap/sync.py:61
+#: src/postulo_imap/sync.py:57
 #, draft
 msgid "Password or app password"
 msgstr "Heslo alebo heslo aplikácie"
 
-#: src/postulo_imap/sync.py:47
+#: src/postulo_imap/sync.py:43
 #, draft
 msgid "Port"
 msgstr "Port"
 
-#: src/postulo_imap/sync.py:203
+#: src/postulo_imap/sync.py:199
 #, draft
 msgid "Recognised"
 msgstr "Rozpoznané"
 
-#: src/postulo_imap/sync.py:50
+#: src/postulo_imap/sync.py:46
 #, draft
 msgid "Security"
 msgstr "Zabezpečenie"
 
-#: src/postulo_imap/sync.py:45
+#: src/postulo_imap/sync.py:41
 #, draft
 msgid "Server"
 msgstr "Server"
 
-#: src/postulo_imap/sync.py:143
+#: src/postulo_imap/mailbox.py:290
+msgid "Sign-in refused. Check the username and the password."
+msgstr ""
+
+#: src/postulo_imap/sync.py:139
 #, python-format, draft
 msgid "Signed in, but there is no folder called “%(folder)s”."
 msgstr "Prihlásené, ale priečinok „%(folder)s“ neexistuje."
 
-#: src/postulo_imap/sync.py:158
+#: src/postulo_imap/sync.py:154
 #, python-format, draft
 msgid "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
 msgstr "Prihlásené. V priečinku „%(folder)s“ čaká na prečítanie %(count)d správ."
 
-#: src/postulo_imap/sync.py:54
+#: src/postulo_imap/sync.py:50
 #, draft
 msgid "STARTTLS (port 143)"
 msgstr "STARTTLS (port 143)"
 
-#: src/postulo_imap/sync.py:103
+#: src/postulo_imap/sync.py:99
 #, draft
 msgid "Subfolder"
 msgstr "Podpriečinok"
 
-#: src/postulo_imap/sync.py:53
+#: src/postulo_imap/mailbox.py:173
+#, python-format
+msgid "The folder “%(folder)s” could not be opened."
+msgstr ""
+
+#: src/postulo_imap/mailbox.py:193
+msgid "The mailbox refused the search."
+msgstr ""
+
+#: src/postulo_imap/mailbox.py:202
+msgid "The mailbox refused to hand over the messages."
+msgstr ""
+
+#: src/postulo_imap/sync.py:49
 #, draft
 msgid "TLS (port 993)"
 msgstr "TLS (port 993)"
 
-#: src/postulo_imap/sync.py:107
+#: src/postulo_imap/sync.py:103
 #, draft
 msgid "Used only when messages are moved. Created if missing."
 msgstr "Používa sa len pri presúvaní správ. Ak chýba, vytvorí sa."
 
-#: src/postulo_imap/sync.py:58
+#: src/postulo_imap/sync.py:54
 #, draft
 msgid "Username"
 msgstr "Používateľské meno"

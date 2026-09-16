@@ -1,0 +1,60 @@
+{
+  "language": "es",
+  "name": "Español",
+  "dates": [
+    "\\b(\\d{1,2}[/.-]\\d{1,2}[/.-]\\d{2,4})(?:\\s*,?\\s*(?:a las\\s*)?(\\d{1,2}[:h]\\d{2}))?",
+    "\\b(\\d{4}-\\d{2}-\\d{2})(?:[ T](\\d{1,2}:\\d{2}))?",
+    "\\b(\\d{1,2}\\s+de\\s+(?:enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|setiembre|octubre|noviembre|diciembre)(?:\\s+de\\s+\\d{4})?)(?:\\s*,?\\s*(?:a las\\s*)?(\\d{1,2}[:h]\\d{2}))?"
+  ],
+  "kinds": [
+    {
+      "kind": "offer",
+      "patterns": [
+        "nos complace ofrecer(te|le)",
+        "queremos ofrecer(te|le) el puesto",
+        "oferta (de trabajo|de empleo|laboral)",
+        "carta de oferta"
+      ]
+    },
+    {
+      "kind": "rejected",
+      "patterns": [
+        "lamentamos (comunicar|informar)(te|le)",
+        "(tu|su) candidatura no (ha sido|fue) (seleccionada|elegida)",
+        "no (continuaremos|seguiremos) con (tu|su) candidatura",
+        "hemos decidido (continuar|seguir) con (otro|otra)",
+        "no se ajusta al perfil",
+        "guardaremos (tu|su) (cv|curr[íi]culum)"
+      ]
+    },
+    {
+      "kind": "interview",
+      "patterns": [
+        "invitar(te|le) a una (entrevista|conversaci[óo]n)",
+        "invitaci[óo]n a (una )?entrevista",
+        "(agendar|concertar|programar) una (entrevista|reuni[óo]n|llamada)",
+        "entrevista (telef[óo]nica|presencial|por v[íi]deo)",
+        "(tienes|tiene) disponibilidad"
+      ]
+    },
+    {
+      "kind": "assessment",
+      "patterns": [
+        "prueba (t[ée]cnica|escrita|en l[íi]nea|online)",
+        "evaluaci[óo]n (t[ée]cnica|en l[íi]nea|online)",
+        "ejercicio (t[ée]cnico|pr[áa]ctico)",
+        "cuestionario .{0,30}(completar|rellenar)"
+      ]
+    },
+    {
+      "kind": "acknowledged",
+      "patterns": [
+        "gracias por (tu|su) (candidatura|solicitud|inter[ée]s)",
+        "hemos recibido (tu|su) (candidatura|solicitud)",
+        "(tu|su) candidatura ha sido recibida",
+        "confirmaci[óo]n de (tu|su) (candidatura|solicitud)",
+        "estamos revisando (tu|su) candidatura"
+      ]
+    }
+  ]
+}

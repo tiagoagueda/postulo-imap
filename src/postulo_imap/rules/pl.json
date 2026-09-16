@@ -1,0 +1,59 @@
+{
+  "language": "pl",
+  "name": "Polski",
+  "dates": [
+    "\\b(\\d{1,2}\\.\\d{1,2}\\.\\d{2,4})(?:\\s*,?\\s*(?:o\\s*(?:godz\\.?|godzinie)?\\s*)?(\\d{1,2}[:.]\\d{2}))?",
+    "\\b(\\d{4}-\\d{2}-\\d{2})(?:[ T](\\d{1,2}:\\d{2}))?",
+    "\\b(\\d{1,2}\\s+(?:stycznia|lutego|marca|kwietnia|maja|czerwca|lipca|sierpnia|wrze[śs]nia|pa[źz]dziernika|listopada|grudnia)(?:\\s+\\d{4})?)(?:\\s*,?\\s*(?:o\\s*(?:godz\\.?|godzinie)?\\s*)?(\\d{1,2}[:.]\\d{2}))?"
+  ],
+  "kinds": [
+    {
+      "kind": "offer",
+      "patterns": [
+        "mamy przyjemno[śs][ćc] (zaproponowa[ćc]|z[łl]o[żz]y[ćc] ofert)",
+        "chcieliby[śs]my zaproponowa[ćc] (panu|pani|ci) (stanowisko|prac)",
+        "oferta (pracy|zatrudnienia)",
+        "propozycja (zatrudnienia|wsp[óo][łl]pracy)"
+      ]
+    },
+    {
+      "kind": "rejected",
+      "patterns": [
+        "z przykro[śs]ci[ąa] (informujemy|zawiadamiamy)",
+        "nie (zosta[łl]|zosta[łl]a|zosta[łl]o) zakwalifikowan",
+        "nie b[ęe]dziemy kontynuowa[ćc]",
+        "wybrali[śs]my inn(ego|[ąa]) kandydat",
+        "(pana|pani|twoja) kandydatura nie",
+        "zachowamy (pana|pani|twoje) (cv|dokumenty|zg[łl]oszenie)"
+      ]
+    },
+    {
+      "kind": "interview",
+      "patterns": [
+        "zapraszamy.{0,20}na (rozmow|spotkanie)",
+        "zaproszenie na (rozmow|spotkanie)",
+        "um[óo]wi[ćc] (si[ęe] na )?(rozmow|spotkanie)",
+        "rozmow(a|[ęe]) (kwalifikacyjn|rekrutacyjn)",
+        "czy (jest pan|jest pani|jeste[śs]) dost[ęe]pn"
+      ]
+    },
+    {
+      "kind": "assessment",
+      "patterns": [
+        "(test|zadanie) (techniczn|rekrutacyjn|online)",
+        "zadanie do (wykonania|rozwi[ąa]zania)",
+        "prosimy o (wype[łl]nienie|rozwi[ąa]zanie) (testu|ankiety|zadania)",
+        "ankiet[ęe] do wype[łl]nienia"
+      ]
+    },
+    {
+      "kind": "acknowledged",
+      "patterns": [
+        "dzi[ęe]kujemy za (przes[łl]anie|z[łl]o[żz]enie|nades[łl]anie|aplikacj|zainteresowanie)",
+        "otrzymali[śs]my (pana|pani|twoj[ąa])? ?(aplikacj|zg[łl]oszen|cv)",
+        "potwierdzenie (otrzymania|przyj[ęe]cia) (aplikacji|zg[łl]oszenia)",
+        "rozpatrujemy (pana|pani|twoj[ąa])? ?(aplikacj|kandydatur)"
+      ]
+    }
+  ]
+}

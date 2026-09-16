@@ -13,24 +13,20 @@ wants Postulo to touch nothing can turn both off.
 
 from __future__ import annotations
 
-import logging
-
 from django.utils.translation import gettext as _
 from django.utils.translation import gettext_lazy
 from postulo.applications.models import Application
 from postulo.applications.suggestions import suggest
-from postulo.plugins.base import FieldSpec, SyncReport, TestResult
+from postulo.plugins.api import FieldSpec, SyncReport, TestResult
 
 from . import __version__, classifying, mailbox
-from .mailbox import KEYWORD, Mailbox, MailboxError
+from .mailbox import KEYWORD, Mailbox, MailboxError, close
 from .matching import match
 
 #: How the person's mail is left afterwards.
 MARK_KEYWORD = "keyword"
 MARK_MOVE = "move"
 MARK_NOTHING = "nothing"
-
-logger = logging.getLogger(__name__)
 
 
 class ImapSync:
@@ -152,7 +148,7 @@ class ImapSync:
         except MailboxError as error:
             return TestResult(False, str(error))
         finally:
-            _close(client)
+            close(client)
         return TestResult(
             True,
             str(_("Signed in. %(count)d messages in “%(folder)s” are waiting to be read."))
@@ -222,13 +218,5 @@ class ImapSync:
                     % {"count": unmatched}
                 )
         finally:
-            _close(client)
+            close(client)
         return report
-
-
-def _close(client) -> None:
-    """Log out, and never let a failure to hang up hide what the run actually did."""
-    try:
-        client.logout()
-    except Exception:
-        logger.debug("The mailbox did not acknowledge the logout", exc_info=True)

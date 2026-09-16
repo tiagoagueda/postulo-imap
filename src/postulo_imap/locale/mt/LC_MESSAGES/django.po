@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Postulo\n"
 "Report-Msgid-Bugs-To: https://source.tiagoagueda.com/postulo/postulo/issues\n"
-"POT-Creation-Date: 2026-09-13 04:02+0000\n"
+"POT-Creation-Date: 2026-09-16 08:39+0000\n"
 "PO-Revision-Date: 2026-09-13 04:02+0000\n"
 "Last-Translator: Postulo contributors\n"
 "Language-Team: Malti\n"
@@ -16,163 +16,185 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n==0 || ( n%100>1 && n%100<11) ? 1 : (n%100>10 && n%100<20 ) ? 2 : 3);\n"
 "X-Generator: postulo scripts/messages.py\n"
 
-#: src/postulo_imap/sync.py:221
+#: src/postulo_imap/sync.py:217
 #, python-format, draft
 msgid "%(count)d could not be matched to an application; attach them by hand."
 msgstr "%(count)d ma setgħux jitqabblu ma' applikazzjoni; ehmiżhom manwalment."
 
-#: src/postulo_imap/sync.py:194
+#: src/postulo_imap/sync.py:190
 #, draft
 msgid "A message with no subject"
 msgstr "Messaġġ mingħajr suġġett"
 
-#: src/postulo_imap/sync.py:65
+#: src/postulo_imap/sync.py:61
 #, draft
 msgid ""
 "An app password wherever the server offers one; Gmail requires it with two-factor authentication on. Stored encrypted."
 msgstr ""
 "Password tal-app kull fejn is-server joffri waħda; Gmail jeħtieġha meta l-awtentikazzjoni b'żewġ fatturi tkun mixgħula. Maħżuna kriptata."
 
-#: src/postulo_imap/sync.py:88
+#: src/postulo_imap/mailbox.py:282
+msgid ""
+"Could not reach the server. Check the address, the port and the security."
+msgstr ""
+
+#: src/postulo_imap/sync.py:84
 #, python-format, draft
 msgid "Flag it with %(keyword)s"
 msgstr "Immarkah b'%(keyword)s"
 
-#: src/postulo_imap/sync.py:94
+#: src/postulo_imap/sync.py:90
 #, draft
 msgid ""
 "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means every recent message is read again; nothing is suggested twice either way."
 msgstr ""
 "L-immarkar ma jidhirx fil-biċċa l-kbira tal-klijenti u jżomm kull passata qasira. Jekk il-kaxxa tal-posta titħalla kif inhi, kull messaġġ riċenti jinqara mill-ġdid; fiż-żewġ każi xejn ma jiġi ssuġġerit darbtejn."
 
-#: src/postulo_imap/sync.py:73
+#: src/postulo_imap/sync.py:69
 #, draft
 msgid "Folder to read"
 msgstr "Folder x'taqra"
 
-#: src/postulo_imap/sync.py:45
+#: src/postulo_imap/sync.py:41
 #, draft
 msgid "For example imap.example.org."
 msgstr "Pereżempju imap.example.org."
 
-#: src/postulo_imap/sync.py:200
+#: src/postulo_imap/sync.py:196
 #, draft
 msgid "From"
 msgstr "Minn"
 
-#: src/postulo_imap/sync.py:115
+#: src/postulo_imap/sync.py:111
 #, draft
 msgid "How many days of mail a pass considers."
 msgstr "Kemm-il jum ta' posta tqis passata."
 
-#: src/postulo_imap/sync.py:90
+#: src/postulo_imap/sync.py:86
 #, draft
 msgid "Leave the mailbox untouched"
 msgstr "Ħalli l-kaxxa tal-posta kif inhi"
 
-#: src/postulo_imap/sync.py:111
+#: src/postulo_imap/sync.py:107
 #, draft
 msgid "Look back"
 msgstr "Ħares lura"
 
-#: src/postulo_imap/sync.py:40
+#: src/postulo_imap/sync.py:36
 #, draft
 msgid "Mailbox (IMAP)"
 msgstr "Kaxxa tal-posta (IMAP)"
 
-#: src/postulo_imap/sync.py:201
+#: src/postulo_imap/sync.py:197
 #, draft
 msgid "Matched by"
 msgstr "Imqabbel minn"
 
-#: src/postulo_imap/sync.py:89
+#: src/postulo_imap/sync.py:85
 #, draft
 msgid "Move it to a subfolder"
 msgstr "Mexxih f'subfolder"
 
-#: src/postulo_imap/sync.py:128
+#: src/postulo_imap/sync.py:124
 #, draft
 msgid "Name the folder to read. Postulo never reads the inbox."
 msgstr "Semmi l-folder x'taqra. Postulo qatt ma jaqra l-inbox."
 
-#: src/postulo_imap/sync.py:126
+#: src/postulo_imap/sync.py:122
 #, draft
 msgid "Name the subfolder to move messages to."
 msgstr "Semmi s-subfolder fejn jitmexxew il-messaġġi."
 
-#: src/postulo_imap/sync.py:201
+#: src/postulo_imap/sync.py:197
 #, draft
 msgid "nothing yet"
 msgstr "xejn s'issa"
 
-#: src/postulo_imap/sync.py:85
+#: src/postulo_imap/sync.py:81
 #, draft
 msgid "Once read"
 msgstr "Ladarba jinqara"
 
-#: src/postulo_imap/sync.py:77
+#: src/postulo_imap/sync.py:73
 #, draft
 msgid ""
 "One folder, never the inbox. Make a rule on your mail server that files recruiter mail here; Postulo reads nothing else."
 msgstr ""
 "Folder wieħed, qatt l-inbox. Agħmel regola fuq is-server tal-posta tiegħek li tpoġġi l-posta tar-recruiters hawn; Postulo ma jaqra xejn iktar."
 
-#: src/postulo_imap/sync.py:61
+#: src/postulo_imap/sync.py:57
 #, draft
 msgid "Password or app password"
 msgstr "Password jew password tal-app"
 
-#: src/postulo_imap/sync.py:47
+#: src/postulo_imap/sync.py:43
 #, draft
 msgid "Port"
 msgstr "Port"
 
-#: src/postulo_imap/sync.py:203
+#: src/postulo_imap/sync.py:199
 #, draft
 msgid "Recognised"
 msgstr "Magħruf"
 
-#: src/postulo_imap/sync.py:50
+#: src/postulo_imap/sync.py:46
 #, draft
 msgid "Security"
 msgstr "Sigurtà"
 
-#: src/postulo_imap/sync.py:45
+#: src/postulo_imap/sync.py:41
 #, draft
 msgid "Server"
 msgstr "Server"
 
-#: src/postulo_imap/sync.py:143
+#: src/postulo_imap/mailbox.py:290
+msgid "Sign-in refused. Check the username and the password."
+msgstr ""
+
+#: src/postulo_imap/sync.py:139
 #, python-format, draft
 msgid "Signed in, but there is no folder called “%(folder)s”."
 msgstr "Dħalt, imma m'hemm l-ebda folder jismu “%(folder)s”."
 
-#: src/postulo_imap/sync.py:158
+#: src/postulo_imap/sync.py:154
 #, python-format, draft
 msgid "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
 msgstr "Dħalt. %(count)d messaġġi f'“%(folder)s” qed jistennew li jinqraw."
 
-#: src/postulo_imap/sync.py:54
+#: src/postulo_imap/sync.py:50
 #, draft
 msgid "STARTTLS (port 143)"
 msgstr "STARTTLS (port 143)"
 
-#: src/postulo_imap/sync.py:103
+#: src/postulo_imap/sync.py:99
 #, draft
 msgid "Subfolder"
 msgstr "Subfolder"
 
-#: src/postulo_imap/sync.py:53
+#: src/postulo_imap/mailbox.py:173
+#, python-format
+msgid "The folder “%(folder)s” could not be opened."
+msgstr ""
+
+#: src/postulo_imap/mailbox.py:193
+msgid "The mailbox refused the search."
+msgstr ""
+
+#: src/postulo_imap/mailbox.py:202
+msgid "The mailbox refused to hand over the messages."
+msgstr ""
+
+#: src/postulo_imap/sync.py:49
 #, draft
 msgid "TLS (port 993)"
 msgstr "TLS (port 993)"
 
-#: src/postulo_imap/sync.py:107
+#: src/postulo_imap/sync.py:103
 #, draft
 msgid "Used only when messages are moved. Created if missing."
 msgstr "Jintuża biss meta l-messaġġi jitmexxew. Jinħoloq jekk ma jkunx hemm."
 
-#: src/postulo_imap/sync.py:58
+#: src/postulo_imap/sync.py:54
 #, draft
 msgid "Username"
 msgstr "Isem tal-utent"

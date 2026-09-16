@@ -37,7 +37,16 @@ packages = ["src/postulo_imap"]
 
 [dependency-groups]
 dev = [
-    "postulo @ git+https://source.tiagoagueda.com/postulo/postulo.git",
+    # The Postulo this plugin is released beside, named exactly rather than left as
+    # "whatever `main` is today": a plugin tested against tomorrow's core is not tested
+    # against the core anybody is running (postulo-imap#1).
+    #
+    # A commit rather than `v0.3.0` or the `0.3.0` branch, for now, because neither exists
+    # in a usable form: there is no 0.3.0 tag, and the `0.3.0` branch is a snapshot from
+    # before the work converged back onto `main` — it has neither the destination guard
+    # this plugin now connects through (postulo/postulo#215) nor the catalogue tool the
+    # tests call. This becomes `@v0.3.0` the day that tag is made.
+    "postulo @ git+https://source.tiagoagueda.com/postulo/postulo.git@5ee31c66aa278f5d189acf7e59031d3f56188b68",
     "pytest>=8.3",
     "pytest-django>=4.14",
     "ruff>=0.16",

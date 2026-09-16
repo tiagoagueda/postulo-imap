@@ -53,11 +53,16 @@ address against a contact you recorded; the sender's domain against the company'
 role title in the subject or body. When two applications answer equally well — two roles
 at one company — nothing is chosen, and you attach it by hand.
 
-**Classifying**, from the phrase lists in `src/postulo_imap/rules/`, English, French and
-Portuguese to start with. Rules, not a model: they are inspectable, translatable and wrong
-in ways you can see. The most consequential reading wins, so a message that both thanks
-you and invites you is an invitation. An invitation's dates are offered as the message
-wrote them, for you to put in the diary.
+**Classifying**, from the phrase lists in `src/postulo_imap/rules/`: German, English,
+Spanish, French, Italian, Dutch, Polish and Portuguese. Rules, not a model: they are
+inspectable, translatable and wrong in ways you can see. The most consequential reading
+wins, so a message that both thanks you and invites you is an invitation. An invitation's
+dates are offered as the message wrote them, for you to put in the diary.
+
+**A language with no phrase list is skipped, not guessed at.** Mail in one of the eight is
+read; anything else matches nothing, no suggestion is filed, and your mailbox is left as it
+was. Postulo's own interface speaks many more languages than this plugin can read mail in,
+so if your rejections arrive in a language that is not listed, the list is what to add.
 
 **Suggesting.** Every recognised message becomes a suggestion in
 **Applications → Suggestions**: what it says, which application, who it is from, which
@@ -71,8 +76,12 @@ Not the body, beyond that excerpt, and no attachments.
 ## Adding a language
 
 Copy `src/postulo_imap/rules/en.json`, translate the phrases, name the file after the
-language, and open a pull request. No code changes, and the tests will show you whether
-your patterns catch what they should.
+language, add it to the set named in `tests/test_imap.py`, and open a pull request. No code
+changes, and the tests will show you whether your patterns catch what they should.
+
+Keep to words that belong to your language. The files are tried in turn and the first match
+wins, so a pattern that reads equally well as English or Dutch will answer for those too,
+and the suggestion will name the wrong language.
 
 ## Develop
 

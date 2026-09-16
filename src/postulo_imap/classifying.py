@@ -8,6 +8,20 @@ date takes in that language. Adding a language is adding a file, not writing cod
 The kinds are tried in the order the file lists them, most consequential first, and the
 first that matches wins: a message that says both "we would like to invite you" and
 "thank you for your application" is an invitation.
+
+**What happens in a language with no file is worth saying plainly.** The files ship for
+German, English, Spanish, French, Italian, Dutch, Polish and Portuguese. A message in any
+other language matches nothing, is skipped, and no suggestion is filed — it is never
+guessed at, and the mailbox is left exactly as it was. That is the right failure and the
+wrong silence: somebody whose rejections are in Swedish sees a plugin that appears to work
+and files nothing. So the set is named in `tests/test_imap.py`, adding a language is adding
+a file and a line there, and the plugin's catalogues being translated into a language says
+nothing about whether its mail can be read (postulo-imap#1).
+
+The files are tried in turn, so a pattern that also reads as another language answers for
+that language too — the first file to match decides, and `de.json` is consulted before
+`en.json`. Each list therefore keeps to words that belong to its own language: "Online-Test"
+rather than a bare "online test" that is equally English.
 """
 
 from __future__ import annotations

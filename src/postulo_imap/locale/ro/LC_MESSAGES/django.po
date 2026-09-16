@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Postulo\n"
 "Report-Msgid-Bugs-To: https://source.tiagoagueda.com/postulo/postulo/issues\n"
-"POT-Creation-Date: 2026-09-13 04:02+0000\n"
+"POT-Creation-Date: 2026-09-16 08:39+0000\n"
 "PO-Revision-Date: 2026-09-13 04:02+0000\n"
 "Last-Translator: Postulo contributors\n"
 "Language-Team: română\n"
@@ -16,163 +16,185 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2);\n"
 "X-Generator: postulo scripts/messages.py\n"
 
-#: src/postulo_imap/sync.py:221
+#: src/postulo_imap/sync.py:217
 #, python-format, draft
 msgid "%(count)d could not be matched to an application; attach them by hand."
 msgstr "%(count)d nu au putut fi asociate unei candidaturi; atașează-le manual."
 
-#: src/postulo_imap/sync.py:194
+#: src/postulo_imap/sync.py:190
 #, draft
 msgid "A message with no subject"
 msgstr "Un mesaj fără subiect"
 
-#: src/postulo_imap/sync.py:65
+#: src/postulo_imap/sync.py:61
 #, draft
 msgid ""
 "An app password wherever the server offers one; Gmail requires it with two-factor authentication on. Stored encrypted."
 msgstr ""
 "O parolă de aplicație oriunde serverul oferă una; Gmail o cere când autentificarea în doi pași este activată. Stocată criptat."
 
-#: src/postulo_imap/sync.py:88
+#: src/postulo_imap/mailbox.py:282
+msgid ""
+"Could not reach the server. Check the address, the port and the security."
+msgstr ""
+
+#: src/postulo_imap/sync.py:84
 #, python-format, draft
 msgid "Flag it with %(keyword)s"
 msgstr "Marchează cu %(keyword)s"
 
-#: src/postulo_imap/sync.py:94
+#: src/postulo_imap/sync.py:90
 #, draft
 msgid ""
 "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means every recent message is read again; nothing is suggested twice either way."
 msgstr ""
 "Marcarea este invizibilă în majoritatea clienților și menține fiecare trecere scurtă. Lăsarea căsuței neatinse înseamnă că fiecare mesaj recent este citit din nou; în ambele cazuri nimic nu este sugerat de două ori."
 
-#: src/postulo_imap/sync.py:73
+#: src/postulo_imap/sync.py:69
 #, draft
 msgid "Folder to read"
 msgstr "Dosarul de citit"
 
-#: src/postulo_imap/sync.py:45
+#: src/postulo_imap/sync.py:41
 #, draft
 msgid "For example imap.example.org."
 msgstr "De exemplu imap.example.org."
 
-#: src/postulo_imap/sync.py:200
+#: src/postulo_imap/sync.py:196
 #, draft
 msgid "From"
 msgstr "De la"
 
-#: src/postulo_imap/sync.py:115
+#: src/postulo_imap/sync.py:111
 #, draft
 msgid "How many days of mail a pass considers."
 msgstr "Câte zile de e-mail ia în considerare o trecere."
 
-#: src/postulo_imap/sync.py:90
+#: src/postulo_imap/sync.py:86
 #, draft
 msgid "Leave the mailbox untouched"
 msgstr "Lasă căsuța neatinsă"
 
-#: src/postulo_imap/sync.py:111
+#: src/postulo_imap/sync.py:107
 #, draft
 msgid "Look back"
 msgstr "Interval în urmă"
 
-#: src/postulo_imap/sync.py:40
+#: src/postulo_imap/sync.py:36
 #, draft
 msgid "Mailbox (IMAP)"
 msgstr "Căsuță poștală (IMAP)"
 
-#: src/postulo_imap/sync.py:201
+#: src/postulo_imap/sync.py:197
 #, draft
 msgid "Matched by"
 msgstr "Asociat după"
 
-#: src/postulo_imap/sync.py:89
+#: src/postulo_imap/sync.py:85
 #, draft
 msgid "Move it to a subfolder"
 msgstr "Mută într-un subdosar"
 
-#: src/postulo_imap/sync.py:128
+#: src/postulo_imap/sync.py:124
 #, draft
 msgid "Name the folder to read. Postulo never reads the inbox."
 msgstr "Indică dosarul de citit. Postulo nu citește niciodată inboxul."
 
-#: src/postulo_imap/sync.py:126
+#: src/postulo_imap/sync.py:122
 #, draft
 msgid "Name the subfolder to move messages to."
 msgstr "Indică subdosarul în care se mută mesajele."
 
-#: src/postulo_imap/sync.py:201
+#: src/postulo_imap/sync.py:197
 #, draft
 msgid "nothing yet"
 msgstr "nimic încă"
 
-#: src/postulo_imap/sync.py:85
+#: src/postulo_imap/sync.py:81
 #, draft
 msgid "Once read"
 msgstr "După citire"
 
-#: src/postulo_imap/sync.py:77
+#: src/postulo_imap/sync.py:73
 #, draft
 msgid ""
 "One folder, never the inbox. Make a rule on your mail server that files recruiter mail here; Postulo reads nothing else."
 msgstr ""
 "Un singur dosar, niciodată inboxul. Creează pe serverul tău de e-mail o regulă care pune aici e-mailurile de la recrutori; Postulo nu citește nimic altceva."
 
-#: src/postulo_imap/sync.py:61
+#: src/postulo_imap/sync.py:57
 #, draft
 msgid "Password or app password"
 msgstr "Parolă sau parolă de aplicație"
 
-#: src/postulo_imap/sync.py:47
+#: src/postulo_imap/sync.py:43
 #, draft
 msgid "Port"
 msgstr "Port"
 
-#: src/postulo_imap/sync.py:203
+#: src/postulo_imap/sync.py:199
 #, draft
 msgid "Recognised"
 msgstr "Recunoscute"
 
-#: src/postulo_imap/sync.py:50
+#: src/postulo_imap/sync.py:46
 #, draft
 msgid "Security"
 msgstr "Securitate"
 
-#: src/postulo_imap/sync.py:45
+#: src/postulo_imap/sync.py:41
 #, draft
 msgid "Server"
 msgstr "Server"
 
-#: src/postulo_imap/sync.py:143
+#: src/postulo_imap/mailbox.py:290
+msgid "Sign-in refused. Check the username and the password."
+msgstr ""
+
+#: src/postulo_imap/sync.py:139
 #, python-format, draft
 msgid "Signed in, but there is no folder called “%(folder)s”."
 msgstr "Autentificat, dar nu există niciun dosar numit „%(folder)s”."
 
-#: src/postulo_imap/sync.py:158
+#: src/postulo_imap/sync.py:154
 #, python-format, draft
 msgid "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
 msgstr "Autentificat. %(count)d mesaje din „%(folder)s” așteaptă să fie citite."
 
-#: src/postulo_imap/sync.py:54
+#: src/postulo_imap/sync.py:50
 #, draft
 msgid "STARTTLS (port 143)"
 msgstr "STARTTLS (port 143)"
 
-#: src/postulo_imap/sync.py:103
+#: src/postulo_imap/sync.py:99
 #, draft
 msgid "Subfolder"
 msgstr "Subdosar"
 
-#: src/postulo_imap/sync.py:53
+#: src/postulo_imap/mailbox.py:173
+#, python-format
+msgid "The folder “%(folder)s” could not be opened."
+msgstr ""
+
+#: src/postulo_imap/mailbox.py:193
+msgid "The mailbox refused the search."
+msgstr ""
+
+#: src/postulo_imap/mailbox.py:202
+msgid "The mailbox refused to hand over the messages."
+msgstr ""
+
+#: src/postulo_imap/sync.py:49
 #, draft
 msgid "TLS (port 993)"
 msgstr "TLS (port 993)"
 
-#: src/postulo_imap/sync.py:107
+#: src/postulo_imap/sync.py:103
 #, draft
 msgid "Used only when messages are moved. Created if missing."
 msgstr "Folosit doar când mesajele sunt mutate. Creat dacă lipsește."
 
-#: src/postulo_imap/sync.py:58
+#: src/postulo_imap/sync.py:54
 #, draft
 msgid "Username"
 msgstr "Nume de utilizator"

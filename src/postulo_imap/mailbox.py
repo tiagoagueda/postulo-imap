@@ -5,6 +5,23 @@ read is deliberately small: the headers that identify and thread a message, the 
 sender, the subject, and the first plain-text part, shortened. The body is not stored
 anywhere by default — only a short excerpt travels with a suggestion — because a job
 tracker holding a copy of somebody's mailbox is a different and much larger promise.
+
+**Where this is allowed to dial is not the plugin's decision.** A server and a port are
+typed into a form by whoever owns the connection, and a form that opens a socket wherever
+it is pointed is a port scanner and a way onto the loopback interface of the machine
+Postulo runs on. So the host goes through ``approve_host`` first: it resolves the name,
+holds every address it answers with to the instance's policy
+(``POSTULO_CONNECTIONS_ALLOW_PRIVATE``, which is how somebody says their mail server is on
+their own network), and hands back the address to connect to. Connecting to *that* address
+rather than to the name again is the point — a name is free to answer publicly for a check
+and with ``127.0.0.1`` a moment later — and the name is kept for TLS, because a
+certificate proved against a number never matches.
+
+**What goes wrong is said plainly and no more than that.** Whatever the far side answered
+— a refused banner, a protocol error, the exact reason a sign-in failed — goes to the log,
+where the operator can read it, and never into the message the person sees: *Test* is
+reachable by anyone who can add a connection, and a verbatim error is how a form becomes a
+way to read what is listening on a network it should not be able to see at all.
 """
 
 from __future__ import annotations
@@ -12,12 +29,16 @@ from __future__ import annotations
 import datetime as dt
 import email
 import email.utils
+import logging
 import re
+import ssl
 from dataclasses import dataclass, field
 from email.header import decode_header, make_header
 from email.message import Message
 
+from django.utils.translation import gettext as _
 from imapclient import IMAPClient
+from postulo.plugins.api import DestinationRefused, approve_host
 
 #: What travels with a suggestion, at most. An advert-length excerpt is plenty to
 #: recognise a message by; the mailbox keeps the rest.
@@ -26,6 +47,10 @@ EXCERPT_CHARS = 2000
 DEFAULT_SINCE_DAYS = 30
 #: The IMAP keyword put on a message once it has been read.
 KEYWORD = "$Postulo"
+#: Long enough for a slow server, short enough that a scheduled pass cannot hang on one.
+TIMEOUT = 30
+
+logger = logging.getLogger(__name__)
 
 
 class MailboxError(Exception):
@@ -143,8 +168,9 @@ class Mailbox:
         try:
             self.client.select_folder(self.folder, readonly=readonly)
         except Exception as error:
+            logger.info("The folder %r could not be opened: %s", self.folder, error)
             raise MailboxError(
-                f"the folder {self.folder!r} could not be opened: {error}"
+                str(_("The folder “%(folder)s” could not be opened.")) % {"folder": self.folder}
             ) from error
 
     def unread_uids(
@@ -163,7 +189,8 @@ class Mailbox:
         try:
             return sorted(self.client.search(criteria))
         except Exception as error:
-            raise MailboxError(f"the mailbox refused the search: {error}") from error
+            logger.info("The mailbox refused the search: %s", error)
+            raise MailboxError(str(_("The mailbox refused the search."))) from error
 
     def fetch(self, uids: list[int]) -> list[Mail]:
         if not uids:
@@ -171,7 +198,8 @@ class Mailbox:
         try:
             answer = self.client.fetch(uids, ["BODY.PEEK[]"])
         except Exception as error:
-            raise MailboxError(f"the mailbox refused to hand over messages: {error}") from error
+            logger.info("The mailbox refused to hand over messages: %s", error)
+            raise MailboxError(str(_("The mailbox refused to hand over the messages."))) from error
         mails = []
         for uid, parts in answer.items():
             raw = parts.get(b"BODY[]") or parts.get(b"RFC822") or b""
@@ -191,18 +219,74 @@ class Mailbox:
         self.client.move(uids, destination)
 
 
+class _ProvesTheName(ssl.SSLContext):
+    """Dial the address that was approved; prove the certificate against the name typed.
+
+    IMAPClient takes the TLS server name from whatever it was told to connect to, which is
+    the approved address here — and a certificate checked against a number never matches.
+    So the name travels with the context and is put back at the moment the socket is
+    wrapped, which covers both ways this plugin gets to TLS: implicit on port 993, and
+    ``STARTTLS`` on 143. It is the shape ``postulo.core.destinations`` uses for SMTP and
+    ``plugins/http.py`` uses with ``sni_hostname``, for the same reason.
+    """
+
+    #: The host somebody typed, which is what the certificate has to be good for.
+    server_name: str = ""
+
+    def wrap_socket(self, sock, *args, **kwargs):
+        return super().wrap_socket(sock, *args, **{**kwargs, "server_hostname": self.server_name})
+
+
+def tls_context(server_name: str) -> ssl.SSLContext:
+    """Python's default client context, told which name it is proving."""
+    context = ssl.create_default_context()
+    context.__class__ = _ProvesTheName
+    context.server_name = server_name
+    return context
+
+
+def close(client) -> None:
+    """Log out, and never let a failure to hang up hide what the run actually did."""
+    try:
+        client.logout()
+    except Exception:
+        logger.debug("The mailbox did not acknowledge the logout", exc_info=True)
+
+
 def connect(config: dict) -> IMAPClient:
-    """Open the account. The caller closes it."""
+    """Open the account, at an address the instance's policy allows. The caller closes it.
+
+    Two failures, two answers, and neither of them repeats what the server said. *Could not
+    reach it* is an address, a port or a security setting that is wrong, or a server that is
+    down; *sign-in refused* is a username or a password. Anything more precise — which of
+    the two a mailbox admitted to, how long it took, what its banner says — is exactly the
+    reconnaissance the destination check exists to prevent.
+    """
     host = str(config.get("host", "")).strip()
-    if not host:
-        raise MailboxError("no server to connect to")
     port = int(config.get("port") or 993)
     starttls = str(config.get("security")) == "starttls"
     try:
-        client = IMAPClient(host, port=port, ssl=not starttls, timeout=30)
+        address = approve_host(host)
+    except DestinationRefused as error:
+        raise MailboxError(str(error)) from error
+    context = tls_context(host)
+    try:
+        client = IMAPClient(
+            address, port=port, ssl=not starttls, ssl_context=context, timeout=TIMEOUT
+        )
         if starttls:
-            client.starttls()
+            client.starttls(context)
+    except Exception as error:
+        logger.info("%s:%s did not answer: %s: %s", host, port, type(error).__name__, error)
+        raise MailboxError(
+            str(_("Could not reach the server. Check the address, the port and the security."))
+        ) from error
+    try:
         client.login(str(config.get("username", "")), str(config.get("password", "")))
     except Exception as error:
-        raise MailboxError(f"{type(error).__name__}: {error}") from error
+        logger.info("%s refused the sign-in: %s: %s", host, type(error).__name__, error)
+        close(client)
+        raise MailboxError(
+            str(_("Sign-in refused. Check the username and the password."))
+        ) from error
     return client

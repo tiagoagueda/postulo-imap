@@ -17,4 +17,13 @@ this file; the rule lists live in ``rules/`` as data, so a language is added wit
 writing code.
 """
 
-__version__ = "0.1.0"
+from importlib.metadata import PackageNotFoundError, version
+
+try:
+    #: What Postulo shows beside the connection: the version that was *installed*, read from
+    #: the package's own metadata rather than typed here. Two numbers, one in
+    #: `pyproject.toml` and one in the source, drift the first time only one of them is
+    #: raised, and the one people read is the wrong one.
+    __version__ = version("postulo-imap")
+except PackageNotFoundError:  # pragma: no cover - running from a checkout, uninstalled
+    __version__ = "0.0.0"
