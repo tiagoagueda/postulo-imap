@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Postulo\n"
 "Report-Msgid-Bugs-To: https://source.tiagoagueda.com/postulo/postulo/issues\n"
-"POT-Creation-Date: 2026-09-16 08:39+0000\n"
+"POT-Creation-Date: 2026-09-21 15:24+0000\n"
 "PO-Revision-Date: 2026-09-13 04:02+0000\n"
 "Last-Translator: Postulo contributors\n"
 "Language-Team: Deutsch\n"
@@ -16,18 +16,18 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: postulo scripts/messages.py\n"
 
-#: src/postulo_imap/sync.py:217
+#: src/postulo_imap/sync.py:221
 #, python-format, draft
 msgid "%(count)d could not be matched to an application; attach them by hand."
 msgstr ""
 "%(count)d konnten keiner Bewerbung zugeordnet werden; hängen Sie sie von Hand an."
 
-#: src/postulo_imap/sync.py:190
+#: src/postulo_imap/sync.py:194
 #, draft
 msgid "A message with no subject"
 msgstr "Eine Nachricht ohne Betreff"
 
-#: src/postulo_imap/sync.py:61
+#: src/postulo_imap/sync.py:65
 #, draft
 msgid ""
 "An app password wherever the server offers one; Gmail requires it with two-factor authentication on. Stored encrypted."
@@ -39,111 +39,111 @@ msgid ""
 "Could not reach the server. Check the address, the port and the security."
 msgstr ""
 
-#: src/postulo_imap/sync.py:84
+#: src/postulo_imap/sync.py:88
 #, python-format, draft
 msgid "Flag it with %(keyword)s"
 msgstr "Mit %(keyword)s markieren"
 
-#: src/postulo_imap/sync.py:90
+#: src/postulo_imap/sync.py:94
 #, draft
 msgid ""
 "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means every recent message is read again; nothing is suggested twice either way."
 msgstr ""
 "Die Markierung ist in den meisten Programmen unsichtbar und hält jeden Durchlauf kurz. Bleibt das Postfach unberührt, wird jede neuere Nachricht erneut gelesen; doppelt vorgeschlagen wird so oder so nichts."
 
-#: src/postulo_imap/sync.py:69
+#: src/postulo_imap/sync.py:73
 #, draft
 msgid "Folder to read"
 msgstr "Zu lesender Ordner"
 
-#: src/postulo_imap/sync.py:41
+#: src/postulo_imap/sync.py:45
 #, draft
 msgid "For example imap.example.org."
 msgstr "Zum Beispiel imap.example.org."
 
-#: src/postulo_imap/sync.py:196
+#: src/postulo_imap/sync.py:200
 #, draft
 msgid "From"
 msgstr "Von"
 
-#: src/postulo_imap/sync.py:111
+#: src/postulo_imap/sync.py:115
 #, draft
 msgid "How many days of mail a pass considers."
 msgstr "Wie viele Tage Post ein Durchlauf berücksichtigt."
 
-#: src/postulo_imap/sync.py:86
+#: src/postulo_imap/sync.py:90
 #, draft
 msgid "Leave the mailbox untouched"
 msgstr "Postfach unberührt lassen"
 
-#: src/postulo_imap/sync.py:107
+#: src/postulo_imap/sync.py:111
 #, draft
 msgid "Look back"
 msgstr "Rückblick"
 
-#: src/postulo_imap/sync.py:36
+#: src/postulo_imap/sync.py:40
 #, draft
 msgid "Mailbox (IMAP)"
 msgstr "Postfach (IMAP)"
 
-#: src/postulo_imap/sync.py:197
+#: src/postulo_imap/sync.py:201
 #, draft
 msgid "Matched by"
 msgstr "Zugeordnet über"
 
-#: src/postulo_imap/sync.py:85
+#: src/postulo_imap/sync.py:89
 #, draft
 msgid "Move it to a subfolder"
 msgstr "In einen Unterordner verschieben"
 
-#: src/postulo_imap/sync.py:124
+#: src/postulo_imap/sync.py:128
 #, draft
 msgid "Name the folder to read. Postulo never reads the inbox."
 msgstr "Nennen Sie den zu lesenden Ordner. Postulo liest nie den Posteingang."
 
-#: src/postulo_imap/sync.py:122
+#: src/postulo_imap/sync.py:126
 #, draft
 msgid "Name the subfolder to move messages to."
 msgstr "Nennen Sie den Unterordner, in den Nachrichten verschoben werden."
 
-#: src/postulo_imap/sync.py:197
+#: src/postulo_imap/sync.py:201
 #, draft
 msgid "nothing yet"
 msgstr "noch nichts"
 
-#: src/postulo_imap/sync.py:81
+#: src/postulo_imap/sync.py:85
 #, draft
 msgid "Once read"
 msgstr "Nach dem Lesen"
 
-#: src/postulo_imap/sync.py:73
+#: src/postulo_imap/sync.py:77
 #, draft
 msgid ""
 "One folder, never the inbox. Make a rule on your mail server that files recruiter mail here; Postulo reads nothing else."
 msgstr ""
 "Ein Ordner, nie der Posteingang. Legen Sie auf Ihrem Mailserver eine Regel an, die Recruiter-Post hier ablegt; Postulo liest nichts anderes."
 
-#: src/postulo_imap/sync.py:57
+#: src/postulo_imap/sync.py:61
 #, draft
 msgid "Password or app password"
 msgstr "Passwort oder App-Passwort"
 
-#: src/postulo_imap/sync.py:43
+#: src/postulo_imap/sync.py:47
 #, draft
 msgid "Port"
 msgstr "Port"
 
-#: src/postulo_imap/sync.py:199
+#: src/postulo_imap/sync.py:203
 #, draft
 msgid "Recognised"
 msgstr "Erkannt"
 
-#: src/postulo_imap/sync.py:46
+#: src/postulo_imap/sync.py:50
 #, draft
 msgid "Security"
 msgstr "Sicherheit"
 
-#: src/postulo_imap/sync.py:41
+#: src/postulo_imap/sync.py:45
 #, draft
 msgid "Server"
 msgstr "Server"
@@ -152,23 +152,23 @@ msgstr "Server"
 msgid "Sign-in refused. Check the username and the password."
 msgstr ""
 
-#: src/postulo_imap/sync.py:139
+#: src/postulo_imap/sync.py:143
 #, python-format, draft
 msgid "Signed in, but there is no folder called “%(folder)s”."
 msgstr "Angemeldet, aber es gibt keinen Ordner namens „%(folder)s“."
 
-#: src/postulo_imap/sync.py:154
+#: src/postulo_imap/sync.py:158
 #, python-format, draft
 msgid "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
 msgstr ""
 "Angemeldet. %(count)d Nachrichten in „%(folder)s“ warten darauf, gelesen zu werden."
 
-#: src/postulo_imap/sync.py:50
+#: src/postulo_imap/sync.py:54
 #, draft
 msgid "STARTTLS (port 143)"
 msgstr "STARTTLS (Port 143)"
 
-#: src/postulo_imap/sync.py:99
+#: src/postulo_imap/sync.py:103
 #, draft
 msgid "Subfolder"
 msgstr "Unterordner"
@@ -186,18 +186,18 @@ msgstr ""
 msgid "The mailbox refused to hand over the messages."
 msgstr ""
 
-#: src/postulo_imap/sync.py:49
+#: src/postulo_imap/sync.py:53
 #, draft
 msgid "TLS (port 993)"
 msgstr "TLS (Port 993)"
 
-#: src/postulo_imap/sync.py:103
+#: src/postulo_imap/sync.py:107
 #, draft
 msgid "Used only when messages are moved. Created if missing."
 msgstr ""
 "Nur beim Verschieben von Nachrichten verwendet. Wird angelegt, falls er fehlt."
 
-#: src/postulo_imap/sync.py:54
+#: src/postulo_imap/sync.py:58
 #, draft
 msgid "Username"
 msgstr "Benutzername"

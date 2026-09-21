@@ -15,9 +15,13 @@ from __future__ import annotations
 
 from django.utils.translation import gettext as _
 from django.utils.translation import gettext_lazy
-from postulo.applications.models import Application
-from postulo.applications.suggestions import suggest
-from postulo.plugins.api import FieldSpec, SyncReport, TestResult
+from postulo.plugins.api import (
+    Application,
+    FieldSpec,
+    SyncReport,
+    TestResult,
+    suggest,
+)
 
 from . import __version__, classifying, mailbox
 from .mailbox import KEYWORD, Mailbox, MailboxError, close

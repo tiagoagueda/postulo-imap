@@ -21,8 +21,7 @@ import re
 from dataclasses import dataclass
 from urllib.parse import urlsplit
 
-from postulo.applications.models import Application, Suggestion
-from postulo.jobs.models import Contact
+from postulo.plugins.api import Application, Contact, Suggestion
 
 #: Domains that host mailboxes for everyone, so a match on them means nothing.
 PUBLIC_DOMAINS = frozenset(

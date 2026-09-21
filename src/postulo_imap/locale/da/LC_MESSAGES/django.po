@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Postulo\n"
 "Report-Msgid-Bugs-To: https://source.tiagoagueda.com/postulo/postulo/issues\n"
-"POT-Creation-Date: 2026-09-16 08:39+0000\n"
+"POT-Creation-Date: 2026-09-21 15:24+0000\n"
 "PO-Revision-Date: 2026-09-13 04:02+0000\n"
 "Last-Translator: Postulo contributors\n"
 "Language-Team: dansk\n"
@@ -16,17 +16,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: postulo scripts/messages.py\n"
 
-#: src/postulo_imap/sync.py:217
+#: src/postulo_imap/sync.py:221
 #, python-format, draft
 msgid "%(count)d could not be matched to an application; attach them by hand."
 msgstr "%(count)d kunne ikke knyttes til en ansøgning; vedhæft dem manuelt."
 
-#: src/postulo_imap/sync.py:190
+#: src/postulo_imap/sync.py:194
 #, draft
 msgid "A message with no subject"
 msgstr "En besked uden emne"
 
-#: src/postulo_imap/sync.py:61
+#: src/postulo_imap/sync.py:65
 #, draft
 msgid ""
 "An app password wherever the server offers one; Gmail requires it with two-factor authentication on. Stored encrypted."
@@ -38,111 +38,111 @@ msgid ""
 "Could not reach the server. Check the address, the port and the security."
 msgstr ""
 
-#: src/postulo_imap/sync.py:84
+#: src/postulo_imap/sync.py:88
 #, python-format, draft
 msgid "Flag it with %(keyword)s"
 msgstr "Markér den med %(keyword)s"
 
-#: src/postulo_imap/sync.py:90
+#: src/postulo_imap/sync.py:94
 #, draft
 msgid ""
 "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means every recent message is read again; nothing is suggested twice either way."
 msgstr ""
 "Markering er usynlig i de fleste klienter og holder hver gennemgang kort. Lades postkassen urørt, læses hver nylig besked igen; intet foreslås to gange uanset hvad."
 
-#: src/postulo_imap/sync.py:69
+#: src/postulo_imap/sync.py:73
 #, draft
 msgid "Folder to read"
 msgstr "Mappe at læse"
 
-#: src/postulo_imap/sync.py:41
+#: src/postulo_imap/sync.py:45
 #, draft
 msgid "For example imap.example.org."
 msgstr "For eksempel imap.example.org."
 
-#: src/postulo_imap/sync.py:196
+#: src/postulo_imap/sync.py:200
 #, draft
 msgid "From"
 msgstr "Fra"
 
-#: src/postulo_imap/sync.py:111
+#: src/postulo_imap/sync.py:115
 #, draft
 msgid "How many days of mail a pass considers."
 msgstr "Hvor mange dages post en gennemgang tager med."
 
-#: src/postulo_imap/sync.py:86
+#: src/postulo_imap/sync.py:90
 #, draft
 msgid "Leave the mailbox untouched"
 msgstr "Lad postkassen være urørt"
 
-#: src/postulo_imap/sync.py:107
+#: src/postulo_imap/sync.py:111
 #, draft
 msgid "Look back"
 msgstr "Se tilbage"
 
-#: src/postulo_imap/sync.py:36
+#: src/postulo_imap/sync.py:40
 #, draft
 msgid "Mailbox (IMAP)"
 msgstr "Postkasse (IMAP)"
 
-#: src/postulo_imap/sync.py:197
+#: src/postulo_imap/sync.py:201
 #, draft
 msgid "Matched by"
 msgstr "Matchet på"
 
-#: src/postulo_imap/sync.py:85
+#: src/postulo_imap/sync.py:89
 #, draft
 msgid "Move it to a subfolder"
 msgstr "Flyt den til en undermappe"
 
-#: src/postulo_imap/sync.py:124
+#: src/postulo_imap/sync.py:128
 #, draft
 msgid "Name the folder to read. Postulo never reads the inbox."
 msgstr "Angiv mappen, der skal læses. Postulo læser aldrig indbakken."
 
-#: src/postulo_imap/sync.py:122
+#: src/postulo_imap/sync.py:126
 #, draft
 msgid "Name the subfolder to move messages to."
 msgstr "Angiv undermappen, som beskeder skal flyttes til."
 
-#: src/postulo_imap/sync.py:197
+#: src/postulo_imap/sync.py:201
 #, draft
 msgid "nothing yet"
 msgstr "intet endnu"
 
-#: src/postulo_imap/sync.py:81
+#: src/postulo_imap/sync.py:85
 #, draft
 msgid "Once read"
 msgstr "Når læst"
 
-#: src/postulo_imap/sync.py:73
+#: src/postulo_imap/sync.py:77
 #, draft
 msgid ""
 "One folder, never the inbox. Make a rule on your mail server that files recruiter mail here; Postulo reads nothing else."
 msgstr ""
 "Én mappe, aldrig indbakken. Lav en regel på din mailserver, der lægger rekrutteringsmail her; Postulo læser intet andet."
 
-#: src/postulo_imap/sync.py:57
+#: src/postulo_imap/sync.py:61
 #, draft
 msgid "Password or app password"
 msgstr "Adgangskode eller app-adgangskode"
 
-#: src/postulo_imap/sync.py:43
+#: src/postulo_imap/sync.py:47
 #, draft
 msgid "Port"
 msgstr "Port"
 
-#: src/postulo_imap/sync.py:199
+#: src/postulo_imap/sync.py:203
 #, draft
 msgid "Recognised"
 msgstr "Genkendt"
 
-#: src/postulo_imap/sync.py:46
+#: src/postulo_imap/sync.py:50
 #, draft
 msgid "Security"
 msgstr "Sikkerhed"
 
-#: src/postulo_imap/sync.py:41
+#: src/postulo_imap/sync.py:45
 #, draft
 msgid "Server"
 msgstr "Server"
@@ -151,22 +151,22 @@ msgstr "Server"
 msgid "Sign-in refused. Check the username and the password."
 msgstr ""
 
-#: src/postulo_imap/sync.py:139
+#: src/postulo_imap/sync.py:143
 #, python-format, draft
 msgid "Signed in, but there is no folder called “%(folder)s”."
 msgstr "Logget ind, men der er ingen mappe ved navn “%(folder)s”."
 
-#: src/postulo_imap/sync.py:154
+#: src/postulo_imap/sync.py:158
 #, python-format, draft
 msgid "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
 msgstr "Logget ind. %(count)d beskeder i “%(folder)s” venter på at blive læst."
 
-#: src/postulo_imap/sync.py:50
+#: src/postulo_imap/sync.py:54
 #, draft
 msgid "STARTTLS (port 143)"
 msgstr "STARTTLS (port 143)"
 
-#: src/postulo_imap/sync.py:99
+#: src/postulo_imap/sync.py:103
 #, draft
 msgid "Subfolder"
 msgstr "Undermappe"
@@ -184,17 +184,17 @@ msgstr ""
 msgid "The mailbox refused to hand over the messages."
 msgstr ""
 
-#: src/postulo_imap/sync.py:49
+#: src/postulo_imap/sync.py:53
 #, draft
 msgid "TLS (port 993)"
 msgstr "TLS (port 993)"
 
-#: src/postulo_imap/sync.py:103
+#: src/postulo_imap/sync.py:107
 #, draft
 msgid "Used only when messages are moved. Created if missing."
 msgstr "Bruges kun, når beskeder flyttes. Oprettes, hvis den mangler."
 
-#: src/postulo_imap/sync.py:54
+#: src/postulo_imap/sync.py:58
 #, draft
 msgid "Username"
 msgstr "Brugernavn"

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Postulo\n"
 "Report-Msgid-Bugs-To: https://source.tiagoagueda.com/postulo/postulo/issues\n"
-"POT-Creation-Date: 2026-09-16 08:39+0000\n"
+"POT-Creation-Date: 2026-09-21 15:24+0000\n"
 "PO-Revision-Date: 2026-09-13 04:02+0000\n"
 "Last-Translator: Postulo contributors\n"
 "Language-Team: suomi\n"
@@ -16,17 +16,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: postulo scripts/messages.py\n"
 
-#: src/postulo_imap/sync.py:217
+#: src/postulo_imap/sync.py:221
 #, python-format, draft
 msgid "%(count)d could not be matched to an application; attach them by hand."
 msgstr "%(count)d ei voitu liittää hakemukseen; liitä ne käsin."
 
-#: src/postulo_imap/sync.py:190
+#: src/postulo_imap/sync.py:194
 #, draft
 msgid "A message with no subject"
 msgstr "Viesti ilman aihetta"
 
-#: src/postulo_imap/sync.py:61
+#: src/postulo_imap/sync.py:65
 #, draft
 msgid ""
 "An app password wherever the server offers one; Gmail requires it with two-factor authentication on. Stored encrypted."
@@ -38,111 +38,111 @@ msgid ""
 "Could not reach the server. Check the address, the port and the security."
 msgstr ""
 
-#: src/postulo_imap/sync.py:84
+#: src/postulo_imap/sync.py:88
 #, python-format, draft
 msgid "Flag it with %(keyword)s"
 msgstr "Merkitse lipulla %(keyword)s"
 
-#: src/postulo_imap/sync.py:90
+#: src/postulo_imap/sync.py:94
 #, draft
 msgid ""
 "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means every recent message is read again; nothing is suggested twice either way."
 msgstr ""
 "Liputus on useimmissa asiakasohjelmissa näkymätön ja pitää jokaisen kierroksen lyhyenä. Jos postilaatikko jätetään koskematta, jokainen tuore viesti luetaan uudelleen; kummassakaan tapauksessa mitään ei ehdoteta kahdesti."
 
-#: src/postulo_imap/sync.py:69
+#: src/postulo_imap/sync.py:73
 #, draft
 msgid "Folder to read"
 msgstr "Luettava kansio"
 
-#: src/postulo_imap/sync.py:41
+#: src/postulo_imap/sync.py:45
 #, draft
 msgid "For example imap.example.org."
 msgstr "Esimerkiksi imap.example.org."
 
-#: src/postulo_imap/sync.py:196
+#: src/postulo_imap/sync.py:200
 #, draft
 msgid "From"
 msgstr "Lähettäjä"
 
-#: src/postulo_imap/sync.py:111
+#: src/postulo_imap/sync.py:115
 #, draft
 msgid "How many days of mail a pass considers."
 msgstr "Kuinka monen päivän postin yksi kierros huomioi."
 
-#: src/postulo_imap/sync.py:86
+#: src/postulo_imap/sync.py:90
 #, draft
 msgid "Leave the mailbox untouched"
 msgstr "Jätä postilaatikko koskematta"
 
-#: src/postulo_imap/sync.py:107
+#: src/postulo_imap/sync.py:111
 #, draft
 msgid "Look back"
 msgstr "Tarkastelujakso"
 
-#: src/postulo_imap/sync.py:36
+#: src/postulo_imap/sync.py:40
 #, draft
 msgid "Mailbox (IMAP)"
 msgstr "Postilaatikko (IMAP)"
 
-#: src/postulo_imap/sync.py:197
+#: src/postulo_imap/sync.py:201
 #, draft
 msgid "Matched by"
 msgstr "Yhdistämisperuste"
 
-#: src/postulo_imap/sync.py:85
+#: src/postulo_imap/sync.py:89
 #, draft
 msgid "Move it to a subfolder"
 msgstr "Siirrä alikansioon"
 
-#: src/postulo_imap/sync.py:124
+#: src/postulo_imap/sync.py:128
 #, draft
 msgid "Name the folder to read. Postulo never reads the inbox."
 msgstr "Nimeä luettava kansio. Postulo ei koskaan lue saapuneet-kansiota."
 
-#: src/postulo_imap/sync.py:122
+#: src/postulo_imap/sync.py:126
 #, draft
 msgid "Name the subfolder to move messages to."
 msgstr "Nimeä alikansio, johon viestit siirretään."
 
-#: src/postulo_imap/sync.py:197
+#: src/postulo_imap/sync.py:201
 #, draft
 msgid "nothing yet"
 msgstr "ei vielä mitään"
 
-#: src/postulo_imap/sync.py:81
+#: src/postulo_imap/sync.py:85
 #, draft
 msgid "Once read"
 msgstr "Lukemisen jälkeen"
 
-#: src/postulo_imap/sync.py:73
+#: src/postulo_imap/sync.py:77
 #, draft
 msgid ""
 "One folder, never the inbox. Make a rule on your mail server that files recruiter mail here; Postulo reads nothing else."
 msgstr ""
 "Yksi kansio, ei koskaan saapuneet-kansio. Tee sähköpostipalvelimellesi sääntö, joka ohjaa rekrytoijien postin tänne; Postulo ei lue mitään muuta."
 
-#: src/postulo_imap/sync.py:57
+#: src/postulo_imap/sync.py:61
 #, draft
 msgid "Password or app password"
 msgstr "Salasana tai sovellussalasana"
 
-#: src/postulo_imap/sync.py:43
+#: src/postulo_imap/sync.py:47
 #, draft
 msgid "Port"
 msgstr "Portti"
 
-#: src/postulo_imap/sync.py:199
+#: src/postulo_imap/sync.py:203
 #, draft
 msgid "Recognised"
 msgstr "Tunnistettu"
 
-#: src/postulo_imap/sync.py:46
+#: src/postulo_imap/sync.py:50
 #, draft
 msgid "Security"
 msgstr "Suojaus"
 
-#: src/postulo_imap/sync.py:41
+#: src/postulo_imap/sync.py:45
 #, draft
 msgid "Server"
 msgstr "Palvelin"
@@ -151,22 +151,22 @@ msgstr "Palvelin"
 msgid "Sign-in refused. Check the username and the password."
 msgstr ""
 
-#: src/postulo_imap/sync.py:139
+#: src/postulo_imap/sync.py:143
 #, python-format, draft
 msgid "Signed in, but there is no folder called “%(folder)s”."
 msgstr "Kirjauduttu, mutta kansiota nimeltä ”%(folder)s” ei ole."
 
-#: src/postulo_imap/sync.py:154
+#: src/postulo_imap/sync.py:158
 #, python-format, draft
 msgid "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
 msgstr "Kirjauduttu. Kansiossa ”%(folder)s” odottaa lukemista %(count)d viestiä."
 
-#: src/postulo_imap/sync.py:50
+#: src/postulo_imap/sync.py:54
 #, draft
 msgid "STARTTLS (port 143)"
 msgstr "STARTTLS (portti 143)"
 
-#: src/postulo_imap/sync.py:99
+#: src/postulo_imap/sync.py:103
 #, draft
 msgid "Subfolder"
 msgstr "Alikansio"
@@ -184,17 +184,17 @@ msgstr ""
 msgid "The mailbox refused to hand over the messages."
 msgstr ""
 
-#: src/postulo_imap/sync.py:49
+#: src/postulo_imap/sync.py:53
 #, draft
 msgid "TLS (port 993)"
 msgstr "TLS (portti 993)"
 
-#: src/postulo_imap/sync.py:103
+#: src/postulo_imap/sync.py:107
 #, draft
 msgid "Used only when messages are moved. Created if missing."
 msgstr "Käytetään vain, kun viestejä siirretään. Luodaan, jos puuttuu."
 
-#: src/postulo_imap/sync.py:54
+#: src/postulo_imap/sync.py:58
 #, draft
 msgid "Username"
 msgstr "Käyttäjänimi"
