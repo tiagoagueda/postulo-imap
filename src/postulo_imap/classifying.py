@@ -3,7 +3,9 @@
 Rules, not a model, on purpose: they are inspectable, translatable, and wrong in ways a
 person can see. Each language is a JSON file in ``rules/`` — the phrases that mark a
 rejection, an invitation, an assessment, an offer, an acknowledgement, and the shapes a
-date takes in that language. Adding a language is adding a file, not writing code.
+date takes in that language. Adding a language is adding a file, not writing code. The
+file is named after the language's BCP 47 tag as Postulo writes one: ``pt``, or ``pt-BR``
+should a variety need phrases of its own.
 
 The kinds are tried in the order the file lists them, most consequential first, and the
 first that matches wins: a message that says both "we would like to invite you" and
@@ -31,6 +33,8 @@ import re
 from dataclasses import dataclass
 from functools import lru_cache
 from pathlib import Path
+
+from postulo.plugins.api import language_match
 
 RULES_DIR = Path(__file__).parent / "rules"
 
@@ -90,6 +94,25 @@ def languages() -> list[tuple[str, str]]:
     return [(data["language"], data["name"]) for data in _loaded()]
 
 
+def rules_for(code: str) -> str:
+    """The rule list that reads ``code``, as its file names it, or "" when none does.
+
+    A rule file is named after a BCP 47 tag, and a code is compared the way tags are:
+    without regard to case, and a variety with no list of its own is read by its
+    language's. `pt-BR` and `PT` both find `pt`; compared by exact string, each found
+    nothing and said nothing (postulo-imap#3). The comparison is Postulo's own.
+    """
+    return language_match(code, [data["language"] for data in _loaded()])
+
+
+def _consulted(only: tuple[str, ...]) -> list[dict]:
+    """The rule files to try: every one, or those that read the languages asked for."""
+    if not only:
+        return _loaded()
+    wanted = {rules_for(code) for code in only}
+    return [data for data in _loaded() if data["language"] in wanted]
+
+
 def dates_in(text: str, language: str = "") -> tuple[str, ...]:
     """Dates the text seems to propose, as they were written.
 
@@ -98,9 +121,7 @@ def dates_in(text: str, language: str = "") -> tuple[str, ...]:
     what the message said and letting them decide.
     """
     found: list[str] = []
-    for data in _loaded():
-        if language and data["language"] != language:
-            continue
+    for data in _consulted((language,) if language else ()):
         for pattern in data["date_patterns"]:
             for match in pattern.finditer(text):
                 whole = " ".join(part for part in match.groups() if part).strip()
@@ -113,12 +134,11 @@ def classify(text: str, *, only: tuple[str, ...] = ()) -> Verdict | None:
     """What kind of message this is, or ``None`` when no rule recognises it.
 
     ``only`` limits the languages consulted; empty means all of them, which is what a
-    mailbox that receives mail in several languages needs.
+    mailbox that receives mail in several languages needs. Each is a language code however
+    it is spelt, matched to a rule list by `rules_for`.
     """
     lowered = text.lower()
-    for data in _loaded():
-        if only and data["language"] not in only:
-            continue
+    for data in _consulted(only):
         for kind, patterns in data["compiled"]:
             for pattern in patterns:
                 match = pattern.search(lowered)

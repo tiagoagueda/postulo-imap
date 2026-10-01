@@ -43,13 +43,22 @@ def test_the_surface_is_what_this_plugin_actually_uses():
 
 @pytest.mark.parametrize(
     "name",
-    ["Application", "Contact", "DestinationRefused", "Suggestion", "approve_host", "suggest"],
+    [
+        "Application",
+        "Contact",
+        "DestinationRefused",
+        "Suggestion",
+        "approve_host",
+        "language_match",
+        "suggest",
+    ],
 )
 def test_every_name_this_plugin_needs_is_promised(name: str):
     """Not merely importable: on `__all__`, which is what the promise is made about.
 
     A name that resolves today because it happens to be reachable is not a name that keeps
-    working across a release. Four of these six were the whole of `REACHING_PAST`.
+    working across a release. Four of these were the whole of `REACHING_PAST`;
+    `language_match` came with the rule files being matched as tags (#3).
     """
     from postulo.plugins import api
 

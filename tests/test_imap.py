@@ -23,7 +23,7 @@ from postulo.applications.services import change_status
 from postulo.applications.suggestions import accept
 from postulo.jobs.models import Company, Contact, JobPosting
 from postulo.plugins import registry, syncing
-from postulo.plugins.api import SyncPlugin
+from postulo.plugins.api import SyncPlugin, is_language_tag, language_tag
 from postulo.plugins.api import approve_host as real_approve_host
 from postulo.plugins.models import Connection
 
@@ -385,6 +385,46 @@ def test_a_language_with_no_rules_is_skipped_rather_than_guessed_at():
     assert classifying.classify("Köszönjük a jelentkezését.".lower()) is None
 
 
+def test_a_rule_list_is_named_after_a_language_tag():
+    """`pt`, or `pt-BR` if a variety needs phrases of its own: a tag, as Postulo writes one.
+
+    The name is what a code is matched against, and what a suggestion shows, so a file
+    called `PT.json` or `pt_br.json` is a second spelling of something that has one
+    (postulo-imap#3).
+    """
+    for path in sorted(classifying.RULES_DIR.glob("*.json")):
+        code = path.stem
+        assert is_language_tag(code), f"{path.name} is not named after a language"
+        assert language_tag(code) == code, f"{path.name}: write it {language_tag(code)}.json"
+        assert json.loads(path.read_text(encoding="utf-8"))["language"] == code, path.name
+
+
+@pytest.mark.parametrize("code", ["pt-BR", "PT", "pt-PT", "pt"])
+def test_a_code_finds_its_rules_however_it_is_spelt(code):
+    """Tags compare without regard to case, and a variety is read by its language's rules.
+
+    Compared by exact string, a Brazilian reader's `pt-BR` matched no file: nothing was
+    consulted, nothing was filed and nothing said so.
+    """
+    assert classifying.rules_for(code) == "pt"
+
+    verdict = classifying.classify("Lamentamos informar que não foi selecionada.", only=(code,))
+    assert verdict is not None and (verdict.kind, verdict.language) == ("rejected", "pt")
+    assert classifying.dates_in("Entrevista a 12/09/2026 às 14:00.", code) == ("12/09/2026 14:00",)
+
+
+def test_asking_for_one_language_leaves_the_others_out():
+    assert classifying.classify("we regret to inform you", only=("pt-BR",)) is None
+    assert classifying.classify("we regret to inform you", only=("pt-BR", "en-GB")).language == "en"
+
+
+def test_a_language_asked_for_that_has_no_rules_reads_nothing():
+    """Asking for Swedish is not asking for everything: no list, so no reading at all."""
+    assert classifying.rules_for("sv") == ""
+    assert classifying.classify("we regret to inform you", only=("sv",)) is None
+    assert classifying.dates_in("on 12/09/2026 at 14:00", "sv") == ()
+
+
 # --------------------------------------------------------------- the matching
 
 
@@ -638,12 +678,12 @@ def test_the_plugin_speaks_french_and_portuguese_by_itself():
 
     registry.plugins("sync", refresh=True)
     plugin = registry.find_plugin("sync", "imap")
-    with translation.override("fr-fr"):
+    with translation.override("fr-FR"):
         assert str(plugin.label) == "Boîte aux lettres (IMAP)"
         assert plugin.config_fields()[5].label == "Dossier à lire"
-    with translation.override("pt-pt"):
+    with translation.override("pt-PT"):
         assert str(plugin.label) == "Caixa de correio (IMAP)"
-    with translation.override("en-gb"):
+    with translation.override("en-GB"):
         assert str(plugin.label) == "Mailbox (IMAP)"
 
 

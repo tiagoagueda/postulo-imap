@@ -3,7 +3,7 @@ name = "postulo-imap"
 version = "0.3.0"
 description = "Read one folder of a mailbox over IMAP and suggest what it says happened: acknowledgements, rejections, interview invitations, assessments, offers. Nothing is written on a guess."
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.12.4"
 license = "AGPL-3.0-or-later"
 authors = [{ name = "Tiago Agueda" }]
 keywords = ["postulo", "plugin", "imap", "email"]
@@ -46,7 +46,7 @@ dev = [
     # before the work converged back onto `main` — it has neither the destination guard
     # this plugin now connects through (postulo/postulo#215) nor the catalogue tool the
     # tests call. This becomes `@v0.3.0` the day that tag is made.
-    "postulo @ git+https://source.tiagoagueda.com/postulo/postulo.git@1d6cdd7e0",
+    "postulo @ git+https://source.tiagoagueda.com/postulo/postulo.git@a6363a397",
     "pytest>=8.3",
     "pytest-django>=4.14",
     "ruff>=0.16",

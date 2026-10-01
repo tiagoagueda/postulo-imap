@@ -79,9 +79,30 @@ Copy `src/postulo_imap/rules/en.json`, translate the phrases, name the file afte
 language, add it to the set named in `tests/test_imap.py`, and open a pull request. No code
 changes, and the tests will show you whether your patterns catch what they should.
 
+The name is the language's BCP 47 tag as Postulo writes one, and the file says the same in
+its `language`: `sv.json` for Swedish, or `pt-BR.json` if a variety needs phrases of its
+own. A code is matched to a list the way tags are compared, without regard to case, and a
+variety with no list of its own is read by its language's: `pt-BR` and `PT` both find
+`pt.json`. The tests refuse a file named any other way.
+
 Keep to words that belong to your language. The files are tried in turn and the first match
 wins, so a pattern that reads equally well as English or Dutch will answer for those too,
 and the suggestion will name the wrong language.
+
+## Translations
+
+The plugin's own words — the connection form, what a run reports, what a suggestion says —
+are translated apart from the phrase lists, in `src/postulo_imap/locale/`. Postulo never
+translates a plugin's strings; a catalogue for every language Postulo offers is in place;
+fill one and run `uv run postulo-messages compile`. `uv run postulo-messages extract`
+refreshes them from the source, and `uv run pytest -m release` holds the twenty-four
+European Union catalogues complete before a release.
+
+A language code here is a BCP 47 tag in its canonical form, as everywhere in Postulo: the
+language in lower case, a script with a capital, a region in capitals (`fr-FR`, `pt-BR`,
+`sr-Cyrl`). The directories under `locale/` are the one exception: `fr_FR` and `sr_Cyrl`
+are gettext's names for a catalogue, not codes, and `postulo-messages` derives them from
+the tags, so nobody types one.
 
 ## Develop
 
