@@ -1,11 +1,9 @@
 # lietuvių translation of postulo-imap.
-# This file is distributed under the same license as Postulo (AGPL-3.0-or-later).
+# This file is distributed under the same license as the postulo-imap package (AGPL-3.0-or-later).
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Postulo\n"
-"Report-Msgid-Bugs-To: https://source.tiagoagueda.com/postulo/postulo/issues\n"
-"POT-Creation-Date: 2026-09-21 15:24+0000\n"
+"Project-Id-Version: postulo-imap\n"
 "PO-Revision-Date: 2026-09-13 04:02+0000\n"
 "Last-Translator: Postulo contributors\n"
 "Language-Team: lietuvių\n"
@@ -16,186 +14,178 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && (n%100<11 || n%100>19) ? 0 : n%10>=2 && n%10<=9 && (n%100<11 || n%100>19) ? 1 : 2);\n"
 "X-Generator: postulo scripts/messages.py\n"
 
-#: src/postulo_imap/sync.py:221
-#, python-format, draft
+#: src/postulo_imap/sync.py
+#, fuzzy, python-format
 msgid "%(count)d could not be matched to an application; attach them by hand."
 msgstr "%(count)d nepavyko susieti su paraiška; pridėkite juos rankiniu būdu."
 
-#: src/postulo_imap/sync.py:194
-#, draft
+#: src/postulo_imap/sync.py
+#, fuzzy
 msgid "A message with no subject"
 msgstr "Laiškas be temos"
 
-#: src/postulo_imap/sync.py:65
-#, draft
-msgid ""
-"An app password wherever the server offers one; Gmail requires it with two-factor authentication on. Stored encrypted."
-msgstr ""
-"Programos slaptažodis, kai serveris jį siūlo; Gmail jo reikalauja, kai įjungta dviejų veiksnių autentifikacija. Saugomas užšifruotas."
+#: src/postulo_imap/sync.py
+#, fuzzy
+msgid "An app password wherever the server offers one; Gmail requires it with two-factor authentication on. Stored encrypted."
+msgstr "Programos slaptažodis, kai serveris jį siūlo; Gmail jo reikalauja, kai įjungta dviejų veiksnių autentifikacija. Saugomas užšifruotas."
 
-#: src/postulo_imap/mailbox.py:282
-msgid ""
-"Could not reach the server. Check the address, the port and the security."
+#: src/postulo_imap/mailbox.py
+msgid "Could not reach the server. Check the address, the port and the security."
 msgstr ""
 
-#: src/postulo_imap/sync.py:88
-#, python-format, draft
+#: src/postulo_imap/sync.py
+#, fuzzy, python-format
 msgid "Flag it with %(keyword)s"
 msgstr "Pažymėti žyme %(keyword)s"
 
-#: src/postulo_imap/sync.py:94
-#, draft
-msgid ""
-"Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means every recent message is read again; nothing is suggested twice either way."
-msgstr ""
-"Žymėjimas daugumoje klientų nematomas ir kiekvieną peržiūrą daro trumpą. Paliekant pašto dėžutę nepaliestą, kiekvienas naujas laiškas skaitomas iš naujo; bet kuriuo atveju niekas nesiūloma dukart."
+#: src/postulo_imap/sync.py
+#, fuzzy
+msgid "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means every recent message is read again; nothing is suggested twice either way."
+msgstr "Žymėjimas daugumoje klientų nematomas ir kiekvieną peržiūrą daro trumpą. Paliekant pašto dėžutę nepaliestą, kiekvienas naujas laiškas skaitomas iš naujo; bet kuriuo atveju niekas nesiūloma dukart."
 
-#: src/postulo_imap/sync.py:73
-#, draft
+#: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Folder to read"
 msgstr "Skaitomas aplankas"
 
-#: src/postulo_imap/sync.py:45
-#, draft
+#: src/postulo_imap/sync.py
+#, fuzzy
 msgid "For example imap.example.org."
 msgstr "Pavyzdžiui, imap.example.org."
 
-#: src/postulo_imap/sync.py:200
-#, draft
+#: src/postulo_imap/sync.py
+#, fuzzy
 msgid "From"
 msgstr "Nuo"
 
-#: src/postulo_imap/sync.py:115
-#, draft
+#: src/postulo_imap/sync.py
+#, fuzzy
 msgid "How many days of mail a pass considers."
 msgstr "Kiek dienų pašto apima viena peržiūra."
 
-#: src/postulo_imap/sync.py:90
-#, draft
+#: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Leave the mailbox untouched"
 msgstr "Palikti pašto dėžutę nepaliestą"
 
-#: src/postulo_imap/sync.py:111
-#, draft
+#: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Look back"
 msgstr "Laikotarpis atgal"
 
-#: src/postulo_imap/sync.py:40
-#, draft
+#: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Mailbox (IMAP)"
 msgstr "Pašto dėžutė (IMAP)"
 
-#: src/postulo_imap/sync.py:201
-#, draft
+#: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Matched by"
 msgstr "Susieta pagal"
 
-#: src/postulo_imap/sync.py:89
-#, draft
+#: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Move it to a subfolder"
 msgstr "Perkelti į poaplankį"
 
-#: src/postulo_imap/sync.py:128
-#, draft
+#: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Name the folder to read. Postulo never reads the inbox."
-msgstr ""
-"Nurodykite skaitomą aplanką. Postulo niekada neskaito gautųjų laiškų aplanko."
+msgstr "Nurodykite skaitomą aplanką. Postulo niekada neskaito gautųjų laiškų aplanko."
 
-#: src/postulo_imap/sync.py:126
-#, draft
+#: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Name the subfolder to move messages to."
 msgstr "Nurodykite poaplankį, į kurį perkelti laiškus."
 
-#: src/postulo_imap/sync.py:201
-#, draft
+#: src/postulo_imap/sync.py
+#, fuzzy
 msgid "nothing yet"
 msgstr "kol kas nieko"
 
-#: src/postulo_imap/sync.py:85
-#, draft
+#: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Once read"
 msgstr "Perskaičius"
 
-#: src/postulo_imap/sync.py:77
-#, draft
-msgid ""
-"One folder, never the inbox. Make a rule on your mail server that files recruiter mail here; Postulo reads nothing else."
-msgstr ""
-"Vienas aplankas, niekada ne gautieji laiškai. Savo pašto serveryje sukurkite taisyklę, kuri čia perkelia įdarbintojų laiškus; Postulo daugiau nieko neskaito."
+#: src/postulo_imap/sync.py
+#, fuzzy
+msgid "One folder, never the inbox. Make a rule on your mail server that files recruiter mail here; Postulo reads nothing else."
+msgstr "Vienas aplankas, niekada ne gautieji laiškai. Savo pašto serveryje sukurkite taisyklę, kuri čia perkelia įdarbintojų laiškus; Postulo daugiau nieko neskaito."
 
-#: src/postulo_imap/sync.py:61
-#, draft
+#: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Password or app password"
 msgstr "Slaptažodis arba programos slaptažodis"
 
-#: src/postulo_imap/sync.py:47
-#, draft
+#: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Port"
 msgstr "Prievadas"
 
-#: src/postulo_imap/sync.py:203
-#, draft
+#: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Recognised"
 msgstr "Atpažinta"
 
-#: src/postulo_imap/sync.py:50
-#, draft
+#: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Security"
 msgstr "Saugumas"
 
-#: src/postulo_imap/sync.py:45
-#, draft
+#: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Server"
 msgstr "Serveris"
 
-#: src/postulo_imap/mailbox.py:290
+#: src/postulo_imap/mailbox.py
 msgid "Sign-in refused. Check the username and the password."
 msgstr ""
 
-#: src/postulo_imap/sync.py:143
-#, python-format, draft
+#: src/postulo_imap/sync.py
+#, fuzzy, python-format
 msgid "Signed in, but there is no folder called “%(folder)s”."
 msgstr "Prisijungta, bet aplanko „%(folder)s“ nėra."
 
-#: src/postulo_imap/sync.py:158
-#, python-format, draft
+#: src/postulo_imap/sync.py
+#, fuzzy, python-format
 msgid "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
 msgstr "Prisijungta. Aplanke „%(folder)s“ laukia %(count)d laiškų."
 
-#: src/postulo_imap/sync.py:54
-#, draft
+#: src/postulo_imap/sync.py
+#, fuzzy
 msgid "STARTTLS (port 143)"
 msgstr "STARTTLS (143 prievadas)"
 
-#: src/postulo_imap/sync.py:103
-#, draft
+#: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Subfolder"
 msgstr "Poaplankis"
 
-#: src/postulo_imap/mailbox.py:173
+#: src/postulo_imap/mailbox.py
 #, python-format
 msgid "The folder “%(folder)s” could not be opened."
 msgstr ""
 
-#: src/postulo_imap/mailbox.py:193
+#: src/postulo_imap/mailbox.py
 msgid "The mailbox refused the search."
 msgstr ""
 
-#: src/postulo_imap/mailbox.py:202
+#: src/postulo_imap/mailbox.py
 msgid "The mailbox refused to hand over the messages."
 msgstr ""
 
-#: src/postulo_imap/sync.py:53
-#, draft
+#: src/postulo_imap/sync.py
+#, fuzzy
 msgid "TLS (port 993)"
 msgstr "TLS (993 prievadas)"
 
-#: src/postulo_imap/sync.py:107
-#, draft
+#: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Used only when messages are moved. Created if missing."
 msgstr "Naudojamas tik perkeliant laiškus. Sukuriamas, jei jo nėra."
 
-#: src/postulo_imap/sync.py:58
-#, draft
+#: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Username"
 msgstr "Naudotojo vardas"

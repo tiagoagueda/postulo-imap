@@ -1,11 +1,9 @@
 # Deutsch translation of postulo-imap.
-# This file is distributed under the same license as Postulo (AGPL-3.0-or-later).
+# This file is distributed under the same license as the postulo-imap package (AGPL-3.0-or-later).
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Postulo\n"
-"Report-Msgid-Bugs-To: https://source.tiagoagueda.com/postulo/postulo/issues\n"
-"POT-Creation-Date: 2026-09-21 15:24+0000\n"
+"Project-Id-Version: postulo-imap\n"
 "PO-Revision-Date: 2026-09-13 04:02+0000\n"
 "Last-Translator: Postulo contributors\n"
 "Language-Team: Deutsch\n"
@@ -16,188 +14,178 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: postulo scripts/messages.py\n"
 
-#: src/postulo_imap/sync.py:221
-#, python-format, draft
+#: src/postulo_imap/sync.py
+#, fuzzy, python-format
 msgid "%(count)d could not be matched to an application; attach them by hand."
-msgstr ""
-"%(count)d konnten keiner Bewerbung zugeordnet werden; hängen Sie sie von Hand an."
+msgstr "%(count)d konnten keiner Bewerbung zugeordnet werden; hängen Sie sie von Hand an."
 
-#: src/postulo_imap/sync.py:194
-#, draft
+#: src/postulo_imap/sync.py
+#, fuzzy
 msgid "A message with no subject"
 msgstr "Eine Nachricht ohne Betreff"
 
-#: src/postulo_imap/sync.py:65
-#, draft
-msgid ""
-"An app password wherever the server offers one; Gmail requires it with two-factor authentication on. Stored encrypted."
-msgstr ""
-"Ein App-Passwort, wo immer der Server eines anbietet; Gmail verlangt es bei eingeschalteter Zwei-Faktor-Authentifizierung. Wird verschlüsselt gespeichert."
+#: src/postulo_imap/sync.py
+#, fuzzy
+msgid "An app password wherever the server offers one; Gmail requires it with two-factor authentication on. Stored encrypted."
+msgstr "Ein App-Passwort, wo immer der Server eines anbietet; Gmail verlangt es bei eingeschalteter Zwei-Faktor-Authentifizierung. Wird verschlüsselt gespeichert."
 
-#: src/postulo_imap/mailbox.py:282
-msgid ""
-"Could not reach the server. Check the address, the port and the security."
+#: src/postulo_imap/mailbox.py
+msgid "Could not reach the server. Check the address, the port and the security."
 msgstr ""
 
-#: src/postulo_imap/sync.py:88
-#, python-format, draft
+#: src/postulo_imap/sync.py
+#, fuzzy, python-format
 msgid "Flag it with %(keyword)s"
 msgstr "Mit %(keyword)s markieren"
 
-#: src/postulo_imap/sync.py:94
-#, draft
-msgid ""
-"Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means every recent message is read again; nothing is suggested twice either way."
-msgstr ""
-"Die Markierung ist in den meisten Programmen unsichtbar und hält jeden Durchlauf kurz. Bleibt das Postfach unberührt, wird jede neuere Nachricht erneut gelesen; doppelt vorgeschlagen wird so oder so nichts."
+#: src/postulo_imap/sync.py
+#, fuzzy
+msgid "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means every recent message is read again; nothing is suggested twice either way."
+msgstr "Die Markierung ist in den meisten Programmen unsichtbar und hält jeden Durchlauf kurz. Bleibt das Postfach unberührt, wird jede neuere Nachricht erneut gelesen; doppelt vorgeschlagen wird so oder so nichts."
 
-#: src/postulo_imap/sync.py:73
-#, draft
+#: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Folder to read"
 msgstr "Zu lesender Ordner"
 
-#: src/postulo_imap/sync.py:45
-#, draft
+#: src/postulo_imap/sync.py
+#, fuzzy
 msgid "For example imap.example.org."
 msgstr "Zum Beispiel imap.example.org."
 
-#: src/postulo_imap/sync.py:200
-#, draft
+#: src/postulo_imap/sync.py
+#, fuzzy
 msgid "From"
 msgstr "Von"
 
-#: src/postulo_imap/sync.py:115
-#, draft
+#: src/postulo_imap/sync.py
+#, fuzzy
 msgid "How many days of mail a pass considers."
 msgstr "Wie viele Tage Post ein Durchlauf berücksichtigt."
 
-#: src/postulo_imap/sync.py:90
-#, draft
+#: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Leave the mailbox untouched"
 msgstr "Postfach unberührt lassen"
 
-#: src/postulo_imap/sync.py:111
-#, draft
+#: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Look back"
 msgstr "Rückblick"
 
-#: src/postulo_imap/sync.py:40
-#, draft
+#: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Mailbox (IMAP)"
 msgstr "Postfach (IMAP)"
 
-#: src/postulo_imap/sync.py:201
-#, draft
+#: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Matched by"
 msgstr "Zugeordnet über"
 
-#: src/postulo_imap/sync.py:89
-#, draft
+#: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Move it to a subfolder"
 msgstr "In einen Unterordner verschieben"
 
-#: src/postulo_imap/sync.py:128
-#, draft
+#: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Name the folder to read. Postulo never reads the inbox."
 msgstr "Nennen Sie den zu lesenden Ordner. Postulo liest nie den Posteingang."
 
-#: src/postulo_imap/sync.py:126
-#, draft
+#: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Name the subfolder to move messages to."
 msgstr "Nennen Sie den Unterordner, in den Nachrichten verschoben werden."
 
-#: src/postulo_imap/sync.py:201
-#, draft
+#: src/postulo_imap/sync.py
+#, fuzzy
 msgid "nothing yet"
 msgstr "noch nichts"
 
-#: src/postulo_imap/sync.py:85
-#, draft
+#: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Once read"
 msgstr "Nach dem Lesen"
 
-#: src/postulo_imap/sync.py:77
-#, draft
-msgid ""
-"One folder, never the inbox. Make a rule on your mail server that files recruiter mail here; Postulo reads nothing else."
-msgstr ""
-"Ein Ordner, nie der Posteingang. Legen Sie auf Ihrem Mailserver eine Regel an, die Recruiter-Post hier ablegt; Postulo liest nichts anderes."
+#: src/postulo_imap/sync.py
+#, fuzzy
+msgid "One folder, never the inbox. Make a rule on your mail server that files recruiter mail here; Postulo reads nothing else."
+msgstr "Ein Ordner, nie der Posteingang. Legen Sie auf Ihrem Mailserver eine Regel an, die Recruiter-Post hier ablegt; Postulo liest nichts anderes."
 
-#: src/postulo_imap/sync.py:61
-#, draft
+#: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Password or app password"
 msgstr "Passwort oder App-Passwort"
 
-#: src/postulo_imap/sync.py:47
-#, draft
+#: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Port"
 msgstr "Port"
 
-#: src/postulo_imap/sync.py:203
-#, draft
+#: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Recognised"
 msgstr "Erkannt"
 
-#: src/postulo_imap/sync.py:50
-#, draft
+#: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Security"
 msgstr "Sicherheit"
 
-#: src/postulo_imap/sync.py:45
-#, draft
+#: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Server"
 msgstr "Server"
 
-#: src/postulo_imap/mailbox.py:290
+#: src/postulo_imap/mailbox.py
 msgid "Sign-in refused. Check the username and the password."
 msgstr ""
 
-#: src/postulo_imap/sync.py:143
-#, python-format, draft
+#: src/postulo_imap/sync.py
+#, fuzzy, python-format
 msgid "Signed in, but there is no folder called “%(folder)s”."
 msgstr "Angemeldet, aber es gibt keinen Ordner namens „%(folder)s“."
 
-#: src/postulo_imap/sync.py:158
-#, python-format, draft
+#: src/postulo_imap/sync.py
+#, fuzzy, python-format
 msgid "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
-msgstr ""
-"Angemeldet. %(count)d Nachrichten in „%(folder)s“ warten darauf, gelesen zu werden."
+msgstr "Angemeldet. %(count)d Nachrichten in „%(folder)s“ warten darauf, gelesen zu werden."
 
-#: src/postulo_imap/sync.py:54
-#, draft
+#: src/postulo_imap/sync.py
+#, fuzzy
 msgid "STARTTLS (port 143)"
 msgstr "STARTTLS (Port 143)"
 
-#: src/postulo_imap/sync.py:103
-#, draft
+#: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Subfolder"
 msgstr "Unterordner"
 
-#: src/postulo_imap/mailbox.py:173
+#: src/postulo_imap/mailbox.py
 #, python-format
 msgid "The folder “%(folder)s” could not be opened."
 msgstr ""
 
-#: src/postulo_imap/mailbox.py:193
+#: src/postulo_imap/mailbox.py
 msgid "The mailbox refused the search."
 msgstr ""
 
-#: src/postulo_imap/mailbox.py:202
+#: src/postulo_imap/mailbox.py
 msgid "The mailbox refused to hand over the messages."
 msgstr ""
 
-#: src/postulo_imap/sync.py:53
-#, draft
+#: src/postulo_imap/sync.py
+#, fuzzy
 msgid "TLS (port 993)"
 msgstr "TLS (Port 993)"
 
-#: src/postulo_imap/sync.py:107
-#, draft
+#: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Used only when messages are moved. Created if missing."
-msgstr ""
-"Nur beim Verschieben von Nachrichten verwendet. Wird angelegt, falls er fehlt."
+msgstr "Nur beim Verschieben von Nachrichten verwendet. Wird angelegt, falls er fehlt."
 
-#: src/postulo_imap/sync.py:58
-#, draft
+#: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Username"
 msgstr "Benutzername"
