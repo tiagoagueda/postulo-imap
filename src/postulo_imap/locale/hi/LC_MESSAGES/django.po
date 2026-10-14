@@ -4,161 +4,192 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-10 10:46+0000\n"
-"Last-Translator: Postulo contributors\n"
-"Language-Team: हिन्दी\n"
+"PO-Revision-Date: 2026-10-13 13:00+0000\n"
+"Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
+"Language-Team: Hindi <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/hi/>\n"
 "Language: hi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: postulo-messages\n"
 
 #: src/postulo_imap/sync.py
-#, python-format
+#, fuzzy, python-format
 msgid "%(count)d could not be matched to an application; attach them by hand."
-msgstr ""
+msgstr "%(count)d मैसेज किसी आवेदन से मेल नहीं खा सके; उन्हें हाथ से अटैच करें।"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "A message with no subject"
-msgstr ""
+msgstr "बिना विषय का मैसेज"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "An app password wherever the server offers one; Gmail requires it with two-factor authentication on. Stored encrypted."
-msgstr ""
+msgstr "जहां सर्वर ऐप पासवर्ड देता हो, वहां ऐप पासवर्ड; टू-फ़ैक्टर ऑथेंटिकेशन चालू होने पर Gmail में यह ज़रूरी है। एन्क्रिप्ट करके रखा जाता है।"
 
 #: src/postulo_imap/mailbox.py
+#, fuzzy
 msgid "Could not reach the server. Check the address, the port and the security."
-msgstr ""
+msgstr "सर्वर तक नहीं पहुंचा जा सका। पता, पोर्ट और सुरक्षा जांचें।"
 
 #: src/postulo_imap/sync.py
-#, python-format
+#, fuzzy, python-format
 msgid "Flag it with %(keyword)s"
-msgstr ""
+msgstr "%(keyword)s से चिह्नित करें"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means every recent message is read again; nothing is suggested twice either way."
-msgstr ""
+msgstr "ज़्यादातर क्लाइंट में चिह्न दिखाई नहीं देता और इससे हर बार की जांच छोटी रहती है। मेलबॉक्स को ज्यों का त्यों छोड़ने पर हाल के सभी मैसेज फिर से पढ़े जाते हैं; दोनों ही तरह से कोई सुझाव दो बार नहीं दिया जाता।"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Folder to read"
-msgstr ""
+msgstr "पढ़ने के लिए फ़ोल्डर"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "For example imap.example.org."
-msgstr ""
+msgstr "उदाहरण के लिए imap.example.org।"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "From"
-msgstr ""
+msgstr "से"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "How many days of mail a pass considers."
-msgstr ""
+msgstr "हर बार कितने दिनों के मेल देखे जाते हैं।"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Leave the mailbox untouched"
-msgstr ""
+msgstr "मेलबॉक्स को ज्यों का त्यों छोड़ें"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Look back"
-msgstr ""
+msgstr "कितने दिन पीछे देखें"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Mailbox (IMAP)"
-msgstr ""
+msgstr "मेलबॉक्स (IMAP)"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Matched by"
-msgstr ""
+msgstr "किस आधार पर मेल खाया"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Move it to a subfolder"
-msgstr ""
+msgstr "सबफ़ोल्डर में ले जाएं"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Name the folder to read. Postulo never reads the inbox."
-msgstr ""
+msgstr "पढ़ने के लिए फ़ोल्डर का नाम बताएं। Postulo कभी इनबॉक्स नहीं पढ़ता।"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Name the subfolder to move messages to."
-msgstr ""
+msgstr "उस सबफ़ोल्डर का नाम बताएं जिसमें मैसेज ले जाने हैं।"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "nothing yet"
-msgstr ""
+msgstr "अभी तक कुछ नहीं"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Once read"
-msgstr ""
+msgstr "पढ़ने के बाद"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "One folder, never the inbox. Make a rule on your mail server that files recruiter mail here; Postulo reads nothing else."
-msgstr ""
+msgstr "एक फ़ोल्डर, इनबॉक्स कभी नहीं। अपने मेल सर्वर पर एक नियम बनाएं जो रिक्रूटर के मेल यहां रखे; Postulo और कुछ नहीं पढ़ता।"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Password or app password"
-msgstr ""
+msgstr "पासवर्ड या ऐप पासवर्ड"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Port"
-msgstr ""
+msgstr "पोर्ट"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Recognised"
-msgstr ""
+msgstr "पहचाना गया"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Security"
-msgstr ""
+msgstr "सुरक्षा"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Server"
-msgstr ""
+msgstr "सर्वर"
 
 #: src/postulo_imap/mailbox.py
+#, fuzzy
 msgid "Sign-in refused. Check the username and the password."
-msgstr ""
+msgstr "साइन-इन अस्वीकार किया गया। यूज़रनेम और पासवर्ड जांचें।"
 
 #: src/postulo_imap/sync.py
-#, python-format
+#, fuzzy, python-format
 msgid "Signed in, but there is no folder called “%(folder)s”."
-msgstr ""
+msgstr "साइन इन हो गया, लेकिन “%(folder)s” नाम का कोई फ़ोल्डर नहीं है।"
 
 #: src/postulo_imap/sync.py
-#, python-format
+#, fuzzy, python-format
 msgid "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
-msgstr ""
+msgstr "साइन इन हो गया। “%(folder)s” में %(count)d मैसेज पढ़े जाने का इंतज़ार कर रहे हैं।"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "STARTTLS (port 143)"
-msgstr ""
+msgstr "STARTTLS (पोर्ट 143)"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Subfolder"
-msgstr ""
+msgstr "सबफ़ोल्डर"
 
 #: src/postulo_imap/mailbox.py
-#, python-format
+#, fuzzy, python-format
 msgid "The folder “%(folder)s” could not be opened."
-msgstr ""
+msgstr "फ़ोल्डर “%(folder)s” खोला नहीं जा सका।"
 
 #: src/postulo_imap/mailbox.py
+#, fuzzy
 msgid "The mailbox refused the search."
-msgstr ""
+msgstr "मेलबॉक्स ने खोज अस्वीकार कर दी।"
 
 #: src/postulo_imap/mailbox.py
+#, fuzzy
 msgid "The mailbox refused to hand over the messages."
-msgstr ""
+msgstr "मेलबॉक्स ने मैसेज देने से इनकार कर दिया।"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "TLS (port 993)"
-msgstr ""
+msgstr "TLS (पोर्ट 993)"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Used only when messages are moved. Created if missing."
-msgstr ""
+msgstr "सिर्फ़ तब इस्तेमाल होता है जब मैसेज ले जाए जाते हैं। न होने पर बनाया जाता है।"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Username"
-msgstr ""
+msgstr "यूज़रनेम"

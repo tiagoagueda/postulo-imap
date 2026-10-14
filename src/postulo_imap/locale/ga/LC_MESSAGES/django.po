@@ -4,14 +4,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-09-13 04:02+0000\n"
-"Last-Translator: Postulo contributors\n"
-"Language-Team: Gaeilge\n"
+"PO-Revision-Date: 2026-10-10 12:45+0000\n"
+"Last-Translator: LibreTranslate <noreply-mt-libretranslate@weblate.org>\n"
+"Language-Team: Irish <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/ga/>\n"
 "Language: ga\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=5; plural=(n==1 ? 0 : n==2 ? 1 : (n>2 && n<7) ? 2 :(n>6 && n<11) ? 3 : 4);\n"
+"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : (n>2 && n<7) ? 2 :(n>6 && n<11) ? 3 : 4;\n"
 "X-Generator: postulo scripts/messages.py\n"
 
 #: src/postulo_imap/sync.py
@@ -30,8 +30,9 @@ msgid "An app password wherever the server offers one; Gmail requires it with tw
 msgstr "Pasfhocal aipe cibé áit a dtairgeann an freastalaí ceann; éilíonn Gmail é nuair a bhíonn fíordheimhniú dhá fhachtóir ar siúl. Stóráilte go criptithe."
 
 #: src/postulo_imap/mailbox.py
+#, fuzzy
 msgid "Could not reach the server. Check the address, the port and the security."
-msgstr ""
+msgstr "Níorbh fhéidir teacht ar an bhfreastalaí. Seiceáil an seoladh, an calafort agus an t-urrús."
 
 #: src/postulo_imap/sync.py
 #, fuzzy, python-format
@@ -139,8 +140,9 @@ msgid "Server"
 msgstr "Freastalaí"
 
 #: src/postulo_imap/mailbox.py
+#, fuzzy
 msgid "Sign-in refused. Check the username and the password."
-msgstr ""
+msgstr "Cláraigh-i diúltaíodh. Seiceáil an ainm úsáideora agus an focal faire."
 
 #: src/postulo_imap/sync.py
 #, fuzzy, python-format
@@ -163,17 +165,19 @@ msgid "Subfolder"
 msgstr "Fofhillteán"
 
 #: src/postulo_imap/mailbox.py
-#, python-format
+#, fuzzy, python-format
 msgid "The folder “%(folder)s” could not be opened."
-msgstr ""
+msgstr "Ní fhéadfaí an fillteán \"%(folder)s\" a oscailt."
 
 #: src/postulo_imap/mailbox.py
+#, fuzzy
 msgid "The mailbox refused the search."
-msgstr ""
+msgstr "Dhiúltaigh an bosca poist an cuardach."
 
 #: src/postulo_imap/mailbox.py
+#, fuzzy
 msgid "The mailbox refused to hand over the messages."
-msgstr ""
+msgstr "Dhiúltaigh an bosca poist a thabhairt ar láimh thar na teachtaireachtaí."
 
 #: src/postulo_imap/sync.py
 #, fuzzy

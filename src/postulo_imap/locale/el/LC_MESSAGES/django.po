@@ -4,14 +4,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-09-13 04:02+0000\n"
-"Last-Translator: Postulo contributors\n"
-"Language-Team: Ελληνικά\n"
+"PO-Revision-Date: 2026-10-10 12:21+0000\n"
+"Last-Translator: LibreTranslate <noreply-mt-libretranslate@weblate.org>\n"
+"Language-Team: Greek <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/el/>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: postulo scripts/messages.py\n"
 
 #: src/postulo_imap/sync.py
@@ -30,8 +30,9 @@ msgid "An app password wherever the server offers one; Gmail requires it with tw
 msgstr "Κωδικός εφαρμογής όπου ο διακομιστής προσφέρει έναν· το Gmail τον απαιτεί με ενεργή ταυτοποίηση δύο παραγόντων. Αποθηκεύεται κρυπτογραφημένος."
 
 #: src/postulo_imap/mailbox.py
+#, fuzzy
 msgid "Could not reach the server. Check the address, the port and the security."
-msgstr ""
+msgstr "Αδύνατη η πρόσβαση στον εξυπηρετητή. Ελέγξτε τη διεύθυνση, το λιμάνι και την ασφάλεια."
 
 #: src/postulo_imap/sync.py
 #, fuzzy, python-format
@@ -139,8 +140,9 @@ msgid "Server"
 msgstr "Διακομιστής"
 
 #: src/postulo_imap/mailbox.py
+#, fuzzy
 msgid "Sign-in refused. Check the username and the password."
-msgstr ""
+msgstr "Η υπογραφή αρνήθηκε. Ελέγξτε το όνομα χρήστη και τον κωδικό πρόσβασης."
 
 #: src/postulo_imap/sync.py
 #, fuzzy, python-format
@@ -163,17 +165,19 @@ msgid "Subfolder"
 msgstr "Υποφάκελος"
 
 #: src/postulo_imap/mailbox.py
-#, python-format
+#, fuzzy, python-format
 msgid "The folder “%(folder)s” could not be opened."
-msgstr ""
+msgstr "Ο φάκελος “%(folder)s” δεν ήταν δυνατό να ανοιχτεί."
 
 #: src/postulo_imap/mailbox.py
+#, fuzzy
 msgid "The mailbox refused the search."
-msgstr ""
+msgstr "Το γραμματοκιβώτιο αρνήθηκε την έρευνα."
 
 #: src/postulo_imap/mailbox.py
+#, fuzzy
 msgid "The mailbox refused to hand over the messages."
-msgstr ""
+msgstr "Το γραμματοκιβώτιο αρνήθηκε να παραδώσει τα μηνύματα."
 
 #: src/postulo_imap/sync.py
 #, fuzzy
