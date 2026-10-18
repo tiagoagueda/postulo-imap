@@ -4,14 +4,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-09-13 04:02+0000\n"
-"Last-Translator: Postulo contributors\n"
-"Language-Team: polski\n"
+"PO-Revision-Date: 2026-10-10 12:45+0000\n"
+"Last-Translator: LibreTranslate <noreply-mt-libretranslate@weblate.org>\n"
+"Language-Team: Polish <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: postulo scripts/messages.py\n"
 
 #: src/postulo_imap/sync.py
@@ -30,8 +30,9 @@ msgid "An app password wherever the server offers one; Gmail requires it with tw
 msgstr "Hasło aplikacji wszędzie tam, gdzie serwer je oferuje; Gmail wymaga go przy włączonym uwierzytelnianiu dwuskładnikowym. Przechowywane w postaci zaszyfrowanej."
 
 #: src/postulo_imap/mailbox.py
+#, fuzzy
 msgid "Could not reach the server. Check the address, the port and the security."
-msgstr ""
+msgstr "Nie można dotrzeć do serwera. Sprawdź adres, port i ochronę."
 
 #: src/postulo_imap/sync.py
 #, fuzzy, python-format
@@ -139,8 +140,9 @@ msgid "Server"
 msgstr "Serwer"
 
 #: src/postulo_imap/mailbox.py
+#, fuzzy
 msgid "Sign-in refused. Check the username and the password."
-msgstr ""
+msgstr "Odmawiam. Sprawdź nazwę użytkownika i hasło."
 
 #: src/postulo_imap/sync.py
 #, fuzzy, python-format
@@ -163,17 +165,19 @@ msgid "Subfolder"
 msgstr "Podfolder"
 
 #: src/postulo_imap/mailbox.py
-#, python-format
+#, fuzzy, python-format
 msgid "The folder “%(folder)s” could not be opened."
-msgstr ""
+msgstr "Nie można otworzyć folderu \"%(folder)s\"."
 
 #: src/postulo_imap/mailbox.py
+#, fuzzy
 msgid "The mailbox refused the search."
-msgstr ""
+msgstr "Skrzynka na listy odmówiła przeszukania."
 
 #: src/postulo_imap/mailbox.py
+#, fuzzy
 msgid "The mailbox refused to hand over the messages."
-msgstr ""
+msgstr "Skrzynka na listy odmówiła przekazania wiadomości."
 
 #: src/postulo_imap/sync.py
 #, fuzzy

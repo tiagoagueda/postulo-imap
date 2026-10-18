@@ -4,14 +4,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-09-13 04:02+0000\n"
-"Last-Translator: Postulo contributors\n"
-"Language-Team: Nederlands\n"
+"PO-Revision-Date: 2026-10-10 12:45+0000\n"
+"Last-Translator: LibreTranslate <noreply-mt-libretranslate@weblate.org>\n"
+"Language-Team: Dutch <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: postulo scripts/messages.py\n"
 
 #: src/postulo_imap/sync.py
@@ -30,8 +30,9 @@ msgid "An app password wherever the server offers one; Gmail requires it with tw
 msgstr "Een app-wachtwoord waar de server dat aanbiedt; Gmail vereist het als tweestapsverificatie aanstaat. Versleuteld opgeslagen."
 
 #: src/postulo_imap/mailbox.py
+#, fuzzy
 msgid "Could not reach the server. Check the address, the port and the security."
-msgstr ""
+msgstr "Kon de server niet bereiken. Controleer het adres, de haven en de beveiliging."
 
 #: src/postulo_imap/sync.py
 #, fuzzy, python-format
@@ -139,8 +140,9 @@ msgid "Server"
 msgstr "Server"
 
 #: src/postulo_imap/mailbox.py
+#, fuzzy
 msgid "Sign-in refused. Check the username and the password."
-msgstr ""
+msgstr "Aanmelden geweigerd. Controleer de gebruikersnaam en het wachtwoord."
 
 #: src/postulo_imap/sync.py
 #, fuzzy, python-format
@@ -163,17 +165,19 @@ msgid "Subfolder"
 msgstr "Submap"
 
 #: src/postulo_imap/mailbox.py
-#, python-format
+#, fuzzy, python-format
 msgid "The folder “%(folder)s” could not be opened."
-msgstr ""
+msgstr "De map ."
 
 #: src/postulo_imap/mailbox.py
+#, fuzzy
 msgid "The mailbox refused the search."
-msgstr ""
+msgstr "De brievenbus weigerde de zoekopdracht."
 
 #: src/postulo_imap/mailbox.py
+#, fuzzy
 msgid "The mailbox refused to hand over the messages."
-msgstr ""
+msgstr "De brievenbus weigerde de berichten over te dragen."
 
 #: src/postulo_imap/sync.py
 #, fuzzy

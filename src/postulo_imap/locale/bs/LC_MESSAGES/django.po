@@ -4,161 +4,192 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-09-13 04:02+0000\n"
-"Last-Translator: Postulo contributors\n"
-"Language-Team: bosanski\n"
+"PO-Revision-Date: 2026-10-14 07:13+0000\n"
+"Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
+"Language-Team: Bosnian <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/bs/>\n"
 "Language: bs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: postulo scripts/messages.py\n"
 
 #: src/postulo_imap/sync.py
-#, python-format
+#, fuzzy, python-format
 msgid "%(count)d could not be matched to an application; attach them by hand."
-msgstr ""
+msgstr "Poruke koje se nisu mogle povezati s prijavom: %(count)d; priložite ih ručno."
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "A message with no subject"
-msgstr ""
+msgstr "Poruka bez predmeta"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "An app password wherever the server offers one; Gmail requires it with two-factor authentication on. Stored encrypted."
-msgstr ""
+msgstr "Lozinka aplikacije gdje god je server nudi; Gmail je zahtijeva kada je uključena potvrda u dva koraka. Pohranjena šifrirano."
 
 #: src/postulo_imap/mailbox.py
+#, fuzzy
 msgid "Could not reach the server. Check the address, the port and the security."
-msgstr ""
+msgstr "Server nije dostupan. Provjerite adresu, port i sigurnost."
 
 #: src/postulo_imap/sync.py
-#, python-format
+#, fuzzy, python-format
 msgid "Flag it with %(keyword)s"
-msgstr ""
+msgstr "Označi je zastavicom %(keyword)s"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means every recent message is read again; nothing is suggested twice either way."
-msgstr ""
+msgstr "Zastavica se u većini klijenata ne vidi i svaki prolaz ostaje kratak. Ako sandučić ostane netaknut, svaka nedavna poruka čita se ponovo; ni u jednom slučaju ništa se ne predlaže dvaput."
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Folder to read"
-msgstr ""
+msgstr "Folder za čitanje"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "For example imap.example.org."
-msgstr ""
+msgstr "Na primjer imap.example.org."
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "From"
-msgstr ""
+msgstr "Od"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "How many days of mail a pass considers."
-msgstr ""
+msgstr "Koliko dana pošte jedan prolaz uzima u obzir."
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Leave the mailbox untouched"
-msgstr ""
+msgstr "Ostavi sandučić netaknutim"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Look back"
-msgstr ""
+msgstr "Period unazad"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Mailbox (IMAP)"
-msgstr ""
+msgstr "Poštanski sandučić (IMAP)"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Matched by"
-msgstr ""
+msgstr "Prepoznato po"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Move it to a subfolder"
-msgstr ""
+msgstr "Premjesti je u podfolder"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Name the folder to read. Postulo never reads the inbox."
-msgstr ""
+msgstr "Navedite folder za čitanje. Postulo nikad ne čita prijemni sandučić."
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Name the subfolder to move messages to."
-msgstr ""
+msgstr "Navedite podfolder u koji se premještaju poruke."
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "nothing yet"
-msgstr ""
+msgstr "još ništa"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Once read"
-msgstr ""
+msgstr "Nakon čitanja"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "One folder, never the inbox. Make a rule on your mail server that files recruiter mail here; Postulo reads nothing else."
-msgstr ""
+msgstr "Jedan folder, nikad prijemni sandučić. Napravite pravilo na svom serveru pošte koje poštu od regrutera odlaže ovdje; Postulo ne čita ništa drugo."
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Password or app password"
-msgstr ""
+msgstr "Lozinka ili lozinka aplikacije"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Port"
-msgstr ""
+msgstr "Port"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Recognised"
-msgstr ""
+msgstr "Prepoznato"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Security"
-msgstr ""
+msgstr "Sigurnost"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Server"
-msgstr ""
+msgstr "Server"
 
 #: src/postulo_imap/mailbox.py
+#, fuzzy
 msgid "Sign-in refused. Check the username and the password."
-msgstr ""
+msgstr "Prijava odbijena. Provjerite korisničko ime i lozinku."
 
 #: src/postulo_imap/sync.py
-#, python-format
+#, fuzzy, python-format
 msgid "Signed in, but there is no folder called “%(folder)s”."
-msgstr ""
+msgstr "Prijavljeno, ali ne postoji folder „%(folder)s“."
 
 #: src/postulo_imap/sync.py
-#, python-format
+#, fuzzy, python-format
 msgid "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
-msgstr ""
+msgstr "Prijavljeno. Poruke u „%(folder)s“ koje čekaju čitanje: %(count)d."
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "STARTTLS (port 143)"
-msgstr ""
+msgstr "STARTTLS (port 143)"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Subfolder"
-msgstr ""
+msgstr "Podfolder"
 
 #: src/postulo_imap/mailbox.py
-#, python-format
+#, fuzzy, python-format
 msgid "The folder “%(folder)s” could not be opened."
-msgstr ""
+msgstr "Folder „%(folder)s“ nije se mogao otvoriti."
 
 #: src/postulo_imap/mailbox.py
+#, fuzzy
 msgid "The mailbox refused the search."
-msgstr ""
+msgstr "Poštanski sandučić je odbio pretragu."
 
 #: src/postulo_imap/mailbox.py
+#, fuzzy
 msgid "The mailbox refused to hand over the messages."
-msgstr ""
+msgstr "Poštanski sandučić je odbio predati poruke."
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "TLS (port 993)"
-msgstr ""
+msgstr "TLS (port 993)"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Used only when messages are moved. Created if missing."
-msgstr ""
+msgstr "Koristi se samo kada se poruke premještaju. Kreira se ako ne postoji."
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Username"
-msgstr ""
+msgstr "Korisničko ime"

@@ -4,9 +4,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-09-13 04:02+0000\n"
-"Last-Translator: Postulo contributors\n"
-"Language-Team: português (Portugal)\n"
+"PO-Revision-Date: 2026-10-13 12:11+0000\n"
+"Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
+"Language-Team: Portuguese (Portugal) <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/pt_PT/>\n"
 "Language: pt_PT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,7 +25,7 @@ msgstr "Uma mensagem sem assunto"
 
 #: src/postulo_imap/sync.py
 msgid "An app password wherever the server offers one; Gmail requires it with two-factor authentication on. Stored encrypted."
-msgstr "Uma palavra-passe de aplicação sempre que o servidor a ofereça; o Gmail exige-a com a autenticação em dois passos activa. Guardada cifrada."
+msgstr "Uma palavra-passe de aplicação sempre que o servidor a ofereça; o Gmail exige-a com a verificação em dois passos ativa. Guardada cifrada."
 
 #: src/postulo_imap/mailbox.py
 msgid "Could not reach the server. Check the address, the port and the security."

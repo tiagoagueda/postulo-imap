@@ -4,161 +4,192 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-09-13 04:02+0000\n"
-"Last-Translator: Postulo contributors\n"
-"Language-Team: Lëtzebuergesch\n"
+"PO-Revision-Date: 2026-10-13 19:00+0000\n"
+"Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
+"Language-Team: Luxembourgish <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/lb/>\n"
 "Language: lb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: postulo scripts/messages.py\n"
 
 #: src/postulo_imap/sync.py
-#, python-format
+#, fuzzy, python-format
 msgid "%(count)d could not be matched to an application; attach them by hand."
-msgstr ""
+msgstr "%(count)d konnte keng Kandidatur zougeuerdent ginn; verknäppt se mat der Hand."
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "A message with no subject"
-msgstr ""
+msgstr "E Message ouni Sujet"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "An app password wherever the server offers one; Gmail requires it with two-factor authentication on. Stored encrypted."
-msgstr ""
+msgstr "En App-Passwuert, iwwerall wou de Server eent ubitt; Gmail verlaangt et, wann d'Zwee-Faktor-Authentifikatioun ugeschalt ass. Verschlësselt gespäichert."
 
 #: src/postulo_imap/mailbox.py
+#, fuzzy
 msgid "Could not reach the server. Check the address, the port and the security."
-msgstr ""
+msgstr "De Server war net z'erreechen. Kontrolléiert d'Adress, de Port an d'Sécherheet."
 
 #: src/postulo_imap/sync.py
-#, python-format
+#, fuzzy, python-format
 msgid "Flag it with %(keyword)s"
-msgstr ""
+msgstr "Mat %(keyword)s markéieren"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means every recent message is read again; nothing is suggested twice either way."
-msgstr ""
+msgstr "D'Markéieren ass an deene meeschte Mailprogrammer onsichtbar an hält all Duerchgang kuerz. Wann d'Postfach onberéiert bleift, gëtt all rezente Message nach eng Kéier gelies; op déi eng wéi op déi aner Manéier gëtt näischt zweemol virgeschloen."
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Folder to read"
-msgstr ""
+msgstr "Dossier, deen gelies gëtt"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "For example imap.example.org."
-msgstr ""
+msgstr "Zum Beispill imap.example.org."
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "From"
-msgstr ""
+msgstr "Ofsender"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "How many days of mail a pass considers."
-msgstr ""
+msgstr "Wéi vill Deeg u Mailen en Duerchgang berécksiichtegt."
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Leave the mailbox untouched"
-msgstr ""
+msgstr "D'Postfach net upaken"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Look back"
-msgstr ""
+msgstr "Zréckkucken"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Mailbox (IMAP)"
-msgstr ""
+msgstr "Postfach (IMAP)"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Matched by"
-msgstr ""
+msgstr "Erkannt iwwer"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Move it to a subfolder"
-msgstr ""
+msgstr "An en Ënnerdossier réckelen"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Name the folder to read. Postulo never reads the inbox."
-msgstr ""
+msgstr "Gitt den Dossier un, deen gelies soll ginn. De Postulo liest ni den Agank."
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Name the subfolder to move messages to."
-msgstr ""
+msgstr "Gitt den Ënnerdossier un, an deen d'Messagë geréckelt solle ginn."
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "nothing yet"
-msgstr ""
+msgstr "nach näischt"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Once read"
-msgstr ""
+msgstr "Nom Liesen"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "One folder, never the inbox. Make a rule on your mail server that files recruiter mail here; Postulo reads nothing else."
-msgstr ""
+msgstr "Een Dossier, ni den Agank. Maacht eng Regel op Ärem Mailserver, déi Maile vu Recruteuren heihinner sortéiert; de Postulo liest soss näischt."
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Password or app password"
-msgstr ""
+msgstr "Passwuert oder App-Passwuert"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Port"
-msgstr ""
+msgstr "Port"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Recognised"
-msgstr ""
+msgstr "Erkannt"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Security"
-msgstr ""
+msgstr "Sécherheet"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Server"
-msgstr ""
+msgstr "Server"
 
 #: src/postulo_imap/mailbox.py
+#, fuzzy
 msgid "Sign-in refused. Check the username and the password."
-msgstr ""
+msgstr "Umeldung refuséiert. Kontrolléiert de Benotzernumm an d'Passwuert."
 
 #: src/postulo_imap/sync.py
-#, python-format
+#, fuzzy, python-format
 msgid "Signed in, but there is no folder called “%(folder)s”."
-msgstr ""
+msgstr "Ugemellt, mä et gëtt keen Dossier mam Numm „%(folder)s“."
 
 #: src/postulo_imap/sync.py
-#, python-format
+#, fuzzy, python-format
 msgid "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
-msgstr ""
+msgstr "Ugemellt. %(count)d Messagen an „%(folder)s“ waarden drop, gelies ze ginn."
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "STARTTLS (port 143)"
-msgstr ""
+msgstr "STARTTLS (Port 143)"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Subfolder"
-msgstr ""
+msgstr "Ënnerdossier"
 
 #: src/postulo_imap/mailbox.py
-#, python-format
+#, fuzzy, python-format
 msgid "The folder “%(folder)s” could not be opened."
-msgstr ""
+msgstr "Den Dossier „%(folder)s“ konnt net opgemaach ginn."
 
 #: src/postulo_imap/mailbox.py
+#, fuzzy
 msgid "The mailbox refused the search."
-msgstr ""
+msgstr "D'Postfach huet d'Sich refuséiert."
 
 #: src/postulo_imap/mailbox.py
+#, fuzzy
 msgid "The mailbox refused to hand over the messages."
-msgstr ""
+msgstr "D'Postfach huet refuséiert, d'Messagen erauszeginn."
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "TLS (port 993)"
-msgstr ""
+msgstr "TLS (Port 993)"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Used only when messages are moved. Created if missing."
-msgstr ""
+msgstr "Gëtt nëmme benotzt, wann Messagë geréckelt ginn. Gëtt ugeluecht, wann e feelt."
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Username"
-msgstr ""
+msgstr "Benotzernumm"

@@ -4,188 +4,161 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-09-13 04:02+0000\n"
-"Last-Translator: Postulo contributors\n"
-"Language-Team: magyar\n"
+"PO-Revision-Date: 2026-10-13 18:56+0000\n"
+"Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
+"Language-Team: Hungarian <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/hu/>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: postulo scripts/messages.py\n"
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "%(count)d could not be matched to an application; attach them by hand."
-msgstr "%(count)d nem volt párosítható jelentkezéshez; csatold őket kézzel."
+msgstr "%(count)d üzenet nem volt párosítható jelentkezéshez; kapcsolja hozzá őket kézzel."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "A message with no subject"
 msgstr "Tárgy nélküli üzenet"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "An app password wherever the server offers one; Gmail requires it with two-factor authentication on. Stored encrypted."
-msgstr "Alkalmazásjelszó, ahol a szerver kínál ilyet; a Gmail bekapcsolt kétlépcsős hitelesítés mellett megköveteli. Titkosítva tárolva."
+msgstr "Alkalmazásjelszó, ahol a kiszolgáló kínál ilyet; a Gmail bekapcsolt kétlépcsős azonosítás mellett megköveteli. Titkosítva tárolva."
 
 #: src/postulo_imap/mailbox.py
 msgid "Could not reach the server. Check the address, the port and the security."
-msgstr ""
+msgstr "Nem sikerült elérni a kiszolgálót. Ellenőrizze a címet, a portot és a biztonsági beállítást."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Flag it with %(keyword)s"
 msgstr "Megjelölés ezzel: %(keyword)s"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means every recent message is read again; nothing is suggested twice either way."
-msgstr "A megjelölés a legtöbb levelezőben láthatatlan, és minden menet rövid marad. Ha a postafiók érintetlen marad, minden friss üzenet újra beolvasásra kerül; egyik esetben sem javasol semmit kétszer."
+msgstr "A megjelölés a legtöbb levelezőprogramban nem látszik, és minden menetet rövidre fog. Ha a postafiókot érintetlenül hagyja, minden friss üzenet újra beolvasásra kerül; a Postulo egyik esetben sem javasol semmit kétszer."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Folder to read"
 msgstr "Olvasandó mappa"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "For example imap.example.org."
 msgstr "Például imap.example.org."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "From"
-msgstr "Feladó"
+msgstr "Ettől"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "How many days of mail a pass considers."
 msgstr "Hány napnyi levelet vesz figyelembe egy menet."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Leave the mailbox untouched"
 msgstr "A postafiók maradjon érintetlen"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Look back"
 msgstr "Visszatekintés"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Mailbox (IMAP)"
 msgstr "Postafiók (IMAP)"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Matched by"
 msgstr "Párosítás alapja"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Move it to a subfolder"
 msgstr "Áthelyezés almappába"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Name the folder to read. Postulo never reads the inbox."
-msgstr "Add meg az olvasandó mappát. A Postulo soha nem olvassa a beérkezett üzeneteket."
+msgstr "Adja meg az olvasandó mappát. A Postulo soha nem olvassa a beérkezett üzeneteket."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Name the subfolder to move messages to."
-msgstr "Add meg az almappát, ahová az üzenetek kerülnek."
+msgstr "Adja meg az almappát, ahová az üzenetek kerüljenek."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "nothing yet"
 msgstr "még semmi"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Once read"
 msgstr "Olvasás után"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "One folder, never the inbox. Make a rule on your mail server that files recruiter mail here; Postulo reads nothing else."
-msgstr "Egyetlen mappa, soha nem a beérkezett üzenetek. Készíts egy szabályt a levelezőszervereden, amely ide teszi a toborzói leveleket; a Postulo mást nem olvas."
+msgstr "Egyetlen mappa, sosem a beérkezett üzenetek. Hozzon létre egy szabályt a levelezőkiszolgálón, amely ide helyezi a toborzóktól érkező leveleket; a Postulo mást nem olvas."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Password or app password"
 msgstr "Jelszó vagy alkalmazásjelszó"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Port"
 msgstr "Port"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Recognised"
 msgstr "Felismerve"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Security"
 msgstr "Biztonság"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Server"
-msgstr "Szerver"
+msgstr "Kiszolgáló"
 
 #: src/postulo_imap/mailbox.py
 msgid "Sign-in refused. Check the username and the password."
-msgstr ""
+msgstr "A bejelentkezés elutasítva. Ellenőrizze a felhasználónevet és a jelszót."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Signed in, but there is no folder called “%(folder)s”."
 msgstr "Bejelentkezve, de nincs „%(folder)s” nevű mappa."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
 msgstr "Bejelentkezve. %(count)d üzenet vár olvasásra a(z) „%(folder)s” mappában."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "STARTTLS (port 143)"
 msgstr "STARTTLS (143-as port)"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Subfolder"
 msgstr "Almappa"
 
 #: src/postulo_imap/mailbox.py
 #, python-format
 msgid "The folder “%(folder)s” could not be opened."
-msgstr ""
+msgstr "Nem sikerült megnyitni a(z) „%(folder)s” mappát."
 
 #: src/postulo_imap/mailbox.py
 msgid "The mailbox refused the search."
-msgstr ""
+msgstr "A postafiók elutasította a keresést."
 
 #: src/postulo_imap/mailbox.py
 msgid "The mailbox refused to hand over the messages."
-msgstr ""
+msgstr "A postafiók nem adta át az üzeneteket."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "TLS (port 993)"
 msgstr "TLS (993-as port)"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Used only when messages are moved. Created if missing."
-msgstr "Csak az üzenetek áthelyezésekor használt. Létrejön, ha hiányzik."
+msgstr "Csak az üzenetek áthelyezésekor használatos. Ha nem létezik, létrejön."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Username"
 msgstr "Felhasználónév"

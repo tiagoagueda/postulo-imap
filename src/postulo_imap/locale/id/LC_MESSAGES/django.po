@@ -4,9 +4,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-10 10:46+0000\n"
-"Last-Translator: Postulo contributors\n"
-"Language-Team: Bahasa Indonesia\n"
+"PO-Revision-Date: 2026-10-13 12:28+0000\n"
+"Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
+"Language-Team: Indonesian <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/id/>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,148 +17,148 @@ msgstr ""
 #: src/postulo_imap/sync.py
 #, python-format
 msgid "%(count)d could not be matched to an application; attach them by hand."
-msgstr ""
+msgstr "%(count)d pesan tidak dapat dicocokkan dengan lamaran; lampirkan secara manual."
 
 #: src/postulo_imap/sync.py
 msgid "A message with no subject"
-msgstr ""
+msgstr "Pesan tanpa subjek"
 
 #: src/postulo_imap/sync.py
 msgid "An app password wherever the server offers one; Gmail requires it with two-factor authentication on. Stored encrypted."
-msgstr ""
+msgstr "Kata sandi aplikasi, di mana pun server menyediakannya; Gmail mewajibkannya bila autentikasi dua faktor aktif. Disimpan terenkripsi."
 
 #: src/postulo_imap/mailbox.py
 msgid "Could not reach the server. Check the address, the port and the security."
-msgstr ""
+msgstr "Tidak dapat menjangkau server. Periksa alamat, port, dan keamanannya."
 
 #: src/postulo_imap/sync.py
 #, python-format
 msgid "Flag it with %(keyword)s"
-msgstr ""
+msgstr "Tandai dengan %(keyword)s"
 
 #: src/postulo_imap/sync.py
 msgid "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means every recent message is read again; nothing is suggested twice either way."
-msgstr ""
+msgstr "Penandaan tidak terlihat di sebagian besar klien email dan membuat setiap putaran tetap singkat. Membiarkan kotak surat apa adanya berarti setiap pesan terbaru dibaca lagi; dengan cara mana pun, tidak ada yang disarankan dua kali."
 
 #: src/postulo_imap/sync.py
 msgid "Folder to read"
-msgstr ""
+msgstr "Folder untuk dibaca"
 
 #: src/postulo_imap/sync.py
 msgid "For example imap.example.org."
-msgstr ""
+msgstr "Misalnya imap.example.org."
 
 #: src/postulo_imap/sync.py
 msgid "From"
-msgstr ""
+msgstr "Dari"
 
 #: src/postulo_imap/sync.py
 msgid "How many days of mail a pass considers."
-msgstr ""
+msgstr "Berapa hari surat yang diperiksa dalam setiap putaran."
 
 #: src/postulo_imap/sync.py
 msgid "Leave the mailbox untouched"
-msgstr ""
+msgstr "Biarkan kotak surat apa adanya"
 
 #: src/postulo_imap/sync.py
 msgid "Look back"
-msgstr ""
+msgstr "Rentang waktu"
 
 #: src/postulo_imap/sync.py
 msgid "Mailbox (IMAP)"
-msgstr ""
+msgstr "Kotak surat (IMAP)"
 
 #: src/postulo_imap/sync.py
 msgid "Matched by"
-msgstr ""
+msgstr "Dicocokkan oleh"
 
 #: src/postulo_imap/sync.py
 msgid "Move it to a subfolder"
-msgstr ""
+msgstr "Pindahkan ke subfolder"
 
 #: src/postulo_imap/sync.py
 msgid "Name the folder to read. Postulo never reads the inbox."
-msgstr ""
+msgstr "Sebutkan nama folder yang akan dibaca. Postulo tidak pernah membaca kotak masuk."
 
 #: src/postulo_imap/sync.py
 msgid "Name the subfolder to move messages to."
-msgstr ""
+msgstr "Sebutkan nama subfolder tujuan pemindahan pesan."
 
 #: src/postulo_imap/sync.py
 msgid "nothing yet"
-msgstr ""
+msgstr "belum ada"
 
 #: src/postulo_imap/sync.py
 msgid "Once read"
-msgstr ""
+msgstr "Setelah dibaca"
 
 #: src/postulo_imap/sync.py
 msgid "One folder, never the inbox. Make a rule on your mail server that files recruiter mail here; Postulo reads nothing else."
-msgstr ""
+msgstr "Satu folder, tidak pernah kotak masuk. Buat aturan di server email Anda yang memindahkan email dari perekrut ke sini; Postulo tidak membaca apa pun selain itu."
 
 #: src/postulo_imap/sync.py
 msgid "Password or app password"
-msgstr ""
+msgstr "Kata sandi atau kata sandi aplikasi"
 
 #: src/postulo_imap/sync.py
 msgid "Port"
-msgstr ""
+msgstr "Port"
 
 #: src/postulo_imap/sync.py
 msgid "Recognised"
-msgstr ""
+msgstr "Dikenali"
 
 #: src/postulo_imap/sync.py
 msgid "Security"
-msgstr ""
+msgstr "Keamanan"
 
 #: src/postulo_imap/sync.py
 msgid "Server"
-msgstr ""
+msgstr "Server"
 
 #: src/postulo_imap/mailbox.py
 msgid "Sign-in refused. Check the username and the password."
-msgstr ""
+msgstr "Proses masuk ditolak. Periksa nama pengguna dan kata sandi."
 
 #: src/postulo_imap/sync.py
 #, python-format
 msgid "Signed in, but there is no folder called “%(folder)s”."
-msgstr ""
+msgstr "Sudah masuk, tetapi tidak ada folder bernama “%(folder)s”."
 
 #: src/postulo_imap/sync.py
 #, python-format
 msgid "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
-msgstr ""
+msgstr "Sudah masuk. %(count)d pesan di “%(folder)s” menunggu untuk dibaca."
 
 #: src/postulo_imap/sync.py
 msgid "STARTTLS (port 143)"
-msgstr ""
+msgstr "STARTTLS (port 143)"
 
 #: src/postulo_imap/sync.py
 msgid "Subfolder"
-msgstr ""
+msgstr "Subfolder"
 
 #: src/postulo_imap/mailbox.py
 #, python-format
 msgid "The folder “%(folder)s” could not be opened."
-msgstr ""
+msgstr "Folder “%(folder)s” tidak dapat dibuka."
 
 #: src/postulo_imap/mailbox.py
 msgid "The mailbox refused the search."
-msgstr ""
+msgstr "Kotak surat menolak pencarian."
 
 #: src/postulo_imap/mailbox.py
 msgid "The mailbox refused to hand over the messages."
-msgstr ""
+msgstr "Kotak surat menolak untuk menyerahkan pesan."
 
 #: src/postulo_imap/sync.py
 msgid "TLS (port 993)"
-msgstr ""
+msgstr "TLS (port 993)"
 
 #: src/postulo_imap/sync.py
 msgid "Used only when messages are moved. Created if missing."
-msgstr ""
+msgstr "Hanya digunakan saat pesan dipindahkan. Dibuat jika belum ada."
 
 #: src/postulo_imap/sync.py
 msgid "Username"
-msgstr ""
+msgstr "Nama pengguna"
