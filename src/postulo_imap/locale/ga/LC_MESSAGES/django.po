@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-10 12:45+0000\n"
+"PO-Revision-Date: 2026-10-19 11:15+0000\n"
 "Last-Translator: LibreTranslate <noreply-mt-libretranslate@weblate.org>\n"
 "Language-Team: Irish <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/ga/>\n"
 "Language: ga\n"
@@ -15,24 +15,24 @@ msgstr ""
 "X-Generator: postulo scripts/messages.py\n"
 
 #: src/postulo_imap/sync.py
-#, python-format
+#, fuzzy, python-format
 msgid "%(count)d could not be matched to an application; attach it by hand."
 msgid_plural "%(count)d could not be matched to an application; attach them by hand."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
+msgstr[0] "%(count)d Ní fhéadfaí a mheaitseáil le hiarratas; é a cheangal de láimh."
+msgstr[1] "níorbh fhéidir 2 a mheaitseáil le hiarratas; iad a chur de láimh."
+msgstr[2] "%(count)d Ní fhéadfaí a mheaitseáil le hiarratas; iad a cheangal de láimh."
+msgstr[3] "%(count)d Ní fhéadfaí a mheaitseáil le hiarratas; iad a cheangal de láimh."
+msgstr[4] "%(count)d Ní fhéadfaí a mheaitseáil le hiarratas; iad a cheangal de láimh."
 
 #: src/postulo_imap/sync.py
-#, python-format
+#, fuzzy, python-format
 msgid "%(count)d message could not be read and was skipped."
 msgid_plural "%(count)d messages could not be read and were skipped."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
+msgstr[0] "%(count)d Ní fhéadfaí teachtaireacht a léamh agus a bhí skipped."
+msgstr[1] "ní fhéadfaí 2 teachtaireachtaí a léamh agus bhí skipped."
+msgstr[2] "%(count)d Ní fhéadfaí teachtaireachtaí a léamh agus a bhí skipped."
+msgstr[3] "%(count)d Ní fhéadfaí teachtaireachtaí a léamh agus a bhí skipped."
+msgstr[4] "%(count)d Ní fhéadfaí teachtaireachtaí a léamh agus a bhí skipped."
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -40,16 +40,19 @@ msgid "A message with no subject"
 msgstr "Teachtaireacht gan ábhar"
 
 #: src/postulo_imap/classifying.py
+#, fuzzy
 msgid "a rejection"
-msgstr ""
+msgstr "a dhiúltú"
 
 #: src/postulo_imap/matching.py
+#, fuzzy
 msgid "a reply to a message already matched"
-msgstr ""
+msgstr "freagra ar theachtaireacht a mheaitseáil cheana féin"
 
 #: src/postulo_imap/classifying.py
+#, fuzzy
 msgid "an acknowledgement"
-msgstr ""
+msgstr "admháil"
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -57,16 +60,19 @@ msgid "An app password wherever the server offers one; Gmail requires it with tw
 msgstr "Pasfhocal aipe cibé áit a dtairgeann an freastalaí ceann; éilíonn Gmail é nuair a bhíonn fíordheimhniú dhá fhachtóir ar siúl. Stóráilte go criptithe."
 
 #: src/postulo_imap/classifying.py
+#, fuzzy
 msgid "an assessment"
-msgstr ""
+msgstr "measúnú"
 
 #: src/postulo_imap/classifying.py
+#, fuzzy
 msgid "an invitation"
-msgstr ""
+msgstr "cuireadh"
 
 #: src/postulo_imap/classifying.py
+#, fuzzy
 msgid "an offer"
-msgstr ""
+msgstr "tairiscint"
 
 #: src/postulo_imap/mailbox.py
 #, fuzzy
@@ -99,13 +105,14 @@ msgid "From"
 msgstr "Ó"
 
 #: src/postulo_imap/sync.py
-#, python-format
+#, fuzzy, python-format
 msgid "Give a number of days between 1 and %(max)d."
-msgstr ""
+msgstr "Tabhair roinnt laethanta idir 1 agus %(max)d."
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Give a port between 1 and 65535, or leave it empty."
-msgstr ""
+msgstr "Tabhair calafort idir 1 agus 65535, nó fág folamh é."
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -118,8 +125,9 @@ msgid "Leave the mailbox untouched"
 msgstr "Fág an bosca poist gan athrú"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Left empty: 993 with TLS, 143 with STARTTLS."
-msgstr ""
+msgstr "Clé folamh: 993 le TLS, 143 le STARTTLS."
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -142,8 +150,9 @@ msgid "Move it to a subfolder"
 msgstr "Bog chuig fofhillteán é"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Name a subfolder other than the folder being read."
-msgstr ""
+msgstr "Ainm fofhillteán seachas an fillteán á léamh."
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -166,8 +175,9 @@ msgid "Once read"
 msgstr "Nuair a bheidh sé léite"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "One folder, never the inbox. Make a rule on your mail server that files recruiter mail here; Postulo reads nothing else. Every message it reads is flagged or moved afterwards, whether or not it was recognised."
-msgstr ""
+msgstr "Fillteán amháin, riamh an bhosca. Déan riail ar do fhreastalaí ríomhphoist a comhaid earcaitheoir phost anseo; Postulo léann rud ar bith eile. Tá gach teachtaireacht a léann sé brataithe nó ar athraíodh a ionad ina dhiaidh sin, cibé acu a bhí nó nach raibh sé aitheanta."
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -180,8 +190,9 @@ msgid "Port"
 msgstr "Port"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Postulo never reads the inbox. Name the folder your mail rule files jobs mail into."
-msgstr ""
+msgstr "Postulo léann riamh an bhosca. Ainm an fillteán do phost comhaid riail poist phost isteach."
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -209,18 +220,19 @@ msgid "Signed in, but there is no folder called “%(folder)s”."
 msgstr "Sínithe isteach, ach níl aon fhillteán darb ainm “%(folder)s” ann."
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Signed in, but this server cannot move messages. Choose to flag them instead."
-msgstr ""
+msgstr "Sínithe i, ach ní féidir leis an bhfreastalaí teachtaireachtaí a bhogadh. Roghnaigh chun iad a bratach ionad."
 
 #: src/postulo_imap/sync.py
-#, python-format
+#, fuzzy, python-format
 msgid "Signed in. %(count)d message in “%(folder)s” is waiting to be read."
 msgid_plural "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
+msgstr[0] "Sínithe i. %(count)d Tá teachtaireacht i \"%(folder)s\" ag fanacht le léamh."
+msgstr[1] "Sínithe i. 2 teachtaireachtaí i \"%(folder)s\" ag fanacht le léamh."
+msgstr[2] "Sínithe i. %(count)d teachtaireachtaí i \"%(folder)s\" ag fanacht le léamh."
+msgstr[3] "Sínithe i. %(count)d teachtaireachtaí i \"%(folder)s\" ag fanacht le léamh."
+msgstr[4] "Sínithe i. %(count)d teachtaireachtaí i \"%(folder)s\" ag fanacht le léamh."
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -233,12 +245,14 @@ msgid "Subfolder"
 msgstr "Fofhillteán"
 
 #: src/postulo_imap/matching.py
+#, fuzzy
 msgid "the address of a contact"
-msgstr ""
+msgstr "seoladh teagmhála"
 
 #: src/postulo_imap/matching.py
+#, fuzzy
 msgid "the company’s name in the message"
-msgstr ""
+msgstr "ainm na cuideachta sa teachtaireacht"
 
 #: src/postulo_imap/mailbox.py
 #, fuzzy, python-format
@@ -256,33 +270,39 @@ msgid "The mailbox refused to hand over the messages."
 msgstr "Dhiúltaigh an bosca poist a thabhairt ar láimh thar na teachtaireachtaí."
 
 #: src/postulo_imap/mailbox.py
+#, fuzzy
 msgid "The mailbox refused to look for the folder."
-msgstr ""
+msgstr "An bosca poist dhiúltaigh chun breathnú ar an fillteán."
 
 #: src/postulo_imap/mailbox.py
+#, fuzzy
 msgid "The messages were read but could not be flagged; the next pass will read them again."
-msgstr ""
+msgstr "Léadh na teachtaireachtaí ach ní fhéadfaí a bhratach; Beidh an pas seo chugainn iad a léamh arís."
 
 #: src/postulo_imap/mailbox.py
-#, python-format
+#, fuzzy, python-format
 msgid "The messages were read but could not be moved to “%(folder)s”; the next pass will read them again."
-msgstr ""
+msgstr "Léadh na teachtaireachtaí ach ní fhéadfaí iad a aistriú go dtí \"%(folder)s”; Beidh an pas eile a léamh arís."
 
 #: src/postulo_imap/mailbox.py
+#, fuzzy
 msgid "The messages were read, but this server cannot move them; the next pass will read them again."
-msgstr ""
+msgstr "Léadh na teachtaireachtaí, ach ní féidir leis an bhfreastalaí bogadh orthu; Beidh an pas seo chugainn iad a léamh arís."
 
 #: src/postulo_imap/matching.py
+#, fuzzy
 msgid "the role’s title in the message"
-msgstr ""
+msgstr "teideal an ról sa teachtaireacht"
 
 #: src/postulo_imap/matching.py
+#, fuzzy
 msgid "the sender’s web domain"
-msgstr ""
+msgstr "bhfearann gréasáin an seoltóir"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "This folder does not keep flags of its own, so every message of the look-back is read again on each pass."
-msgstr ""
+msgstr "Ní dhéanann an fillteán seo bratacha dá chuid féin a choinneáil, mar sin tá gach teachtaireacht ar an athsheoladh léamh arís ar gach pas."
 
 #: src/postulo_imap/sync.py
 #, fuzzy
