@@ -30,17 +30,20 @@ Restart Postulo. In a container, bake it into the image — see *Plugins in the 
 
 **First make the folder.** In your mail client or on your server, create a folder — the
 default name here is *Jobs* — and a rule that files recruiter mail into it. Postulo never
-reads your inbox, and it reads nothing but this one folder.
+reads your inbox, and it reads nothing but this one folder: a connection that names `INBOX`
+is refused. Every message it reads there is afterwards flagged, or moved, or (if you chose
+to leave the mailbox untouched) left alone, whether or not the rules recognised it; a
+message nothing recognised is skipped, with no suggestion, and flagged like the rest.
 
 Then, under **Settings → Connections → Add a connection**, choose *Mailbox (IMAP)*:
 
 | Field | What it is |
 | --- | --- |
-| Server, port, security | `imap.example.org`, 993 with TLS, or 143 with STARTTLS. |
+| Server, port, security | `imap.example.org`, 993 with TLS, or 143 with STARTTLS. Leave the port empty and it follows the security you chose. |
 | Username, password | An app password wherever the server offers one. Gmail requires one with two-factor authentication on. Stored encrypted. |
 | Folder to read | *Jobs*, or whatever you called it. |
 | Once read | Flag with `$Postulo` (default, invisible in most clients), move to a subfolder, or leave the mailbox completely untouched. |
-| Look back | How many days a pass considers. Thirty by default. |
+| Look back | How many days a pass considers, 1 to 3650. Thirty by default. |
 | Run | Every 15 minutes to once a day, honoured by the scheduler; *Sync now* runs at once. |
 
 Press *Test*: it signs in and says how many messages are waiting.
@@ -49,14 +52,18 @@ Press *Test*: it signs in and says how many messages are waiting.
 
 **Matching**, strongest evidence first: a reply to a message already matched; the sender's
 address against a contact you recorded; the sender's domain against the company's website
-(public mail providers prove nothing and are ignored); and last, the company name or the
+(public mail providers prove nothing and are ignored, and `acme.co.uk` is told from every
+other `.co.uk`); and last, the company name or the
 role title in the subject or body. When two applications answer equally well — two roles
 at one company — nothing is chosen, and you attach it by hand.
 
 **Classifying**, from the phrase lists in `src/postulo_imap/rules/`: German, English,
 Spanish, French, Italian, Dutch, Polish and Portuguese. Rules, not a model: they are
 inspectable, translatable and wrong in ways you can see. The most consequential reading
-wins, so a message that both thanks you and invites you is an invitation. An invitation's
+wins, whatever language each phrase is in: offer, then rejection, then invitation, then
+assessment, then acknowledgement, so a message that both thanks you and invites you is an
+invitation, and a rejection that mentions an earlier interview is a rejection. Line wraps,
+HTML tags and entities, non-breaking spaces and typographic apostrophes do not hide a phrase. An invitation's
 dates are offered as the message wrote them, for you to put in the diary.
 
 **A language with no phrase list is skipped, not guessed at.** Mail in one of the eight is
@@ -73,6 +80,13 @@ timeline says *imap* put it there and you can undo it by hand. Declining is reme
 **What is stored**: the message's identifier, date, sender, subject and a short excerpt.
 Not the body, beyond that excerpt, and no attachments.
 
+**What is transferred**: a pass asks the server for 25 messages at a time, learns each one's
+size first, and takes a message above a megabyte as its headers and the first 64 KiB of its
+text only, so attachments are not downloaded and a folder's size does not set the memory a
+pass needs. When you leave the mailbox untouched, a message already suggested is recognised
+from its `Message-ID` header and not downloaded again. A message the plugin cannot read is
+counted in the connection's notes, flagged with the rest, and does not stop the pass.
+
 ## Adding a language
 
 Copy `src/postulo_imap/rules/en.json`, translate the phrases, name the file after the
@@ -85,9 +99,11 @@ own. A code is matched to a list the way tags are compared, without regard to ca
 variety with no list of its own is read by its language's: `pt-BR` and `PT` both find
 `pt.json`. The tests refuse a file named any other way.
 
-Keep to words that belong to your language. The files are tried in turn and the first match
-wins, so a pattern that reads equally well as English or Dutch will answer for those too,
-and the suggestion will name the wrong language.
+Keep to words that belong to your language. The kinds are tried in order across all the
+files, and within a kind the files are tried in turn, so a pattern that reads equally well as
+English or Dutch will answer for those too, and the suggestion will name the wrong language.
+Name the post in an offer ("pleased to offer you the *position*"): an offer outranks every
+other kind, so a pattern that also fits an advert or an interview turns those into offers.
 
 ## Translations
 

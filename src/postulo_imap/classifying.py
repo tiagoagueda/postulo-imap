@@ -7,23 +7,29 @@ date takes in that language. Adding a language is adding a file, not writing cod
 file is named after the language's BCP 47 tag as Postulo writes one: ``pt``, or ``pt-BR``
 should a variety need phrases of its own.
 
-The kinds are tried in the order the file lists them, most consequential first, and the
-first that matches wins: a message that says both "we would like to invite you" and
-"thank you for your application" is an invitation.
+The kinds are tried in the order ``MOST_CONSEQUENTIAL_FIRST`` names, and for each kind in
+turn *every* language is tried, so the first kind with a match wins whichever language
+matched it: a message that says both "we would like to invite you" and "thank you for your
+application" is an invitation, and a Portuguese rejection that mentions an earlier
+"entrevista presencial" is a rejection, not the interview the Spanish rules would have read
+it as had they been asked first (postulo-imap#18).
 
 **What happens in a language with no file is worth saying plainly.** The files ship for
 German, English, Spanish, French, Italian, Dutch, Polish and Portuguese. A message in any
 other language matches nothing, is skipped, and no suggestion is filed — it is never
-guessed at, and the mailbox is left exactly as it was. That is the right failure and the
-wrong silence: somebody whose rejections are in Swedish sees a plugin that appears to work
-and files nothing. So the set is named in `tests/test_imap.py`, adding a language is adding
-a file and a line there, and the plugin's catalogues being translated into a language says
-nothing about whether its mail can be read (postulo-imap#1).
+guessed at. That is the right failure and the wrong silence: somebody whose rejections are
+in Swedish sees a plugin that appears to work and files nothing. So the set is named in
+`tests/test_imap.py`, adding a language is adding a file and a line there, and the plugin's
+catalogues being translated into a language says nothing about whether its mail can be read
+(postulo-imap#1). A skipped message is still flagged or moved like every other one the pass
+read.
 
-The files are tried in turn, so a pattern that also reads as another language answers for
-that language too — the first file to match decides, and `de.json` is consulted before
-`en.json`. Each list therefore keeps to words that belong to its own language: "Online-Test"
-rather than a bare "online test" that is equally English.
+Within one kind the files are tried in turn, so a pattern that also reads as another
+language answers for that language too — the first file to match names the language, and
+`de.json` is consulted before `en.json`. Each list therefore keeps to words that belong to
+its own language: "Online-Test" rather than a bare "online test" that is equally English.
+The text is brought to one spelling first (`normalising.normalise`): a line wrap, an
+entity, a non-breaking space and a typographic apostrophe do not hide a phrase.
 """
 
 from __future__ import annotations
@@ -34,7 +40,10 @@ from dataclasses import dataclass
 from functools import lru_cache
 from pathlib import Path
 
+from django.utils.translation import gettext_lazy as _
 from postulo.plugins.api import language_match
+
+from .normalising import normalise
 
 RULES_DIR = Path(__file__).parent / "rules"
 
@@ -47,6 +56,21 @@ OUTCOMES = {
     "interview": ("email_received", "interviewing"),
     "assessment": ("assessment", "assessment"),
     "offer": ("offer", "offer"),
+}
+
+
+#: The kinds in the order they are tried: what a message that says two things is read as.
+#: The first kind with a match, in any language, decides.
+MOST_CONSEQUENTIAL_FIRST = ("offer", "rejected", "interview", "assessment", "acknowledged")
+
+#: How a kind is worded to the person, apart from the identifier the code uses. What a
+#: suggestion stores is the translated words, and the identifier stays `Verdict.kind`.
+KIND_LABELS = {
+    "acknowledged": _("an acknowledgement"),
+    "rejected": _("a rejection"),
+    "interview": _("an invitation"),
+    "assessment": _("an assessment"),
+    "offer": _("an offer"),
 }
 
 
@@ -66,6 +90,11 @@ class Verdict:
     @property
     def suggested_status(self) -> str:
         return OUTCOMES[self.kind][1]
+
+    @property
+    def label(self) -> str:
+        """The kind in the active language, for a person to read."""
+        return str(KIND_LABELS[self.kind])
 
 
 @lru_cache(maxsize=1)
@@ -133,21 +162,28 @@ def dates_in(text: str, language: str = "") -> tuple[str, ...]:
 def classify(text: str, *, only: tuple[str, ...] = ()) -> Verdict | None:
     """What kind of message this is, or ``None`` when no rule recognises it.
 
-    ``only`` limits the languages consulted; empty means all of them, which is what a
-    mailbox that receives mail in several languages needs. Each is a language code however
-    it is spelt, matched to a rule list by `rules_for`.
+    Kind by kind, most consequential first, and every language for each kind: see the
+    module's docstring. ``only`` limits the languages consulted; empty means all of them,
+    which is what a mailbox that receives mail in several languages needs. Each is a
+    language code however it is spelt, matched to a rule list by `rules_for`. Nothing in the
+    plugin passes it yet: the connection form has no language field.
     """
+    text = normalise(text)
     lowered = text.lower()
-    for data in _consulted(only):
-        for kind, patterns in data["compiled"]:
-            for pattern in patterns:
-                match = pattern.search(lowered)
-                if match:
-                    dates = dates_in(text, data["language"]) if kind == "interview" else ()
-                    return Verdict(
-                        kind=kind,
-                        language=data["language"],
-                        matched=match.group(0).strip(),
-                        dates=dates,
-                    )
+    files = _consulted(only)
+    for kind in MOST_CONSEQUENTIAL_FIRST:
+        for data in files:
+            for entry_kind, patterns in data["compiled"]:
+                if entry_kind != kind:
+                    continue
+                for pattern in patterns:
+                    match = pattern.search(lowered)
+                    if match:
+                        dates = dates_in(text, data["language"]) if kind == "interview" else ()
+                        return Verdict(
+                            kind=kind,
+                            language=data["language"],
+                            matched=match.group(0).strip(),
+                            dates=dates,
+                        )
     return None

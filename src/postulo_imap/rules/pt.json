@@ -10,10 +10,10 @@
     {
       "kind": "offer",
       "patterns": [
-        "temos o prazer de lhe (oferecer|propor)",
-        "proposta de (trabalho|emprego|contrata[çc][ãa]o)",
-        "gostar[íi]amos de lhe oferecer",
-        "oferta de emprego"
+        "temos o prazer de lhe (oferecer|propor) (a|o|um|uma) (posi[çc][ãa]o|cargo|lugar|vaga|posto|emprego|fun[çc][ãa]o)",
+        "gostar[íi]amos de lhe oferecer (a|o|um|uma) (posi[çc][ãa]o|cargo|lugar|vaga|posto|emprego|fun[çc][ãa]o)",
+        "proposta formal de (trabalho|emprego|contrata[çc][ãa]o)",
+        "carta de (oferta|proposta)"
       ]
     },
     {
@@ -34,7 +34,8 @@
         "convite para (uma )?entrevista",
         "agendar (uma )?(entrevista|conversa|reuni[ãa]o)",
         "entrevista (telef[óo]nica|presencial|por v[íi]deo)",
-        "tem disponibilidade"
+        "tem disponibilidade",
+        "(oferecer|propor|marcar) (uma )?(entrevista|reuni[ãa]o|conversa)"
       ]
     },
     {

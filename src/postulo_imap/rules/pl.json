@@ -10,10 +10,10 @@
     {
       "kind": "offer",
       "patterns": [
-        "mamy przyjemno[śs][ćc] (zaproponowa[ćc]|z[łl]o[żz]y[ćc] ofert)",
+        "mamy przyjemno[śs][ćc] zaproponowa[ćc] (panu |pani |ci )?(stanowisko|prac[ęe]|zatrudnienie)",
+        "mamy przyjemno[śs][ćc] z[łl]o[żz]y[ćc] ofert[ęe]",
         "chcieliby[śs]my zaproponowa[ćc] (panu|pani|ci) (stanowisko|prac)",
-        "oferta (pracy|zatrudnienia)",
-        "propozycja (zatrudnienia|wsp[óo][łl]pracy)"
+        "przedstawi[ćc] .{0,20}ofert[ęe] (pracy|zatrudnienia)"
       ]
     },
     {
@@ -34,7 +34,8 @@
         "zaproszenie na (rozmow|spotkanie)",
         "um[óo]wi[ćc] (si[ęe] na )?(rozmow|spotkanie)",
         "rozmow(a|[ęe]) (kwalifikacyjn|rekrutacyjn)",
-        "czy (jest pan|jest pani|jeste[śs]) dost[ęe]pn"
+        "czy (jest pan|jest pani|jeste[śs]) dost[ęe]pn",
+        "zaproponowa[ćc] .{0,20}(rozmow|spotkanie)"
       ]
     },
     {

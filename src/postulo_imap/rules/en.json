@@ -11,11 +11,10 @@
     {
       "kind": "offer",
       "patterns": [
-        "pleased to offer you",
-        "delighted to offer you",
-        "we would like to offer you",
+        "(pleased|delighted|happy|thrilled) to offer you (the|a|an) (position|role|job|post)",
+        "we would like to offer you (the|a|an) (position|role|job|post)",
         "offer of employment",
-        "job offer",
+        "(extend|extending|make|making) (you )?(a|an|the) (formal |job )?offer",
         "your offer letter"
       ]
     },
@@ -41,7 +40,8 @@
         "(interview|call) (invitation|invite)",
         "book a time",
         "are you available (on|for)",
-        "next (step|stage).{0,40}(interview|call)"
+        "next (step|stage).{0,40}(interview|call)",
+        "(pleased|delighted|happy) to offer you an? (interview|call|conversation|meeting)"
       ]
     },
     {

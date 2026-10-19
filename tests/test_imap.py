@@ -30,7 +30,7 @@ from postulo.plugins.models import Connection
 from postulo_imap import classifying, mailbox
 from postulo_imap import sync as sync_module
 from postulo_imap.mailbox import KEYWORD, Mail, parse, plain_text
-from postulo_imap.matching import domain_of, match, registrable
+from postulo_imap.matching import HOW_LABELS, domain_of, match, registrable
 from postulo_imap.sync import ImapSync
 
 pytestmark = pytest.mark.django_db
@@ -63,7 +63,8 @@ def a_message(
     message["From"] = f"{name} <{sender}>" if name else sender
     message["To"] = "ana@example.org"
     message["Subject"] = subject
-    message["Message-ID"] = message_id
+    if message_id:
+        message["Message-ID"] = message_id
     message["Date"] = (when or timezone.now()).strftime("%a, %d %b %Y %H:%M:%S %z")
     if in_reply_to:
         message["In-Reply-To"] = in_reply_to
@@ -89,7 +90,24 @@ class FakeIMAP:
         self.started_tls = False
         self.credentials: tuple[str, str] | None = None
         self.next_uid = 1
+        #: Every FETCH, as (uids, parts): what a pass asked the server for.
+        self.fetches: list[tuple[list[int], list[str]]] = []
+        #: A size to report for a uid in place of the real one, to pretend a message is big.
+        self.sizes: dict[int, int] = {}
+        #: An exception to raise from a method, by name.
+        self.fail: dict[str, Exception] = {}
+        #: What the server says it can do, and what it says about the folder it selected.
+        self.capabilities = {"MOVE", "UIDPLUS"}
+        self.permanent_flags: tuple[bytes, ...] | None = None
+        self.copied: list[tuple[list[int], str]] = []
         FakeIMAP.instances.append(self)
+
+    def _maybe_fail(self, name):
+        if name in self.fail:
+            raise self.fail[name]
+
+    def has_capability(self, name):
+        return name in self.capabilities
 
     # -- connection
     def starttls(self, ssl_context=None):
@@ -106,6 +124,7 @@ class FakeIMAP:
 
     # -- folders
     def folder_exists(self, name):
+        self._maybe_fail("folder_exists")
         return name in self.folders
 
     def create_folder(self, name):
@@ -115,6 +134,10 @@ class FakeIMAP:
         if name not in self.folders:
             raise ValueError(f"[NONEXISTENT] Unknown Mailbox: {name}")
         self.selected, self.readonly = name, readonly
+        answer = {b"EXISTS": len(self.folders[name])}
+        if self.permanent_flags is not None:
+            answer[b"PERMANENTFLAGS"] = self.permanent_flags
+        return answer
 
     # -- messages
     def add(self, raw: bytes, *, folder="Jobs", flags=(), date=None) -> int:
@@ -147,25 +170,71 @@ class FakeIMAP:
         return found
 
     def fetch(self, uids, parts):
-        return {uid: {b"BODY[]": self.folders[self.selected][uid]["raw"]} for uid in uids}
+        self._maybe_fail("fetch")
+        self.fetches.append((list(uids), list(parts)))
+        answer = {}
+        for uid in uids:
+            raw = self.folders[self.selected][uid]["raw"]
+            pieces = [*re.split(rb"(\r?\n\r?\n)", raw, maxsplit=1), b"", b""]
+            head, separator, body = pieces[:3]
+            item = {}
+            for part in parts:
+                if part == "RFC822.SIZE":
+                    item[b"RFC822.SIZE"] = self.sizes.get(uid, len(raw))
+                elif part == "BODY.PEEK[]":
+                    item[b"BODY[]"] = raw
+                elif part == "BODY.PEEK[HEADER]":
+                    item[b"BODY[HEADER]"] = head + separator
+                elif part.startswith("BODY.PEEK[HEADER.FIELDS"):
+                    wanted = [
+                        line
+                        for line in head.splitlines()
+                        if line.lower().startswith(b"message-id:")
+                    ]
+                    item[b"BODY[HEADER.FIELDS (MESSAGE-ID)]"] = b"\r\n".join(wanted) + b"\r\n\r\n"
+                elif part.startswith("BODY.PEEK[TEXT]<0."):
+                    size = int(part.split(".")[-1].rstrip(">"))
+                    item[b"BODY[TEXT]<0>"] = body[:size]
+            answer[uid] = item
+        return answer
 
     def add_flags(self, uids, flags):
+        self._maybe_fail("add_flags")
         if self.readonly:
             raise ValueError("[READ-ONLY] Mailbox is read-only")
         for uid in uids:
             self.folders[self.selected][uid]["flags"].update(flags)
 
     def move(self, uids, destination):
+        self._maybe_fail("move")
         if self.readonly:
             raise ValueError("[READ-ONLY] Mailbox is read-only")
         self.create_folder(destination)
         for uid in uids:
             self.folders[destination][uid] = self.folders[self.selected].pop(uid)
 
+    def copy(self, uids, destination):
+        self.copied.append((list(uids), destination))
+        self.create_folder(destination)
+        for uid in uids:
+            self.folders[destination][uid] = dict(self.folders[self.selected][uid])
+
+    def delete_messages(self, uids):
+        for uid in uids:
+            self.folders[self.selected][uid]["flags"].add("\\Deleted")
+
+    def expunge(self, uids=None):
+        for uid in list(self.folders[self.selected]):
+            if (uids is None or uid in uids) and "\\Deleted" in self.folders[self.selected][uid][
+                "flags"
+            ]:
+                del self.folders[self.selected][uid]
+
 
 #: The order every rule list names its kinds in, most consequential first: a message that
 #: both thanks somebody and invites them is an invitation.
-MOST_CONSEQUENTIAL_FIRST = ["offer", "rejected", "interview", "assessment", "acknowledged"]
+MOST_CONSEQUENTIAL_FIRST = list(classifying.MOST_CONSEQUENTIAL_FIRST)
+assert MOST_CONSEQUENTIAL_FIRST == ["offer", "rejected", "interview", "assessment", "acknowledged"]
 
 #: What the fake resolver says `imap.example.org` answers with. A test never asks the real
 #: one: a name that has to resolve is a test that fails on a train.
@@ -503,7 +572,10 @@ def test_the_form_insists_on_a_folder_and_a_destination():
 def test_the_test_button_signs_in_and_counts_what_is_waiting(imap):
     imap.add(a_message())
     result = ImapSync().test(CONFIG)
-    assert result.ok and "1 messages" in result.message and "Jobs" in result.message
+    assert result.ok and "1 message " in result.message and "Jobs" in result.message
+    assert "1 messages" not in result.message
+    imap.add(a_message(message_id="<m2@blackmesa.test>"))
+    assert "2 messages " in ImapSync().test(CONFIG).message
 
     result = ImapSync().test({**CONFIG, "password": "wrong"})
     assert not result.ok and "Sign-in refused" in result.message
@@ -592,7 +664,7 @@ def test_a_pass_suggests_what_it_recognises_and_marks_what_it_read(imap, connect
     assert acknowledged.suggested_status == Status.ACKNOWLEDGED
     assert acknowledged.status == SuggestionStatus.PENDING
     assert "Black Mesa Careers" in " ".join(acknowledged.context.values())
-    assert "domain" in " ".join(acknowledged.context.values())
+    assert str(HOW_LABELS["domain"]) in acknowledged.context.values()
 
     invitation = Suggestion.objects.get(external_id="<m2@blackmesa.test>")
     assert invitation.suggested_status == Status.INTERVIEWING
@@ -670,7 +742,7 @@ def test_a_mailbox_that_will_not_open_is_reported_on_the_connection(imap, connec
     connection.save()
     assert syncing.run_syncs() == (1, 1)
     connection.refresh_from_db()
-    assert "could not be opened" in connection.last_error
+    assert connection.last_error == "The folder “Nope” could not be opened."
 
 
 def test_the_plugin_speaks_french_and_portuguese_by_itself():
@@ -689,7 +761,7 @@ def test_the_plugin_speaks_french_and_portuguese_by_itself():
 
 def test_the_sync_module_closes_the_connection_even_when_it_fails(imap, connection):
     connection.config["folder"] = "Nope"
-    with pytest.raises(Exception, match="could not be opened"):
-        ImapSync().sync(connection, {**connection.full_config, "folder": "Nope"})
+    report = ImapSync().sync(connection, {**connection.full_config, "folder": "Nope"})
+    assert report.error == "The folder “Nope” could not be opened."
     assert imap.logged_in is False
     assert sync_module.MARK_KEYWORD == "keyword"

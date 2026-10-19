@@ -10,7 +10,7 @@
     {
       "kind": "offer",
       "patterns": [
-        "freuen uns.{0,40}anbieten zu k[öo]nnen",
+        "freuen uns.{0,40}(stelle|position|vertrag|arbeitsplatz).{0,30}anbieten zu k[öo]nnen",
         "m[öo]chten ihnen (die|diese) (stelle|position) anbieten",
         "vertragsangebot",
         "einstellungsangebot",
@@ -37,7 +37,8 @@
         "(vorstellungs|kennenlern)gespr[äa]ch",
         "w[üu]rden sie gerne (kennenlernen|pers[öo]nlich treffen)",
         "einen termin .{0,30}(vereinbaren|abstimmen|vorschlagen)",
-        "h[äa]tten sie am .{0,30}zeit"
+        "h[äa]tten sie am .{0,30}zeit",
+        "gespr[äa]chstermin"
       ]
     },
     {
