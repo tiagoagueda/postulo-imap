@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-10 12:45+0000\n"
+"PO-Revision-Date: 2026-10-19 11:15+0000\n"
 "Last-Translator: LibreTranslate <noreply-mt-libretranslate@weblate.org>\n"
 "Language-Team: Norwegian Bokmål <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/nb_NO/>\n"
 "Language: nb\n"
@@ -15,18 +15,18 @@ msgstr ""
 "X-Generator: postulo scripts/messages.py\n"
 
 #: src/postulo_imap/sync.py
-#, python-format
+#, fuzzy, python-format
 msgid "%(count)d could not be matched to an application; attach it by hand."
 msgid_plural "%(count)d could not be matched to an application; attach them by hand."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%(count)d kunne ikke matches til et program; fest det for hånd."
+msgstr[1] "%(count)d kunne ikke matches til et program; fest dem for hånd."
 
 #: src/postulo_imap/sync.py
-#, python-format
+#, fuzzy, python-format
 msgid "%(count)d message could not be read and was skipped."
 msgid_plural "%(count)d messages could not be read and were skipped."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%(count)d meldingen kunne ikke leses og ble hoppet over."
+msgstr[1] "%(count)d meldinger kunne ikke leses og ble hoppet over."
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -34,16 +34,19 @@ msgid "A message with no subject"
 msgstr "En melding uten emne"
 
 #: src/postulo_imap/classifying.py
+#, fuzzy
 msgid "a rejection"
-msgstr ""
+msgstr "avvisning"
 
 #: src/postulo_imap/matching.py
+#, fuzzy
 msgid "a reply to a message already matched"
-msgstr ""
+msgstr "et svar på en melding som allerede er matchet"
 
 #: src/postulo_imap/classifying.py
+#, fuzzy
 msgid "an acknowledgement"
-msgstr ""
+msgstr "en anerkjennelse"
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -51,16 +54,19 @@ msgid "An app password wherever the server offers one; Gmail requires it with tw
 msgstr "Et apppassord der serveren tilbyr én; Gmail krever det med to-faktor-autentisering på. Oppbevart kryptert."
 
 #: src/postulo_imap/classifying.py
+#, fuzzy
 msgid "an assessment"
-msgstr ""
+msgstr "en vurdering"
 
 #: src/postulo_imap/classifying.py
+#, fuzzy
 msgid "an invitation"
-msgstr ""
+msgstr "en invitasjon"
 
 #: src/postulo_imap/classifying.py
+#, fuzzy
 msgid "an offer"
-msgstr ""
+msgstr "et tilbud"
 
 #: src/postulo_imap/mailbox.py
 #, fuzzy
@@ -93,13 +99,14 @@ msgid "From"
 msgstr "Fra"
 
 #: src/postulo_imap/sync.py
-#, python-format
+#, fuzzy, python-format
 msgid "Give a number of days between 1 and %(max)d."
-msgstr ""
+msgstr "Gi et antall dager mellom 1 og %(max)d."
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Give a port between 1 and 65535, or leave it empty."
-msgstr ""
+msgstr "Gi en port mellom 1 og 65535, eller la den være tom."
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -112,8 +119,9 @@ msgid "Leave the mailbox untouched"
 msgstr "La postkassen være uberørt"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Left empty: 993 with TLS, 143 with STARTTLS."
-msgstr ""
+msgstr "Venstre tom: 993 med TLS, 143 med STARTTLS."
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -136,8 +144,9 @@ msgid "Move it to a subfolder"
 msgstr "Flytt den til en undermappe"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Name a subfolder other than the folder being read."
-msgstr ""
+msgstr "Navngjev en annen undermappe enn mappen som leses."
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -160,8 +169,9 @@ msgid "Once read"
 msgstr "En gang lest"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "One folder, never the inbox. Make a rule on your mail server that files recruiter mail here; Postulo reads nothing else. Every message it reads is flagged or moved afterwards, whether or not it was recognised."
-msgstr ""
+msgstr "En mappe, aldri innboksen. Lag en regel på e-postserveren din om at filer rekrutterer e-post her; Postulo leser ingenting annet. Hver melding den leser er flagget eller flyttet etterpå, enten det ble anerkjent eller ikke."
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -174,8 +184,9 @@ msgid "Port"
 msgstr "Port"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Postulo never reads the inbox. Name the folder your mail rule files jobs mail into."
-msgstr ""
+msgstr "Postulo leser aldri innboksen. Navn på mappen e-postreglene jobber e-post i."
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -203,15 +214,16 @@ msgid "Signed in, but there is no folder called “%(folder)s”."
 msgstr "Logget inn, men det er ingen mappe som heter \\\"%(folder)s\\\"."
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Signed in, but this server cannot move messages. Choose to flag them instead."
-msgstr ""
+msgstr "Logget på, men denne tjeneren kan ikke flytte meldinger. Velg å flagge dem i stedet."
 
 #: src/postulo_imap/sync.py
-#, python-format
+#, fuzzy, python-format
 msgid "Signed in. %(count)d message in “%(folder)s” is waiting to be read."
 msgid_plural "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Signert. %(count)d melding i \\\"%(folder)s\\\" venter på å bli lest."
+msgstr[1] "Signert. %(count)d meldinger i \\\"%(folder)s\\\" venter på å bli lest."
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -224,12 +236,14 @@ msgid "Subfolder"
 msgstr "Undermappe"
 
 #: src/postulo_imap/matching.py
+#, fuzzy
 msgid "the address of a contact"
-msgstr ""
+msgstr "adressen til en kontakt"
 
 #: src/postulo_imap/matching.py
+#, fuzzy
 msgid "the company’s name in the message"
-msgstr ""
+msgstr "selskapets navn i meldingen"
 
 #: src/postulo_imap/mailbox.py
 #, fuzzy, python-format
@@ -247,33 +261,39 @@ msgid "The mailbox refused to hand over the messages."
 msgstr "Postkassen nektet å sende over meldingene."
 
 #: src/postulo_imap/mailbox.py
+#, fuzzy
 msgid "The mailbox refused to look for the folder."
-msgstr ""
+msgstr "Postkassen nektet å se etter mappen."
 
 #: src/postulo_imap/mailbox.py
+#, fuzzy
 msgid "The messages were read but could not be flagged; the next pass will read them again."
-msgstr ""
+msgstr "Meldingene ble lest, men kunne ikke bli flagget; neste pass vil lese dem igjen."
 
 #: src/postulo_imap/mailbox.py
-#, python-format
+#, fuzzy, python-format
 msgid "The messages were read but could not be moved to “%(folder)s”; the next pass will read them again."
-msgstr ""
+msgstr "Meldingene ble lest, men kunne ikke flyttes til \\\"%(folder)s\\\"; neste pass vil lese dem igjen."
 
 #: src/postulo_imap/mailbox.py
+#, fuzzy
 msgid "The messages were read, but this server cannot move them; the next pass will read them again."
-msgstr ""
+msgstr "Meldingene ble lest, men denne serveren kan ikke flytte dem; neste pass vil lese dem igjen."
 
 #: src/postulo_imap/matching.py
+#, fuzzy
 msgid "the role’s title in the message"
-msgstr ""
+msgstr "rollens tittel i meldingen"
 
 #: src/postulo_imap/matching.py
+#, fuzzy
 msgid "the sender’s web domain"
-msgstr ""
+msgstr "avsenderens webdomene"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "This folder does not keep flags of its own, so every message of the look-back is read again on each pass."
-msgstr ""
+msgstr "Denne mappen holder ikke flagg av seg selv, så hver melding av utseendet leses igjen på hvert pass."
 
 #: src/postulo_imap/sync.py
 #, fuzzy
