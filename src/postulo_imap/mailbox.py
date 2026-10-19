@@ -6,6 +6,14 @@ sender, the subject, and the first plain-text part, shortened. The body is not s
 anywhere by default — only a short excerpt travels with a suggestion — because a job
 tracker holding a copy of somebody's mailbox is a different and much larger promise.
 
+**What is transferred is small too** (postulo-imap#20). A pass asks for its messages a batch
+at a time, learns each one's size first, and takes a message above ``FULL_LIMIT`` as its
+headers plus the first ``PARTIAL_TEXT`` bytes of its text rather than whole, so the memory a
+pass needs is set by a batch and not by what somebody put in the folder. Every header and
+every decoded part is cut to a fixed size before anything searches it, and the HTML is read
+by a parser that takes linear time, so a message built to be slow to read is read in the
+time a message of its size takes.
+
 **Where this is allowed to dial is not the plugin's decision.** A server and a port are
 typed into a form by whoever owns the connection, and a form that opens a socket wherever
 it is pointed is a port scanner and a way onto the loopback interface of the machine
@@ -29,26 +37,49 @@ from __future__ import annotations
 import datetime as dt
 import email
 import email.utils
+import hashlib
 import logging
 import re
 import ssl
+from collections.abc import Iterator
 from dataclasses import dataclass, field
 from email.header import decode_header, make_header
 from email.message import Message
+from html.parser import HTMLParser
 
 from django.utils.translation import gettext as _
 from imapclient import IMAPClient
 from postulo.plugins.api import DestinationRefused, approve_host
+
+from .normalising import normalise
 
 #: What travels with a suggestion, at most. An advert-length excerpt is plenty to
 #: recognise a message by; the mailbox keeps the rest.
 EXCERPT_CHARS = 2000
 #: How far back a first pass looks, in days, when nothing has been marked yet.
 DEFAULT_SINCE_DAYS = 30
+#: The longest look-back a connection may ask for, in days (ten years).
+MAX_SINCE_DAYS = 3650
 #: The IMAP keyword put on a message once it has been read.
 KEYWORD = "$Postulo"
 #: Long enough for a slow server, short enough that a scheduled pass cannot hang on one.
 TIMEOUT = 30
+
+#: How many messages one command asks for, and so how many are held at once.
+FETCH_BATCH = 25
+#: A message above this many bytes is not fetched whole.
+FULL_LIMIT = 1_000_000
+#: How much of the text of such a message is fetched after its headers.
+PARTIAL_TEXT = 65_536
+#: The most of one decoded part that is looked at: an excerpt is two thousand characters.
+MAX_PART_BYTES = 200_000
+#: The most of one header that is looked at.
+MAX_HEADER_CHARS = 4096
+#: How many identifiers of ``References`` threading uses: the parent is the last one
+#: (RFC 5322 §3.6.4), and the ones before it only repeat what an earlier message matched.
+MAX_REFERENCES = 8
+#: The longest identifier a suggestion can be keyed on.
+MAX_ID_CHARS = 250
 
 logger = logging.getLogger(__name__)
 
@@ -77,7 +108,49 @@ class Mail:
 
     @property
     def haystack(self) -> str:
-        return f"{self.subject}\n{self.text}".lower()
+        """What the rules and the matching read: lower case, one space between words."""
+        return normalise(f"{self.subject}\n{self.text}").lower()
+
+
+# ------------------------------------------------------------------ reading text
+
+#: NUL (which PostgreSQL refuses in text), the other control characters a person never typed,
+#: and lone surrogates (which cannot be written as UTF-8 at all).
+_UNSAFE = re.compile(r"[\x00-\x08\x0b\x0c\x0e-\x1f\x7f\ud800-\udfff]")
+_SPACES = re.compile(r"\s+")
+_IDENTIFIER = re.compile(rf"<[^<>\s]{{1,{MAX_ID_CHARS}}}>")
+
+
+def _clean(text: str) -> str:
+    return _UNSAFE.sub("", text)
+
+
+def _raw_text(value: str, *, limit: int = MAX_HEADER_CHARS, tail: bool = False) -> str:
+    """A header value as text, whatever bytes it carried.
+
+    The parser hands back a header with a byte outside ASCII as ``email.header.Header``,
+    which neither ``parseaddr`` nor ``parsedate_to_datetime`` can read (postulo-imap#21), so
+    the raw string is taken instead, with each such byte still escaped in it, and put back
+    to bytes: UTF-8 when it is, which is what internationalised mail sends, else Latin-1.
+    """
+    value = value[-limit:] if tail else value[:limit]
+    try:
+        raw = value.encode("utf-8", "surrogateescape")
+    except UnicodeError:
+        return _clean(value.encode("utf-8", "replace").decode("utf-8"))
+    try:
+        return _clean(raw.decode("utf-8"))
+    except UnicodeDecodeError:
+        return _clean(raw.decode("latin-1"))
+
+
+def _header(message: Message, name: str, *, tail: bool = False) -> str:
+    """The first header called ``name``, as text, cut to ``MAX_HEADER_CHARS``."""
+    wanted = name.lower()
+    for key, value in message.raw_items():
+        if key.lower() == wanted:
+            return _raw_text(str(value), tail=tail)
+    return ""
 
 
 def _decoded(value: str | None) -> str:
@@ -85,13 +158,84 @@ def _decoded(value: str | None) -> str:
     if not value:
         return ""
     try:
-        return re.sub(r"\s+", " ", str(make_header(decode_header(value)))).strip()
+        text = str(make_header(decode_header(value)))
     except Exception:
-        return re.sub(r"\s+", " ", value).strip()
+        text = value
+    return _SPACES.sub(" ", _clean(text)).strip()
+
+
+class _Text(HTMLParser):
+    """The text of an HTML part, in time that grows with its size and no faster.
+
+    ``<head>`` goes with ``<script>`` and ``<style>``: the title of a newsletter is not what
+    the message says. A tag that ends a line ends one here and an inline tag ends nothing, so
+    ``re<b>gret</b>`` is still one word and ``<div>a</div><div>b</div>`` is two lines.
+    """
+
+    SKIPPED = frozenset({"script", "style", "head", "title", "noscript", "template"})
+    LINES = frozenset(
+        {"br", "p", "div", "tr", "li", "ul", "ol", "table", "h1", "h2", "h3", "h4", "h5", "h6"}
+    )
+
+    def __init__(self) -> None:
+        super().__init__(convert_charrefs=True)
+        self.parts: list[str] = []
+        self.skipping = 0
+
+    def handle_starttag(self, tag, attrs):
+        if tag == "body":
+            # A document that never closed its <head> would otherwise lose its whole text.
+            self.skipping = 0
+        elif tag in self.SKIPPED:
+            self.skipping += 1
+        elif tag in self.LINES:
+            self.parts.append("\n")
+
+    def handle_startendtag(self, tag, attrs):
+        if tag in self.LINES:
+            self.parts.append("\n")
+
+    def handle_endtag(self, tag):
+        if tag in self.SKIPPED:
+            self.skipping = max(0, self.skipping - 1)
+        elif tag in self.LINES:
+            self.parts.append("\n")
+
+    def handle_data(self, data):
+        if not self.skipping:
+            self.parts.append(data)
+
+
+def _strip_html(html: str) -> str:
+    parser = _Text()
+    try:
+        parser.feed(html[:MAX_PART_BYTES])
+        parser.close()
+    except Exception:
+        logger.info("An HTML part could not be read to its end", exc_info=True)
+    return "".join(parser.parts)
+
+
+def _payload(part: Message) -> str:
+    try:
+        raw = part.get_payload(decode=True)
+    except Exception:
+        return ""
+    if not isinstance(raw, bytes):
+        return ""
+    raw = raw[:MAX_PART_BYTES]
+    charset = part.get_content_charset() or "utf-8"
+    try:
+        text = raw.decode(charset, errors="replace")
+    except (LookupError, UnicodeError, ValueError):
+        # A name no codec knows, or one (``idna``, ``undefined``) that is a codec but not a
+        # character set and refuses ``errors="replace"``.
+        text = raw.decode("utf-8", errors="replace")
+    return _clean(text)
 
 
 def plain_text(message: Message) -> str:
-    """The first plain-text part, or the HTML with its tags removed, shortened."""
+    """The first plain-text part, or the HTML as text, shortened. Line breaks are kept."""
     text = ""
     if message.is_multipart():
         for part in message.walk():
@@ -107,54 +251,70 @@ def plain_text(message: Message) -> str:
         text = _payload(message)
         if message.get_content_type() == "text/html":
             text = _strip_html(text)
-    text = re.sub(r"\n{3,}", "\n\n", text).strip()
+    lines = text.replace("\r\n", "\n").replace("\r", "\n").split("\n")
+    text = re.sub(r"\n{3,}", "\n\n", "\n".join(line.rstrip() for line in lines)).strip()
     return text[:EXCERPT_CHARS]
 
 
-def _payload(part: Message) -> str:
-    try:
-        raw = part.get_payload(decode=True)
-    except Exception:
-        return ""
-    if raw is None:
-        return ""
-    charset = part.get_content_charset() or "utf-8"
-    try:
-        return raw.decode(charset, errors="replace")
-    except LookupError:
-        return raw.decode("utf-8", errors="replace")
+def _threading(message: Message) -> list[str]:
+    """The identifiers that tie a message to an earlier one: its parent, and the last few.
 
-
-def _strip_html(html: str) -> str:
-    html = re.sub(r"(?is)<(script|style).*?</\1>", " ", html)
-    html = re.sub(r"(?i)<br\s*/?>|</p>", "\n", html)
-    return re.sub(r"\s+\n", "\n", re.sub(r"<[^>]+>", " ", html))
+    Few on purpose: they go into one database ``IN`` list, which a header of thousands
+    would overflow, and the ones before the last only repeat what an earlier message
+    already matched (postulo-imap#15).
+    """
+    parent = _IDENTIFIER.findall(_header(message, "In-Reply-To"))[-1:]
+    earlier = _IDENTIFIER.findall(_header(message, "References", tail=True))[-MAX_REFERENCES:]
+    return list(dict.fromkeys([*earlier, *parent]))
 
 
 def parse(uid: int, raw: bytes) -> Mail:
     message = email.message_from_bytes(raw)
-    name, address = email.utils.parseaddr(message.get("From", ""))
+    name, address = email.utils.parseaddr(_header(message, "From"))
     date = None
-    if message.get("Date"):
+    if value := _header(message, "Date"):
         try:
-            date = email.utils.parsedate_to_datetime(message["Date"])
-        except (TypeError, ValueError):
+            date = email.utils.parsedate_to_datetime(value)
+        except Exception:
             date = None
     if date is not None and date.tzinfo is None:
         date = date.replace(tzinfo=dt.UTC)
-    references = re.findall(
-        r"<[^>]+>", f"{message.get('In-Reply-To', '')} {message.get('References', '')}"
-    )
     return Mail(
         uid=uid,
-        message_id=_decoded(message.get("Message-ID")) or f"uid-{uid}",
-        sender=address.lower(),
+        # A message with no identifier is known by what it says, not by where it sits: a UID
+        # repeats across folders, mailboxes and servers, and a repeat is a suggestion that
+        # is never filed (postulo-imap#11).
+        message_id=_decoded(_header(message, "Message-ID"))
+        or f"sha256-{hashlib.sha256(raw).hexdigest()}",
+        sender=_clean(address).lower(),
         sender_name=_decoded(name),
-        subject=_decoded(message.get("Subject")),
+        subject=_decoded(_header(message, "Subject")),
         date=date,
         text=plain_text(message),
-        references=[reference.strip() for reference in references],
+        references=_threading(message),
     )
+
+
+def identifier_of(header_block: bytes) -> str:
+    """The Message-ID in a block of headers, or "" when it has none."""
+    try:
+        return _decoded(_header(email.message_from_bytes(header_block), "Message-ID"))
+    except Exception:
+        return ""
+
+
+# ------------------------------------------------------------------- the mailbox
+
+
+def _part(answer: dict, prefix: bytes) -> bytes:
+    """The data item of a FETCH answer whose name starts with ``prefix``.
+
+    A partial fetch is answered under a name with its offset in it (``BODY[TEXT]<0>``).
+    """
+    for key, value in answer.items():
+        if isinstance(key, bytes) and key.upper().startswith(prefix) and value:
+            return value
+    return b""
 
 
 class Mailbox:
@@ -163,15 +323,29 @@ class Mailbox:
     def __init__(self, client: IMAPClient, folder: str) -> None:
         self.client = client
         self.folder = folder
+        #: Whether the folder keeps keywords of its own, as far as it said. Unknown is yes.
+        self.keeps_keywords = True
+
+    def exists(self, folder: str | None = None) -> bool:
+        try:
+            return bool(self.client.folder_exists(folder or self.folder))
+        except Exception as error:
+            logger.info("The mailbox refused to look for a folder: %s", error)
+            raise MailboxError(str(_("The mailbox refused to look for the folder."))) from error
 
     def select(self, *, readonly: bool = False) -> None:
         try:
-            self.client.select_folder(self.folder, readonly=readonly)
+            answer = self.client.select_folder(self.folder, readonly=readonly)
         except Exception as error:
             logger.info("The folder %r could not be opened: %s", self.folder, error)
             raise MailboxError(
                 str(_("The folder “%(folder)s” could not be opened.")) % {"folder": self.folder}
             ) from error
+        permanent = answer.get(b"PERMANENTFLAGS") if isinstance(answer, dict) else None
+        if permanent:
+            # RFC 3501 §6.3.1: ``\*`` says a client may create new keywords. A folder without
+            # it ignores ours, and a pass that relied on the flag would read everything again.
+            self.keeps_keywords = b"\\*" in permanent or KEYWORD.encode() in permanent
 
     def unread_uids(
         self, *, since_days: int = DEFAULT_SINCE_DAYS, use_keyword: bool = True
@@ -192,31 +366,136 @@ class Mailbox:
             logger.info("The mailbox refused the search: %s", error)
             raise MailboxError(str(_("The mailbox refused the search."))) from error
 
-    def fetch(self, uids: list[int]) -> list[Mail]:
-        if not uids:
-            return []
+    @staticmethod
+    def batches(uids: list[int]) -> Iterator[list[int]]:
+        for start in range(0, len(uids), FETCH_BATCH):
+            yield uids[start : start + FETCH_BATCH]
+
+    def _fetch(self, uids: list[int], parts: list[str]) -> dict:
         try:
-            answer = self.client.fetch(uids, ["BODY.PEEK[]"])
+            return self.client.fetch(uids, parts)
         except Exception as error:
             logger.info("The mailbox refused to hand over messages: %s", error)
             raise MailboxError(str(_("The mailbox refused to hand over the messages."))) from error
-        mails = []
-        for uid, parts in answer.items():
-            raw = parts.get(b"BODY[]") or parts.get(b"RFC822") or b""
-            if raw:
-                mails.append(parse(int(uid), raw))
-        return sorted(mails, key=lambda mail: mail.uid)
+
+    def survey(
+        self, uids: list[int], *, with_identifiers: bool = False
+    ) -> tuple[dict[int, int], dict[int, str]]:
+        """How big each message is, and (when asked) what its Message-ID says.
+
+        The headers alone, so that a message already filed is never downloaded again.
+        """
+        parts = ["RFC822.SIZE"]
+        if with_identifiers:
+            parts.append("BODY.PEEK[HEADER.FIELDS (MESSAGE-ID)]")
+        answer = self._fetch(uids, parts)
+        sizes: dict[int, int] = {}
+        identifiers: dict[int, str] = {}
+        for uid, data in answer.items():
+            sizes[int(uid)] = int(data.get(b"RFC822.SIZE") or FULL_LIMIT + 1)
+            if with_identifiers:
+                identifiers[int(uid)] = identifier_of(_part(data, b"BODY[HEADER.FIELDS"))
+        return sizes, identifiers
+
+    def read(self, uids: list[int], sizes: dict[int, int]) -> tuple[list[Mail], list[int]]:
+        """The messages of one batch, and the uids of those that could not be read.
+
+        A message that cannot be parsed is the message's problem and not the pass's
+        (postulo-imap#8): it is logged, counted and handed back so that it is flagged with
+        the rest and not fetched again on every pass until it ages out of the look-back.
+        """
+        whole = [uid for uid in uids if sizes.get(uid, FULL_LIMIT + 1) <= FULL_LIMIT]
+        raws: dict[int, bytes] = {}
+        if whole:
+            for uid, data in self._fetch(whole, ["BODY.PEEK[]"]).items():
+                raws[int(uid)] = data.get(b"BODY[]") or data.get(b"RFC822") or b""
+        for uid in uids:
+            if uid in whole:
+                continue
+            # Too big to hold: its headers and the start of its text say all this plugin
+            # reads of it, and the attachments are somebody else's business.
+            answer = self._fetch(
+                [uid], ["BODY.PEEK[HEADER]", f"BODY.PEEK[TEXT]<0.{PARTIAL_TEXT}>"]
+            ).get(uid, {})
+            raws[uid] = _part(answer, b"BODY[HEADER]") + _part(answer, b"BODY[TEXT]")
+        mails: list[Mail] = []
+        unreadable: list[int] = []
+        for uid in sorted(uids):
+            raw = raws.get(uid, b"")
+            try:
+                if not raw:
+                    raise ValueError("the server sent nothing for this message")
+                mails.append(parse(uid, raw))
+            except Exception as error:
+                logger.warning(
+                    "Message %s of %r could not be read: %s: %s",
+                    uid,
+                    self.folder,
+                    type(error).__name__,
+                    error,
+                )
+                unreadable.append(uid)
+        return mails, unreadable
 
     def mark(self, uids: list[int]) -> None:
-        if uids:
+        if not uids:
+            return
+        try:
             self.client.add_flags(uids, [KEYWORD])
+        except Exception as error:
+            logger.info("The mailbox refused to flag messages: %s: %s", type(error).__name__, error)
+            raise MailboxError(
+                str(
+                    _(
+                        "The messages were read but could not be flagged; the next pass will "
+                        "read them again."
+                    )
+                )
+            ) from error
+
+    def can_move(self) -> bool:
+        """Whether the server can move messages: MOVE, or copying and then deleting by UID."""
+        try:
+            return bool(self.client.has_capability("MOVE") or self.client.has_capability("UIDPLUS"))
+        except Exception:
+            return False
 
     def move(self, uids: list[int], destination: str) -> None:
         if not uids:
             return
-        if not self.client.folder_exists(destination):
-            self.client.create_folder(destination)
-        self.client.move(uids, destination)
+        try:
+            if not self.can_move():
+                raise MailboxError(
+                    str(
+                        _(
+                            "The messages were read, but this server cannot move them; the next "
+                            "pass will read them again."
+                        )
+                    )
+                )
+            if not self.client.folder_exists(destination):
+                self.client.create_folder(destination)
+            if self.client.has_capability("MOVE"):
+                self.client.move(uids, destination)
+            else:
+                # Copy, mark as deleted, and expunge those uids only: a plain EXPUNGE would
+                # also remove whatever else the person had marked for deletion in the folder.
+                self.client.copy(uids, destination)
+                self.client.delete_messages(uids)
+                self.client.expunge(uids)
+        except MailboxError:
+            raise
+        except Exception as error:
+            logger.info("The mailbox refused to move messages: %s: %s", type(error).__name__, error)
+            raise MailboxError(
+                str(
+                    _(
+                        "The messages were read but could not be moved to “%(folder)s”; the "
+                        "next pass will read them again."
+                    )
+                )
+                % {"folder": destination}
+            ) from error
 
 
 class _ProvesTheName(ssl.SSLContext):
@@ -253,6 +532,25 @@ def close(client) -> None:
         logger.debug("The mailbox did not acknowledge the logout", exc_info=True)
 
 
+def port_of(config: dict) -> int:
+    """The port to dial: the one typed, else the one the chosen security uses."""
+    starttls = str(config.get("security")) == "starttls"
+    try:
+        port = int(config.get("port") or 0)
+    except (TypeError, ValueError):
+        port = 0
+    return port if 0 < port <= 65535 else (143 if starttls else 993)
+
+
+def days_of(config: dict) -> int:
+    """The look-back in days: the one typed when it is sane, else the default."""
+    try:
+        days = int(config.get("days") or 0)
+    except (TypeError, ValueError):
+        days = 0
+    return days if 1 <= days <= MAX_SINCE_DAYS else DEFAULT_SINCE_DAYS
+
+
 def connect(config: dict) -> IMAPClient:
     """Open the account, at an address the instance's policy allows. The caller closes it.
 
@@ -263,7 +561,7 @@ def connect(config: dict) -> IMAPClient:
     reconnaissance the destination check exists to prevent.
     """
     host = str(config.get("host", "")).strip()
-    port = int(config.get("port") or 993)
+    port = port_of(config)
     starttls = str(config.get("security")) == "starttls"
     try:
         address = approve_host(host)

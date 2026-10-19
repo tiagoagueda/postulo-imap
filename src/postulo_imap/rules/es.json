@@ -10,9 +10,10 @@
     {
       "kind": "offer",
       "patterns": [
-        "nos complace ofrecer(te|le)",
+        "nos complace ofrecer(te|le) (el|este|la|esta) (puesto|cargo|empleo|posici[óo]n|plaza)",
         "queremos ofrecer(te|le) el puesto",
-        "oferta (de trabajo|de empleo|laboral)",
+        "(hacer(te|le)|presentar(te|le)) una oferta (de trabajo|de empleo|laboral)",
+        "oferta (de trabajo|de empleo|laboral) formal",
         "carta de oferta"
       ]
     },
@@ -34,7 +35,8 @@
         "invitaci[óo]n a (una )?entrevista",
         "(agendar|concertar|programar) una (entrevista|reuni[óo]n|llamada)",
         "entrevista (telef[óo]nica|presencial|por v[íi]deo)",
-        "(tienes|tiene) disponibilidad"
+        "(tienes|tiene) disponibilidad",
+        "ofrecer(te|le) una (entrevista|reuni[óo]n|llamada)"
       ]
     },
     {

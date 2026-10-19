@@ -10,9 +10,10 @@
     {
       "kind": "offer",
       "patterns": [
-        "siamo lieti di offrir(ti|le)",
+        "siamo lieti di offrir(ti|le) (la posizione|il ruolo|il posto|l'incarico|il lavoro)",
         "vorremmo offrir(ti|le) (la posizione|il ruolo|il posto)",
-        "offerta di (lavoro|impiego|assunzione)",
+        "offerta formale di (lavoro|impiego|assunzione)",
+        "(ti|le) (facciamo|presentiamo) un'offerta di (lavoro|impiego|assunzione)",
         "lettera di offerta"
       ]
     },
@@ -34,7 +35,8 @@
         "invito a (un )?colloquio",
         "fissare un (colloquio|appuntamento|incontro)",
         "colloquio (telefonico|conoscitivo|in videochiamata)",
-        "(sei|è|e') disponibile (il|per|nella)"
+        "(sei|è|e') disponibile (il|per|nella)",
+        "offrir(ti|le) un (colloquio|incontro)"
       ]
     },
     {

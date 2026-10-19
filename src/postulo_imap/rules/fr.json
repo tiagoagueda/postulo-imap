@@ -10,7 +10,7 @@
     {
       "kind": "offer",
       "patterns": [
-        "nous avons le plaisir de vous proposer",
+        "nous avons le plaisir de vous proposer (le|un|ce) (poste|contrat|emploi|r[ôo]le)",
         "proposition d'embauche",
         "offre d'emploi ferme",
         "promesse d'embauche",
