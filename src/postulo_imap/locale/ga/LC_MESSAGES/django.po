@@ -15,19 +15,58 @@ msgstr ""
 "X-Generator: postulo scripts/messages.py\n"
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
-msgid "%(count)d could not be matched to an application; attach them by hand."
-msgstr "Níorbh fhéidir %(count)d a mheaitseáil le hiarratas; ceangail de láimh iad."
+#, python-format
+msgid "%(count)d could not be matched to an application; attach it by hand."
+msgid_plural "%(count)d could not be matched to an application; attach them by hand."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+
+#: src/postulo_imap/sync.py
+#, python-format
+msgid "%(count)d message could not be read and was skipped."
+msgid_plural "%(count)d messages could not be read and were skipped."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
 
 #: src/postulo_imap/sync.py
 #, fuzzy
 msgid "A message with no subject"
 msgstr "Teachtaireacht gan ábhar"
 
+#: src/postulo_imap/classifying.py
+msgid "a rejection"
+msgstr ""
+
+#: src/postulo_imap/matching.py
+msgid "a reply to a message already matched"
+msgstr ""
+
+#: src/postulo_imap/classifying.py
+msgid "an acknowledgement"
+msgstr ""
+
 #: src/postulo_imap/sync.py
 #, fuzzy
 msgid "An app password wherever the server offers one; Gmail requires it with two-factor authentication on. Stored encrypted."
 msgstr "Pasfhocal aipe cibé áit a dtairgeann an freastalaí ceann; éilíonn Gmail é nuair a bhíonn fíordheimhniú dhá fhachtóir ar siúl. Stóráilte go criptithe."
+
+#: src/postulo_imap/classifying.py
+msgid "an assessment"
+msgstr ""
+
+#: src/postulo_imap/classifying.py
+msgid "an invitation"
+msgstr ""
+
+#: src/postulo_imap/classifying.py
+msgid "an offer"
+msgstr ""
 
 #: src/postulo_imap/mailbox.py
 #, fuzzy
@@ -60,6 +99,15 @@ msgid "From"
 msgstr "Ó"
 
 #: src/postulo_imap/sync.py
+#, python-format
+msgid "Give a number of days between 1 and %(max)d."
+msgstr ""
+
+#: src/postulo_imap/sync.py
+msgid "Give a port between 1 and 65535, or leave it empty."
+msgstr ""
+
+#: src/postulo_imap/sync.py
 #, fuzzy
 msgid "How many days of mail a pass considers."
 msgstr "Cé mhéad lá ríomhphoist a mheasann rith amháin."
@@ -68,6 +116,10 @@ msgstr "Cé mhéad lá ríomhphoist a mheasann rith amháin."
 #, fuzzy
 msgid "Leave the mailbox untouched"
 msgstr "Fág an bosca poist gan athrú"
+
+#: src/postulo_imap/sync.py
+msgid "Left empty: 993 with TLS, 143 with STARTTLS."
+msgstr ""
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -90,6 +142,10 @@ msgid "Move it to a subfolder"
 msgstr "Bog chuig fofhillteán é"
 
 #: src/postulo_imap/sync.py
+msgid "Name a subfolder other than the folder being read."
+msgstr ""
+
+#: src/postulo_imap/sync.py
 #, fuzzy
 msgid "Name the folder to read. Postulo never reads the inbox."
 msgstr "Ainmnigh an fillteán le léamh. Ní léann Postulo an bosca isteach riamh."
@@ -110,9 +166,8 @@ msgid "Once read"
 msgstr "Nuair a bheidh sé léite"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
-msgid "One folder, never the inbox. Make a rule on your mail server that files recruiter mail here; Postulo reads nothing else."
-msgstr "Fillteán amháin, ní an bosca isteach go deo. Déan riail ar do fhreastalaí ríomhphoist a chuireann ríomhphost earcaitheoirí anseo; ní léann Postulo aon rud eile."
+msgid "One folder, never the inbox. Make a rule on your mail server that files recruiter mail here; Postulo reads nothing else. Every message it reads is flagged or moved afterwards, whether or not it was recognised."
+msgstr ""
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -123,6 +178,10 @@ msgstr "Pasfhocal nó pasfhocal aipe"
 #, fuzzy
 msgid "Port"
 msgstr "Port"
+
+#: src/postulo_imap/sync.py
+msgid "Postulo never reads the inbox. Name the folder your mail rule files jobs mail into."
+msgstr ""
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -150,9 +209,18 @@ msgid "Signed in, but there is no folder called “%(folder)s”."
 msgstr "Sínithe isteach, ach níl aon fhillteán darb ainm “%(folder)s” ann."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
-msgid "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
-msgstr "Sínithe isteach. Tá %(count)d teachtaireacht i “%(folder)s” ag fanacht le léamh."
+msgid "Signed in, but this server cannot move messages. Choose to flag them instead."
+msgstr ""
+
+#: src/postulo_imap/sync.py
+#, python-format
+msgid "Signed in. %(count)d message in “%(folder)s” is waiting to be read."
+msgid_plural "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -163,6 +231,14 @@ msgstr "STARTTLS (port 143)"
 #, fuzzy
 msgid "Subfolder"
 msgstr "Fofhillteán"
+
+#: src/postulo_imap/matching.py
+msgid "the address of a contact"
+msgstr ""
+
+#: src/postulo_imap/matching.py
+msgid "the company’s name in the message"
+msgstr ""
 
 #: src/postulo_imap/mailbox.py
 #, fuzzy, python-format
@@ -178,6 +254,35 @@ msgstr "Dhiúltaigh an bosca poist an cuardach."
 #, fuzzy
 msgid "The mailbox refused to hand over the messages."
 msgstr "Dhiúltaigh an bosca poist a thabhairt ar láimh thar na teachtaireachtaí."
+
+#: src/postulo_imap/mailbox.py
+msgid "The mailbox refused to look for the folder."
+msgstr ""
+
+#: src/postulo_imap/mailbox.py
+msgid "The messages were read but could not be flagged; the next pass will read them again."
+msgstr ""
+
+#: src/postulo_imap/mailbox.py
+#, python-format
+msgid "The messages were read but could not be moved to “%(folder)s”; the next pass will read them again."
+msgstr ""
+
+#: src/postulo_imap/mailbox.py
+msgid "The messages were read, but this server cannot move them; the next pass will read them again."
+msgstr ""
+
+#: src/postulo_imap/matching.py
+msgid "the role’s title in the message"
+msgstr ""
+
+#: src/postulo_imap/matching.py
+msgid "the sender’s web domain"
+msgstr ""
+
+#: src/postulo_imap/sync.py
+msgid "This folder does not keep flags of its own, so every message of the look-back is read again on each pass."
+msgstr ""
 
 #: src/postulo_imap/sync.py
 #, fuzzy
