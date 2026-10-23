@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-13 18:56+0000\n"
+"PO-Revision-Date: 2026-10-23 08:08+0000\n"
 "Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: English (Canada) <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/en_CA/>\n"
 "Language: en_CA\n"
@@ -18,15 +18,15 @@ msgstr ""
 #, python-format
 msgid "%(count)d could not be matched to an application; attach it by hand."
 msgid_plural "%(count)d could not be matched to an application; attach them by hand."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%(count)d could not be matched to an application; attach it by hand."
+msgstr[1] "%(count)d could not be matched to an application; attach them by hand."
 
 #: src/postulo_imap/sync.py
 #, python-format
 msgid "%(count)d message could not be read and was skipped."
 msgid_plural "%(count)d messages could not be read and were skipped."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%(count)d message could not be read and was skipped."
+msgstr[1] "%(count)d messages could not be read and were skipped."
 
 #: src/postulo_imap/sync.py
 msgid "A message with no subject"
@@ -34,15 +34,15 @@ msgstr "A message with no subject"
 
 #: src/postulo_imap/classifying.py
 msgid "a rejection"
-msgstr ""
+msgstr "a rejection"
 
 #: src/postulo_imap/matching.py
 msgid "a reply to a message already matched"
-msgstr ""
+msgstr "a reply to a message already matched"
 
 #: src/postulo_imap/classifying.py
 msgid "an acknowledgement"
-msgstr ""
+msgstr "an acknowledgement"
 
 #: src/postulo_imap/sync.py
 msgid "An app password wherever the server offers one; Gmail requires it with two-factor authentication on. Stored encrypted."
@@ -50,15 +50,15 @@ msgstr "An app password wherever the server offers one; Gmail requires it with t
 
 #: src/postulo_imap/classifying.py
 msgid "an assessment"
-msgstr ""
+msgstr "an assessment"
 
 #: src/postulo_imap/classifying.py
 msgid "an invitation"
-msgstr ""
+msgstr "an invitation"
 
 #: src/postulo_imap/classifying.py
 msgid "an offer"
-msgstr ""
+msgstr "an offer"
 
 #: src/postulo_imap/mailbox.py
 msgid "Could not reach the server. Check the address, the port and the security."
@@ -88,11 +88,11 @@ msgstr "From"
 #: src/postulo_imap/sync.py
 #, python-format
 msgid "Give a number of days between 1 and %(max)d."
-msgstr ""
+msgstr "Give a number of days between 1 and %(max)d."
 
 #: src/postulo_imap/sync.py
 msgid "Give a port between 1 and 65535, or leave it empty."
-msgstr ""
+msgstr "Give a port between 1 and 65535, or leave it empty."
 
 #: src/postulo_imap/sync.py
 msgid "How many days of mail a pass considers."
@@ -104,7 +104,7 @@ msgstr "Leave the mailbox untouched"
 
 #: src/postulo_imap/sync.py
 msgid "Left empty: 993 with TLS, 143 with STARTTLS."
-msgstr ""
+msgstr "Left empty: 993 with TLS, 143 with STARTTLS."
 
 #: src/postulo_imap/sync.py
 msgid "Look back"
@@ -124,7 +124,7 @@ msgstr "Move it to a subfolder"
 
 #: src/postulo_imap/sync.py
 msgid "Name a subfolder other than the folder being read."
-msgstr ""
+msgstr "Name a subfolder other than the folder being read."
 
 #: src/postulo_imap/sync.py
 msgid "Name the folder to read. Postulo never reads the inbox."
@@ -144,7 +144,7 @@ msgstr "Once read"
 
 #: src/postulo_imap/sync.py
 msgid "One folder, never the inbox. Make a rule on your mail server that files recruiter mail here; Postulo reads nothing else. Every message it reads is flagged or moved afterwards, whether or not it was recognised."
-msgstr ""
+msgstr "One folder, never the inbox. Make a rule on your mail server that files recruiter mail here; Postulo reads nothing else. Every message it reads is flagged or moved afterwards, whether or not it was recognized."
 
 #: src/postulo_imap/sync.py
 msgid "Password or app password"
@@ -156,7 +156,7 @@ msgstr "Port"
 
 #: src/postulo_imap/sync.py
 msgid "Postulo never reads the inbox. Name the folder your mail rule files jobs mail into."
-msgstr ""
+msgstr "Postulo never reads the inbox. Name the folder your mail rule files jobs mail into."
 
 #: src/postulo_imap/sync.py
 msgid "Recognised"
@@ -181,14 +181,14 @@ msgstr "Signed in, but there is no folder called “%(folder)s”."
 
 #: src/postulo_imap/sync.py
 msgid "Signed in, but this server cannot move messages. Choose to flag them instead."
-msgstr ""
+msgstr "Signed in, but this server cannot move messages. Choose to flag them instead."
 
 #: src/postulo_imap/sync.py
 #, python-format
 msgid "Signed in. %(count)d message in “%(folder)s” is waiting to be read."
 msgid_plural "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Signed in. %(count)d message in “%(folder)s” is waiting to be read."
+msgstr[1] "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
 
 #: src/postulo_imap/sync.py
 msgid "STARTTLS (port 143)"
@@ -200,11 +200,11 @@ msgstr "Subfolder"
 
 #: src/postulo_imap/matching.py
 msgid "the address of a contact"
-msgstr ""
+msgstr "the address of a contact"
 
 #: src/postulo_imap/matching.py
 msgid "the company’s name in the message"
-msgstr ""
+msgstr "the company’s name in the message"
 
 #: src/postulo_imap/mailbox.py
 #, python-format
@@ -221,32 +221,32 @@ msgstr "The mailbox refused to hand over the messages."
 
 #: src/postulo_imap/mailbox.py
 msgid "The mailbox refused to look for the folder."
-msgstr ""
+msgstr "The mailbox refused to look for the folder."
 
 #: src/postulo_imap/mailbox.py
 msgid "The messages were read but could not be flagged; the next pass will read them again."
-msgstr ""
+msgstr "The messages were read but could not be flagged; the next pass will read them again."
 
 #: src/postulo_imap/mailbox.py
 #, python-format
 msgid "The messages were read but could not be moved to “%(folder)s”; the next pass will read them again."
-msgstr ""
+msgstr "The messages were read but could not be moved to “%(folder)s”; the next pass will read them again."
 
 #: src/postulo_imap/mailbox.py
 msgid "The messages were read, but this server cannot move them; the next pass will read them again."
-msgstr ""
+msgstr "The messages were read, but this server cannot move them; the next pass will read them again."
 
 #: src/postulo_imap/matching.py
 msgid "the role’s title in the message"
-msgstr ""
+msgstr "the role’s title in the message"
 
 #: src/postulo_imap/matching.py
 msgid "the sender’s web domain"
-msgstr ""
+msgstr "the sender’s web domain"
 
 #: src/postulo_imap/sync.py
 msgid "This folder does not keep flags of its own, so every message of the look-back is read again on each pass."
-msgstr ""
+msgstr "This folder does not keep flags of its own, so every message of the look-back is read again on each pass."
 
 #: src/postulo_imap/sync.py
 msgid "TLS (port 993)"
