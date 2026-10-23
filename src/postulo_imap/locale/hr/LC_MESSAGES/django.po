@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-14 07:05+0000\n"
+"PO-Revision-Date: 2026-10-22 21:51+0000\n"
 "Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Croatian <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/hr/>\n"
 "Language: hr\n"
@@ -15,20 +15,20 @@ msgstr ""
 "X-Generator: postulo scripts/messages.py\n"
 
 #: src/postulo_imap/sync.py
-#, python-format
+#, fuzzy, python-format
 msgid "%(count)d could not be matched to an application; attach it by hand."
 msgid_plural "%(count)d could not be matched to an application; attach them by hand."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%(count)d se nije mogla povezati s prijavom; priložite je ručno."
+msgstr[1] "%(count)d nisu se mogle povezati s prijavom; priložite ih ručno."
+msgstr[2] "%(count)d nije se moglo povezati s prijavom; priložite ih ručno."
 
 #: src/postulo_imap/sync.py
-#, python-format
+#, fuzzy, python-format
 msgid "%(count)d message could not be read and was skipped."
 msgid_plural "%(count)d messages could not be read and were skipped."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%(count)d poruka nije se mogla pročitati i preskočena je."
+msgstr[1] "%(count)d poruke nisu se mogle pročitati i preskočene su."
+msgstr[2] "%(count)d poruka nije se moglo pročitati, pa su preskočene."
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -37,15 +37,15 @@ msgstr "Poruka bez predmeta"
 
 #: src/postulo_imap/classifying.py
 msgid "a rejection"
-msgstr ""
+msgstr "odbijenica"
 
 #: src/postulo_imap/matching.py
 msgid "a reply to a message already matched"
-msgstr ""
+msgstr "odgovor na već uparenu poruku"
 
 #: src/postulo_imap/classifying.py
 msgid "an acknowledgement"
-msgstr ""
+msgstr "potvrda primitka"
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -54,15 +54,15 @@ msgstr "Lozinka aplikacije gdje god je poslužitelj nudi; Gmail je zahtijeva kad
 
 #: src/postulo_imap/classifying.py
 msgid "an assessment"
-msgstr ""
+msgstr "procjena"
 
 #: src/postulo_imap/classifying.py
 msgid "an invitation"
-msgstr ""
+msgstr "poziv"
 
 #: src/postulo_imap/classifying.py
 msgid "an offer"
-msgstr ""
+msgstr "ponuda"
 
 #: src/postulo_imap/mailbox.py
 #, fuzzy
@@ -97,11 +97,11 @@ msgstr "Od"
 #: src/postulo_imap/sync.py
 #, python-format
 msgid "Give a number of days between 1 and %(max)d."
-msgstr ""
+msgstr "Navedite broj dana između 1 i %(max)d."
 
 #: src/postulo_imap/sync.py
 msgid "Give a port between 1 and 65535, or leave it empty."
-msgstr ""
+msgstr "Navedite priključak između 1 i 65535 ili ga ostavite praznim."
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -115,7 +115,7 @@ msgstr "Ostavi sandučić netaknutim"
 
 #: src/postulo_imap/sync.py
 msgid "Left empty: 993 with TLS, 143 with STARTTLS."
-msgstr ""
+msgstr "Ako je prazno: 993 uz TLS, 143 uz STARTTLS."
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -139,7 +139,7 @@ msgstr "Premjesti u podmapu"
 
 #: src/postulo_imap/sync.py
 msgid "Name a subfolder other than the folder being read."
-msgstr ""
+msgstr "Navedite podmapu različitu od mape koja se čita."
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -163,7 +163,7 @@ msgstr "Nakon čitanja"
 
 #: src/postulo_imap/sync.py
 msgid "One folder, never the inbox. Make a rule on your mail server that files recruiter mail here; Postulo reads nothing else. Every message it reads is flagged or moved afterwards, whether or not it was recognised."
-msgstr ""
+msgstr "Jedna mapa, nikad ulazna pošta. Napravite pravilo na svom poslužitelju e-pošte koje ovamo razvrstava poštu regrutera; Postulo ne čita ništa drugo. Svaka poruka koju pročita poslije se označava zastavicom ili premješta, bez obzira na to je li prepoznata."
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -177,7 +177,7 @@ msgstr "Port"
 
 #: src/postulo_imap/sync.py
 msgid "Postulo never reads the inbox. Name the folder your mail rule files jobs mail into."
-msgstr ""
+msgstr "Postulo nikad ne čita ulaznu poštu. Navedite mapu u koju vaše pravilo e-pošte razvrstava poštu o poslovima."
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -205,16 +205,17 @@ msgid "Signed in, but there is no folder called “%(folder)s”."
 msgstr "Prijava uspjela, ali ne postoji mapa pod nazivom „%(folder)s”."
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Signed in, but this server cannot move messages. Choose to flag them instead."
-msgstr ""
+msgstr "Prijavljeni ste, ali ovaj poslužitelj ne može premještati poruke. Umjesto toga odaberite njihovo označavanje zastavicom."
 
 #: src/postulo_imap/sync.py
 #, python-format
 msgid "Signed in. %(count)d message in “%(folder)s” is waiting to be read."
 msgid_plural "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Prijavljeni ste. %(count)d poruka u mapi „%(folder)s” čeka na čitanje."
+msgstr[1] "Prijavljeni ste. %(count)d poruke u mapi „%(folder)s” čekaju na čitanje."
+msgstr[2] "Prijavljeni ste. %(count)d poruka u mapi „%(folder)s” čeka na čitanje."
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -228,11 +229,11 @@ msgstr "Podmapa"
 
 #: src/postulo_imap/matching.py
 msgid "the address of a contact"
-msgstr ""
+msgstr "adresa kontakta"
 
 #: src/postulo_imap/matching.py
 msgid "the company’s name in the message"
-msgstr ""
+msgstr "naziv tvrtke u poruci"
 
 #: src/postulo_imap/mailbox.py
 #, fuzzy, python-format
@@ -251,32 +252,33 @@ msgstr "Poštanski sandučić odbio je predati poruke."
 
 #: src/postulo_imap/mailbox.py
 msgid "The mailbox refused to look for the folder."
-msgstr ""
+msgstr "Poštanski sandučić odbio je potražiti mapu."
 
 #: src/postulo_imap/mailbox.py
 msgid "The messages were read but could not be flagged; the next pass will read them again."
-msgstr ""
+msgstr "Poruke su pročitane, ali nisu se mogle označiti zastavicom; sljedeći prolaz pročitat će ih ponovno."
 
 #: src/postulo_imap/mailbox.py
 #, python-format
 msgid "The messages were read but could not be moved to “%(folder)s”; the next pass will read them again."
-msgstr ""
+msgstr "Poruke su pročitane, ali nisu se mogle premjestiti u „%(folder)s”; sljedeći prolaz pročitat će ih ponovno."
 
 #: src/postulo_imap/mailbox.py
 msgid "The messages were read, but this server cannot move them; the next pass will read them again."
-msgstr ""
+msgstr "Poruke su pročitane, ali ovaj ih poslužitelj ne može premjestiti; sljedeći prolaz pročitat će ih ponovno."
 
 #: src/postulo_imap/matching.py
 msgid "the role’s title in the message"
-msgstr ""
+msgstr "naziv radnog mjesta u poruci"
 
 #: src/postulo_imap/matching.py
 msgid "the sender’s web domain"
-msgstr ""
+msgstr "web-domena pošiljatelja"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "This folder does not keep flags of its own, so every message of the look-back is read again on each pass."
-msgstr ""
+msgstr "Ova mapa ne čuva vlastite zastavice, pa se svaka poruka iz razdoblja pregleda unatrag ponovno čita pri svakom prolazu."
 
 #: src/postulo_imap/sync.py
 #, fuzzy

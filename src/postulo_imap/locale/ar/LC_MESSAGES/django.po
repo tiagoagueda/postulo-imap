@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-19 11:15+0000\n"
+"PO-Revision-Date: 2026-10-22 22:14+0000\n"
 "Last-Translator: LibreTranslate <noreply-mt-libretranslate@weblate.org>\n"
 "Language-Team: Arabic <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/ar/>\n"
 "Language: ar\n"
@@ -15,26 +15,26 @@ msgstr ""
 "X-Generator: postulo scripts/messages.py\n"
 
 #: src/postulo_imap/sync.py
-#, python-format
+#, fuzzy, python-format
 msgid "%(count)d could not be matched to an application; attach it by hand."
 msgid_plural "%(count)d could not be matched to an application; attach them by hand."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "لا يمكن تطابق صفر مع طلب؛ وربطهم باليد."
+msgstr[1] "%(count)d could not be matched to an application; attach it by hand."
+msgstr[2] ")٢( لا يمكن مضاهاتها مع طلب؛ وربطها باليد."
+msgstr[3] "%(count)d could not be matched to an application; attach them by hand."
 msgstr[4] ""
-msgstr[5] ""
+msgstr[5] "%(count)d could not be matched to an application; attach them by hand."
 
 #: src/postulo_imap/sync.py
-#, python-format
+#, fuzzy, python-format
 msgid "%(count)d message could not be read and was skipped."
 msgid_plural "%(count)d messages could not be read and were skipped."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "لا يمكن قراءته ولا تخطيه."
+msgstr[1] "%(count)d message could not be read and was abandonedpped."
+msgstr[2] "ولا يمكن قراءة رسالتين وتخطيهما."
+msgstr[3] "%(count)d messages could not be read and were abandonedpped."
 msgstr[4] ""
-msgstr[5] ""
+msgstr[5] "%(count)d messages could not be read and were abandonedpped."
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -42,16 +42,19 @@ msgid "A message with no subject"
 msgstr "رسالة بلا موضوع"
 
 #: src/postulo_imap/classifying.py
+#, fuzzy
 msgid "a rejection"
-msgstr ""
+msgstr "رفض"
 
 #: src/postulo_imap/matching.py
+#, fuzzy
 msgid "a reply to a message already matched"
-msgstr ""
+msgstr "رد على رسالة متطابقة بالفعل"
 
 #: src/postulo_imap/classifying.py
+#, fuzzy
 msgid "an acknowledgement"
-msgstr ""
+msgstr "إقرار"
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -59,16 +62,19 @@ msgid "An app password wherever the server offers one; Gmail requires it with tw
 msgstr "كلمة مرور التطبيق حيثما يوفّرها الخادم؛ ويشترطها Gmail عند تفعيل المصادقة الثنائية. تُخزَّن مشفّرة."
 
 #: src/postulo_imap/classifying.py
+#, fuzzy
 msgid "an assessment"
-msgstr ""
+msgstr "تقييم"
 
 #: src/postulo_imap/classifying.py
+#, fuzzy
 msgid "an invitation"
-msgstr ""
+msgstr "دعوة"
 
 #: src/postulo_imap/classifying.py
+#, fuzzy
 msgid "an offer"
-msgstr ""
+msgstr "عرض"
 
 #: src/postulo_imap/mailbox.py
 #, fuzzy
@@ -101,13 +107,14 @@ msgid "From"
 msgstr "المرسل"
 
 #: src/postulo_imap/sync.py
-#, python-format
+#, fuzzy, python-format
 msgid "Give a number of days between 1 and %(max)d."
-msgstr ""
+msgstr "أعطِ عدد من الأيامِ بين 1 و %(max)d."
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Give a port between 1 and 65535, or leave it empty."
-msgstr ""
+msgstr "أعط ميناء ما بين 1 و 65535 أو أتركه فارغاً."
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -120,8 +127,9 @@ msgid "Leave the mailbox untouched"
 msgstr "ترك صندوق البريد دون تغيير"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Left empty: 993 with TLS, 143 with STARTTLS."
-msgstr ""
+msgstr "اليسار فارغ: 993 مع TLS، 143 مع ستارتلس."
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -144,8 +152,9 @@ msgid "Move it to a subfolder"
 msgstr "نقلها إلى مجلد فرعي"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Name a subfolder other than the folder being read."
-msgstr ""
+msgstr "سمي ملفاً فرعياً غير الملف الذي يقرأ."
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -168,8 +177,9 @@ msgid "Once read"
 msgstr "بعد القراءة"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "One folder, never the inbox. Make a rule on your mail server that files recruiter mail here; Postulo reads nothing else. Every message it reads is flagged or moved afterwards, whether or not it was recognised."
-msgstr ""
+msgstr "ملف واحد، لا العلبة اصنعي قاعدة على خادم البريد الذي يقدم بريد المجند هنا البريد البريدي لا يقرأ شيئاً آخر وكل رسالة يقرأها يتم توجيهها أو نقلها بعد ذلك، سواء تم التعرف عليها أم لا."
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -182,8 +192,9 @@ msgid "Port"
 msgstr "المنفذ"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Postulo never reads the inbox. Name the folder your mail rule files jobs mail into."
-msgstr ""
+msgstr "البريد لا يقرأ أبداً الصندوق سمي الملف الذي تضعه قاعدة بريدك في البريد."
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -211,19 +222,20 @@ msgid "Signed in, but there is no folder called “%(folder)s”."
 msgstr "تم تسجيل الدخول، لكن لا يوجد مجلد باسم «%(folder)s»."
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Signed in, but this server cannot move messages. Choose to flag them instead."
-msgstr ""
+msgstr "تم التوقيع، ولكن هذا الخادم لا يمكن نقل الرسائل. اختر أن ترفع علمهم بدلاً من ذلك."
 
 #: src/postulo_imap/sync.py
-#, python-format
+#, fuzzy, python-format
 msgid "Signed in. %(count)d message in “%(folder)s” is waiting to be read."
 msgid_plural "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Signed in. 0 messages in “%(folder)s” are waiting to be read."
+msgstr[1] "Signed in. %(count)d message in “%(folder)s” is waiting to be read."
+msgstr[2] "Signed in. 2 messages in “%(folder)s” are waiting to be read."
+msgstr[3] "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
 msgstr[4] ""
-msgstr[5] ""
+msgstr[5] "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -236,12 +248,14 @@ msgid "Subfolder"
 msgstr "المجلد الفرعي"
 
 #: src/postulo_imap/matching.py
+#, fuzzy
 msgid "the address of a contact"
-msgstr ""
+msgstr "عنوان الاتصال"
 
 #: src/postulo_imap/matching.py
+#, fuzzy
 msgid "the company’s name in the message"
-msgstr ""
+msgstr "اسم الشركة في الرسالة"
 
 #: src/postulo_imap/mailbox.py
 #, fuzzy, python-format
@@ -259,12 +273,14 @@ msgid "The mailbox refused to hand over the messages."
 msgstr "رفض صندوق البريد تسليم الرسائل."
 
 #: src/postulo_imap/mailbox.py
+#, fuzzy
 msgid "The mailbox refused to look for the folder."
-msgstr ""
+msgstr "صندوق البريد رفض البحث عن الملف."
 
 #: src/postulo_imap/mailbox.py
+#, fuzzy
 msgid "The messages were read but could not be flagged; the next pass will read them again."
-msgstr ""
+msgstr "The messages were read but could not be flagged; the next pass will read them again."
 
 #: src/postulo_imap/mailbox.py
 #, fuzzy, python-format

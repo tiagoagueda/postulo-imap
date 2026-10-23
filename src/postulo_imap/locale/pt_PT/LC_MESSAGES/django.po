@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-19 11:15+0000\n"
-"Last-Translator: LibreTranslate <noreply-mt-libretranslate@weblate.org>\n"
+"PO-Revision-Date: 2026-10-22 21:52+0000\n"
+"Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Portuguese (Portugal) <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/pt_PT/>\n"
 "Language: pt_PT\n"
 "MIME-Version: 1.0\n"
@@ -15,17 +15,17 @@ msgstr ""
 "X-Generator: postulo scripts/messages.py\n"
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "%(count)d could not be matched to an application; attach it by hand."
 msgid_plural "%(count)d could not be matched to an application; attach them by hand."
-msgstr[0] "%(count)d não foi possível corresponder a uma aplicação; anexá-la manualmente."
-msgstr[1] "%(count)d não foi possível corresponder a uma aplicação; anexá-las à mão."
+msgstr[0] "%(count)d mensagem não pôde ser associada a uma candidatura; anexe-a manualmente."
+msgstr[1] "%(count)d mensagens não puderam ser associadas a uma candidatura; anexe-as manualmente."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "%(count)d message could not be read and was skipped."
 msgid_plural "%(count)d messages could not be read and were skipped."
-msgstr[0] "A mensagem %(count)d não pôde ser lida e foi ignorada."
+msgstr[0] "%(count)d mensagem não pôde ser lida e foi ignorada."
 msgstr[1] "%(count)d mensagens não puderam ser lidas e foram ignoradas."
 
 #: src/postulo_imap/sync.py
@@ -33,36 +33,30 @@ msgid "A message with no subject"
 msgstr "Uma mensagem sem assunto"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "a rejection"
-msgstr "a rejeição"
+msgstr "uma rejeição"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "a reply to a message already matched"
-msgstr "uma resposta a uma mensagem já correspondente"
+msgstr "uma resposta a uma mensagem já associada"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an acknowledgement"
-msgstr "um reconhecimento"
+msgstr "uma confirmação de receção"
 
 #: src/postulo_imap/sync.py
 msgid "An app password wherever the server offers one; Gmail requires it with two-factor authentication on. Stored encrypted."
 msgstr "Uma palavra-passe de aplicação sempre que o servidor a ofereça; o Gmail exige-a com a verificação em dois passos ativa. Guardada cifrada."
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an assessment"
 msgstr "uma avaliação"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an invitation"
 msgstr "um convite"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an offer"
 msgstr "uma oferta"
 
@@ -92,14 +86,13 @@ msgid "From"
 msgstr "De"
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Give a number of days between 1 and %(max)d."
 msgstr "Dê um número de dias entre 1 e %(max)d."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Give a port between 1 and 65535, or leave it empty."
-msgstr "Dê um porto entre 1 e 65535, ou deixe-o vazio."
+msgstr "Indique uma porta entre 1 e 65535, ou deixe-a vazia."
 
 #: src/postulo_imap/sync.py
 msgid "How many days of mail a pass considers."
@@ -110,9 +103,8 @@ msgid "Leave the mailbox untouched"
 msgstr "Não mexer na caixa de correio"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Left empty: 993 with TLS, 143 with STARTTLS."
-msgstr "Esquerda vazia: 993 com TLS, 143 com STARTTLS."
+msgstr "Se ficar vazio: 993 com TLS, 143 com STARTTLS."
 
 #: src/postulo_imap/sync.py
 msgid "Look back"
@@ -131,7 +123,6 @@ msgid "Move it to a subfolder"
 msgstr "Movê-lo para uma subpasta"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Name a subfolder other than the folder being read."
 msgstr "Nomeie uma subpasta que não seja a pasta a ser lida."
 
@@ -152,9 +143,8 @@ msgid "Once read"
 msgstr "Depois de lido"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "One folder, never the inbox. Make a rule on your mail server that files recruiter mail here; Postulo reads nothing else. Every message it reads is flagged or moved afterwards, whether or not it was recognised."
-msgstr "Uma pasta, nunca a caixa de entrada. Faça uma regra no seu servidor de e- mail de que os arquivos de recrutamento de e- mail aqui; Postulo não lê mais nada. Cada mensagem que lê é sinalizada ou movida depois, seja ou não reconhecida."
+msgstr "Uma pasta, nunca a caixa de entrada. Crie no seu servidor de correio uma regra que arquive aqui o correio dos recrutadores; o Postulo não lê mais nada. Cada mensagem que lê é depois marcada ou movida, tenha ou não sido reconhecida."
 
 #: src/postulo_imap/sync.py
 msgid "Password or app password"
@@ -165,9 +155,8 @@ msgid "Port"
 msgstr "Porta"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Postulo never reads the inbox. Name the folder your mail rule files jobs mail into."
-msgstr "Postulo nunca lê a caixa de entrada. Nomeie a pasta para onde os seus ficheiros de regras de e- mail são enviados."
+msgstr "O Postulo nunca lê a caixa de entrada. Indique a pasta onde a sua regra de correio arquiva o correio de emprego."
 
 #: src/postulo_imap/sync.py
 msgid "Recognised"
@@ -191,16 +180,15 @@ msgid "Signed in, but there is no folder called “%(folder)s”."
 msgstr "Sessão iniciada, mas não existe nenhuma pasta chamada «%(folder)s»."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Signed in, but this server cannot move messages. Choose to flag them instead."
-msgstr "Assinado, mas este servidor não consegue mover as mensagens. Em vez disso, escolha marcar."
+msgstr "Sessão iniciada, mas este servidor não consegue mover mensagens. Em vez disso, escolha marcá-las."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Signed in. %(count)d message in “%(folder)s” is waiting to be read."
 msgid_plural "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
-msgstr[0] "Assinado. %(count)d mensagem em “%(folder)s” está esperando para ser lido."
-msgstr[1] "Assinado. %(count)d mensagens em “%(folder)s” estão esperando para ser lido."
+msgstr[0] "Sessão iniciada. %(count)d mensagem em «%(folder)s» está à espera de ser lida."
+msgstr[1] "Sessão iniciada. %(count)d mensagens em «%(folder)s» estão à espera de ser lidas."
 
 #: src/postulo_imap/sync.py
 msgid "STARTTLS (port 143)"
@@ -211,12 +199,10 @@ msgid "Subfolder"
 msgstr "Subpasta"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the address of a contact"
 msgstr "o endereço de um contacto"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the company’s name in the message"
 msgstr "o nome da empresa na mensagem"
 
@@ -234,39 +220,33 @@ msgid "The mailbox refused to hand over the messages."
 msgstr "A caixa de correio recusou-se a entregar as mensagens."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The mailbox refused to look for the folder."
-msgstr "A caixa de correio recusou- se a procurar a pasta."
+msgstr "A caixa de correio recusou-se a procurar a pasta."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The messages were read but could not be flagged; the next pass will read them again."
-msgstr "As mensagens foram lidas mas não puderam ser marcadas; a próxima passagem as lerá novamente."
+msgstr "As mensagens foram lidas, mas não puderam ser marcadas; a próxima passagem vai lê-las novamente."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy, python-format
+#, python-format
 msgid "The messages were read but could not be moved to “%(folder)s”; the next pass will read them again."
-msgstr "As mensagens foram lidas mas não puderam ser movidas para “%(folder)s”; o próximo passe irá lê-las novamente."
+msgstr "As mensagens foram lidas, mas não puderam ser movidas para «%(folder)s»; a próxima passagem vai lê-las novamente."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The messages were read, but this server cannot move them; the next pass will read them again."
-msgstr "As mensagens foram lidas, mas este servidor não pode movê- las; a próxima passagem irá lê- las novamente."
+msgstr "As mensagens foram lidas, mas este servidor não consegue movê-las; a próxima passagem vai lê-las novamente."
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the role’s title in the message"
-msgstr "o título do papel na mensagem"
+msgstr "o nome do cargo na mensagem"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the sender’s web domain"
-msgstr "domínio web do remetente"
+msgstr "o domínio web do remetente"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "This folder does not keep flags of its own, so every message of the look-back is read again on each pass."
-msgstr "Esta pasta não mantém bandeiras próprias, então cada mensagem do look-back é lida novamente em cada passe."
+msgstr "Esta pasta não guarda marcas próprias, por isso cada mensagem do período analisado é lida novamente em cada passagem."
 
 #: src/postulo_imap/sync.py
 msgid "TLS (port 993)"
