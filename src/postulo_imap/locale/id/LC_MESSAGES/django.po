@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-22 21:52+0000\n"
+"PO-Revision-Date: 2026-10-23 12:47+0000\n"
 "Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Indonesian <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/id/>\n"
 "Language: id\n"
@@ -18,7 +18,7 @@ msgstr ""
 #, fuzzy, python-format
 msgid "%(count)d could not be matched to an application; attach it by hand."
 msgid_plural "%(count)d could not be matched to an application; attach them by hand."
-msgstr[0] "Font color = \"# 404040\" X0X: tidak dapat cocok dengan aplikasi; melampirkan mereka dengan tangan."
+msgstr[0] "%(count)d tidak dapat dicocokkan dengan lamaran; lampirkan secara manual."
 
 #: src/postulo_imap/sync.py
 #, fuzzy, python-format

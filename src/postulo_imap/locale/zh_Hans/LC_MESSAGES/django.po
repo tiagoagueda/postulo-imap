@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-22 21:52+0000\n"
-"Last-Translator: LibreTranslate <noreply-mt-libretranslate@weblate.org>\n"
+"PO-Revision-Date: 2026-10-23 12:47+0000\n"
+"Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/zh_Hans/>\n"
 "Language: zh_Hans\n"
 "MIME-Version: 1.0\n"
@@ -245,7 +245,7 @@ msgstr "信息中公司名称"
 #: src/postulo_imap/mailbox.py
 #, fuzzy, python-format
 msgid "The folder “%(folder)s” could not be opened."
-msgstr "无法打开文件夹 ."
+msgstr "无法打开文件夹“%(folder)s”。"
 
 #: src/postulo_imap/mailbox.py
 #, fuzzy
@@ -270,7 +270,7 @@ msgstr "信件已经宣读,但无法标出;下个通行证将再次宣读."
 #: src/postulo_imap/mailbox.py
 #, fuzzy, python-format
 msgid "The messages were read but could not be moved to “%(folder)s”; the next pass will read them again."
-msgstr "信件被读取,但无法移到“X50X”处;下个通行证将再次读取."
+msgstr "邮件已读取，但无法移至“%(folder)s”；下一轮将再次读取这些邮件。"
 
 #: src/postulo_imap/mailbox.py
 #, fuzzy

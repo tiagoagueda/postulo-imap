@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-22 21:52+0000\n"
-"Last-Translator: LibreTranslate <noreply-mt-libretranslate@weblate.org>\n"
+"PO-Revision-Date: 2026-10-23 12:47+0000\n"
+"Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Chinese (Traditional Han script) <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/zh_Hant/>\n"
 "Language: zh_Hant\n"
 "MIME-Version: 1.0\n"
@@ -270,7 +270,7 @@ msgstr "有相關訊息被取出, 但無法被標出."
 #: src/postulo_imap/mailbox.py
 #, fuzzy, python-format
 msgid "The messages were read but could not be moved to “%(folder)s”; the next pass will read them again."
-msgstr "有留言被讀取了, 但無法被移到 “ (X50X) ” ; 接著的通訊會再被取出 ."
+msgstr "郵件已讀取，但無法移至「%(folder)s」；下一輪將再次讀取這些郵件。"
 
 #: src/postulo_imap/mailbox.py
 #, fuzzy

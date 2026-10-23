@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-22 21:52+0000\n"
-"Last-Translator: LibreTranslate <noreply-mt-libretranslate@weblate.org>\n"
+"PO-Revision-Date: 2026-10-23 11:33+0000\n"
+"Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Turkish <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
@@ -101,7 +101,7 @@ msgstr "From"
 #: src/postulo_imap/sync.py
 #, fuzzy, python-format
 msgid "Give a number of days between 1 and %(max)d."
-msgstr "1 ve [X36X) arasında birkaç gün verin."
+msgstr "1 ile %(max)d arasında bir gün sayısı girin."
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -211,7 +211,7 @@ msgstr "Sign-in reddetti. Kullanıcı ve şifreyi kontrol edin."
 #: src/postulo_imap/sync.py
 #, fuzzy, python-format
 msgid "Signed in, but there is no folder called “%(folder)s”."
-msgstr "İçeri kaydolun, ancak “X42X” adı verilen bir klasör yoktur."
+msgstr "Oturum açıldı, ancak “%(folder)s” adında bir klasör yok."
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -273,7 +273,7 @@ msgstr "Mesajlar okunmuştu ama bayraklanamadı; sonraki geçiş tekrar okuyacak
 #: src/postulo_imap/mailbox.py
 #, fuzzy, python-format
 msgid "The messages were read but could not be moved to “%(folder)s”; the next pass will read them again."
-msgstr "Mesajlar okunmuştu ama “[X50X)’e taşınamadı; bir sonraki geçiş onları tekrar okuyacak."
+msgstr "İletiler okundu ancak “%(folder)s” klasörüne taşınamadı; bir sonraki geçişte yeniden okunacaklar."
 
 #: src/postulo_imap/mailbox.py
 #, fuzzy
