@@ -50,7 +50,7 @@ dev = [
     # before the work converged back onto `main` — it has neither the destination guard
     # this plugin now connects through (postulo/postulo#215) nor the catalogue tool the
     # tests call. This becomes `@v0.3.0` the day that tag is made.
-    "postulo @ git+https://source.tiagoagueda.com/postulo/postulo.git@42be52048214fd98ed96d881fdf9fbadc10c4b73",
+    "postulo @ git+https://source.tiagoagueda.com/postulo/postulo.git@a8467ab21fac7e16c4a6faf825413e42381656e5",
     "pytest>=8.3",
     "pytest-django>=4.14",
     "ruff>=0.16",

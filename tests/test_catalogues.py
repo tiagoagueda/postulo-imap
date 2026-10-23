@@ -2,8 +2,8 @@
 
 Postulo never translates a plugin's strings, so Postulo's release gate cannot see these;
 this is the same gate, here (postulo/postulo#187). English is the source, every translation
-is made in Weblate (postulo/postulo#706) and arrives as its pull request, and the twenty-four
-European Union catalogues are complete in a published version -- `uv run pytest -m release`.
+is made in Weblate (postulo/postulo#706) and arrives as its pull request, and the core
+release's selected languages are complete in a published version -- `uv run pytest -m release`.
 """
 
 from __future__ import annotations
@@ -18,32 +18,14 @@ REPO = Path(__file__).resolve().parents[1]
 #: What a person writes in this repository, as opposed to what a tool makes.
 WRITTEN_BY_HAND = {".py", ".md", ".toml", ".yml", ".json", ".html", ".txt"}
 
-#: The twenty-four, minus the source. Complete in a published version, not in every commit.
-EUROPEAN_UNION = (
-    "bg",
-    "cs",
-    "da",
-    "de",
-    "el",
-    "es",
-    "et",
-    "fi",
-    "fr-FR",
-    "ga",
-    "hr",
-    "hu",
-    "it",
-    "lt",
-    "lv",
-    "mt",
-    "nl",
-    "pl",
-    "pt-PT",
-    "ro",
-    "sk",
-    "sl",
-    "sv",
-)
+#: The languages the core release this plugin ships beside must carry complete, a draft
+#: counting: the core's one list (postulo/postulo#347), read through the pinned core.
+#: Empty only with a core too old to have it, which the release test below refuses.
+try:
+    from postulo.core import messages_tool as _core_tool
+except ImportError:  # pragma: no cover - depends on which core is installed
+    _core_tool = None
+SELECTED = _core_tool.selected() if hasattr(_core_tool, "selected") else ()
 
 
 def _tool(*, required: bool):
@@ -51,7 +33,7 @@ def _tool(*, required: bool):
 
     Skipping is right while working against an older core: the tool arrived with Postulo
     0.3, and a checkout beside a 0.2 is a fair place to be. It is exactly wrong at a
-    release, where a skip means the twenty-four catalogues below were never looked at and
+    release, where a skip means the selected catalogues below were never looked at and
     the gate passed by saying nothing. So the gate asks for the tool and fails without it
     (postulo-imap#1).
     """
@@ -98,8 +80,8 @@ def test_every_language_postulo_offers_has_a_catalogue(tool):
 
 
 @pytest.mark.release
-@pytest.mark.parametrize("code", EUROPEAN_UNION)
-def test_every_european_union_language_stays_complete(gate, code):
+@pytest.mark.parametrize("code", SELECTED)
+def test_every_selected_language_is_complete(gate, code):
     gaps = missing(gate, code)
     assert gaps == [], f"{code}: {len(gaps)} untranslated, e.g. {gaps[:3]}"
 
@@ -129,3 +111,12 @@ def test_a_language_code_is_written_one_way():
         if spelling in path.read_text(encoding="utf-8")
     ]
     assert found == []
+
+
+@pytest.mark.release
+def test_the_core_names_the_languages_this_release_selects():
+    """A release gate with no languages would check nothing (postulo/postulo#347)."""
+    assert SELECTED, (
+        "The pinned core has no messages_tool.selected(): pin the core this plugin is "
+        "released beside."
+    )
