@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-22 21:52+0000\n"
-"Last-Translator: LibreTranslate <noreply-mt-libretranslate@weblate.org>\n"
+"PO-Revision-Date: 2026-10-23 12:47+0000\n"
+"Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Swahili <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/sw/>\n"
 "Language: sw\n"
 "MIME-Version: 1.0\n"
@@ -76,7 +76,7 @@ msgstr "Nimeshindwa kuingia kwenye server Angalia anwani, bandari na usalama."
 #: src/postulo_imap/sync.py
 #, fuzzy, python-format
 msgid "Flag it with %(keyword)s"
-msgstr "Picha zote na Wizara ya Mambo ya Ndani ya Nchi. ..................................................................."
+msgstr "Iwekee alama %(keyword)s"
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -101,7 +101,7 @@ msgstr "Kutoka kwa"
 #: src/postulo_imap/sync.py
 #, fuzzy, python-format
 msgid "Give a number of days between 1 and %(max)d."
-msgstr "Fanya zoezi hilo kwa muda wa siku moja na nusu."
+msgstr "Weka idadi ya siku kati ya 1 na %(max)d."
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -211,7 +211,7 @@ msgstr "Barua ilikataa. Angalia jina la mtumiaji na password."
 #: src/postulo_imap/sync.py
 #, fuzzy, python-format
 msgid "Signed in, but there is no folder called “%(folder)s”."
-msgstr "Kwa mfano: “Hakuna mwenye kutia shaka katika hilo, na wala hakuna mwenye kutia shaka” (42:42)."
+msgstr "Umeingia, lakini hakuna folda inayoitwa “%(folder)s”."
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -222,8 +222,8 @@ msgstr "Kuingia, lakini seva hii haiwezi kuhamisha ujumbe. Chagua bendera yako b
 #, fuzzy, python-format
 msgid "Signed in. %(count)d message in “%(folder)s” is waiting to be read."
 msgid_plural "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
-msgstr[0] "Hakika Qur’ani inahadithia kwa sura nzuri kabisa tukio hilo."
-msgstr[1] "Hakika katika hayo zipo Ishara kwa watu wanao fikiri."
+msgstr[0] "Umeingia. Ujumbe %(count)d katika “%(folder)s” unasubiri kusomwa."
+msgstr[1] "Umeingia. Jumbe %(count)d katika “%(folder)s” zinasubiri kusomwa."
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -248,7 +248,7 @@ msgstr "jina la kampuni katika ujumbe"
 #: src/postulo_imap/mailbox.py
 #, fuzzy, python-format
 msgid "The folder “%(folder)s” could not be opened."
-msgstr "Hata hivyo, \"X12X\" haikuweza kufunguliwa."
+msgstr "Folda “%(folder)s” haikuweza kufunguliwa."
 
 #: src/postulo_imap/mailbox.py
 #, fuzzy
@@ -273,7 +273,7 @@ msgstr "Ujumbe ulisomwa lakini haukuweza kupeperusha bendera; ujumbe ufuatao uta
 #: src/postulo_imap/mailbox.py
 #, fuzzy, python-format
 msgid "The messages were read but could not be moved to “%(folder)s”; the next pass will read them again."
-msgstr "Ujumbe ulisomwa, lakini haukuhamishwa kwenda “X50X”; kifungu kinachofuata kitasomwa tena."
+msgstr "Jumbe zilisomwa lakini hazikuweza kuhamishiwa “%(folder)s”; mzunguko ujao utazisoma tena."
 
 #: src/postulo_imap/mailbox.py
 #, fuzzy

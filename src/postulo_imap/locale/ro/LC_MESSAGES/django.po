@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-22 21:52+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2026-10-23 11:33+0000\n"
+"Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Romanian <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/ro/>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
@@ -276,7 +276,7 @@ msgstr "Mesajele au fost citite, dar nu au putut fi semnalizate; următoarea tre
 #: src/postulo_imap/mailbox.py
 #, fuzzy, python-format
 msgid "The messages were read but could not be moved to “%(folder)s”; the next pass will read them again."
-msgstr "Mesajele au fost citite, dar nu au putut fi mutate la ."
+msgstr "Mesajele au fost citite, dar nu au putut fi mutate în „%(folder)s”; la următoarea trecere vor fi citite din nou."
 
 #: src/postulo_imap/mailbox.py
 #, fuzzy

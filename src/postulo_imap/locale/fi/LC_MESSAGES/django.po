@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-22 21:51+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2026-10-23 11:33+0000\n"
+"Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Finnish <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/fi/>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
@@ -222,8 +222,8 @@ msgstr "Tämä palvelin ei voi siirtää viestejä. Valitse lipun sijasta."
 #, fuzzy, python-format
 msgid "Signed in. %(count)d message in “%(folder)s” is waiting to be read."
 msgid_plural "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
-msgstr[0] "%(count)d-viesti odottaa luettavaa."
-msgstr[1] "Allekirjoitettu. %(count)d viestit ."
+msgstr[0] "Kirjauduttu sisään. %(count)d viesti kansiossa ”%(folder)s” odottaa lukemista."
+msgstr[1] "Kirjauduttu sisään. %(count)d viestiä kansiossa ”%(folder)s” odottaa lukemista."
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -248,7 +248,7 @@ msgstr "yrityksen nimi viestissä"
 #: src/postulo_imap/mailbox.py
 #, fuzzy, python-format
 msgid "The folder “%(folder)s” could not be opened."
-msgstr "Kansiota ei voitu avata."
+msgstr "Kansiota ”%(folder)s” ei voitu avata."
 
 #: src/postulo_imap/mailbox.py
 #, fuzzy

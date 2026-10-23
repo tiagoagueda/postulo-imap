@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-22 21:52+0000\n"
-"Last-Translator: LibreTranslate <noreply-mt-libretranslate@weblate.org>\n"
+"PO-Revision-Date: 2026-10-23 11:33+0000\n"
+"Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Albanian <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/sq/>\n"
 "Language: sq\n"
 "MIME-Version: 1.0\n"
@@ -222,8 +222,8 @@ msgstr "Firmosur në, por ky server nuk mund të lëvizë mesazhet. Zgjidhni t'i
 #, fuzzy, python-format
 msgid "Signed in. %(count)d message in “%(folder)s” is waiting to be read."
 msgid_plural "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
-msgstr[0] "E firmosur. [X11XXX] mesazh në %(folder)sخ po pret të lexohet."
-msgstr[1] "Të firmosura. [X11XXX] mesazhe në %(folder)s⇩ po presin të lexohen."
+msgstr[0] "U hyt. %(count)d mesazh në “%(folder)s” pret të lexohet."
+msgstr[1] "U hyt. %(count)d mesazhe në “%(folder)s” presin të lexohen."
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -248,7 +248,7 @@ msgstr "emri në mesazh"
 #: src/postulo_imap/mailbox.py
 #, fuzzy, python-format
 msgid "The folder “%(folder)s” could not be opened."
-msgstr "Kartela nuk mund të hapet."
+msgstr "Dosja “%(folder)s” nuk mund të hapej."
 
 #: src/postulo_imap/mailbox.py
 #, fuzzy

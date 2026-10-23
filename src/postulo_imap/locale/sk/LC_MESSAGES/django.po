@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-22 21:52+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2026-10-23 11:33+0000\n"
+"Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Slovak <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/sk/>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
@@ -224,9 +224,9 @@ msgstr "Podpísané, ale tento server nemôže presunúť správy. Namiesto toho
 #, fuzzy, python-format
 msgid "Signed in. %(count)d message in “%(folder)s” is waiting to be read."
 msgid_plural "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
-msgstr[0] "Prihlásený. %(count)d správa v ."
-msgstr[1] "Prihlásený. %(count)d správy v ."
-msgstr[2] "Prihlásený. %(count)d správy v ."
+msgstr[0] "Prihlásené. %(count)d správa v priečinku „%(folder)s“ čaká na prečítanie."
+msgstr[1] "Prihlásené. %(count)d správy v priečinku „%(folder)s“ čakajú na prečítanie."
+msgstr[2] "Prihlásené. %(count)d správ v priečinku „%(folder)s“ čaká na prečítanie."
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -251,7 +251,7 @@ msgstr "názov spoločnosti v správe"
 #: src/postulo_imap/mailbox.py
 #, fuzzy, python-format
 msgid "The folder “%(folder)s” could not be opened."
-msgstr "Priečinok sa nepodarilo otvoriť."
+msgstr "Priečinok „%(folder)s“ sa nepodarilo otvoriť."
 
 #: src/postulo_imap/mailbox.py
 #, fuzzy
@@ -276,7 +276,7 @@ msgstr "Správy boli čítané, ale nemohli byť označené; ďalší prihrávka
 #: src/postulo_imap/mailbox.py
 #, fuzzy, python-format
 msgid "The messages were read but could not be moved to “%(folder)s”; the next pass will read them again."
-msgstr "Správy boli čítané, ale nemohol byť presunutý do ."
+msgstr "Správy boli prečítané, ale nepodarilo sa ich presunúť do „%(folder)s“; pri ďalšom prechode sa prečítajú znova."
 
 #: src/postulo_imap/mailbox.py
 #, fuzzy

@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-22 21:52+0000\n"
+"PO-Revision-Date: 2026-10-23 12:47+0000\n"
 "Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Hindi <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/hi/>\n"
 "Language: hi\n"
@@ -18,15 +18,15 @@ msgstr ""
 #, fuzzy, python-format
 msgid "%(count)d could not be matched to an application; attach it by hand."
 msgid_plural "%(count)d could not be matched to an application; attach them by hand."
-msgstr[0] "%(count)d को किसी एप्लिकेशन से मिलान नहीं किया जा सकता; उन्हें हाथ से संलग्न करें।।"
-msgstr[1] "%(count)d को किसी एप्लिकेशन से मिलान नहीं किया जा सकता; उन्हें हाथ से संलग्न करें।।"
+msgstr[0] "%(count)d का किसी आवेदन से मिलान नहीं हो सका; इसे हाथ से जोड़ें।"
+msgstr[1] "%(count)d का किसी आवेदन से मिलान नहीं हो सका; इन्हें हाथ से जोड़ें।"
 
 #: src/postulo_imap/sync.py
 #, fuzzy, python-format
 msgid "%(count)d message could not be read and was skipped."
 msgid_plural "%(count)d messages could not be read and were skipped."
-msgstr[0] "%(count)d संदेशों को पढ़ा नहीं जा सकता और उन्हें छोड़ दिया गया।।"
-msgstr[1] "%(count)d संदेशों को पढ़ा नहीं जा सकता और उन्हें छोड़ दिया गया।।"
+msgstr[0] "%(count)d संदेश पढ़ा नहीं जा सका और छोड़ दिया गया।"
+msgstr[1] "%(count)d संदेश पढ़े नहीं जा सके और छोड़ दिए गए।"
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -101,12 +101,12 @@ msgstr "से"
 #: src/postulo_imap/sync.py
 #, fuzzy, python-format
 msgid "Give a number of days between 1 and %(max)d."
-msgstr "1 और %(max)d के बीच कई दिन दें।।"
+msgstr "1 और %(max)d के बीच दिनों की संख्या दें।"
 
 #: src/postulo_imap/sync.py
 #, fuzzy
 msgid "Give a port between 1 and 65535, or leave it empty."
-msgstr "1 और 65535 के बीच एक बंदरगाह दें, या इसे खाली छोड़ दें।।"
+msgstr "1 और 65535 के बीच कोई पोर्ट दें, या इसे खाली छोड़ें।"
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -121,7 +121,7 @@ msgstr "मेलबॉक्स को ज्यों का त्यों �
 #: src/postulo_imap/sync.py
 #, fuzzy
 msgid "Left empty: 993 with TLS, 143 with STARTTLS."
-msgstr "बाएं खाली: TLS के साथ 993, 143 STARTTLS के साथ।।"
+msgstr "खाली छोड़ने पर: TLS के साथ 993, STARTTLS के साथ 143।"
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -146,7 +146,7 @@ msgstr "सबफ़ोल्डर में ले जाएं"
 #: src/postulo_imap/sync.py
 #, fuzzy
 msgid "Name a subfolder other than the folder being read."
-msgstr "फ़ोल्डर पढ़ने के अलावा एक सबफ़ोल्डर नाम दें।।"
+msgstr "पढ़े जा रहे फ़ोल्डर के अलावा कोई सबफ़ोल्डर बताएँ।"
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -171,7 +171,7 @@ msgstr "पढ़ने के बाद"
 #: src/postulo_imap/sync.py
 #, fuzzy
 msgid "One folder, never the inbox. Make a rule on your mail server that files recruiter mail here; Postulo reads nothing else. Every message it reads is flagged or moved afterwards, whether or not it was recognised."
-msgstr "एक फ़ोल्डर, कभी इनबॉक्स नहीं। अपने मेल सर्वर पर एक नियम बनाएं जो यहां फ़ाइलों को भर्ती करने वाला मेल; पोस्टुलो ने कुछ और पढ़ा। प्रत्येक संदेश को पढ़ने के बाद ध्वजांकित या स्थानांतरित किया जाता है, चाहे वह मान्यता प्राप्त हो।।"
+msgstr "एक फ़ोल्डर, कभी इनबॉक्स नहीं। अपने मेल सर्वर पर ऐसा नियम बनाएँ जो भर्तीकर्ताओं के मेल यहाँ रखे; Postulo और कुछ नहीं पढ़ता। जो भी संदेश यह पढ़ता है, उसे बाद में फ़्लैग या स्थानांतरित किया जाता है, चाहे वह पहचाना गया हो या नहीं।"
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -186,7 +186,7 @@ msgstr "पोर्ट"
 #: src/postulo_imap/sync.py
 #, fuzzy
 msgid "Postulo never reads the inbox. Name the folder your mail rule files jobs mail into."
-msgstr "पोस्टुलो ने कभी इनबॉक्स को पढ़ा नहीं है। अपने मेल नियम फ़ाइलों को मेल करने वाले फ़ोल्डर को नाम दें।।"
+msgstr "Postulo कभी इनबॉक्स नहीं पढ़ता। वह फ़ोल्डर बताएँ जिसमें आपका मेल नियम नौकरी से जुड़े मेल रखता है।"
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -216,14 +216,14 @@ msgstr "साइन इन हो गया, लेकिन “%(folder)s” �
 #: src/postulo_imap/sync.py
 #, fuzzy
 msgid "Signed in, but this server cannot move messages. Choose to flag them instead."
-msgstr "लेकिन यह सर्वर संदेशों को स्थानांतरित नहीं कर सकता है। इसके बजाय उन्हें ध्वजांकित करने के लिए चुनें।।"
+msgstr "साइन इन हो गया, पर यह सर्वर संदेशों को स्थानांतरित नहीं कर सकता। इसके बजाय उन्हें फ़्लैग करना चुनें।"
 
 #: src/postulo_imap/sync.py
 #, fuzzy, python-format
 msgid "Signed in. %(count)d message in “%(folder)s” is waiting to be read."
 msgid_plural "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
-msgstr[0] "%(count)d में \"%(folder)s\" संदेश पढ़ने का इंतजार कर रहे हैं।।"
-msgstr[1] "%(count)d में \"%(folder)s\" संदेश पढ़ने का इंतजार कर रहे हैं।।"
+msgstr[0] "साइन इन हो गया। “%(folder)s” में %(count)d संदेश पढ़े जाने की प्रतीक्षा में है।"
+msgstr[1] "साइन इन हो गया। “%(folder)s” में %(count)d संदेश पढ़े जाने की प्रतीक्षा में हैं।"
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -263,22 +263,22 @@ msgstr "मेलबॉक्स ने मैसेज देने से इ�
 #: src/postulo_imap/mailbox.py
 #, fuzzy
 msgid "The mailbox refused to look for the folder."
-msgstr "मेलबॉक्स ने फ़ोल्डर को देखने से इनकार कर दिया।।"
+msgstr "मेलबॉक्स ने फ़ोल्डर खोजने से इनकार कर दिया।"
 
 #: src/postulo_imap/mailbox.py
 #, fuzzy
 msgid "The messages were read but could not be flagged; the next pass will read them again."
-msgstr "संदेश पढ़ा गया था लेकिन फ्लैग नहीं किया जा सकता; अगले पास उन्हें फिर से पढ़ा जाएगा।।"
+msgstr "संदेश पढ़े गए पर फ़्लैग नहीं किए जा सके; अगली बार उन्हें फिर से पढ़ा जाएगा।"
 
 #: src/postulo_imap/mailbox.py
 #, fuzzy, python-format
 msgid "The messages were read but could not be moved to “%(folder)s”; the next pass will read them again."
-msgstr "संदेशों को पढ़ा गया था लेकिन इसे \"%(folder)s\" में नहीं ले जाया जा सकता; अगला पास उन्हें फिर से पढ़ा जाएगा।।"
+msgstr "संदेश पढ़े गए पर “%(folder)s” में स्थानांतरित नहीं किए जा सके; अगली बार उन्हें फिर से पढ़ा जाएगा।"
 
 #: src/postulo_imap/mailbox.py
 #, fuzzy
 msgid "The messages were read, but this server cannot move them; the next pass will read them again."
-msgstr "संदेश पढ़ा गया था, लेकिन यह सर्वर उन्हें स्थानांतरित नहीं कर सकता; अगला पास उन्हें फिर से पढ़ा जाएगा।।"
+msgstr "संदेश पढ़े गए, पर यह सर्वर उन्हें स्थानांतरित नहीं कर सकता; अगली बार उन्हें फिर से पढ़ा जाएगा।"
 
 #: src/postulo_imap/matching.py
 #, fuzzy
@@ -293,7 +293,7 @@ msgstr "प्रेषक का वेब डोमेन"
 #: src/postulo_imap/sync.py
 #, fuzzy
 msgid "This folder does not keep flags of its own, so every message of the look-back is read again on each pass."
-msgstr "यह फ़ोल्डर अपने स्वयं के झंडे नहीं रखता है, इसलिए प्रत्येक संदेश को फिर से प्रत्येक पास पर पढ़ा जाता है।।"
+msgstr "यह फ़ोल्डर अपने फ़्लैग नहीं रखता, इसलिए पीछे देखने की अवधि का हर संदेश हर बार फिर से पढ़ा जाता है।"
 
 #: src/postulo_imap/sync.py
 #, fuzzy

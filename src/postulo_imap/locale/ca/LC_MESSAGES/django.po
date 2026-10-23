@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-22 21:51+0000\n"
-"Last-Translator: LibreTranslate <noreply-mt-libretranslate@weblate.org>\n"
+"PO-Revision-Date: 2026-10-23 11:33+0000\n"
+"Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Catalan <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
@@ -211,7 +211,7 @@ msgstr "El senyal s'ha rebutjat. Comprova el nom d' usuari i la contrasenya."
 #: src/postulo_imap/sync.py
 #, fuzzy, python-format
 msgid "Signed in, but there is no folder called “%(folder)s”."
-msgstr "Signat en, però no hi ha cap carpeta anomenada OutOfOffice[ X42X] 2001- 2003."
+msgstr "S'ha iniciat la sessió, però no hi ha cap carpeta anomenada «%(folder)s»."
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -222,8 +222,8 @@ msgstr "Signat, però aquest servidor no pot moure missatges. En comptes d'això
 #, fuzzy, python-format
 msgid "Signed in. %(count)d message in “%(folder)s” is waiting to be read."
 msgid_plural "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
-msgstr[0] "Signat en. %(count)d missatge en Manveen[ X3X]íem a llegir."
-msgstr[1] "Signat en. %(count)d missatges a SA[ X34X] uid estan esperant que es llegeixi."
+msgstr[0] "S'ha iniciat la sessió. %(count)d missatge de «%(folder)s» està pendent de llegir."
+msgstr[1] "S'ha iniciat la sessió. %(count)d missatges de «%(folder)s» estan pendents de llegir."
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -248,7 +248,7 @@ msgstr "el nom de l' empresa alexandrmanns del missatge"
 #: src/postulo_imap/mailbox.py
 #, fuzzy, python-format
 msgid "The folder “%(folder)s” could not be opened."
-msgstr "No s' ha pogut obrir la carpeta SUMr[ X12] 2001- 2009."
+msgstr "No s'ha pogut obrir la carpeta «%(folder)s»."
 
 #: src/postulo_imap/mailbox.py
 #, fuzzy

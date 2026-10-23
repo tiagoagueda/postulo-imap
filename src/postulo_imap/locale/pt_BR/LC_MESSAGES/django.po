@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-22 21:51+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2026-10-23 12:47+0000\n"
+"Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Portuguese (Brazil) <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
@@ -222,8 +222,8 @@ msgstr "Assinado, mas este servidor não pode mover mensagens. Escolha chamá-lo
 #, fuzzy, python-format
 msgid "Signed in. %(count)d message in “%(folder)s” is waiting to be read."
 msgid_plural "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
-msgstr[0] "Mensagens em \"X34X\" estão esperando para serem lidas."
-msgstr[1] "Mensagens em \"X34X\" estão esperando para serem lidas."
+msgstr[0] "Conectado. %(count)d mensagem em “%(folder)s” está aguardando leitura."
+msgstr[1] "Conectado. %(count)d mensagens em “%(folder)s” estão aguardando leitura."
 
 #: src/postulo_imap/sync.py
 #, fuzzy
