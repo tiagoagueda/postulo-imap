@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-23 11:33+0000\n"
+"PO-Revision-Date: 2026-10-24 04:19+0000\n"
 "Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Romanian <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/ro/>\n"
 "Language: ro\n"
@@ -15,300 +15,250 @@ msgstr ""
 "X-Generator: postulo scripts/messages.py\n"
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "%(count)d could not be matched to an application; attach it by hand."
 msgid_plural "%(count)d could not be matched to an application; attach them by hand."
-msgstr[0] "%(count)d nu a putut fi egalat cu o aplicație; atașați-l manual."
-msgstr[1] "%(count)d nu s-a putut potrivi cu o aplicație; atașați-le manual."
-msgstr[2] "%(count)d nu s-a putut potrivi cu o aplicație; atașați-le manual."
+msgstr[0] "%(count)d mesaj nu a putut fi asociat cu o candidatură; atașați-l manual."
+msgstr[1] "%(count)d mesaje nu au putut fi asociate cu o candidatură; atașați-le manual."
+msgstr[2] "%(count)d de mesaje nu au putut fi asociate cu o candidatură; atașați-le manual."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "%(count)d message could not be read and was skipped."
 msgid_plural "%(count)d messages could not be read and were skipped."
-msgstr[0] "Mesajul nu a putut fi citit şi a fost omis."
-msgstr[1] "Mesajele nu au putut fi citite și au fost omise."
-msgstr[2] "Mesajele nu au putut fi citite și au fost omise."
+msgstr[0] "%(count)d mesaj nu a putut fi citit și a fost omis."
+msgstr[1] "%(count)d mesaje nu au putut fi citite și au fost omise."
+msgstr[2] "%(count)d de mesaje nu au putut fi citite și au fost omise."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "A message with no subject"
 msgstr "Un mesaj fără subiect"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "a rejection"
 msgstr "o respingere"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "a reply to a message already matched"
-msgstr "un răspuns la un mesaj deja potrivit"
+msgstr "un răspuns la un mesaj deja asociat"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an acknowledgement"
 msgstr "o confirmare"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "An app password wherever the server offers one; Gmail requires it with two-factor authentication on. Stored encrypted."
 msgstr "O parolă de aplicație oriunde serverul oferă una; Gmail o cere când autentificarea în doi pași este activată. Stocată criptat."
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an assessment"
 msgstr "o evaluare"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an invitation"
 msgstr "o invitație"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an offer"
 msgstr "o ofertă"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "Could not reach the server. Check the address, the port and the security."
-msgstr "Nu am putut ajunge la server. Verifică adresa, portul şi securitatea."
+msgstr "Serverul nu a putut fi contactat. Verificați adresa, portul și securitatea."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Flag it with %(keyword)s"
-msgstr "Marchează cu %(keyword)s"
+msgstr "Marcați-l cu %(keyword)s"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means every recent message is read again; nothing is suggested twice either way."
-msgstr "Marcarea este invizibilă în majoritatea clienților și menține fiecare trecere scurtă. Lăsarea căsuței neatinse înseamnă că fiecare mesaj recent este citit din nou; în ambele cazuri nimic nu este sugerat de două ori."
+msgstr "Marcarea este invizibilă în majoritatea clienților de e-mail și menține fiecare rulare scurtă. Dacă lăsați căsuța poștală neatinsă, fiecare mesaj recent este citit din nou; în ambele cazuri, nimic nu este sugerat de două ori."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Folder to read"
 msgstr "Dosarul de citit"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "For example imap.example.org."
 msgstr "De exemplu imap.example.org."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "From"
 msgstr "De la"
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Give a number of days between 1 and %(max)d."
-msgstr "Se acordă un număr de zile între 1 și %(max)d."
+msgstr "Introduceți un număr de zile între 1 și %(max)d."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Give a port between 1 and 65535, or leave it empty."
-msgstr "Daţi un port între 1 şi 65535, sau lăsaţi-l gol."
+msgstr "Introduceți un port între 1 și 65535 sau lăsați câmpul gol."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "How many days of mail a pass considers."
-msgstr "Câte zile de e-mail ia în considerare o trecere."
+msgstr "Câte zile de e-mail ia în considerare o rulare."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Leave the mailbox untouched"
-msgstr "Lasă căsuța neatinsă"
+msgstr "Lăsați căsuța poștală neatinsă"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Left empty: 993 with TLS, 143 with STARTTLS."
-msgstr "Stânga goală: 993 cu TLS, 143 cu STARTTLS."
+msgstr "Dacă este gol: 993 cu TLS, 143 cu STARTTLS."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Look back"
-msgstr "Interval în urmă"
+msgstr "Perioadă analizată"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Mailbox (IMAP)"
 msgstr "Căsuță poștală (IMAP)"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Matched by"
-msgstr "Asociat după"
+msgstr "Recunoscut după"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Move it to a subfolder"
-msgstr "Mută într-un subdosar"
+msgstr "Mutați-l într-un subdosar"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Name a subfolder other than the folder being read."
-msgstr "Numeşte un subdosar, altul decât dosarul citit."
+msgstr "Indicați un subdosar diferit de dosarul citit."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Name the folder to read. Postulo never reads the inbox."
-msgstr "Indică dosarul de citit. Postulo nu citește niciodată inboxul."
+msgstr "Indicați dosarul de citit. Postulo nu citește niciodată Inboxul."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Name the subfolder to move messages to."
-msgstr "Indică subdosarul în care se mută mesajele."
+msgstr "Indicați subdosarul în care să fie mutate mesajele."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "nothing yet"
 msgstr "nimic încă"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Once read"
 msgstr "După citire"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "One folder, never the inbox. Make a rule on your mail server that files recruiter mail here; Postulo reads nothing else. Every message it reads is flagged or moved afterwards, whether or not it was recognised."
-msgstr "Un dosar, niciodată inbox. Face o regulă pe serverul de e-mail care fisiere recruiser mail aici; Postulo citește nimic altceva. Fiecare mesaj citit este marcat sau mutat după aceea, indiferent dacă a fost sau nu recunoscut."
+msgstr "Un singur dosar, niciodată Inboxul. Creați pe serverul de e-mail o regulă care mută aici e-mailurile de la recrutori; Postulo nu citește nimic altceva. Fiecare mesaj citit este apoi marcat sau mutat, fie că a fost recunoscut, fie că nu."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Password or app password"
 msgstr "Parolă sau parolă de aplicație"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Port"
 msgstr "Port"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Postulo never reads the inbox. Name the folder your mail rule files jobs mail into."
-msgstr "Postulo nu citeşte niciodată inbox-ul. Numiţi dosarul în care sunt poşta."
+msgstr "Postulo nu citește niciodată Inboxul. Indicați dosarul în care regula dumneavoastră de e-mail mută mesajele despre joburi."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Recognised"
 msgstr "Recunoscute"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Security"
 msgstr "Securitate"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Server"
 msgstr "Server"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "Sign-in refused. Check the username and the password."
-msgstr "Semn-in refuzat. Verificați numele de utilizator și parola."
+msgstr "Conectare refuzată. Verificați numele de utilizator și parola."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Signed in, but there is no folder called “%(folder)s”."
-msgstr "Autentificat, dar nu există niciun dosar numit „%(folder)s”."
+msgstr "Conectat, dar nu există niciun dosar numit „%(folder)s”."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Signed in, but this server cannot move messages. Choose to flag them instead."
-msgstr "Semnat în, dar acest server nu poate muta mesaje. Alegeţi să-i urmăriţi."
+msgstr "Conectat, dar acest server nu poate muta mesaje. Alegeți în schimb marcarea lor."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Signed in. %(count)d message in “%(folder)s” is waiting to be read."
 msgid_plural "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
-msgstr[0] "Semnat în. %(count)d mesaj în %(folder)s."
-msgstr[1] "Semnat în %(count)d mesaje în %(folder)s."
-msgstr[2] "Semnat în %(count)d mesaje în %(folder)s."
+msgstr[0] "Conectat. %(count)d mesaj din „%(folder)s” așteaptă să fie citit."
+msgstr[1] "Conectat. %(count)d mesaje din „%(folder)s” așteaptă să fie citite."
+msgstr[2] "Conectat. %(count)d de mesaje din „%(folder)s” așteaptă să fie citite."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "STARTTLS (port 143)"
 msgstr "STARTTLS (port 143)"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Subfolder"
 msgstr "Subdosar"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the address of a contact"
 msgstr "adresa unui contact"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the company’s name in the message"
-msgstr "numele societății în mesaj"
+msgstr "numele companiei din mesaj"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy, python-format
+#, python-format
 msgid "The folder “%(folder)s” could not be opened."
-msgstr "Nu s-a putut deschide dosarul %(folder)s."
+msgstr "Dosarul „%(folder)s” nu a putut fi deschis."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The mailbox refused the search."
-msgstr "Cutia poştală a refuzat căutarea."
+msgstr "Căsuța poștală a refuzat căutarea."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The mailbox refused to hand over the messages."
-msgstr "Cutia poştală a refuzat să predea mesajele."
+msgstr "Căsuța poștală a refuzat să transmită mesajele."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The mailbox refused to look for the folder."
-msgstr "Cutia poştală a refuzat să caute dosarul."
+msgstr "Căsuța poștală a refuzat să caute dosarul."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The messages were read but could not be flagged; the next pass will read them again."
-msgstr "Mesajele au fost citite, dar nu au putut fi semnalizate; următoarea trecere le va citi din nou."
+msgstr "Mesajele au fost citite, dar nu au putut fi marcate; următoarea rulare le va citi din nou."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy, python-format
+#, python-format
 msgid "The messages were read but could not be moved to “%(folder)s”; the next pass will read them again."
-msgstr "Mesajele au fost citite, dar nu au putut fi mutate în „%(folder)s”; la următoarea trecere vor fi citite din nou."
+msgstr "Mesajele au fost citite, dar nu au putut fi mutate în „%(folder)s”; următoarea rulare le va citi din nou."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The messages were read, but this server cannot move them; the next pass will read them again."
-msgstr "Mesajele au fost citite, dar acest server nu le poate muta; următoarea trecere le va citi din nou."
+msgstr "Mesajele au fost citite, dar acest server nu le poate muta; următoarea rulare le va citi din nou."
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the role’s title in the message"
-msgstr "titlul rolului în mesaj"
+msgstr "denumirea postului din mesaj"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the sender’s web domain"
-msgstr "domeniul web expeditorul"
+msgstr "domeniul web al expeditorului"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "This folder does not keep flags of its own, so every message of the look-back is read again on each pass."
-msgstr "Acest dosar nu păstrează steaguri proprii, astfel încât fiecare mesaj de privire înapoi este citit din nou pe fiecare trecere."
+msgstr "Acest dosar nu păstrează propriile marcaje, așa că fiecare mesaj din perioada analizată este citit din nou la fiecare rulare."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "TLS (port 993)"
 msgstr "TLS (port 993)"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Used only when messages are moved. Created if missing."
 msgstr "Folosit doar când mesajele sunt mutate. Creat dacă lipsește."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Username"
 msgstr "Nume de utilizator"

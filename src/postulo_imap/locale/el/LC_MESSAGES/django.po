@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-22 21:51+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2026-10-24 03:42+0000\n"
+"Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Greek <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/el/>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
@@ -15,43 +15,38 @@ msgstr ""
 "X-Generator: postulo scripts/messages.py\n"
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "%(count)d could not be matched to an application; attach it by hand."
 msgid_plural "%(count)d could not be matched to an application; attach them by hand."
-msgstr[0] "%(count)d δεν μπορεί να αντιστοιχιστεί με μια αίτηση· επισυνάψτε την με το χέρι."
-msgstr[1] "%(count)d δεν ήταν δυνατή η ταύτιση με μια αίτηση· επισυνάψτε τις με το χέρι."
+msgstr[0] "%(count)d μήνυμα δεν ήταν δυνατό να αντιστοιχιστεί σε αίτηση· συνδέστε το χειροκίνητα."
+msgstr[1] "%(count)d μηνύματα δεν ήταν δυνατό να αντιστοιχιστούν σε αίτηση· συνδέστε τα χειροκίνητα."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "%(count)d message could not be read and was skipped."
 msgid_plural "%(count)d messages could not be read and were skipped."
-msgstr[0] "%(count)d μήνυμα δεν μπορούσε να διαβαστεί και παραλείφθηκε."
-msgstr[1] "%(count)d μηνύματα δεν ήταν δυνατόν να διαβαστούν και παραλείφθηκαν."
+msgstr[0] "%(count)d μήνυμα δεν ήταν δυνατό να διαβαστεί και παραλείφθηκε."
+msgstr[1] "%(count)d μηνύματα δεν ήταν δυνατό να διαβαστούν και παραλείφθηκαν."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "A message with no subject"
-msgstr "Ένα μήνυμα χωρίς θέμα"
+msgstr "Μήνυμα χωρίς θέμα"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "a rejection"
 msgstr "απόρριψη"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "a reply to a message already matched"
 msgstr "απάντηση σε μήνυμα που έχει ήδη αντιστοιχιστεί"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an acknowledgement"
-msgstr "αναγνώριση"
+msgstr "επιβεβαίωση παραλαβής"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "An app password wherever the server offers one; Gmail requires it with two-factor authentication on. Stored encrypted."
-msgstr "Κωδικός εφαρμογής όπου ο διακομιστής προσφέρει έναν· το Gmail τον απαιτεί με ενεργή ταυτοποίηση δύο παραγόντων. Αποθηκεύεται κρυπτογραφημένος."
+msgstr "Κωδικός εφαρμογής, όπου ο διακομιστής το προσφέρει· το Gmail τον απαιτεί όταν είναι ενεργός ο έλεγχος ταυτότητας δύο παραγόντων. Αποθηκεύεται κρυπτογραφημένος."
 
 #: src/postulo_imap/classifying.py
 #, fuzzy
@@ -59,186 +54,158 @@ msgid "an assessment"
 msgstr "αξιολόγηση"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an invitation"
 msgstr "πρόσκληση"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an offer"
 msgstr "προσφορά"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "Could not reach the server. Check the address, the port and the security."
-msgstr "Αδύνατη η πρόσβαση στον εξυπηρετητή. Ελέγξτε τη διεύθυνση, το λιμάνι και την ασφάλεια."
+msgstr "Δεν ήταν δυνατή η σύνδεση με τον διακομιστή. Ελέγξτε τη διεύθυνση, τη θύρα και την ασφάλεια."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Flag it with %(keyword)s"
 msgstr "Σήμανση με %(keyword)s"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means every recent message is read again; nothing is suggested twice either way."
-msgstr "Η σήμανση είναι αόρατη στα περισσότερα προγράμματα και κρατά κάθε πέρασμα σύντομο. Αν το γραμματοκιβώτιο μείνει ανέγγιχτο, κάθε πρόσφατο μήνυμα διαβάζεται ξανά· έτσι κι αλλιώς τίποτα δεν προτείνεται δύο φορές."
+msgstr "Η σήμανση δεν φαίνεται στα περισσότερα προγράμματα αλληλογραφίας και κρατά κάθε πέρασμα σύντομο. Αν το γραμματοκιβώτιο μένει ανέπαφο, κάθε πρόσφατο μήνυμα διαβάζεται ξανά· σε κάθε περίπτωση τίποτα δεν προτείνεται δύο φορές."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Folder to read"
 msgstr "Φάκελος προς ανάγνωση"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "For example imap.example.org."
-msgstr "Για παράδειγμα imap.example.org."
+msgstr "Για παράδειγμα, imap.example.org."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "From"
 msgstr "Από"
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Give a number of days between 1 and %(max)d."
 msgstr "Δώστε αριθμό ημερών μεταξύ 1 και %(max)d."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Give a port between 1 and 65535, or leave it empty."
-msgstr "Δώστε μια θύρα μεταξύ 1 και 65535, ή αφήστε την άδεια."
+msgstr "Δώστε μια θύρα μεταξύ 1 και 65535 ή αφήστε το πεδίο κενό."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "How many days of mail a pass considers."
 msgstr "Πόσες ημέρες αλληλογραφίας εξετάζει ένα πέρασμα."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Leave the mailbox untouched"
-msgstr "Να μείνει το γραμματοκιβώτιο ανέγγιχτο"
+msgstr "Να μένει το γραμματοκιβώτιο ανέπαφο"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Left empty: 993 with TLS, 143 with STARTTLS."
-msgstr "Αριστερά άδεια: 993 με TLS, 143 με STARTTLS."
+msgstr "Αν μείνει κενό: 993 με TLS, 143 με STARTTLS."
 
 #: src/postulo_imap/sync.py
 #, fuzzy
 msgid "Look back"
-msgstr "Αναδρομή"
+msgstr "Χρονικό διάστημα ανάγνωσης"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Mailbox (IMAP)"
 msgstr "Γραμματοκιβώτιο (IMAP)"
 
 #: src/postulo_imap/sync.py
 #, fuzzy
 msgid "Matched by"
-msgstr "Ταίριασμα μέσω"
+msgstr "Αντιστοίχιση βάσει"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Move it to a subfolder"
 msgstr "Μετακίνηση σε υποφάκελο"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Name a subfolder other than the folder being read."
-msgstr "Όνομα υποφάκελου εκτός του φακέλου που διαβάζεται."
+msgstr "Δώστε έναν υποφάκελο διαφορετικό από τον φάκελο που διαβάζεται."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Name the folder to read. Postulo never reads the inbox."
 msgstr "Ονομάστε τον φάκελο προς ανάγνωση. Το Postulo δεν διαβάζει ποτέ τα εισερχόμενα."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Name the subfolder to move messages to."
 msgstr "Ονομάστε τον υποφάκελο στον οποίο μετακινούνται τα μηνύματα."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "nothing yet"
 msgstr "τίποτα ακόμη"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Once read"
 msgstr "Μετά την ανάγνωση"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "One folder, never the inbox. Make a rule on your mail server that files recruiter mail here; Postulo reads nothing else. Every message it reads is flagged or moved afterwards, whether or not it was recognised."
-msgstr "Ένας φάκελος, ποτέ τα εισερχόμενα. Κάντε έναν κανόνα στο διακομιστή αλληλογραφίας σας που αρχειοθετεί το μήνυμα στρατολογητή εδώ? Postulo δεν διαβάζει τίποτα άλλο. Κάθε μήνυμα που διαβάζει επισημαίνεται ή μεταφέρεται μετά, είτε έχει αναγνωριστεί είτε όχι."
+msgstr "Ένας φάκελος, ποτέ τα εισερχόμενα. Δημιουργήστε στον διακομιστή αλληλογραφίας σας έναν κανόνα που καταχωρίζει εδώ την αλληλογραφία από υπευθύνους προσλήψεων· το Postulo δεν διαβάζει τίποτε άλλο. Κάθε μήνυμα που διαβάζει επισημαίνεται ή μετακινείται στη συνέχεια, είτε αναγνωρίστηκε είτε όχι."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Password or app password"
 msgstr "Κωδικός πρόσβασης ή κωδικός εφαρμογής"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Port"
 msgstr "Θύρα"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Postulo never reads the inbox. Name the folder your mail rule files jobs mail into."
-msgstr "Ο Ποστούλο δεν διαβάζει τα εισερχόμενα. Ονόμασε το φάκελο στον κανόνα των αρχείων αλληλογραφίας σου."
+msgstr "Το Postulo δεν διαβάζει ποτέ τα εισερχόμενα. Δώστε το όνομα του φακέλου στον οποίο ο κανόνας αλληλογραφίας σας καταχωρίζει τα μηνύματα για θέσεις εργασίας."
 
 #: src/postulo_imap/sync.py
 #, fuzzy
 msgid "Recognised"
-msgstr "Αναγνωρίστηκαν"
+msgstr "Αναγνωρισμένα"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Security"
 msgstr "Ασφάλεια"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Server"
 msgstr "Διακομιστής"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "Sign-in refused. Check the username and the password."
-msgstr "Η υπογραφή αρνήθηκε. Ελέγξτε το όνομα χρήστη και τον κωδικό πρόσβασης."
+msgstr "Η σύνδεση απορρίφθηκε. Ελέγξτε το όνομα χρήστη και τον κωδικό πρόσβασης."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Signed in, but there is no folder called “%(folder)s”."
 msgstr "Έγινε σύνδεση, αλλά δεν υπάρχει φάκελος με όνομα «%(folder)s»."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Signed in, but this server cannot move messages. Choose to flag them instead."
-msgstr "Υπέγραψε, αλλά αυτός ο διακομιστής δεν μπορεί να μετακινήσει μηνύματα. Διάλεξε να τους σημαδέψεις."
+msgstr "Έγινε σύνδεση, αλλά αυτός ο διακομιστής δεν μπορεί να μετακινήσει μηνύματα. Επιλέξτε σήμανση αντί γι’ αυτό."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Signed in. %(count)d message in “%(folder)s” is waiting to be read."
 msgid_plural "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
-msgstr[0] "%(count)d μήνυμα στο “%(folder)s” περιμένει να διαβαστεί."
-msgstr[1] "Τα μηνύματα %(count)d στο “%(folder)s” περιμένουν να διαβαστούν."
+msgstr[0] "Έγινε σύνδεση. %(count)d μήνυμα στον φάκελο «%(folder)s» περιμένει να διαβαστεί."
+msgstr[1] "Έγινε σύνδεση. %(count)d μηνύματα στον φάκελο «%(folder)s» περιμένουν να διαβαστούν."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "STARTTLS (port 143)"
 msgstr "STARTTLS (θύρα 143)"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Subfolder"
 msgstr "Υποφάκελος"
 
 #: src/postulo_imap/matching.py
 #, fuzzy
 msgid "the address of a contact"
-msgstr "τη διεύθυνση της επαφής"
+msgstr "η διεύθυνση μιας επαφής"
 
 #: src/postulo_imap/matching.py
 #, fuzzy
@@ -246,66 +213,57 @@ msgid "the company’s name in the message"
 msgstr "το όνομα της εταιρείας στο μήνυμα"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy, python-format
+#, python-format
 msgid "The folder “%(folder)s” could not be opened."
-msgstr "Ο φάκελος “%(folder)s” δεν ήταν δυνατό να ανοιχτεί."
+msgstr "Δεν ήταν δυνατό να ανοιχτεί ο φάκελος «%(folder)s»."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The mailbox refused the search."
-msgstr "Το γραμματοκιβώτιο αρνήθηκε την έρευνα."
+msgstr "Το γραμματοκιβώτιο αρνήθηκε την αναζήτηση."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The mailbox refused to hand over the messages."
 msgstr "Το γραμματοκιβώτιο αρνήθηκε να παραδώσει τα μηνύματα."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The mailbox refused to look for the folder."
-msgstr "Το γραμματοκιβώτιο αρνήθηκε να ψάξει για το φάκελο."
+msgstr "Το γραμματοκιβώτιο αρνήθηκε να αναζητήσει τον φάκελο."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The messages were read but could not be flagged; the next pass will read them again."
-msgstr "Τα μηνύματα διαβάστηκαν αλλά δεν μπορούσαν να σημαδευτούν· το επόμενο πέρασμα θα τα διαβάσει ξανά."
+msgstr "Τα μηνύματα διαβάστηκαν, αλλά δεν ήταν δυνατή η σήμανσή τους· το επόμενο πέρασμα θα τα διαβάσει ξανά."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy, python-format
+#, python-format
 msgid "The messages were read but could not be moved to “%(folder)s”; the next pass will read them again."
-msgstr "Τα μηνύματα διαβάστηκαν αλλά δεν μπορούσαν να μεταφερθούν στο “%(folder)s”· το επόμενο πέρασμα θα τα διαβάσει ξανά."
+msgstr "Τα μηνύματα διαβάστηκαν, αλλά δεν ήταν δυνατή η μετακίνησή τους στον φάκελο «%(folder)s»· το επόμενο πέρασμα θα τα διαβάσει ξανά."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The messages were read, but this server cannot move them; the next pass will read them again."
 msgstr "Τα μηνύματα διαβάστηκαν, αλλά αυτός ο διακομιστής δεν μπορεί να τα μετακινήσει· το επόμενο πέρασμα θα τα διαβάσει ξανά."
 
 #: src/postulo_imap/matching.py
 #, fuzzy
 msgid "the role’s title in the message"
-msgstr "τον τίτλο του ρόλου στο μήνυμα"
+msgstr "ο τίτλος της θέσης στο μήνυμα"
 
 #: src/postulo_imap/matching.py
 #, fuzzy
 msgid "the sender’s web domain"
-msgstr "τον διαδικτυακό τομέα του αποστολέα"
+msgstr "ο τομέας ιστού (domain) του αποστολέα"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "This folder does not keep flags of its own, so every message of the look-back is read again on each pass."
-msgstr "Αυτός ο φάκελος δεν κρατά δικές του σημαίες, οπότε κάθε μήνυμα της αναδρομής διαβάζεται ξανά σε κάθε πάσα."
+msgstr "Αυτός ο φάκελος δεν διατηρεί δικές του σημάνσεις, οπότε κάθε μήνυμα του χρονικού διαστήματος ανάγνωσης διαβάζεται ξανά σε κάθε πέρασμα."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "TLS (port 993)"
 msgstr "TLS (θύρα 993)"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Used only when messages are moved. Created if missing."
 msgstr "Χρησιμοποιείται μόνο όταν μετακινούνται μηνύματα. Δημιουργείται αν λείπει."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Username"
 msgstr "Όνομα χρήστη"

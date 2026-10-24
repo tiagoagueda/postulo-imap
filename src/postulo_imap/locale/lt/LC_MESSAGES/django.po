@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-22 21:51+0000\n"
-"Last-Translator: LibreTranslate <noreply-mt-libretranslate@weblate.org>\n"
+"PO-Revision-Date: 2026-10-24 01:46+0000\n"
+"Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Lithuanian <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/lt/>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
@@ -15,7 +15,7 @@ msgstr ""
 "X-Generator: postulo scripts/messages.py\n"
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "%(count)d could not be matched to an application; attach it by hand."
 msgid_plural "%(count)d could not be matched to an application; attach them by hand."
 msgstr[0] "%(count)d laiško nepavyko susieti su paraiška; prisekite jį rankiniu būdu."
@@ -23,7 +23,7 @@ msgstr[1] "%(count)d laiškų nepavyko susieti su paraiška; prisekite juos rank
 msgstr[2] "%(count)d laiškų nepavyko susieti su paraiška; prisekite juos rankiniu būdu."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "%(count)d message could not be read and was skipped."
 msgid_plural "%(count)d messages could not be read and were skipped."
 msgstr[0] "%(count)d laiško nepavyko perskaityti, todėl jis buvo praleistas."
@@ -35,17 +35,14 @@ msgid "A message with no subject"
 msgstr "Laiškas be temos"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "a rejection"
 msgstr "atsisakymas"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "a reply to a message already matched"
 msgstr "atsakymas į jau susietą laišką"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an acknowledgement"
 msgstr "gavimo patvirtinimas"
 
@@ -54,17 +51,14 @@ msgid "An app password wherever the server offers one; Gmail requires it with tw
 msgstr "Programos slaptažodis, jei serveris tokį siūlo; Gmail jo reikalauja, kai įjungtas patvirtinimas dviem veiksmais. Saugomas užšifruotas."
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an assessment"
 msgstr "vertinimo užduotis"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an invitation"
 msgstr "kvietimas"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an offer"
 msgstr "pasiūlymas"
 
@@ -94,12 +88,11 @@ msgid "From"
 msgstr "Siuntėjas"
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Give a number of days between 1 and %(max)d."
 msgstr "Nurodykite dienų skaičių nuo 1 iki %(max)d."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Give a port between 1 and 65535, or leave it empty."
 msgstr "Nurodykite prievadą nuo 1 iki 65535 arba palikite tuščią."
 
@@ -112,9 +105,8 @@ msgid "Leave the mailbox untouched"
 msgstr "Palikti pašto dėžutę nepakeistą"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Left empty: 993 with TLS, 143 with STARTTLS."
-msgstr "Jei paliekama tuščia: 993 su TLS, 143 su STARTTLS."
+msgstr "Palikus tuščią: 993 su TLS, 143 su STARTTLS."
 
 #: src/postulo_imap/sync.py
 msgid "Look back"
@@ -133,7 +125,6 @@ msgid "Move it to a subfolder"
 msgstr "Perkelti į poaplankį"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Name a subfolder other than the folder being read."
 msgstr "Nurodykite kitą poaplankį nei skaitomas aplankas."
 
@@ -154,7 +145,6 @@ msgid "Once read"
 msgstr "Nuskaičius"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "One folder, never the inbox. Make a rule on your mail server that files recruiter mail here; Postulo reads nothing else. Every message it reads is flagged or moved afterwards, whether or not it was recognised."
 msgstr "Vienas aplankas, niekada ne gautieji. Pašto serveryje sukurkite taisyklę, kuri darbuotojų atrankos specialistų laiškus perkeltų čia; nieko kito Postulo neskaito. Kiekvienas perskaitytas laiškas po to pažymimas arba perkeliamas, nesvarbu, ar jis buvo atpažintas, ar ne."
 
@@ -167,7 +157,6 @@ msgid "Port"
 msgstr "Prievadas"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Postulo never reads the inbox. Name the folder your mail rule files jobs mail into."
 msgstr "Postulo niekada neskaito gautųjų laiškų aplanko. Nurodykite aplanką, į kurį jūsų pašto taisyklė perkelia darbo paieškos laiškus."
 
@@ -193,12 +182,11 @@ msgid "Signed in, but there is no folder called “%(folder)s”."
 msgstr "Prisijungta, bet aplanko „%(folder)s“ nėra."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Signed in, but this server cannot move messages. Choose to flag them instead."
 msgstr "Prisijungta, tačiau šis serveris negali perkelti laiškų. Verčiau pasirinkite juos pažymėti."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Signed in. %(count)d message in “%(folder)s” is waiting to be read."
 msgid_plural "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
 msgstr[0] "Prisijungta. Aplanke „%(folder)s“ %(count)d laiškas laukia, kol bus perskaitytas."
@@ -214,12 +202,10 @@ msgid "Subfolder"
 msgstr "Poaplankis"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the address of a contact"
 msgstr "kontaktinio asmens adresas"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the company’s name in the message"
 msgstr "įmonės pavadinimas laiške"
 
@@ -237,37 +223,31 @@ msgid "The mailbox refused to hand over the messages."
 msgstr "Pašto dėžutė atsisakė perduoti laiškus."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The mailbox refused to look for the folder."
 msgstr "Pašto dėžutė atsisakė ieškoti aplanko."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The messages were read but could not be flagged; the next pass will read them again."
 msgstr "Laiškai perskaityti, bet jų nepavyko pažymėti; kito tikrinimo metu jie bus perskaityti iš naujo."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy, python-format
+#, python-format
 msgid "The messages were read but could not be moved to “%(folder)s”; the next pass will read them again."
 msgstr "Laiškai perskaityti, bet jų nepavyko perkelti į „%(folder)s“; kito tikrinimo metu jie bus perskaityti iš naujo."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The messages were read, but this server cannot move them; the next pass will read them again."
 msgstr "Laiškai perskaityti, bet šis serveris negali jų perkelti; kito tikrinimo metu jie bus perskaityti iš naujo."
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the role’s title in the message"
 msgstr "pareigų pavadinimas laiške"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the sender’s web domain"
 msgstr "siuntėjo žiniatinklio domenas"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "This folder does not keep flags of its own, so every message of the look-back is read again on each pass."
 msgstr "Šis aplankas nesaugo savų žymų, todėl per kiekvieną tikrinimą iš naujo perskaitomi visi nurodyto laikotarpio atgal laiškai."
 

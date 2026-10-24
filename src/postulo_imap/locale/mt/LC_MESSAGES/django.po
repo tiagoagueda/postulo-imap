@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-22 21:51+0000\n"
+"PO-Revision-Date: 2026-10-24 04:05+0000\n"
 "Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Maltese <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/mt/>\n"
 "Language: mt\n"
@@ -15,7 +15,7 @@ msgstr ""
 "X-Generator: postulo scripts/messages.py\n"
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "%(count)d could not be matched to an application; attach it by hand."
 msgid_plural "%(count)d could not be matched to an application; attach them by hand."
 msgstr[0] "%(count)d ma setax jitqabbel ma' applikazzjoni; waħħlu bl-idejn."
@@ -24,7 +24,7 @@ msgstr[2] "%(count)d ma setgħux jitqabblu ma' applikazzjoni; waħħalhom bl-ide
 msgstr[3] "%(count)d ma setgħux jitqabblu ma' applikazzjoni; waħħalhom bl-idejn."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "%(count)d message could not be read and was skipped."
 msgid_plural "%(count)d messages could not be read and were skipped."
 msgstr[0] "%(count)d messaġġ ma setax jinqara u nqabeż."
@@ -33,17 +33,14 @@ msgstr[2] "%(count)d messaġġ ma setgħux jinqraw u nqabżu."
 msgstr[3] "%(count)d messaġġ ma setgħux jinqraw u nqabżu."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "A message with no subject"
 msgstr "Messaġġ mingħajr suġġett"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "a rejection"
 msgstr "rifjut"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "a reply to a message already matched"
 msgstr "tweġiba għal messaġġ diġà mqabbel"
 
@@ -53,27 +50,22 @@ msgid "an acknowledgement"
 msgstr "konferma ta' riċevuta"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "An app password wherever the server offers one; Gmail requires it with two-factor authentication on. Stored encrypted."
 msgstr "Password tal-app kull fejn is-server joffri waħda; Gmail jeħtieġha meta l-awtentikazzjoni b'żewġ fatturi tkun mixgħula. Maħżuna kriptata."
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an assessment"
 msgstr "valutazzjoni"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an invitation"
 msgstr "stedina"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an offer"
 msgstr "offerta"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "Could not reach the server. Check the address, the port and the security."
 msgstr "Is-server ma setax jintlaħaq. Iċċekkja l-indirizz, il-port u s-sigurtà."
 
@@ -83,235 +75,195 @@ msgid "Flag it with %(keyword)s"
 msgstr "Immarkah b'%(keyword)s"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means every recent message is read again; nothing is suggested twice either way."
-msgstr "L-immarkar ma jidhirx fil-biċċa l-kbira tal-klijenti u jżomm kull passata qasira. Jekk il-kaxxa tal-posta titħalla kif inhi, kull messaġġ riċenti jinqara mill-ġdid; fiż-żewġ każi xejn ma jiġi ssuġġerit darbtejn."
+msgstr "L-immarkar ma jidhirx fil-biċċa l-kbira tal-klijenti u jżomm kull tħaddima qasira. Jekk il-kaxxa tal-posta titħalla kif inhi, kull messaġġ riċenti jinqara mill-ġdid; fiż-żewġ każi xejn ma jiġi ssuġġerit darbtejn."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Folder to read"
-msgstr "Folder x'taqra"
+msgstr "Folder li għandu jinqara"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "For example imap.example.org."
 msgstr "Pereżempju imap.example.org."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "From"
 msgstr "Minn"
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Give a number of days between 1 and %(max)d."
 msgstr "Agħti numru ta' jiem bejn 1 u %(max)d."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Give a port between 1 and 65535, or leave it empty."
 msgstr "Agħti port bejn 1 u 65535, jew ħallih vojt."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "How many days of mail a pass considers."
-msgstr "Kemm-il jum ta' posta tqis passata."
+msgstr "Kemm-il jum ta' posta tqis kull tħaddima."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Leave the mailbox untouched"
 msgstr "Ħalli l-kaxxa tal-posta kif inhi"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Left empty: 993 with TLS, 143 with STARTTLS."
 msgstr "Jekk jitħalla vojt: 993 b'TLS, 143 b'STARTTLS."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Look back"
 msgstr "Ħares lura"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Mailbox (IMAP)"
 msgstr "Kaxxa tal-posta (IMAP)"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Matched by"
 msgstr "Imqabbel minn"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Move it to a subfolder"
-msgstr "Mexxih f'subfolder"
+msgstr "Mexxih għal subfolder"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Name a subfolder other than the folder being read."
-msgstr "Semmi sottofolder li mhux il-folder li qed jinqara."
+msgstr "Semmi subfolder li mhuwiex il-folder li qed jinqara."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Name the folder to read. Postulo never reads the inbox."
-msgstr "Semmi l-folder x'taqra. Postulo qatt ma jaqra l-inbox."
+msgstr "Semmi l-folder li għandu jinqara. Postulo qatt ma jaqra l-inbox."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Name the subfolder to move messages to."
 msgstr "Semmi s-subfolder fejn jitmexxew il-messaġġi."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "nothing yet"
 msgstr "xejn s'issa"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Once read"
 msgstr "Ladarba jinqara"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "One folder, never the inbox. Make a rule on your mail server that files recruiter mail here; Postulo reads nothing else. Every message it reads is flagged or moved afterwards, whether or not it was recognised."
 msgstr "Folder wieħed, qatt l-inbox. Agħmel regola fuq is-server tal-posta tiegħek li tpoġġi l-posta tar-reklutaturi hawn; Postulo ma jaqra xejn ieħor. Kull messaġġ li jaqra jiġi mmarkat bi flag jew imċaqlaq wara, kemm jekk ikun ġie rikonoxxut kemm jekk le."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Password or app password"
 msgstr "Password jew password tal-app"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Port"
 msgstr "Port"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Postulo never reads the inbox. Name the folder your mail rule files jobs mail into."
 msgstr "Postulo qatt ma jaqra l-inbox. Semmi l-folder fejn ir-regola tal-posta tiegħek tpoġġi l-posta dwar ix-xogħol."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Recognised"
 msgstr "Magħruf"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Security"
 msgstr "Sigurtà"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Server"
 msgstr "Server"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "Sign-in refused. Check the username and the password."
-msgstr "Id-dħul ġie rifjutat. Iċċekkja l-isem tal-utent u l-password."
+msgstr "Id-dħul ġie rrifjutat. Iċċekkja l-isem tal-utent u l-password."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Signed in, but there is no folder called “%(folder)s”."
-msgstr "Dħalt, imma m'hemm l-ebda folder jismu “%(folder)s”."
+msgstr "Id-dħul irnexxa, imma m'hemm l-ebda folder jismu “%(folder)s”."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Signed in, but this server cannot move messages. Choose to flag them instead."
-msgstr "Dħalt, iżda dan is-server ma jistax iċaqlaq messaġġi. Agħżel li timmarkahom bi flag minflok."
+msgstr "Id-dħul irnexxa, iżda dan is-server ma jistax iċaqlaq messaġġi. Agħżel li timmarkahom bi flag minflok."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Signed in. %(count)d message in “%(folder)s” is waiting to be read."
 msgid_plural "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
-msgstr[0] "Dħalt. %(count)d messaġġ f'“%(folder)s” qed jistenna biex jinqara."
-msgstr[1] "Dħalt. %(count)d messaġġi f'“%(folder)s” qed jistennew biex jinqraw."
-msgstr[2] "Dħalt. %(count)d messaġġ f'“%(folder)s” qed jistennew biex jinqraw."
-msgstr[3] "Dħalt. %(count)d messaġġ f'“%(folder)s” qed jistennew biex jinqraw."
+msgstr[0] "Id-dħul irnexxa. %(count)d messaġġ f'“%(folder)s” qed jistenna biex jinqara."
+msgstr[1] "Id-dħul irnexxa. %(count)d messaġġi f'“%(folder)s” qed jistennew biex jinqraw."
+msgstr[2] "Id-dħul irnexxa. %(count)d messaġġ f'“%(folder)s” qed jistennew biex jinqraw."
+msgstr[3] "Id-dħul irnexxa. %(count)d messaġġ f'“%(folder)s” qed jistennew biex jinqraw."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "STARTTLS (port 143)"
 msgstr "STARTTLS (port 143)"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Subfolder"
 msgstr "Subfolder"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the address of a contact"
 msgstr "l-indirizz ta' kuntatt"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the company’s name in the message"
 msgstr "l-isem tal-kumpanija fil-messaġġ"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy, python-format
+#, python-format
 msgid "The folder “%(folder)s” could not be opened."
 msgstr "Il-folder “%(folder)s” ma setax jinfetaħ."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The mailbox refused the search."
 msgstr "Il-kaxxa tal-posta rrifjutat it-tfittxija."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The mailbox refused to hand over the messages."
 msgstr "Il-kaxxa tal-posta rrifjutat li tgħaddi l-messaġġi."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The mailbox refused to look for the folder."
 msgstr "Il-kaxxa tal-posta rrifjutat li tfittex il-folder."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The messages were read but could not be flagged; the next pass will read them again."
-msgstr "Il-messaġġi nqraw iżda ma setgħux jiġu mmarkati bi flag; il-passata li jmiss terġa' taqrahom."
+msgstr "Il-messaġġi nqraw iżda ma setgħux jiġu mmarkati bi flag; it-tħaddima li jmiss terġa' taqrahom."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy, python-format
+#, python-format
 msgid "The messages were read but could not be moved to “%(folder)s”; the next pass will read them again."
-msgstr "Il-messaġġi nqraw iżda ma setgħux jiġu mċaqilqa għal “%(folder)s”; il-passata li jmiss terġa' taqrahom."
+msgstr "Il-messaġġi nqraw iżda ma setgħux jiġu mċaqilqa għal “%(folder)s”; it-tħaddima li jmiss terġa' taqrahom."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The messages were read, but this server cannot move them; the next pass will read them again."
-msgstr "Il-messaġġi nqraw, iżda dan is-server ma jistax iċaqlaqhom; il-passata li jmiss terġa' taqrahom."
+msgstr "Il-messaġġi nqraw, iżda dan is-server ma jistax iċaqlaqhom; it-tħaddima li jmiss terġa' taqrahom."
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the role’s title in the message"
 msgstr "it-titlu tar-rwol fil-messaġġ"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the sender’s web domain"
 msgstr "id-dominju tal-web tal-mittent"
 
 #: src/postulo_imap/sync.py
 #, fuzzy
 msgid "This folder does not keep flags of its own, so every message of the look-back is read again on each pass."
-msgstr "Dan il-folder ma jżommx flags tiegħu, għalhekk kull messaġġ tal-perjodu ta' lura jerġa' jinqara f'kull passata."
+msgstr "Dan il-folder ma jżommx flags tiegħu, għalhekk kull messaġġ fil-perjodu ta' “Ħares lura” jerġa' jinqara f'kull tħaddima."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "TLS (port 993)"
 msgstr "TLS (port 993)"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Used only when messages are moved. Created if missing."
 msgstr "Jintuża biss meta l-messaġġi jitmexxew. Jinħoloq jekk ma jkunx hemm."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Username"
 msgstr "Isem tal-utent"

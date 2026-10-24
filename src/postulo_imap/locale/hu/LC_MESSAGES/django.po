@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-22 21:51+0000\n"
+"PO-Revision-Date: 2026-10-24 01:46+0000\n"
 "Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Hungarian <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/hu/>\n"
 "Language: hu\n"
@@ -53,7 +53,6 @@ msgid "an assessment"
 msgstr "értékelés"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an invitation"
 msgstr "meghívó"
 
@@ -185,7 +184,7 @@ msgid "Signed in, but this server cannot move messages. Choose to flag them inst
 msgstr "Bejelentkezve, de ez a kiszolgáló nem tud üzeneteket áthelyezni. Válassza helyette a megjelölést."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Signed in. %(count)d message in “%(folder)s” is waiting to be read."
 msgid_plural "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
 msgstr[0] "Bejelentkezve. %(count)d üzenet vár olvasásra a(z) „%(folder)s” mappában."
