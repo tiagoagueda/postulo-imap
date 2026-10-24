@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-22 21:51+0000\n"
+"PO-Revision-Date: 2026-10-24 03:42+0000\n"
 "Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Armenian <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/hy/>\n"
 "Language: hy\n"
@@ -15,18 +15,18 @@ msgstr ""
 "X-Generator: postulo scripts/messages.py\n"
 
 #: src/postulo_imap/sync.py
-#, python-format
+#, fuzzy, python-format
 msgid "%(count)d could not be matched to an application; attach it by hand."
 msgid_plural "%(count)d could not be matched to an application; attach them by hand."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%(count)d նամակ հնարավոր չեղավ կապել որևէ դիմումի հետ․ կցեք այն ձեռքով։"
+msgstr[1] "%(count)d նամակ հնարավոր չեղավ կապել որևէ դիմումի հետ․ կցեք դրանք ձեռքով։"
 
 #: src/postulo_imap/sync.py
 #, python-format
 msgid "%(count)d message could not be read and was skipped."
 msgid_plural "%(count)d messages could not be read and were skipped."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%(count)d նամակ հնարավոր չեղավ կարդալ, և այն բաց թողնվեց։"
+msgstr[1] "%(count)d նամակ հնարավոր չեղավ կարդալ, և դրանք բաց թողնվեցին։"
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -35,15 +35,15 @@ msgstr "Առանց թեմայի հաղորդագրություն"
 
 #: src/postulo_imap/classifying.py
 msgid "a rejection"
-msgstr ""
+msgstr "մերժում"
 
 #: src/postulo_imap/matching.py
 msgid "a reply to a message already matched"
-msgstr ""
+msgstr "պատասխան արդեն համապատասխանեցված նամակին"
 
 #: src/postulo_imap/classifying.py
 msgid "an acknowledgement"
-msgstr ""
+msgstr "ստացման հաստատում"
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -52,15 +52,15 @@ msgstr "Հավելվածի գաղտնաբառ, եթե սերվերն այն առ
 
 #: src/postulo_imap/classifying.py
 msgid "an assessment"
-msgstr ""
+msgstr "գնահատում"
 
 #: src/postulo_imap/classifying.py
 msgid "an invitation"
-msgstr ""
+msgstr "հրավեր"
 
 #: src/postulo_imap/classifying.py
 msgid "an offer"
-msgstr ""
+msgstr "առաջարկ"
 
 #: src/postulo_imap/mailbox.py
 #, fuzzy
@@ -95,11 +95,11 @@ msgstr "Ումից"
 #: src/postulo_imap/sync.py
 #, python-format
 msgid "Give a number of days between 1 and %(max)d."
-msgstr ""
+msgstr "Նշեք օրերի թիվ 1-ի և %(max)d-ի միջև։"
 
 #: src/postulo_imap/sync.py
 msgid "Give a port between 1 and 65535, or leave it empty."
-msgstr ""
+msgstr "Նշեք պորտ 1-ի և 65535-ի միջև կամ թողեք դատարկ։"
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -113,7 +113,7 @@ msgstr "Թողնել փոստարկղն անփոփոխ"
 
 #: src/postulo_imap/sync.py
 msgid "Left empty: 993 with TLS, 143 with STARTTLS."
-msgstr ""
+msgstr "Դատարկ թողնելու դեպքում՝ 993 TLS-ով, 143 STARTTLS-ով։"
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -137,7 +137,7 @@ msgstr "Տեղափոխել ենթաթղթապանակ"
 
 #: src/postulo_imap/sync.py
 msgid "Name a subfolder other than the folder being read."
-msgstr ""
+msgstr "Նշեք ենթաթղթապանակ, որը տարբերվում է կարդացվող թղթապանակից։"
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -161,7 +161,7 @@ msgstr "Կարդալուց հետո"
 
 #: src/postulo_imap/sync.py
 msgid "One folder, never the inbox. Make a rule on your mail server that files recruiter mail here; Postulo reads nothing else. Every message it reads is flagged or moved afterwards, whether or not it was recognised."
-msgstr ""
+msgstr "Մեկ թղթապանակ, երբեք մուտքի արկղը։ Ձեր փոստի սերվերում ստեղծեք կանոն, որը հավաքագրողների նամակները դասում է այստեղ․ Postulo-ն ուրիշ ոչինչ չի կարդում։ Յուրաքանչյուր նամակ, որ այն կարդում է, հետո նշվում կամ տեղափոխվում է՝ անկախ նրանից՝ ճանաչվել է, թե ոչ։"
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -175,7 +175,7 @@ msgstr "Պորտ"
 
 #: src/postulo_imap/sync.py
 msgid "Postulo never reads the inbox. Name the folder your mail rule files jobs mail into."
-msgstr ""
+msgstr "Postulo-ն երբեք չի կարդում մուտքի արկղը։ Նշեք այն թղթապանակը, որտեղ ձեր փոստի կանոնը դասում է աշխատանքի մասին նամակները։"
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -204,14 +204,14 @@ msgstr "Մուտքը կատարվեց, բայց «%(folder)s» անունով թ
 
 #: src/postulo_imap/sync.py
 msgid "Signed in, but this server cannot move messages. Choose to flag them instead."
-msgstr ""
+msgstr "Մուտքը կատարված է, բայց այս սերվերը չի կարող նամակներ տեղափոխել։ Փոխարենը ընտրեք դրանք նշելը։"
 
 #: src/postulo_imap/sync.py
 #, python-format
 msgid "Signed in. %(count)d message in “%(folder)s” is waiting to be read."
 msgid_plural "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Մուտքը կատարված է։ «%(folder)s» թղթապանակում %(count)d նամակ սպասում է կարդացվելու։"
+msgstr[1] "Մուտքը կատարված է։ «%(folder)s» թղթապանակում %(count)d նամակ սպասում են կարդացվելու։"
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -225,11 +225,11 @@ msgstr "Ենթաթղթապանակ"
 
 #: src/postulo_imap/matching.py
 msgid "the address of a contact"
-msgstr ""
+msgstr "կոնտակտի հասցեն"
 
 #: src/postulo_imap/matching.py
 msgid "the company’s name in the message"
-msgstr ""
+msgstr "ընկերության անունը նամակում"
 
 #: src/postulo_imap/mailbox.py
 #, fuzzy, python-format
@@ -248,32 +248,33 @@ msgstr "Փոստարկղը հրաժարվեց տրամադրել հաղորդա�
 
 #: src/postulo_imap/mailbox.py
 msgid "The mailbox refused to look for the folder."
-msgstr ""
+msgstr "Փոստարկղը հրաժարվեց փնտրել թղթապանակը։"
 
 #: src/postulo_imap/mailbox.py
 msgid "The messages were read but could not be flagged; the next pass will read them again."
-msgstr ""
+msgstr "Նամակները կարդացվեցին, բայց հնարավոր չեղավ դրանք նշել․ հաջորդ անցումը կրկին կկարդա դրանք։"
 
 #: src/postulo_imap/mailbox.py
 #, python-format
 msgid "The messages were read but could not be moved to “%(folder)s”; the next pass will read them again."
-msgstr ""
+msgstr "Նամակները կարդացվեցին, բայց հնարավոր չեղավ դրանք տեղափոխել «%(folder)s» թղթապանակ․ հաջորդ անցումը կրկին կկարդա դրանք։"
 
 #: src/postulo_imap/mailbox.py
 msgid "The messages were read, but this server cannot move them; the next pass will read them again."
-msgstr ""
+msgstr "Նամակները կարդացվեցին, բայց այս սերվերը չի կարող դրանք տեղափոխել․ հաջորդ անցումը կրկին կկարդա դրանք։"
 
 #: src/postulo_imap/matching.py
 msgid "the role’s title in the message"
-msgstr ""
+msgstr "պաշտոնի անվանումը նամակում"
 
 #: src/postulo_imap/matching.py
 msgid "the sender’s web domain"
-msgstr ""
+msgstr "ուղարկողի վեբ տիրույթը"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "This folder does not keep flags of its own, so every message of the look-back is read again on each pass."
-msgstr ""
+msgstr "Այս թղթապանակը սեփական նշումներ չի պահում, ուստի դիտարկվող ժամանակահատվածի յուրաքանչյուր նամակ կրկին կարդացվում է ամեն անցման ժամանակ։"
 
 #: src/postulo_imap/sync.py
 #, fuzzy

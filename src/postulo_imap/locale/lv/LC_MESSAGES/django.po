@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-22 21:51+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2026-10-24 04:05+0000\n"
+"Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Latvian <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/lv/>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
@@ -15,300 +15,250 @@ msgstr ""
 "X-Generator: postulo scripts/messages.py\n"
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "%(count)d could not be matched to an application; attach it by hand."
 msgid_plural "%(count)d could not be matched to an application; attach them by hand."
-msgstr[0] ""
-msgstr[1] "%(count)d nevarēja pieskaņot pieteikumam; pievienot tos ar roku."
-msgstr[2] "0 nevarēja pieskaņot pieteikumu; pievienot tos ar roku."
+msgstr[0] "%(count)d vēstuli nevarēja sasaistīt ar pieteikumu; pievienojiet to manuāli."
+msgstr[1] "%(count)d vēstules nevarēja sasaistīt ar pieteikumu; pievienojiet tās manuāli."
+msgstr[2] "%(count)d vēstuļu nevarēja sasaistīt ar pieteikumu; pievienojiet tās manuāli."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "%(count)d message could not be read and was skipped."
 msgid_plural "%(count)d messages could not be read and were skipped."
-msgstr[0] ""
-msgstr[1] "%(count)d vēstules neizdevās nolasīt un tika izlaistas."
-msgstr[2] "0 vēstules nevarēja nolasīt un tās tika izlaistas."
+msgstr[0] "%(count)d vēstuli nevarēja nolasīt, un tā tika izlaista."
+msgstr[1] "%(count)d vēstules nevarēja nolasīt, un tās tika izlaistas."
+msgstr[2] "%(count)d vēstuļu nevarēja nolasīt, un tās tika izlaistas."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "A message with no subject"
-msgstr "Ziņa bez temata"
+msgstr "Vēstule bez temata"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "a rejection"
-msgstr "a noraidījums"
+msgstr "noraidījums"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "a reply to a message already matched"
-msgstr "atbildi uz jau saskaņotu vēstuli"
+msgstr "atbilde uz jau sasaistītu vēstuli"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an acknowledgement"
 msgstr "apstiprinājums"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "An app password wherever the server offers one; Gmail requires it with two-factor authentication on. Stored encrypted."
 msgstr "Lietotnes parole, ja serveris tādu piedāvā; Gmail to prasa, ja ieslēgta divfaktoru autentifikācija. Glabāta šifrēti."
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an assessment"
 msgstr "novērtējums"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an invitation"
 msgstr "ielūgums"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an offer"
 msgstr "piedāvājums"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "Could not reach the server. Check the address, the port and the security."
-msgstr "Neizdevās sasniegt serveri. Pārbaudiet adresi, ostu un drošību."
+msgstr "Neizdevās sasniegt serveri. Pārbaudiet adresi, portu un drošības iestatījumu."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Flag it with %(keyword)s"
 msgstr "Atzīmēt ar %(keyword)s"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means every recent message is read again; nothing is suggested twice either way."
-msgstr "Atzīmēšana vairumā klientu nav redzama un padara katru caurskati īsu. Atstājot pastkasti neskartu, katra nesenā ziņa tiek lasīta atkal; nekas netiek ieteikts divreiz nevienā gadījumā."
+msgstr "Atzīmēšana lielākajā daļā klientu nav redzama un saīsina katru caurskati. Ja pastkaste paliek neskarta, katra nesenā vēstule tiek nolasīta atkal; nekas netiek ieteikts divreiz nevienā gadījumā."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Folder to read"
 msgstr "Lasāmā mape"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "For example imap.example.org."
 msgstr "Piemēram, imap.example.org."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "From"
 msgstr "No"
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Give a number of days between 1 and %(max)d."
-msgstr "Norāda dienu skaitu starp 1 un %(max)d."
+msgstr "Norādiet dienu skaitu no 1 līdz %(max)d."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Give a port between 1 and 65535, or leave it empty."
-msgstr "Dodiet portu starp 1 un 65535 vai atstājiet to tukšu."
+msgstr "Norādiet portu no 1 līdz 65535 vai atstājiet to tukšu."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "How many days of mail a pass considers."
-msgstr "Cik dienu pasta viena caurskate aplūko."
+msgstr "Par cik dienām pastu aplūko viena caurskate."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Leave the mailbox untouched"
 msgstr "Atstāt pastkasti neskartu"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Left empty: 993 with TLS, 143 with STARTTLS."
-msgstr "Pa kreisi tukšs: 993 ar TLS, 143 ar STARTTLS."
+msgstr "Ja tukšs: 993 ar TLS, 143 ar STARTTLS."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Look back"
-msgstr "Periods atpakaļ"
+msgstr "Atskatīšanās periods"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Mailbox (IMAP)"
 msgstr "Pastkaste (IMAP)"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Matched by"
-msgstr "Piesaistīts pēc"
+msgstr "Atpazīts pēc"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Move it to a subfolder"
 msgstr "Pārvietot uz apakšmapi"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Name a subfolder other than the folder being read."
-msgstr "Nosauc apakšmapi, kas nav lasāmā mape."
+msgstr "Norādiet apakšmapi, kas nav lasāmā mape."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Name the folder to read. Postulo never reads the inbox."
 msgstr "Norādiet lasāmo mapi. Postulo nekad nelasa iesūtni."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Name the subfolder to move messages to."
 msgstr "Norādiet apakšmapi, uz kuru pārvietot ziņas."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "nothing yet"
 msgstr "vēl nekā"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Once read"
 msgstr "Pēc izlasīšanas"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "One folder, never the inbox. Make a rule on your mail server that files recruiter mail here; Postulo reads nothing else. Every message it reads is flagged or moved afterwards, whether or not it was recognised."
-msgstr "Viena mape, nekad iesūtne. Padarīt noteikumu par jūsu pasta serveri, ka faili vervētājs pastu šeit; Postulo lasa neko citu. Katrs ziņojums ir atzīmēts vai pārvietots pēc tam, neatkarīgi no tā, vai tas tika atzīts vai nē."
+msgstr "Viena mape, nekad iesūtne. Izveidojiet savā pasta serverī kārtulu, kas novieto šeit personāla atlases speciālistu vēstules; Postulo neko citu nelasa. Katra vēstule, ko tas nolasa, pēc tam tiek atzīmēta vai pārvietota neatkarīgi no tā, vai tā tika atpazīta."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Password or app password"
 msgstr "Parole vai lietotnes parole"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Port"
 msgstr "Ports"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Postulo never reads the inbox. Name the folder your mail rule files jobs mail into."
-msgstr "Postulo nekad nelasa iesūtni. Nosauciet mapi jūsu e- pasta režīmā failu failu ielā."
+msgstr "Postulo nekad nelasa iesūtni. Norādiet mapi, kurā jūsu pasta kārtula novieto ar darbu saistītās vēstules."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Recognised"
 msgstr "Atpazīts"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Security"
 msgstr "Drošība"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Server"
 msgstr "Serveris"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "Sign-in refused. Check the username and the password."
 msgstr "Pierakstīšanās atteikta. Pārbaudiet lietotājvārdu un paroli."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Signed in, but there is no folder called “%(folder)s”."
-msgstr "Pieteicies, bet nav mapes ar nosaukumu “%(folder)s”."
+msgstr "Pierakstījās, bet mapes ar nosaukumu “%(folder)s” nav."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Signed in, but this server cannot move messages. Choose to flag them instead."
-msgstr "Pierakstīts, bet serveris nevar pārvietot vēstules. Izvēlēties, lai atzīmētu tos vietā."
+msgstr "Pierakstījās, bet šis serveris nevar pārvietot vēstules. Tā vietā izvēlieties tās atzīmēt."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Signed in. %(count)d message in “%(folder)s” is waiting to be read."
 msgid_plural "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
-msgstr[0] ""
-msgstr[1] "Parakstīts. %(count)d ziņojumi “%(folder)s” gaida, lai lasītu."
-msgstr[2] "Parakstīts. 0 ziņojumi “%(folder)s” gaida lasīt."
+msgstr[0] "Pierakstījās. Mapē “%(folder)s” nolasīšanu gaida %(count)d vēstule."
+msgstr[1] "Pierakstījās. Mapē “%(folder)s” nolasīšanu gaida %(count)d vēstules."
+msgstr[2] "Pierakstījās. Mapē “%(folder)s” nolasīšanu gaida %(count)d vēstuļu."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "STARTTLS (port 143)"
 msgstr "STARTTLS (ports 143)"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Subfolder"
 msgstr "Apakšmape"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the address of a contact"
 msgstr "kontaktpersonas adrese"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the company’s name in the message"
-msgstr "uzņēmuma nosaukums ziņojumā"
+msgstr "uzņēmuma nosaukums vēstulē"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy, python-format
+#, python-format
 msgid "The folder “%(folder)s” could not be opened."
 msgstr "Neizdevās atvērt mapi “%(folder)s”."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The mailbox refused the search."
-msgstr "Pastkastīte atteica meklēšanu."
+msgstr "Pastkaste noraidīja meklēšanu."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The mailbox refused to hand over the messages."
-msgstr "Pastkastīte atteicās nodot vēstules."
+msgstr "Pastkaste atteicās nodot vēstules."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The mailbox refused to look for the folder."
-msgstr "Pastkastīte atteicās meklēt mapi."
+msgstr "Pastkaste atteicās meklēt mapi."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The messages were read but could not be flagged; the next pass will read them again."
-msgstr "Vēstījumi tika lasīti, bet tos nevarēja atzīmēt; nākamā caurlaide tos nolasīs vēlreiz."
+msgstr "Vēstules tika nolasītas, bet tās nevarēja atzīmēt; nākamā caurskate tās nolasīs vēlreiz."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy, python-format
+#, python-format
 msgid "The messages were read but could not be moved to “%(folder)s”; the next pass will read them again."
-msgstr "Ziņojumi tika lasīti, bet nevarēja pārvietot uz “%(folder)s”; nākamais iet būs izlasīt tos vēlreiz."
+msgstr "Vēstules tika nolasītas, bet tās nevarēja pārvietot uz “%(folder)s”; nākamā caurskate tās nolasīs vēlreiz."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The messages were read, but this server cannot move them; the next pass will read them again."
-msgstr "Vēstules tika nolasītas, bet šis serveris tās nevar pārvietot; nākamā caurlaide tās nolasīs vēlreiz."
+msgstr "Vēstules tika nolasītas, bet šis serveris tās nevar pārvietot; nākamā caurskate tās nolasīs vēlreiz."
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the role’s title in the message"
-msgstr "lomas nosaukums vēstījumā"
+msgstr "amata nosaukums vēstulē"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the sender’s web domain"
 msgstr "sūtītāja tīmekļa domēns"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "This folder does not keep flags of its own, so every message of the look-back is read again on each pass."
-msgstr "Šī mape nesaglabā karogus savā, tāpēc katrs atskates- atpakaļ ziņojums tiek nolasīts atkal uz katras caurlaides."
+msgstr "Šī mape neglabā pati savus karodziņus, tāpēc katrā caurskatē visas atskatīšanās perioda vēstules tiek nolasītas atkal."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "TLS (port 993)"
 msgstr "TLS (ports 993)"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Used only when messages are moved. Created if missing."
-msgstr "Izmanto tikai tad, ja ziņas tiek pārvietotas. Tiek izveidota, ja tādas nav."
+msgstr "Izmanto tikai tad, ja vēstules tiek pārvietotas. Ja tās nav, tā tiek izveidota."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Username"
 msgstr "Lietotājvārds"

@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-22 21:51+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2026-10-24 03:42+0000\n"
+"Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Czech <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
@@ -15,300 +15,251 @@ msgstr ""
 "X-Generator: postulo scripts/messages.py\n"
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "%(count)d could not be matched to an application; attach it by hand."
 msgid_plural "%(count)d could not be matched to an application; attach them by hand."
-msgstr[0] "%(count)d nelze přiřadit k aplikaci; připojit ručně."
-msgstr[1] "%(count)d nelze přiřadit k aplikaci; připojit je ručně."
-msgstr[2] "%(count)d nelze přiřadit k aplikaci; připojit je ručně."
+msgstr[0] "%(count)d zprávu nelze přiřadit k žádosti; připojte ji ručně."
+msgstr[1] "%(count)d zprávy nelze přiřadit k žádosti; připojte je ručně."
+msgstr[2] "%(count)d zpráv nelze přiřadit k žádosti; připojte je ručně."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "%(count)d message could not be read and was skipped."
 msgid_plural "%(count)d messages could not be read and were skipped."
-msgstr[0] "%(count)d zprávu nelze přečíst a byl přeskočen."
+msgstr[0] "%(count)d zprávu nebylo možné přečíst a byla přeskočena."
 msgstr[1] "%(count)d zprávy nebylo možné přečíst a byly přeskočeny."
-msgstr[2] "%(count)d zprávy nebylo možné přečíst a byly přeskočeny."
+msgstr[2] "%(count)d zpráv nebylo možné přečíst a byly přeskočeny."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "A message with no subject"
 msgstr "Zpráva bez předmětu"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "a rejection"
 msgstr "odmítnutí"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "a reply to a message already matched"
-msgstr "odpověď na již odpovídající zprávu"
+msgstr "odpověď na již přiřazenou zprávu"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an acknowledgement"
 msgstr "potvrzení"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "An app password wherever the server offers one; Gmail requires it with two-factor authentication on. Stored encrypted."
-msgstr "Heslo aplikace všude, kde ho server nabízí; Gmail ho vyžaduje při zapnutém dvoufázovém ověření. Uloženo šifrovaně."
+msgstr "Heslo aplikace všude, kde ho server nabízí; Gmail ho vyžaduje při zapnutém dvoufázovém ověření. Ukládá se zašifrovaně."
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an assessment"
 msgstr "posouzení"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an invitation"
 msgstr "pozvání"
 
 #: src/postulo_imap/classifying.py
 #, fuzzy
 msgid "an offer"
-msgstr "nabídku"
+msgstr "nabídka"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "Could not reach the server. Check the address, the port and the security."
-msgstr "Nepodařilo se dostat na server. Zkontrolujte adresu, přístav a zabezpečení."
+msgstr "Server se nepodařilo zastihnout. Zkontrolujte adresu, port a zabezpečení."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Flag it with %(keyword)s"
 msgstr "Označit příznakem %(keyword)s"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means every recent message is read again; nothing is suggested twice either way."
 msgstr "Označení příznakem je ve většině klientů neviditelné a každý průchod zkracuje. Ponechání schránky nedotčené znamená, že se každá nedávná zpráva čte znovu; nic se ale v žádném případě nenavrhne dvakrát."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Folder to read"
 msgstr "Složka ke čtení"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "For example imap.example.org."
 msgstr "Například imap.example.org."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "From"
 msgstr "Od"
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Give a number of days between 1 and %(max)d."
 msgstr "Uveďte počet dní mezi 1 a %(max)d."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Give a port between 1 and 65535, or leave it empty."
-msgstr "Dejte port mezi 1 a 65535, nebo nechte prázdný."
+msgstr "Zadejte port mezi 1 a 65535, nebo pole nechte prázdné."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "How many days of mail a pass considers."
 msgstr "Kolik dní pošty jeden průchod bere v úvahu."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Leave the mailbox untouched"
 msgstr "Ponechat schránku nedotčenou"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Left empty: 993 with TLS, 143 with STARTTLS."
-msgstr "Vlevo prázdné: 993 s TLS, 143 s STARTTLS."
+msgstr "Ponecháte-li prázdné: 993 s TLS, 143 se STARTTLS."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Look back"
 msgstr "Období zpět"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Mailbox (IMAP)"
 msgstr "Schránka (IMAP)"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Matched by"
 msgstr "Přiřazeno podle"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Move it to a subfolder"
 msgstr "Přesunout do podsložky"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Name a subfolder other than the folder being read."
-msgstr "Jmenujte jinou podsložku, než kterou čtete."
+msgstr "Zadejte jinou podsložku, než je čtená složka."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Name the folder to read. Postulo never reads the inbox."
 msgstr "Zadejte složku ke čtení. Postulo nikdy nečte doručenou poštu."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Name the subfolder to move messages to."
 msgstr "Zadejte podsložku, do které se mají zprávy přesouvat."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "nothing yet"
 msgstr "zatím nic"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Once read"
 msgstr "Po přečtení"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "One folder, never the inbox. Make a rule on your mail server that files recruiter mail here; Postulo reads nothing else. Every message it reads is flagged or moved afterwards, whether or not it was recognised."
-msgstr "Jedna složka, nikdy schránka. Vytvořte pravidlo na vašem mailovém serveru, že soubory náborář mail zde; Postulo nečte nic jiného. Každá zpráva, kterou si přečte, je označená nebo poté přesunuta, ať už byla uznána či nikoli."
+msgstr "Jedna složka, nikdy doručená pošta. Vytvořte na svém poštovním serveru pravidlo, které sem bude ukládat poštu od náborářů; Postulo nic jiného nečte. Každá přečtená zpráva se poté označí příznakem nebo přesune, ať už byla rozpoznána, nebo ne."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Password or app password"
 msgstr "Heslo nebo heslo aplikace"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Port"
 msgstr "Port"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Postulo never reads the inbox. Name the folder your mail rule files jobs mail into."
-msgstr "Postulo nikdy nečte schránku. Jmenujte složku, do které se vaše poštovní pravidlo zadává."
+msgstr "Postulo nikdy nečte doručenou poštu. Zadejte složku, do které vaše poštovní pravidlo ukládá poštu o práci."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Recognised"
 msgstr "Rozpoznáno"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Security"
 msgstr "Zabezpečení"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Server"
 msgstr "Server"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "Sign-in refused. Check the username and the password."
-msgstr "Signál zamítnut. Zkontrolujte uživatelské jméno a heslo."
+msgstr "Přihlášení bylo odmítnuto. Zkontrolujte uživatelské jméno a heslo."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Signed in, but there is no folder called “%(folder)s”."
 msgstr "Přihlášeno, ale složka „%(folder)s“ neexistuje."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Signed in, but this server cannot move messages. Choose to flag them instead."
-msgstr "Podepsáno, ale tento server nemůže přenášet zprávy. Místo toho si je vyber."
+msgstr "Přihlášeno, ale tento server neumí přesouvat zprávy. Zvolte místo toho jejich označení příznakem."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Signed in. %(count)d message in “%(folder)s” is waiting to be read."
 msgid_plural "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
-msgstr[0] "%(count)d zpráva v \"%(folder)s\" čeká na čtení."
-msgstr[1] "Podepsáno. %(count)d zprávy v \"%(folder)s\" čekají na čtení."
-msgstr[2] "Podepsáno. %(count)d zprávy v \"%(folder)s\" čekají na čtení."
+msgstr[0] "Přihlášeno. %(count)d zpráva ve složce „%(folder)s“ čeká na přečtení."
+msgstr[1] "Přihlášeno. %(count)d zprávy ve složce „%(folder)s“ čekají na přečtení."
+msgstr[2] "Přihlášeno. %(count)d zpráv ve složce „%(folder)s“ čeká na přečtení."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "STARTTLS (port 143)"
 msgstr "STARTTLS (port 143)"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Subfolder"
 msgstr "Podsložka"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the address of a contact"
-msgstr "adresa kontaktní osoby"
+msgstr "adresa kontaktu"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the company’s name in the message"
-msgstr "název společnosti ve zprávě"
+msgstr "název firmy ve zprávě"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy, python-format
+#, python-format
 msgid "The folder “%(folder)s” could not be opened."
-msgstr "Složka \"%(folder)s\" nemohla být otevřena."
+msgstr "Složku „%(folder)s“ nelze otevřít."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The mailbox refused the search."
-msgstr "Poštovní schránka to pátrání odmítla."
+msgstr "Poštovní schránka odmítla vyhledávání."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The mailbox refused to hand over the messages."
 msgstr "Poštovní schránka odmítla předat zprávy."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The mailbox refused to look for the folder."
 msgstr "Poštovní schránka odmítla hledat složku."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The messages were read but could not be flagged; the next pass will read them again."
-msgstr "Zprávy byly přečteny, ale nemohly být označeny; další průsmyk si je znovu přečte."
+msgstr "Zprávy byly přečteny, ale nepodařilo se je označit příznakem; příští průchod je přečte znovu."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy, python-format
+#, python-format
 msgid "The messages were read but could not be moved to “%(folder)s”; the next pass will read them again."
-msgstr "Zprávy byly přečteny, ale nemohly být přesunuty na \"%(folder)s\"; další průsmyk si je znovu přečte."
+msgstr "Zprávy byly přečteny, ale nepodařilo se je přesunout do „%(folder)s“; příští průchod je přečte znovu."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The messages were read, but this server cannot move them; the next pass will read them again."
-msgstr "Zprávy byly přečteny, ale tento server je nemůže přesunout; další průsmyk si je přečte znovu."
+msgstr "Zprávy byly přečteny, ale tento server je neumí přesunout; příští průchod je přečte znovu."
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the role’s title in the message"
-msgstr "název role ve zprávě"
+msgstr "název pozice ve zprávě"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the sender’s web domain"
 msgstr "webová doména odesílatele"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "This folder does not keep flags of its own, so every message of the look-back is read again on each pass."
-msgstr "Tato složka nemá vlastní vlajky, takže každá zpráva look- back se znovu čte na každém průsmyku."
+msgstr "Tato složka si neuchovává vlastní příznaky, takže se při každém průchodu znovu čtou všechny zprávy ze sledovaného období."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "TLS (port 993)"
 msgstr "TLS (port 993)"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Used only when messages are moved. Created if missing."
 msgstr "Použije se jen při přesouvání zpráv. Vytvoří se, pokud chybí."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Username"
 msgstr "Uživatelské jméno"

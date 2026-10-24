@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-23 11:33+0000\n"
+"PO-Revision-Date: 2026-10-24 03:57+0000\n"
 "Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Finnish <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/fi/>\n"
 "Language: fi\n"
@@ -15,297 +15,247 @@ msgstr ""
 "X-Generator: postulo scripts/messages.py\n"
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "%(count)d could not be matched to an application; attach it by hand."
 msgid_plural "%(count)d could not be matched to an application; attach them by hand."
-msgstr[0] "%(count)d ei voitu sovittaa sovellukseen; liitä se käsin."
-msgstr[1] "%(count)d ei voitu sovittaa sovellukseen; liitä ne käsin."
+msgstr[0] "%(count)d viesti jäi yhdistämättä hakemukseen; liitä se käsin."
+msgstr[1] "%(count)d viestiä jäi yhdistämättä hakemuksiin; liitä ne käsin."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "%(count)d message could not be read and was skipped."
 msgid_plural "%(count)d messages could not be read and were skipped."
-msgstr[0] "%(count)d viestiä ei voitu lukea ja ohitettiin."
-msgstr[1] "%(count)d viestejä ei voitu lukea ja ohitettiin."
+msgstr[0] "%(count)d viestin lukeminen epäonnistui, ja se ohitettiin."
+msgstr[1] "%(count)d viestin lukeminen epäonnistui, ja ne ohitettiin."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "A message with no subject"
 msgstr "Viesti ilman aihetta"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "a rejection"
-msgstr "hylkimisreaktio"
+msgstr "hylkäys"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "a reply to a message already matched"
-msgstr "vastaus jo sovitettuun viestiin"
+msgstr "vastaus jo yhdistettyyn viestiin"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an acknowledgement"
-msgstr "vahvistus"
+msgstr "vastaanottokuittaus"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "An app password wherever the server offers one; Gmail requires it with two-factor authentication on. Stored encrypted."
 msgstr "Sovellussalasana, jos palvelin sellaisen tarjoaa; Gmail vaatii sen, kun kaksivaiheinen tunnistautuminen on käytössä. Tallennetaan salattuna."
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an assessment"
 msgstr "arviointi"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an invitation"
 msgstr "kutsu"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an offer"
 msgstr "tarjous"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "Could not reach the server. Check the address, the port and the security."
-msgstr "Palvelinta ei saatu kiinni. Tarkista osoite, satama ja vartijat."
+msgstr "Palvelimeen ei saatu yhteyttä. Tarkista osoite, portti ja suojaus."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Flag it with %(keyword)s"
 msgstr "Merkitse lipulla %(keyword)s"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means every recent message is read again; nothing is suggested twice either way."
 msgstr "Liputus on useimmissa asiakasohjelmissa näkymätön ja pitää jokaisen kierroksen lyhyenä. Jos postilaatikko jätetään koskematta, jokainen tuore viesti luetaan uudelleen; kummassakaan tapauksessa mitään ei ehdoteta kahdesti."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Folder to read"
 msgstr "Luettava kansio"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "For example imap.example.org."
 msgstr "Esimerkiksi imap.example.org."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "From"
 msgstr "Lähettäjä"
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Give a number of days between 1 and %(max)d."
-msgstr "Anna useita päiviä välillä 1 ja %(max)d."
+msgstr "Anna päivien määrä väliltä 1–%(max)d."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Give a port between 1 and 65535, or leave it empty."
-msgstr "Antakaa portti 1-65535 tai jättäkää se tyhjäksi."
+msgstr "Anna portti väliltä 1–65535 tai jätä kenttä tyhjäksi."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "How many days of mail a pass considers."
 msgstr "Kuinka monen päivän postin yksi kierros huomioi."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Leave the mailbox untouched"
 msgstr "Jätä postilaatikko koskematta"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Left empty: 993 with TLS, 143 with STARTTLS."
-msgstr "Vasen tyhjä: 993 TLS, 143 STARTTLS."
+msgstr "Tyhjänä: 993 TLS:llä, 143 STARTTLS:llä."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Look back"
 msgstr "Tarkastelujakso"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Mailbox (IMAP)"
 msgstr "Postilaatikko (IMAP)"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Matched by"
 msgstr "Yhdistämisperuste"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Move it to a subfolder"
 msgstr "Siirrä alikansioon"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Name a subfolder other than the folder being read."
-msgstr "Nimeä muu alikansio kuin luettava kansio."
+msgstr "Anna alikansio, joka on eri kuin luettava kansio."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Name the folder to read. Postulo never reads the inbox."
-msgstr "Nimeä luettava kansio. Postulo ei koskaan lue saapuneet-kansiota."
+msgstr "Nimeä luettava kansio. Postulo ei koskaan lue Saapuneet-kansiota."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Name the subfolder to move messages to."
 msgstr "Nimeä alikansio, johon viestit siirretään."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "nothing yet"
 msgstr "ei vielä mitään"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Once read"
 msgstr "Lukemisen jälkeen"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "One folder, never the inbox. Make a rule on your mail server that files recruiter mail here; Postulo reads nothing else. Every message it reads is flagged or moved afterwards, whether or not it was recognised."
-msgstr "Yksi kansio, ei koskaan postilaatikkoa. Tee sähköpostipalvelimellesi sääntö, että tiedostot rekrytoijan sähköpostia täällä; Postulo ei lue mitään muuta. Jokainen sen lukema viesti on merkitty tai siirretty jälkikäteen riippumatta siitä, onko se tunnustettu."
+msgstr "Yksi kansio, ei koskaan Saapuneet-kansio. Tee sähköpostipalvelimellesi sääntö, joka siirtää rekrytoijien viestit tänne; Postulo ei lue mitään muuta. Jokainen sen lukema viesti merkitään tai siirretään lukemisen jälkeen, tunnistettiin se tai ei."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Password or app password"
 msgstr "Salasana tai sovellussalasana"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Port"
 msgstr "Portti"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Postulo never reads the inbox. Name the folder your mail rule files jobs mail into."
-msgstr "Postulo ei lue postilaatikkoa. Nimeä kansio, johon sähköpostin sääntö tiedostot työt postitetaan."
+msgstr "Postulo ei koskaan lue Saapuneet-kansiota. Anna kansio, johon sähköpostisääntösi siirtää työpaikkoihin liittyvät viestit."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Recognised"
 msgstr "Tunnistettu"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Security"
 msgstr "Suojaus"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Server"
 msgstr "Palvelin"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "Sign-in refused. Check the username and the password."
-msgstr "Hylätty. Tarkista käyttäjätunnus ja salasana."
+msgstr "Kirjautuminen hylättiin. Tarkista käyttäjätunnus ja salasana."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Signed in, but there is no folder called “%(folder)s”."
 msgstr "Kirjauduttu, mutta kansiota nimeltä ”%(folder)s” ei ole."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Signed in, but this server cannot move messages. Choose to flag them instead."
-msgstr "Tämä palvelin ei voi siirtää viestejä. Valitse lipun sijasta."
+msgstr "Kirjauduttu sisään, mutta tämä palvelin ei voi siirtää viestejä. Valitse sen sijaan liputus."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Signed in. %(count)d message in “%(folder)s” is waiting to be read."
 msgid_plural "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
 msgstr[0] "Kirjauduttu sisään. %(count)d viesti kansiossa ”%(folder)s” odottaa lukemista."
 msgstr[1] "Kirjauduttu sisään. %(count)d viestiä kansiossa ”%(folder)s” odottaa lukemista."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "STARTTLS (port 143)"
 msgstr "STARTTLS (portti 143)"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Subfolder"
 msgstr "Alikansio"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the address of a contact"
 msgstr "yhteyshenkilön osoite"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the company’s name in the message"
 msgstr "yrityksen nimi viestissä"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy, python-format
+#, python-format
 msgid "The folder “%(folder)s” could not be opened."
 msgstr "Kansiota ”%(folder)s” ei voitu avata."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The mailbox refused the search."
-msgstr "Postilaatikko kieltäytyi etsinnästä."
+msgstr "Postilaatikko hylkäsi haun."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The mailbox refused to hand over the messages."
 msgstr "Postilaatikko kieltäytyi luovuttamasta viestejä."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The mailbox refused to look for the folder."
 msgstr "Postilaatikko kieltäytyi etsimästä kansiota."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The messages were read but could not be flagged; the next pass will read them again."
-msgstr "Viestit luettiin, mutta niitä ei voitu merkitä; seuraava passi lukee ne uudelleen."
+msgstr "Viestit luettiin, mutta niitä ei voitu merkitä; seuraava kierros lukee ne uudelleen."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy, python-format
+#, python-format
 msgid "The messages were read but could not be moved to “%(folder)s”; the next pass will read them again."
-msgstr "Viestit luettiin, mutta niitä ei voitu siirtää ...%(folder)s. Seuraava syöttö lukee ne uudelleen."
+msgstr "Viestit luettiin, mutta niitä ei voitu siirtää kansioon ”%(folder)s”; seuraava kierros lukee ne uudelleen."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The messages were read, but this server cannot move them; the next pass will read them again."
-msgstr "Viestit luettiin, mutta tämä palvelin ei voi siirtää niitä; seuraava syöttö lukee ne uudelleen."
+msgstr "Viestit luettiin, mutta tämä palvelin ei voi siirtää niitä; seuraava kierros lukee ne uudelleen."
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the role’s title in the message"
-msgstr "rooleja viestissä"
+msgstr "viestissä mainittu tehtävänimike"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the sender’s web domain"
 msgstr "lähettäjän verkkotunnus"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "This folder does not keep flags of its own, so every message of the look-back is read again on each pass."
-msgstr "Tämä kansio ei säilytä omia lippujaan, joten jokainen look-back-viesti luetaan uudelleen jokaisella solalla."
+msgstr "Tämä kansio ei säilytä omia lippujaan, joten jokainen tarkastelujakson viesti luetaan uudelleen jokaisella kierroksella."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "TLS (port 993)"
 msgstr "TLS (portti 993)"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Used only when messages are moved. Created if missing."
 msgstr "Käytetään vain, kun viestejä siirretään. Luodaan, jos puuttuu."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Username"
-msgstr "Käyttäjänimi"
+msgstr "Käyttäjätunnus"
