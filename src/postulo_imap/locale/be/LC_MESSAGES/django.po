@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-22 21:52+0000\n"
-"Last-Translator: Administrator <weblate@tiagoagueda.com>\n"
+"PO-Revision-Date: 2026-10-24 23:22+0000\n"
+"Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Belarusian <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/be/>\n"
 "Language: be\n"
 "MIME-Version: 1.0\n"
@@ -15,7 +15,7 @@ msgstr ""
 "X-Generator: postulo-messages\n"
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "%(count)d could not be matched to an application; attach it by hand."
 msgid_plural "%(count)d could not be matched to an application; attach them by hand."
 msgstr[0] "%(count)d не ўдалося супаставіць з заяўкай; прымацуйце яго ўручную."
@@ -23,7 +23,7 @@ msgstr[1] "%(count)d не ўдалося супаставіць з заяўка�
 msgstr[2] "%(count)d не ўдалося супаставіць з заяўкай; прымацуйце іх уручную."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "%(count)d message could not be read and was skipped."
 msgid_plural "%(count)d messages could not be read and were skipped."
 msgstr[0] "%(count)d паведамленне не ўдалося прачытаць, і яно было прапушчана."
@@ -31,197 +31,162 @@ msgstr[1] "%(count)d паведамленні не ўдалося прачыта
 msgstr[2] "%(count)d паведамленняў не ўдалося прачытаць, і яны былі прапушчаны."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "A message with no subject"
 msgstr "Паведамленне без тэмы"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "a rejection"
 msgstr "адмова"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "a reply to a message already matched"
 msgstr "адказ на ўжо супастаўленае паведамленне"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an acknowledgement"
 msgstr "пацвярджэнне атрымання"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "An app password wherever the server offers one; Gmail requires it with two-factor authentication on. Stored encrypted."
 msgstr "Пароль праграмы, калі сервер яго прапануе; Gmail патрабуе яго пры ўключанай двухфактарнай аўтэнтыфікацыі. Захоўваецца ў зашыфраваным выглядзе."
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an assessment"
 msgstr "тэставае заданне"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an invitation"
 msgstr "запрашэнне"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an offer"
 msgstr "прапанова працы"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "Could not reach the server. Check the address, the port and the security."
 msgstr "Не ўдалося звязацца з серверам. Праверце адрас, порт і бяспеку."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Flag it with %(keyword)s"
 msgstr "Пазначыць сцяжком %(keyword)s"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means every recent message is read again; nothing is suggested twice either way."
 msgstr "Пазначэнне сцяжком у большасці кліентаў нябачнае і робіць кожную праверку кароткай. Калі не змяняць паштовую скрыню, кожнае нядаўняе паведамленне будзе чытацца зноў; у любым выпадку нічога не будзе прапанавана двойчы."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Folder to read"
 msgstr "Папка для чытання"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "For example imap.example.org."
 msgstr "Напрыклад, imap.example.org."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "From"
 msgstr "Ад"
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Give a number of days between 1 and %(max)d."
 msgstr "Укажыце колькасць дзён ад 1 да %(max)d."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Give a port between 1 and 65535, or leave it empty."
 msgstr "Укажыце порт ад 1 да 65535 або пакіньце поле пустым."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "How many days of mail a pass considers."
 msgstr "За колькі дзён пошта разглядаецца пры адной праверцы."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Leave the mailbox untouched"
 msgstr "Не змяняць паштовую скрыню"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Left empty: 993 with TLS, 143 with STARTTLS."
 msgstr "Калі пуста: 993 з TLS, 143 з STARTTLS."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Look back"
 msgstr "Глыбіня прагляду"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Mailbox (IMAP)"
 msgstr "Паштовая скрыня (IMAP)"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Matched by"
 msgstr "Супастаўлена па"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Move it to a subfolder"
 msgstr "Перамясціць у падпапку"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Name a subfolder other than the folder being read."
 msgstr "Назавіце падпапку, адрозную ад папкі, якая чытаецца."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Name the folder to read. Postulo never reads the inbox."
 msgstr "Назавіце папку для чытання. Postulo ніколі не чытае «Уваходныя»."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Name the subfolder to move messages to."
 msgstr "Назавіце падпапку, у якую перамяшчаць паведамленні."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "nothing yet"
 msgstr "пакуль нічога"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Once read"
 msgstr "Пасля чытання"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "One folder, never the inbox. Make a rule on your mail server that files recruiter mail here; Postulo reads nothing else. Every message it reads is flagged or moved afterwards, whether or not it was recognised."
-msgstr "Адна папка, ніколі не «Уваходныя». Стварыце на сваім паштовым серверы правіла, якое складвае сюды лісты ад рэкрутэраў; Postulo больш нічога не чытае. Кожнае прачытанае паведамленне потым пазначаецца сцяжком або перамяшчаецца, незалежна ад таго, ці было яно распазнана."
+msgstr "Адна папка, ніколі не «Уваходныя». Стварыце на сваім паштовым серверы правіла, якое складвае сюды лісты ад рэкрутараў; Postulo больш нічога не чытае. Кожнае прачытанае паведамленне потым пазначаецца сцяжком або перамяшчаецца, незалежна ад таго, ці было яно распазнана."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Password or app password"
 msgstr "Пароль або пароль праграмы"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Port"
 msgstr "Порт"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Postulo never reads the inbox. Name the folder your mail rule files jobs mail into."
 msgstr "Postulo ніколі не чытае «Уваходныя». Назавіце папку, у якую ваша паштовае правіла складвае лісты пра працу."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Recognised"
 msgstr "Распазнана"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Security"
 msgstr "Бяспека"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Server"
 msgstr "Сервер"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "Sign-in refused. Check the username and the password."
 msgstr "Уваход адхілены. Праверце імя карыстальніка і пароль."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Signed in, but there is no folder called “%(folder)s”."
 msgstr "Уваход выкананы, але папкі «%(folder)s» няма."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Signed in, but this server cannot move messages. Choose to flag them instead."
 msgstr "Уваход выкананы, але гэты сервер не можа перамяшчаць паведамленні. Выберыце замест гэтага пазначэнне сцяжком."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Signed in. %(count)d message in “%(folder)s” is waiting to be read."
 msgid_plural "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
 msgstr[0] "Уваход выкананы. %(count)d паведамленне ў «%(folder)s» чакае чытання."
@@ -229,86 +194,71 @@ msgstr[1] "Уваход выкананы. %(count)d паведамленні ў 
 msgstr[2] "Уваход выкананы. %(count)d паведамленняў у «%(folder)s» чакаюць чытання."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "STARTTLS (port 143)"
 msgstr "STARTTLS (порт 143)"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Subfolder"
 msgstr "Падпапка"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the address of a contact"
 msgstr "адрас кантакту"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the company’s name in the message"
 msgstr "назва кампаніі ў паведамленні"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy, python-format
+#, python-format
 msgid "The folder “%(folder)s” could not be opened."
 msgstr "Не ўдалося адкрыць папку «%(folder)s»."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The mailbox refused the search."
 msgstr "Паштовая скрыня адхіліла пошук."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The mailbox refused to hand over the messages."
 msgstr "Паштовая скрыня адмовілася перадаць паведамленні."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The mailbox refused to look for the folder."
 msgstr "Паштовая скрыня адмовілася шукаць папку."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The messages were read but could not be flagged; the next pass will read them again."
 msgstr "Паведамленні былі прачытаны, але іх не ўдалося пазначыць сцяжком; пры наступнай праверцы яны будуць прачытаны зноў."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy, python-format
+#, python-format
 msgid "The messages were read but could not be moved to “%(folder)s”; the next pass will read them again."
 msgstr "Паведамленні былі прачытаны, але іх не ўдалося перамясціць у «%(folder)s»; пры наступнай праверцы яны будуць прачытаны зноў."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The messages were read, but this server cannot move them; the next pass will read them again."
 msgstr "Паведамленні былі прачытаны, але гэты сервер не можа іх перамясціць; пры наступнай праверцы яны будуць прачытаны зноў."
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the role’s title in the message"
 msgstr "назва пасады ў паведамленні"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the sender’s web domain"
 msgstr "вэб-дамен адпраўніка"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "This folder does not keep flags of its own, so every message of the look-back is read again on each pass."
-msgstr "Гэта папка не захоўвае ўласных сцяжкоў, таму кожнае паведамленне з перыяду прагляду чытаецца зноў пры кожнай праверцы."
+msgstr "Гэтая папка не захоўвае ўласных сцяжкоў, таму кожнае паведамленне з перыяду прагляду чытаецца зноў пры кожнай праверцы."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "TLS (port 993)"
 msgstr "TLS (порт 993)"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Used only when messages are moved. Created if missing."
 msgstr "Выкарыстоўваецца толькі пры перамяшчэнні паведамленняў. Ствараецца, калі адсутнічае."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Username"
 msgstr "Імя карыстальніка"

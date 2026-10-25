@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-22 21:51+0000\n"
-"Last-Translator: LibreTranslate <noreply-mt-libretranslate@weblate.org>\n"
+"PO-Revision-Date: 2026-10-24 21:12+0000\n"
+"Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Basque <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/eu/>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
@@ -15,297 +15,248 @@ msgstr ""
 "X-Generator: postulo scripts/messages.py\n"
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "%(count)d could not be matched to an application; attach it by hand."
 msgid_plural "%(count)d could not be matched to an application; attach them by hand."
-msgstr[0] "%(count)d ezin zaio aplikazio bati lotu, eskuz erantsi."
-msgstr[1] "%(count)d ezin da aplikazio batekin bat etorri, eskuz erantsi."
+msgstr[0] "Mezu bat ezin izan da hautagaitza batekin lotu; erantsi eskuz."
+msgstr[1] "%(count)d mezu ezin izan dira hautagaitza batekin lotu; erantsi eskuz."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "%(count)d message could not be read and was skipped."
 msgid_plural "%(count)d messages could not be read and were skipped."
-msgstr[0] "Ezin izan da mezua irakurri eta saltatu egin da."
-msgstr[1] "Ezin izan dira mezuak irakurri eta saltatu."
+msgstr[0] "Mezu bat ezin izan da irakurri, eta saltatu egin da."
+msgstr[1] "%(count)d mezu ezin izan dira irakurri, eta saltatu egin dira."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "A message with no subject"
 msgstr "Gairik gabeko mezua"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "a rejection"
-msgstr "errefusa"
+msgstr "ezespen bat"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "a reply to a message already matched"
-msgstr "bat datorren mezu baten erantzuna"
+msgstr "jada lotutako mezu baten erantzuna"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an acknowledgement"
-msgstr "aitortza bat"
+msgstr "jasotze-agiri bat"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "An app password wherever the server offers one; Gmail requires it with two-factor authentication on. Stored encrypted."
-msgstr "Aplikazioaren pasahitza zerbitzariak bat eskaintzen duen lekuan; Gmail-ek bi faktoreko autentifikazioa eskatzen du. Enkriptatua."
+msgstr "Aplikazio-pasahitz bat, zerbitzariak eskaintzen duen guztietan; Gmail-ek derrigorrezkoa du bi faktoreko autentifikazioa piztuta dagoenean. Zifratuta gordetzen da."
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an assessment"
 msgstr "ebaluazio bat"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an invitation"
-msgstr "gonbidapena"
+msgstr "gonbidapen bat"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an offer"
 msgstr "eskaintza bat"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "Could not reach the server. Check the address, the port and the security."
 msgstr "Ezin izan da zerbitzarira iritsi. Egiaztatu helbidea, ataka eta segurtasuna."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Flag it with %(keyword)s"
-msgstr "Markatu %(keyword)s-ekin"
+msgstr "Markatu %(keyword)s gako-hitzarekin"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means every recent message is read again; nothing is suggested twice either way."
-msgstr "Markatzea ikusezina da bezero gehienetan, eta pasabide bakoitza motz mantentzen du. Postontzia ukitu gabe uzteak esan nahi du azken mezu guztiak berriro irakurtzen direla; ez da bi aldiz iradokitzen."
+msgstr "Markatzea ikusezina da bezero gehienetan, eta irakurraldi bakoitza labur mantentzen du. Postontzia ukitu gabe utziz gero, azken mezu guztiak berriro irakurtzen dira; edonola ere, ez da ezer bi aldiz iradokitzen."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Folder to read"
 msgstr "Irakurtzeko karpeta"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "For example imap.example.org."
-msgstr "Adibidez, imap.adibidea.org."
+msgstr "Adibidez, imap.example.org."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "From"
-msgstr "Hemendik"
+msgstr "Igorlea"
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Give a number of days between 1 and %(max)d."
-msgstr "Eman egun batzuk 1 eta %(max)d artean."
+msgstr "Eman 1 eta %(max)d arteko egun kopurua."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Give a port between 1 and 65535, or leave it empty."
-msgstr "Eman ataka bat 1etik 65535era edo utzi hutsik."
+msgstr "Eman 1 eta 65535 arteko ataka bat, edo utzi hutsik."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "How many days of mail a pass considers."
-msgstr "Posta-egunak zenbat egun hartzen dituen kontuan."
+msgstr "Irakurraldi batek zenbat eguneko posta hartzen duen kontuan."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Leave the mailbox untouched"
 msgstr "Utzi postontzia ukitu gabe"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Left empty: 993 with TLS, 143 with STARTTLS."
-msgstr "Ezkerrean hutsik: 993 TLSrekin, 143 STARTTLSrekin."
+msgstr "Hutsik utzita: 993 TLS erabiliz, 143 STARTTLS erabiliz."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Look back"
-msgstr "Atzera begiratu"
+msgstr "Atzera begiratzeko egunak"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Mailbox (IMAP)"
 msgstr "Postontzia (IMAP)"
 
 #: src/postulo_imap/sync.py
 #, fuzzy
 msgid "Matched by"
-msgstr "Bat datozenak"
+msgstr "Lotzeko irizpidea"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Move it to a subfolder"
 msgstr "Eraman azpikarpetara"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Name a subfolder other than the folder being read."
-msgstr "Idatzi irakurtzen ari den karpeta ez den azpikarpeta bat."
+msgstr "Idatzi irakurtzen den karpeta ez den beste azpikarpeta baten izena."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Name the folder to read. Postulo never reads the inbox."
-msgstr "Idatzi irakurri beharreko karpeta. Postulok ez du sarrerako ontzia irakurtzen."
+msgstr "Idatzi irakurri beharreko karpetaren izena. Postulok ez du inoiz sarrerako ontzia irakurtzen."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Name the subfolder to move messages to."
-msgstr "Deitu azpikarpetari mezuak lekuz aldatzeko."
+msgstr "Idatzi mezuak eramateko azpikarpetaren izena."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "nothing yet"
 msgstr "ezer ez oraindik"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Once read"
 msgstr "Behin irakurrita"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "One folder, never the inbox. Make a rule on your mail server that files recruiter mail here; Postulo reads nothing else. Every message it reads is flagged or moved afterwards, whether or not it was recognised."
-msgstr "Karpeta bat, ez kutxa. Postulok ez du besterik irakurtzen. Irakurtzen duen mezu bakoitza banderaz markatua edo mugitua izango da, ezagutua izan ala ez."
+msgstr "Karpeta bat, inoiz ez sarrerako ontzia. Sortu arau bat zure posta-zerbitzarian kontratatzaileen mezuak hemen artxibatzeko; Postulok ez du beste ezer irakurtzen. Irakurtzen duen mezu oro markatu edo lekuz aldatu egiten da ondoren, ezagutu den ala ez."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Password or app password"
-msgstr "Pasahitza edo aplikazioaren pasahitza"
+msgstr "Pasahitza edo aplikazio-pasahitza"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Port"
 msgstr "Ataka"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Postulo never reads the inbox. Name the folder your mail rule files jobs mail into."
-msgstr "Postulok ez du sarrerako ontzia irakurtzen. Izena eman karpetari posta-arauak fitxategiei lan-mezuak sartzeko."
+msgstr "Postulok ez du inoiz sarrerako ontzia irakurtzen. Idatzi zure posta-arauak lan-mezuak artxibatzen dituen karpetaren izena."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Recognised"
-msgstr "Baieztatuta"
+msgstr "Ezagututa"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Security"
 msgstr "Segurtasuna"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Server"
 msgstr "Zerbitzaria"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "Sign-in refused. Check the username and the password."
-msgstr "Sinatzea ukatuta. Egiaztatu erabiltzaile-izena eta pasahitza."
+msgstr "Saioa hastea ukatu da. Egiaztatu erabiltzaile-izena eta pasahitza."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Signed in, but there is no folder called “%(folder)s”."
-msgstr "Sinatuta, baina ez dago \"%(folder)s\" izeneko karpetarik."
+msgstr "Saioa hasi da, baina ez dago «%(folder)s» izeneko karpetarik."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Signed in, but this server cannot move messages. Choose to flag them instead."
-msgstr "Sinatuta, baina zerbitzari honek ezin ditu mezuak lekuz aldatu. Aukeratu haien ordez bandera jartzea."
+msgstr "Saioa hasi da, baina zerbitzari honek ezin ditu mezuak lekuz aldatu. Aukeratu markatzea horren ordez."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Signed in. %(count)d message in “%(folder)s” is waiting to be read."
 msgid_plural "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
-msgstr[0] "%(count)d mezua irakurtzeko zain dago."
-msgstr[1] "\"%(folder)s\"-ko mezuak irakurtzeko zain daude."
+msgstr[0] "Saioa hasi da. «%(folder)s» karpetako mezu bat irakurtzeko zain dago."
+msgstr[1] "Saioa hasi da. «%(folder)s» karpetako %(count)d mezu irakurtzeko zain daude."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "STARTTLS (port 143)"
-msgstr "STARTTLS (143)"
+msgstr "STARTTLS (143 ataka)"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Subfolder"
 msgstr "Azpikarpeta"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the address of a contact"
 msgstr "kontaktu baten helbidea"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the company’s name in the message"
 msgstr "enpresaren izena mezuan"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy, python-format
+#, python-format
 msgid "The folder “%(folder)s” could not be opened."
-msgstr "Ezin izan da \"%(folder)s\" karpeta ireki."
+msgstr "Ezin izan da «%(folder)s» karpeta ireki."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The mailbox refused the search."
 msgstr "Postontziak bilaketa ukatu zuen."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The mailbox refused to hand over the messages."
-msgstr "Postontzia ez zen mezuez arduratzen."
+msgstr "Postontziak uko egin dio mezuak emateari."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The mailbox refused to look for the folder."
 msgstr "Postontziak karpeta bilatzeari uko egin zion."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The messages were read but could not be flagged; the next pass will read them again."
-msgstr "Mezuak irakurri ziren, baina ezin izan ziren banderaz markatu; hurrengo pasarteak berriro irakurriko ditu."
+msgstr "Mezuak irakurri dira, baina ezin izan dira markatu; hurrengo irakurraldian berriro irakurriko dira."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy, python-format
+#, python-format
 msgid "The messages were read but could not be moved to “%(folder)s”; the next pass will read them again."
-msgstr "Mezuak irakurri ziren, baina ezin izan ziren \"%(folder)s\"era eraman; hurrengo pasarteak berriro irakurriko ditu."
+msgstr "Mezuak irakurri dira, baina ezin izan dira «%(folder)s» karpetara eraman; hurrengo irakurraldian berriro irakurriko dira."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The messages were read, but this server cannot move them; the next pass will read them again."
-msgstr "Mezuak irakurri ziren, baina zerbitzari honek ezin ditu mugitu; hurrengo pasarteak berriro irakurriko ditu."
+msgstr "Mezuak irakurri dira, baina zerbitzari honek ezin ditu lekuz aldatu; hurrengo irakurraldian berriro irakurriko dira."
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the role’s title in the message"
-msgstr "mezuaren izenburua"
+msgstr "mezuko lanpostuaren izena"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the sender’s web domain"
-msgstr "bidaltzailearen web domeinua"
+msgstr "igorlearen web-domeinua"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "This folder does not keep flags of its own, so every message of the look-back is read again on each pass."
-msgstr "Karpeta honek ez ditu bere banderak gordetzen, beraz, atzera begirako mezu guztiak berriro irakurtzen dira pasabide bakoitzean."
+msgstr "Karpeta honek ez ditu bere marka propioak gordetzen; beraz, atzera begiratzeko epeko mezu guztiak berriro irakurtzen dira irakurraldi bakoitzean."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "TLS (port 993)"
-msgstr "TLS (993)"
+msgstr "TLS (993 ataka)"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Used only when messages are moved. Created if missing."
-msgstr "Mezuak lekuz aldatzean bakarrik erabiltzen da. Sortua, falta bada."
+msgstr "Mezuak lekuz aldatzen direnean soilik erabiltzen da. Ez badago, sortu egiten da."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Username"
 msgstr "Erabiltzaile-izena"

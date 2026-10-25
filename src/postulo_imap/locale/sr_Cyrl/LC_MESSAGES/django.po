@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-22 21:52+0000\n"
+"PO-Revision-Date: 2026-10-24 21:40+0000\n"
 "Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Serbian (Cyrillic script) <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/sr_Cyrl/>\n"
 "Language: sr_Cyrl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "X-Generator: postulo scripts/messages.py\n"
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "%(count)d could not be matched to an application; attach it by hand."
 msgid_plural "%(count)d could not be matched to an application; attach them by hand."
 msgstr[0] "%(count)d порука није могла да се повеже ни са једном пријавом; приложите је ручно."
@@ -31,7 +31,6 @@ msgstr[1] "%(count)d поруке нису могле да се прочитај
 msgstr[2] "%(count)d порука није могло да се прочита и прескочено је."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "A message with no subject"
 msgstr "Порука без предмета"
 
@@ -48,14 +47,12 @@ msgid "an acknowledgement"
 msgstr "потврда пријема"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "An app password wherever the server offers one; Gmail requires it with two-factor authentication on. Stored encrypted."
 msgstr "Лозинка за апликацију, где год је сервер нуди; Gmail је захтева када је укључена двофакторска потврда идентитета. Чува се шифровано."
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an assessment"
-msgstr "тестирање"
+msgstr "процена"
 
 #: src/postulo_imap/classifying.py
 msgid "an invitation"
@@ -66,32 +63,27 @@ msgid "an offer"
 msgstr "понуда"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "Could not reach the server. Check the address, the port and the security."
 msgstr "Сервер није доступан. Проверите адресу, порт и безбедност."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Flag it with %(keyword)s"
 msgstr "Означи поруку са %(keyword)s"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means every recent message is read again; nothing is suggested twice either way."
 msgstr "Означавање је невидљиво у већини клијената и сваки пролаз чини кратким. Ако се поштанско сандуче не дира, свака скорашња порука се поново чита; ни на један начин ништа се не предлаже двапут."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Folder to read"
 msgstr "Фасцикла за читање"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "For example imap.example.org."
 msgstr "На пример imap.example.org."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "From"
 msgstr "Од"
 
@@ -105,12 +97,10 @@ msgid "Give a port between 1 and 65535, or leave it empty."
 msgstr "Унесите порт између 1 и 65535 или оставите празно."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "How many days of mail a pass considers."
 msgstr "Колико дана поште један пролаз узима у обзир."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Leave the mailbox untouched"
 msgstr "Не дирај поштанско сандуче"
 
@@ -119,22 +109,18 @@ msgid "Left empty: 993 with TLS, 143 with STARTTLS."
 msgstr "Ако остане празно: 993 са TLS-ом, 143 са STARTTLS-ом."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Look back"
 msgstr "Период уназад"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Mailbox (IMAP)"
 msgstr "Поштанско сандуче (IMAP)"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Matched by"
 msgstr "Упарено према"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Move it to a subfolder"
 msgstr "Премести поруку у подфасциклу"
 
@@ -143,37 +129,30 @@ msgid "Name a subfolder other than the folder being read."
 msgstr "Наведите подфасциклу различиту од фасцикле која се чита."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Name the folder to read. Postulo never reads the inbox."
 msgstr "Наведите фасциклу за читање. Postulo никада не чита пријемно сандуче."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Name the subfolder to move messages to."
 msgstr "Наведите подфасциклу у коју се премештају поруке."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "nothing yet"
 msgstr "још ништа"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Once read"
 msgstr "Након читања"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "One folder, never the inbox. Make a rule on your mail server that files recruiter mail here; Postulo reads nothing else. Every message it reads is flagged or moved afterwards, whether or not it was recognised."
 msgstr "Једна фасцикла, никада пријемно сандуче. Направите правило на свом серверу поште које поруке регрутера смешта овде; Postulo не чита ништа друго. Свака порука коју прочита након тога се означава заставицом или премешта, било да је препозната или не."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Password or app password"
 msgstr "Лозинка или лозинка за апликацију"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Port"
 msgstr "Порт"
 
@@ -182,27 +161,23 @@ msgid "Postulo never reads the inbox. Name the folder your mail rule files jobs 
 msgstr "Postulo никада не чита пријемно сандуче. Наведите фасциклу у коју ваше правило за пошту смешта поруке о пословима."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Recognised"
 msgstr "Препознато"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Security"
 msgstr "Безбедност"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Server"
 msgstr "Сервер"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "Sign-in refused. Check the username and the password."
 msgstr "Пријављивање је одбијено. Проверите корисничко име и лозинку."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Signed in, but there is no folder called “%(folder)s”."
 msgstr "Пријављивање је успело, али не постоји фасцикла „%(folder)s“."
 
@@ -219,12 +194,10 @@ msgstr[1] "Пријављивање је успело. %(count)d поруке у
 msgstr[2] "Пријављивање је успело. %(count)d порука у „%(folder)s“ чека на читање."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "STARTTLS (port 143)"
 msgstr "STARTTLS (порт 143)"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Subfolder"
 msgstr "Подфасцикла"
 
@@ -237,17 +210,15 @@ msgid "the company’s name in the message"
 msgstr "назив компаније у поруци"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy, python-format
+#, python-format
 msgid "The folder “%(folder)s” could not be opened."
 msgstr "Фасцикла „%(folder)s“ није могла да се отвори."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The mailbox refused the search."
 msgstr "Поштанско сандуче је одбило претрагу."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The mailbox refused to hand over the messages."
 msgstr "Поштанско сандуче је одбило да преда поруке."
 
@@ -277,21 +248,17 @@ msgid "the sender’s web domain"
 msgstr "веб-домен пошиљаоца"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "This folder does not keep flags of its own, so every message of the look-back is read again on each pass."
 msgstr "Ова фасцикла не чува сопствене заставице, па се свака порука из периода уназад поново чита при сваком проласку."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "TLS (port 993)"
 msgstr "TLS (порт 993)"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Used only when messages are moved. Created if missing."
 msgstr "Користи се само када се поруке премештају. Прави се ако не постоји."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Username"
 msgstr "Корисничко име"
