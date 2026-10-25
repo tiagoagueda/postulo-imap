@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-22 21:51+0000\n"
+"PO-Revision-Date: 2026-10-24 21:45+0000\n"
 "Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Georgian <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/ka/>\n"
 "Language: ka\n"
@@ -18,274 +18,245 @@ msgstr ""
 #, python-format
 msgid "%(count)d could not be matched to an application; attach it by hand."
 msgid_plural "%(count)d could not be matched to an application; attach them by hand."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%(count)d ვერ დაუკავშირდა რომელიმე განაცხადს; მიაბით ის ხელით."
+msgstr[1] "%(count)d ვერ დაუკავშირდა რომელიმე განაცხადს; მიაბით ისინი ხელით."
 
 #: src/postulo_imap/sync.py
 #, python-format
 msgid "%(count)d message could not be read and was skipped."
 msgid_plural "%(count)d messages could not be read and were skipped."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%(count)d წერილის წაკითხვა ვერ მოხერხდა და გამოტოვებულია."
+msgstr[1] "%(count)d წერილის წაკითხვა ვერ მოხერხდა და გამოტოვებულია."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "A message with no subject"
 msgstr "წერილი თემის გარეშე"
 
 #: src/postulo_imap/classifying.py
 msgid "a rejection"
-msgstr ""
+msgstr "უარი"
 
 #: src/postulo_imap/matching.py
 msgid "a reply to a message already matched"
-msgstr ""
+msgstr "პასუხი უკვე დაკავშირებულ წერილზე"
 
 #: src/postulo_imap/classifying.py
 msgid "an acknowledgement"
-msgstr ""
+msgstr "მიღების დადასტურება"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "An app password wherever the server offers one; Gmail requires it with two-factor authentication on. Stored encrypted."
 msgstr "აპლიკაციის პაროლი, სადაც სერვერი მას გთავაზობთ; Gmail მას ორფაქტორიანი ავთენტიფიკაციის ჩართვისას მოითხოვს. ინახება დაშიფრულად."
 
 #: src/postulo_imap/classifying.py
 msgid "an assessment"
-msgstr ""
+msgstr "შეფასება"
 
 #: src/postulo_imap/classifying.py
 msgid "an invitation"
-msgstr ""
+msgstr "მოწვევა"
 
 #: src/postulo_imap/classifying.py
 msgid "an offer"
-msgstr ""
+msgstr "შეთავაზება"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "Could not reach the server. Check the address, the port and the security."
 msgstr "სერვერთან დაკავშირება ვერ მოხერხდა. შეამოწმეთ მისამართი, პორტი და უსაფრთხოება."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Flag it with %(keyword)s"
 msgstr "%(keyword)s დროშით მონიშვნა"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means every recent message is read again; nothing is suggested twice either way."
 msgstr "დროშით მონიშვნა უმეტეს კლიენტში უხილავია და ყოველ შემოწმებას ამოკლებს. საფოსტო ყუთის ხელუხლებლად დატოვებისას ყოველი ბოლოდროინდელი წერილი ხელახლა იკითხება; ორივე შემთხვევაში არცერთი წინადადება ორჯერ არ გამოჩნდება."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Folder to read"
 msgstr "წასაკითხი საქაღალდე"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "For example imap.example.org."
 msgstr "მაგ. imap.example.org."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "From"
 msgstr "გამგზავნი"
 
 #: src/postulo_imap/sync.py
 #, python-format
 msgid "Give a number of days between 1 and %(max)d."
-msgstr ""
+msgstr "მიუთითეთ დღეების რაოდენობა 1-დან %(max)d-მდე."
 
 #: src/postulo_imap/sync.py
 msgid "Give a port between 1 and 65535, or leave it empty."
-msgstr ""
+msgstr "მიუთითეთ პორტი 1-დან 65535-მდე, ან დატოვეთ ცარიელი."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "How many days of mail a pass considers."
 msgstr "რამდენი დღის ფოსტას განიხილავს ერთი შემოწმება."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Leave the mailbox untouched"
 msgstr "საფოსტო ყუთის ხელუხლებლად დატოვება"
 
 #: src/postulo_imap/sync.py
 msgid "Left empty: 993 with TLS, 143 with STARTTLS."
-msgstr ""
+msgstr "ცარიელის შემთხვევაში: 993 TLS-ით, 143 STARTTLS-ით."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Look back"
 msgstr "რამდენი დღე უკან"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Mailbox (IMAP)"
 msgstr "საფოსტო ყუთი (IMAP)"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Matched by"
 msgstr "რით დაემთხვა"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Move it to a subfolder"
 msgstr "ქვესაქაღალდეში გადატანა"
 
 #: src/postulo_imap/sync.py
 msgid "Name a subfolder other than the folder being read."
-msgstr ""
+msgstr "მიუთითეთ ქვესაქაღალდე, რომელიც წასაკითხი საქაღალდისგან განსხვავდება."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Name the folder to read. Postulo never reads the inbox."
-msgstr "მიუთითეთ წასაკითხი საქაღალდე. Postulo შემოსულებს არასოდეს კითხულობს."
+msgstr "მიუთითეთ წასაკითხი საქაღალდე. Postulo შემოსულების საქაღალდეს არასოდეს კითხულობს."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Name the subfolder to move messages to."
 msgstr "მიუთითეთ ქვესაქაღალდე, სადაც წერილები გადავა."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "nothing yet"
 msgstr "ჯერ არაფერი"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Once read"
 msgstr "წაკითხვის შემდეგ"
 
 #: src/postulo_imap/sync.py
 msgid "One folder, never the inbox. Make a rule on your mail server that files recruiter mail here; Postulo reads nothing else. Every message it reads is flagged or moved afterwards, whether or not it was recognised."
-msgstr ""
+msgstr "ერთი საქაღალდე, არასოდეს შემოსულები. შექმენით წესი თქვენს საფოსტო სერვერზე, რომელიც რეკრუტერების წერილებს აქ ათავსებს; Postulo სხვა არაფერს კითხულობს. ყოველი წაკითხული წერილი შემდეგ დროშით ინიშნება ან გადაიტანება, ამოიცნო თუ არა."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Password or app password"
 msgstr "პაროლი ან აპლიკაციის პაროლი"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Port"
 msgstr "პორტი"
 
 #: src/postulo_imap/sync.py
 msgid "Postulo never reads the inbox. Name the folder your mail rule files jobs mail into."
-msgstr ""
+msgstr "Postulo შემოსულებს არასოდეს კითხულობს. მიუთითეთ საქაღალდე, რომელშიც თქვენი საფოსტო წესი სამსახურთან დაკავშირებულ წერილებს ათავსებს."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Recognised"
 msgstr "ამოცნობილი"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Security"
 msgstr "უსაფრთხოება"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Server"
 msgstr "სერვერი"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "Sign-in refused. Check the username and the password."
 msgstr "შესვლაზე უარი ითქვა. შეამოწმეთ მომხმარებლის სახელი და პაროლი."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Signed in, but there is no folder called “%(folder)s”."
-msgstr "შესული ხართ, მაგრამ საქაღალდე „%(folder)s“ არ არსებობს."
+msgstr "შესვლა მოხერხდა, მაგრამ საქაღალდე „%(folder)s“ არ არსებობს."
 
 #: src/postulo_imap/sync.py
 msgid "Signed in, but this server cannot move messages. Choose to flag them instead."
-msgstr ""
+msgstr "შესული ხართ, მაგრამ ამ სერვერს წერილების გადატანა არ შეუძლია. სანაცვლოდ აირჩიეთ მათი დროშით მონიშვნა."
 
 #: src/postulo_imap/sync.py
 #, python-format
 msgid "Signed in. %(count)d message in “%(folder)s” is waiting to be read."
 msgid_plural "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "შესული ხართ. „%(folder)s“-ში %(count)d წერილი ელოდება წაკითხვას."
+msgstr[1] "შესული ხართ. „%(folder)s“-ში %(count)d წერილი ელოდება წაკითხვას."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "STARTTLS (port 143)"
 msgstr "STARTTLS (პორტი 143)"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Subfolder"
 msgstr "ქვესაქაღალდე"
 
 #: src/postulo_imap/matching.py
 msgid "the address of a contact"
-msgstr ""
+msgstr "კონტაქტის მისამართი"
 
 #: src/postulo_imap/matching.py
 msgid "the company’s name in the message"
-msgstr ""
+msgstr "კომპანიის სახელი წერილში"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy, python-format
+#, python-format
 msgid "The folder “%(folder)s” could not be opened."
 msgstr "საქაღალდე „%(folder)s“ ვერ გაიხსნა."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The mailbox refused the search."
 msgstr "საფოსტო ყუთმა ძიებაზე უარი თქვა."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The mailbox refused to hand over the messages."
 msgstr "საფოსტო ყუთმა წერილების გადმოცემაზე უარი თქვა."
 
 #: src/postulo_imap/mailbox.py
 msgid "The mailbox refused to look for the folder."
-msgstr ""
+msgstr "საფოსტო ყუთმა საქაღალდის მოძებნაზე უარი თქვა."
 
 #: src/postulo_imap/mailbox.py
 msgid "The messages were read but could not be flagged; the next pass will read them again."
-msgstr ""
+msgstr "წერილები წაკითხულია, მაგრამ მათი დროშით მონიშვნა ვერ მოხერხდა; შემდეგი შემოწმებისას ისინი ხელახლა წაიკითხება."
 
 #: src/postulo_imap/mailbox.py
 #, python-format
 msgid "The messages were read but could not be moved to “%(folder)s”; the next pass will read them again."
-msgstr ""
+msgstr "წერილები წაკითხულია, მაგრამ მათი გადატანა „%(folder)s“-ში ვერ მოხერხდა; შემდეგი შემოწმებისას ისინი ხელახლა წაიკითხება."
 
 #: src/postulo_imap/mailbox.py
 msgid "The messages were read, but this server cannot move them; the next pass will read them again."
-msgstr ""
+msgstr "წერილები წაკითხულია, მაგრამ ამ სერვერს მათი გადატანა არ შეუძლია; შემდეგი შემოწმებისას ისინი ხელახლა წაიკითხება."
 
 #: src/postulo_imap/matching.py
 msgid "the role’s title in the message"
-msgstr ""
+msgstr "თანამდებობის დასახელება წერილში"
 
 #: src/postulo_imap/matching.py
 msgid "the sender’s web domain"
-msgstr ""
-
-#: src/postulo_imap/sync.py
-msgid "This folder does not keep flags of its own, so every message of the look-back is read again on each pass."
-msgstr ""
+msgstr "გამგზავნის ვებდომენი"
 
 #: src/postulo_imap/sync.py
 #, fuzzy
+msgid "This folder does not keep flags of its own, so every message of the look-back is read again on each pass."
+msgstr "ეს საქაღალდე საკუთარ დროშებს არ ინახავს, ამიტომ განსახილველი პერიოდის ყოველი წერილი ყოველი შემოწმებისას ხელახლა იკითხება."
+
+#: src/postulo_imap/sync.py
 msgid "TLS (port 993)"
 msgstr "TLS (პორტი 993)"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Used only when messages are moved. Created if missing."
 msgstr "გამოიყენება მხოლოდ წერილების გადატანისას. თუ არ არსებობს, შეიქმნება."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Username"
 msgstr "მომხმარებლის სახელი"

@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-24 03:42+0000\n"
+"PO-Revision-Date: 2026-10-24 21:26+0000\n"
 "Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Armenian <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/hy/>\n"
 "Language: hy\n"
@@ -29,7 +29,6 @@ msgstr[0] "%(count)d նամակ հնարավոր չեղավ կարդալ, և ա�
 msgstr[1] "%(count)d նամակ հնարավոր չեղավ կարդալ, և դրանք բաց թողնվեցին։"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "A message with no subject"
 msgstr "Առանց թեմայի հաղորդագրություն"
 
@@ -46,7 +45,6 @@ msgid "an acknowledgement"
 msgstr "ստացման հաստատում"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "An app password wherever the server offers one; Gmail requires it with two-factor authentication on. Stored encrypted."
 msgstr "Հավելվածի գաղտնաբառ, եթե սերվերն այն առաջարկում է․ Gmail-ը այն պահանջում է, երբ երկգործոն նույնականացումը միացված է։ Պահվում է գաղտնագրված։"
 
@@ -63,32 +61,27 @@ msgid "an offer"
 msgstr "առաջարկ"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "Could not reach the server. Check the address, the port and the security."
 msgstr "Չհաջողվեց կապ հաստատել սերվերի հետ։ Ստուգեք հասցեն, պորտը և անվտանգության կարգավորումը։"
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Flag it with %(keyword)s"
 msgstr "Նշել %(keyword)s բանալի բառով"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means every recent message is read again; nothing is suggested twice either way."
 msgstr "Նշումը տեսանելի չէ փոստային ծրագրերի մեծ մասում և ամեն անցումը կարճ է պահում։ Եթե փոստարկղն անփոփոխ թողնեք, յուրաքանչյուր վերջին հաղորդագրություն նորից կկարդացվի․ երկու դեպքում էլ ոչինչ երկու անգամ չի առաջարկվում։"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Folder to read"
 msgstr "Կարդալու թղթապանակ"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "For example imap.example.org."
 msgstr "Օրինակ՝ imap.example.org։"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "From"
 msgstr "Ումից"
 
@@ -102,12 +95,10 @@ msgid "Give a port between 1 and 65535, or leave it empty."
 msgstr "Նշեք պորտ 1-ի և 65535-ի միջև կամ թողեք դատարկ։"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "How many days of mail a pass considers."
 msgstr "Քանի օրվա փոստ է դիտարկում յուրաքանչյուր անցում։"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Leave the mailbox untouched"
 msgstr "Թողնել փոստարկղն անփոփոխ"
 
@@ -116,22 +107,19 @@ msgid "Left empty: 993 with TLS, 143 with STARTTLS."
 msgstr "Դատարկ թողնելու դեպքում՝ 993 TLS-ով, 143 STARTTLS-ով։"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Look back"
 msgstr "Քանի օր հետ նայել"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Mailbox (IMAP)"
 msgstr "Փոստարկղ (IMAP)"
 
 #: src/postulo_imap/sync.py
 #, fuzzy
 msgid "Matched by"
-msgstr "Համապատասխանեցում"
+msgstr "Համապատասխանեցվել է՝"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Move it to a subfolder"
 msgstr "Տեղափոխել ենթաթղթապանակ"
 
@@ -140,22 +128,18 @@ msgid "Name a subfolder other than the folder being read."
 msgstr "Նշեք ենթաթղթապանակ, որը տարբերվում է կարդացվող թղթապանակից։"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Name the folder to read. Postulo never reads the inbox."
 msgstr "Նշեք կարդալու թղթապանակը։ Postulo-ն երբեք չի կարդում մուտքի արկղը։"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Name the subfolder to move messages to."
 msgstr "Նշեք ենթաթղթապանակը, որտեղ պետք է տեղափոխվեն հաղորդագրությունները։"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "nothing yet"
 msgstr "դեռ ոչինչ"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Once read"
 msgstr "Կարդալուց հետո"
 
@@ -164,12 +148,10 @@ msgid "One folder, never the inbox. Make a rule on your mail server that files r
 msgstr "Մեկ թղթապանակ, երբեք մուտքի արկղը։ Ձեր փոստի սերվերում ստեղծեք կանոն, որը հավաքագրողների նամակները դասում է այստեղ․ Postulo-ն ուրիշ ոչինչ չի կարդում։ Յուրաքանչյուր նամակ, որ այն կարդում է, հետո նշվում կամ տեղափոխվում է՝ անկախ նրանից՝ ճանաչվել է, թե ոչ։"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Password or app password"
 msgstr "Գաղտնաբառ կամ հավելվածի գաղտնաբառ"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Port"
 msgstr "Պորտ"
 
@@ -178,27 +160,23 @@ msgid "Postulo never reads the inbox. Name the folder your mail rule files jobs 
 msgstr "Postulo-ն երբեք չի կարդում մուտքի արկղը։ Նշեք այն թղթապանակը, որտեղ ձեր փոստի կանոնը դասում է աշխատանքի մասին նամակները։"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Recognised"
 msgstr "Ճանաչված"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Security"
 msgstr "Անվտանգություն"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Server"
 msgstr "Սերվեր"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "Sign-in refused. Check the username and the password."
 msgstr "Մուտքը մերժվեց։ Ստուգեք օգտանունը և գաղտնաբառը։"
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Signed in, but there is no folder called “%(folder)s”."
 msgstr "Մուտքը կատարվեց, բայց «%(folder)s» անունով թղթապանակ չկա։"
 
@@ -214,12 +192,10 @@ msgstr[0] "Մուտքը կատարված է։ «%(folder)s» թղթապանակ�
 msgstr[1] "Մուտքը կատարված է։ «%(folder)s» թղթապանակում %(count)d նամակ սպասում են կարդացվելու։"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "STARTTLS (port 143)"
 msgstr "STARTTLS (պորտ 143)"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Subfolder"
 msgstr "Ենթաթղթապանակ"
 
@@ -232,17 +208,15 @@ msgid "the company’s name in the message"
 msgstr "ընկերության անունը նամակում"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy, python-format
+#, python-format
 msgid "The folder “%(folder)s” could not be opened."
 msgstr "«%(folder)s» թղթապանակը հնարավոր չեղավ բացել։"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The mailbox refused the search."
 msgstr "Փոստարկղը մերժեց որոնումը։"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The mailbox refused to hand over the messages."
 msgstr "Փոստարկղը հրաժարվեց տրամադրել հաղորդագրությունները։"
 
@@ -277,16 +251,13 @@ msgid "This folder does not keep flags of its own, so every message of the look-
 msgstr "Այս թղթապանակը սեփական նշումներ չի պահում, ուստի դիտարկվող ժամանակահատվածի յուրաքանչյուր նամակ կրկին կարդացվում է ամեն անցման ժամանակ։"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "TLS (port 993)"
 msgstr "TLS (պորտ 993)"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Used only when messages are moved. Created if missing."
 msgstr "Օգտագործվում է միայն հաղորդագրությունները տեղափոխելիս։ Ստեղծվում է, եթե չկա։"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Username"
 msgstr "Օգտանուն"

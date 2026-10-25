@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-22 21:51+0000\n"
+"PO-Revision-Date: 2026-10-24 21:38+0000\n"
 "Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Icelandic <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/is/>\n"
 "Language: is\n"
@@ -15,297 +15,248 @@ msgstr ""
 "X-Generator: postulo scripts/messages.py\n"
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "%(count)d could not be matched to an application; attach it by hand."
 msgid_plural "%(count)d could not be matched to an application; attach them by hand."
 msgstr[0] "Ekki var hægt að para %(count)d við umsókn; tengdu það handvirkt."
 msgstr[1] "Ekki var hægt að para %(count)d við umsókn; tengdu þau handvirkt."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "%(count)d message could not be read and was skipped."
 msgid_plural "%(count)d messages could not be read and were skipped."
 msgstr[0] "Ekki var hægt að lesa %(count)d skeyti og því var sleppt."
 msgstr[1] "Ekki var hægt að lesa %(count)d skeyti og þeim var sleppt."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "A message with no subject"
 msgstr "Skilaboð án efnis"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "a rejection"
 msgstr "höfnun"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "a reply to a message already matched"
 msgstr "svar við skeyti sem þegar hefur verið parað"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an acknowledgement"
 msgstr "móttökustaðfesting"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "An app password wherever the server offers one; Gmail requires it with two-factor authentication on. Stored encrypted."
 msgstr "Forritslykilorð alls staðar þar sem þjónninn býður upp á það; Gmail krefst þess þegar kveikt er á tveggja þátta auðkenningu. Vistað dulritað."
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an assessment"
 msgstr "matsverkefni"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an invitation"
 msgstr "boð"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an offer"
 msgstr "atvinnutilboð"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "Could not reach the server. Check the address, the port and the security."
 msgstr "Ekki náðist í þjóninn. Athugaðu vistfangið, gáttina og öryggisstillinguna."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Flag it with %(keyword)s"
 msgstr "Merkja með %(keyword)s"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means every recent message is read again; nothing is suggested twice either way."
 msgstr "Merkingin sést ekki í flestum póstforritum og heldur hverri umferð stuttri. Ef pósthólfið er látið óhreyft eru öll nýleg skilaboð lesin aftur; ekkert er lagt til tvisvar hvort sem er."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Folder to read"
 msgstr "Mappa til að lesa"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "For example imap.example.org."
 msgstr "Til dæmis imap.example.org."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "From"
 msgstr "Frá"
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Give a number of days between 1 and %(max)d."
 msgstr "Gefðu upp fjölda daga á bilinu 1 til %(max)d."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Give a port between 1 and 65535, or leave it empty."
 msgstr "Gefðu upp gátt á bilinu 1 til 65535, eða hafðu reitinn tóman."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "How many days of mail a pass considers."
 msgstr "Hversu marga daga af pósti hver umferð skoðar."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Leave the mailbox untouched"
 msgstr "Láta pósthólfið óhreyft"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Left empty: 993 with TLS, 143 with STARTTLS."
 msgstr "Ef tómt: 993 með TLS, 143 með STARTTLS."
 
 #: src/postulo_imap/sync.py
 #, fuzzy
 msgid "Look back"
-msgstr "Skoða aftur í tímann"
+msgstr "Tímabil aftur í tímann"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Mailbox (IMAP)"
 msgstr "Pósthólf (IMAP)"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Matched by"
-msgstr "Tengt með"
+msgstr "Parað eftir"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Move it to a subfolder"
 msgstr "Færa í undirmöppu"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Name a subfolder other than the folder being read."
 msgstr "Tilgreindu aðra undirmöppu en möppuna sem er lesin."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Name the folder to read. Postulo never reads the inbox."
 msgstr "Tilgreindu möppuna sem á að lesa. Postulo les aldrei innhólfið."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Name the subfolder to move messages to."
 msgstr "Tilgreindu undirmöppuna sem færa á skilaboðin í."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "nothing yet"
 msgstr "ekkert enn"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Once read"
 msgstr "Eftir lestur"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "One folder, never the inbox. Make a rule on your mail server that files recruiter mail here; Postulo reads nothing else. Every message it reads is flagged or moved afterwards, whether or not it was recognised."
 msgstr "Ein mappa, aldrei innhólfið. Búðu til reglu á póstþjóninum þínum sem setur póst frá ráðningaraðilum hingað; Postulo les ekkert annað. Hvert skeyti sem það les er merkt eða fært á eftir, hvort sem það þekktist eða ekki."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Password or app password"
 msgstr "Lykilorð eða forritslykilorð"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Port"
 msgstr "Gátt"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Postulo never reads the inbox. Name the folder your mail rule files jobs mail into."
 msgstr "Postulo les aldrei innhólfið. Tilgreindu möppuna sem póstreglan þín setur atvinnupóst í."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Recognised"
 msgstr "Þekkt"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Security"
 msgstr "Öryggi"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Server"
-msgstr "Þjónn"
+msgstr "Netþjónn"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "Sign-in refused. Check the username and the password."
 msgstr "Innskráningu hafnað. Athugaðu notandanafnið og lykilorðið."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Signed in, but there is no folder called “%(folder)s”."
-msgstr "Innskráð, en engin mappa heitir „%(folder)s“."
+msgstr "Skráð inn, en engin mappa heitir „%(folder)s“."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Signed in, but this server cannot move messages. Choose to flag them instead."
 msgstr "Skráð inn, en þessi netþjónn getur ekki fært skeyti. Veldu að merkja þau í staðinn."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Signed in. %(count)d message in “%(folder)s” is waiting to be read."
 msgid_plural "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
 msgstr[0] "Skráð inn. %(count)d skeyti í „%(folder)s“ bíður þess að vera lesið."
 msgstr[1] "Skráð inn. %(count)d skeyti í „%(folder)s“ bíða þess að vera lesin."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "STARTTLS (port 143)"
 msgstr "STARTTLS (gátt 143)"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Subfolder"
 msgstr "Undirmappa"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the address of a contact"
-msgstr "netfang tengiliðar"
+msgstr "netfang tengiliðs"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the company’s name in the message"
 msgstr "nafn fyrirtækisins í skeytinu"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy, python-format
+#, python-format
 msgid "The folder “%(folder)s” could not be opened."
 msgstr "Ekki tókst að opna möppuna „%(folder)s“."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The mailbox refused the search."
 msgstr "Pósthólfið hafnaði leitinni."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The mailbox refused to hand over the messages."
 msgstr "Pósthólfið neitaði að afhenda skilaboðin."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The mailbox refused to look for the folder."
 msgstr "Pósthólfið neitaði að leita að möppunni."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The messages were read but could not be flagged; the next pass will read them again."
 msgstr "Skeytin voru lesin en ekki var hægt að merkja þau; næsta umferð les þau aftur."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy, python-format
+#, python-format
 msgid "The messages were read but could not be moved to “%(folder)s”; the next pass will read them again."
 msgstr "Skeytin voru lesin en ekki var hægt að færa þau í „%(folder)s“; næsta umferð les þau aftur."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The messages were read, but this server cannot move them; the next pass will read them again."
 msgstr "Skeytin voru lesin, en þessi netþjónn getur ekki fært þau; næsta umferð les þau aftur."
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the role’s title in the message"
 msgstr "starfsheitið í skeytinu"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the sender’s web domain"
 msgstr "veflén sendandans"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "This folder does not keep flags of its own, so every message of the look-back is read again on each pass."
-msgstr "Þessi mappa geymir engar eigin merkingar, svo hvert skeyti innan yfirlitstímabilsins er lesið aftur í hverri umferð."
+msgstr "Þessi mappa geymir engar eigin merkingar, svo hvert skeyti innan tímabilsins er lesið aftur í hverri umferð."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "TLS (port 993)"
 msgstr "TLS (gátt 993)"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Used only when messages are moved. Created if missing."
 msgstr "Aðeins notuð þegar skilaboð eru færð. Búin til ef hún er ekki til."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Username"
 msgstr "Notandanafn"

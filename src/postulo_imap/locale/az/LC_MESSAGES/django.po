@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-22 21:52+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2026-10-25 03:18+0000\n"
+"Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Azerbaijani <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/az/>\n"
 "Language: az\n"
 "MIME-Version: 1.0\n"
@@ -15,247 +15,249 @@ msgstr ""
 "X-Generator: postulo-messages\n"
 
 #: src/postulo_imap/sync.py
-#, python-format
+#, fuzzy, python-format
 msgid "%(count)d could not be matched to an application; attach it by hand."
 msgid_plural "%(count)d could not be matched to an application; attach them by hand."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%(count)d məktubu müraciətlə uyğunlaşdırmaq mümkün olmadı; onu əl ilə əlavə edin."
+msgstr[1] "%(count)d məktubu müraciətlə uyğunlaşdırmaq mümkün olmadı; onları əl ilə əlavə edin."
 
 #: src/postulo_imap/sync.py
 #, python-format
 msgid "%(count)d message could not be read and was skipped."
 msgid_plural "%(count)d messages could not be read and were skipped."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%(count)d məktub oxuna bilmədi və buraxıldı."
+msgstr[1] "%(count)d məktub oxuna bilmədi və buraxıldı."
 
 #: src/postulo_imap/sync.py
 msgid "A message with no subject"
-msgstr ""
+msgstr "Mövzusuz məktub"
 
 #: src/postulo_imap/classifying.py
 msgid "a rejection"
-msgstr ""
+msgstr "imtina"
 
 #: src/postulo_imap/matching.py
 msgid "a reply to a message already matched"
-msgstr ""
+msgstr "artıq uyğunlaşdırılmış məktuba cavab"
 
 #: src/postulo_imap/classifying.py
 msgid "an acknowledgement"
-msgstr ""
+msgstr "alınma təsdiqi"
 
 #: src/postulo_imap/sync.py
 msgid "An app password wherever the server offers one; Gmail requires it with two-factor authentication on. Stored encrypted."
-msgstr ""
+msgstr "Server təklif etdiyi hər yerdə tətbiq parolu; iki faktorlu doğrulama aktiv olduqda Gmail bunu tələb edir. Şifrələnmiş şəkildə saxlanılır."
 
 #: src/postulo_imap/classifying.py
 msgid "an assessment"
-msgstr ""
+msgstr "qiymətləndirmə"
 
 #: src/postulo_imap/classifying.py
 msgid "an invitation"
-msgstr ""
+msgstr "dəvət"
 
 #: src/postulo_imap/classifying.py
 msgid "an offer"
-msgstr ""
+msgstr "təklif"
 
 #: src/postulo_imap/mailbox.py
 msgid "Could not reach the server. Check the address, the port and the security."
-msgstr ""
+msgstr "Serverə qoşulmaq mümkün olmadı. Ünvanı, portu və təhlükəsizlik ayarını yoxlayın."
 
 #: src/postulo_imap/sync.py
 #, python-format
 msgid "Flag it with %(keyword)s"
-msgstr ""
+msgstr "%(keyword)s açar sözü ilə işarələ"
 
 #: src/postulo_imap/sync.py
 msgid "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means every recent message is read again; nothing is suggested twice either way."
-msgstr ""
+msgstr "İşarələmə əksər poçt proqramlarında görünmür və hər yoxlamanı qısa saxlayır. Poçt qutusuna toxunulmadıqda hər son məktub yenidən oxunur; hər iki halda heç nə iki dəfə təklif edilmir."
 
 #: src/postulo_imap/sync.py
 msgid "Folder to read"
-msgstr ""
+msgstr "Oxunacaq qovluq"
 
 #: src/postulo_imap/sync.py
 msgid "For example imap.example.org."
-msgstr ""
+msgstr "Məsələn, imap.example.org."
 
 #: src/postulo_imap/sync.py
 msgid "From"
-msgstr ""
+msgstr "Kimdən"
 
 #: src/postulo_imap/sync.py
 #, python-format
 msgid "Give a number of days between 1 and %(max)d."
-msgstr ""
+msgstr "1 ilə %(max)d arasında gün sayı daxil edin."
 
 #: src/postulo_imap/sync.py
 msgid "Give a port between 1 and 65535, or leave it empty."
-msgstr ""
+msgstr "1 ilə 65535 arasında port daxil edin və ya boş buraxın."
 
 #: src/postulo_imap/sync.py
 msgid "How many days of mail a pass considers."
-msgstr ""
+msgstr "Bir yoxlamanın neçə günlük məktubları nəzərə aldığı."
 
 #: src/postulo_imap/sync.py
 msgid "Leave the mailbox untouched"
-msgstr ""
+msgstr "Poçt qutusuna toxunma"
 
 #: src/postulo_imap/sync.py
 msgid "Left empty: 993 with TLS, 143 with STARTTLS."
-msgstr ""
+msgstr "Boş buraxılsa: TLS ilə 993, STARTTLS ilə 143."
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Look back"
-msgstr ""
+msgstr "Geriyə baxış müddəti"
 
 #: src/postulo_imap/sync.py
 msgid "Mailbox (IMAP)"
-msgstr ""
+msgstr "Poçt qutusu (IMAP)"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Matched by"
-msgstr ""
+msgstr "Uyğunlaşdırma əsası"
 
 #: src/postulo_imap/sync.py
 msgid "Move it to a subfolder"
-msgstr ""
+msgstr "Alt qovluğa köçür"
 
 #: src/postulo_imap/sync.py
 msgid "Name a subfolder other than the folder being read."
-msgstr ""
+msgstr "Oxunan qovluqdan fərqli alt qovluq göstərin."
 
 #: src/postulo_imap/sync.py
 msgid "Name the folder to read. Postulo never reads the inbox."
-msgstr ""
+msgstr "Oxunacaq qovluğu göstərin. Postulo heç vaxt gələnlər qutusunu oxumur."
 
 #: src/postulo_imap/sync.py
 msgid "Name the subfolder to move messages to."
-msgstr ""
+msgstr "Məktubların köçürüləcəyi alt qovluğu göstərin."
 
 #: src/postulo_imap/sync.py
 msgid "nothing yet"
-msgstr ""
+msgstr "hələ heç nə"
 
 #: src/postulo_imap/sync.py
 msgid "Once read"
-msgstr ""
+msgstr "Oxunduqdan sonra"
 
 #: src/postulo_imap/sync.py
 msgid "One folder, never the inbox. Make a rule on your mail server that files recruiter mail here; Postulo reads nothing else. Every message it reads is flagged or moved afterwards, whether or not it was recognised."
-msgstr ""
+msgstr "Bir qovluq, heç vaxt gələnlər qutusu deyil. Poçt serverinizdə işə götürənlərdən gələn məktubları buraya yerləşdirən qayda yaradın; Postulo başqa heç nəyi oxumur. Oxuduğu hər məktub, tanınıb-tanınmamasından asılı olmayaraq, sonra işarələnir və ya köçürülür."
 
 #: src/postulo_imap/sync.py
 msgid "Password or app password"
-msgstr ""
+msgstr "Parol və ya tətbiq parolu"
 
 #: src/postulo_imap/sync.py
 msgid "Port"
-msgstr ""
+msgstr "Port"
 
 #: src/postulo_imap/sync.py
 msgid "Postulo never reads the inbox. Name the folder your mail rule files jobs mail into."
-msgstr ""
+msgstr "Postulo heç vaxt gələnlər qutusunu oxumur. Poçt qaydanızın iş məktublarını yerləşdirdiyi qovluğu göstərin."
 
 #: src/postulo_imap/sync.py
 msgid "Recognised"
-msgstr ""
+msgstr "Tanınıb"
 
 #: src/postulo_imap/sync.py
 msgid "Security"
-msgstr ""
+msgstr "Təhlükəsizlik"
 
 #: src/postulo_imap/sync.py
 msgid "Server"
-msgstr ""
+msgstr "Server"
 
 #: src/postulo_imap/mailbox.py
 msgid "Sign-in refused. Check the username and the password."
-msgstr ""
+msgstr "Giriş rədd edildi. İstifadəçi adını və parolu yoxlayın."
 
 #: src/postulo_imap/sync.py
 #, python-format
 msgid "Signed in, but there is no folder called “%(folder)s”."
-msgstr ""
+msgstr "Daxil olundu, lakin «%(folder)s» adlı qovluq yoxdur."
 
 #: src/postulo_imap/sync.py
 msgid "Signed in, but this server cannot move messages. Choose to flag them instead."
-msgstr ""
+msgstr "Daxil olundu, lakin bu server məktubları köçürə bilmir. Bunun əvəzinə onları işarələməyi seçin."
 
 #: src/postulo_imap/sync.py
 #, python-format
 msgid "Signed in. %(count)d message in “%(folder)s” is waiting to be read."
 msgid_plural "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Daxil olundu. «%(folder)s» qovluğunda %(count)d məktub oxunmağı gözləyir."
+msgstr[1] "Daxil olundu. «%(folder)s» qovluğunda %(count)d məktub oxunmağı gözləyir."
 
 #: src/postulo_imap/sync.py
 msgid "STARTTLS (port 143)"
-msgstr ""
+msgstr "STARTTLS (port 143)"
 
 #: src/postulo_imap/sync.py
 msgid "Subfolder"
-msgstr ""
+msgstr "Alt qovluq"
 
 #: src/postulo_imap/matching.py
 msgid "the address of a contact"
-msgstr ""
+msgstr "kontaktın ünvanı"
 
 #: src/postulo_imap/matching.py
 msgid "the company’s name in the message"
-msgstr ""
+msgstr "məktubdakı şirkət adı"
 
 #: src/postulo_imap/mailbox.py
 #, python-format
 msgid "The folder “%(folder)s” could not be opened."
-msgstr ""
+msgstr "«%(folder)s» qovluğunu açmaq mümkün olmadı."
 
 #: src/postulo_imap/mailbox.py
 msgid "The mailbox refused the search."
-msgstr ""
+msgstr "Poçt qutusu axtarışı rədd etdi."
 
 #: src/postulo_imap/mailbox.py
 msgid "The mailbox refused to hand over the messages."
-msgstr ""
+msgstr "Poçt qutusu məktubları verməkdən imtina etdi."
 
 #: src/postulo_imap/mailbox.py
 msgid "The mailbox refused to look for the folder."
-msgstr ""
+msgstr "Poçt qutusu qovluğu axtarmaqdan imtina etdi."
 
 #: src/postulo_imap/mailbox.py
 msgid "The messages were read but could not be flagged; the next pass will read them again."
-msgstr ""
+msgstr "Məktublar oxundu, lakin işarələnə bilmədi; növbəti yoxlama onları yenidən oxuyacaq."
 
 #: src/postulo_imap/mailbox.py
 #, python-format
 msgid "The messages were read but could not be moved to “%(folder)s”; the next pass will read them again."
-msgstr ""
+msgstr "Məktublar oxundu, lakin «%(folder)s» qovluğuna köçürülə bilmədi; növbəti yoxlama onları yenidən oxuyacaq."
 
 #: src/postulo_imap/mailbox.py
 msgid "The messages were read, but this server cannot move them; the next pass will read them again."
-msgstr ""
+msgstr "Məktublar oxundu, lakin bu server onları köçürə bilmir; növbəti yoxlama onları yenidən oxuyacaq."
 
 #: src/postulo_imap/matching.py
 msgid "the role’s title in the message"
-msgstr ""
+msgstr "məktubdakı vəzifə adı"
 
 #: src/postulo_imap/matching.py
 msgid "the sender’s web domain"
-msgstr ""
+msgstr "göndərənin veb domeni"
 
 #: src/postulo_imap/sync.py
 msgid "This folder does not keep flags of its own, so every message of the look-back is read again on each pass."
-msgstr ""
+msgstr "Bu qovluq öz işarələrini saxlamır, ona görə geriyə baxış müddətindəki hər məktub hər yoxlamada yenidən oxunur."
 
 #: src/postulo_imap/sync.py
 msgid "TLS (port 993)"
-msgstr ""
+msgstr "TLS (port 993)"
 
 #: src/postulo_imap/sync.py
 msgid "Used only when messages are moved. Created if missing."
-msgstr ""
+msgstr "Yalnız məktublar köçürüldükdə istifadə olunur. Yoxdursa, yaradılır."
 
 #: src/postulo_imap/sync.py
 msgid "Username"
-msgstr ""
+msgstr "İstifadəçi adı"

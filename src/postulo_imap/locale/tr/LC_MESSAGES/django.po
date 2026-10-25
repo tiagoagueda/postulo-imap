@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-23 11:33+0000\n"
+"PO-Revision-Date: 2026-10-24 21:53+0000\n"
 "Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Turkish <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/tr/>\n"
 "Language: tr\n"
@@ -15,297 +15,248 @@ msgstr ""
 "X-Generator: postulo scripts/messages.py\n"
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "%(count)d could not be matched to an application; attach it by hand."
 msgid_plural "%(count)d could not be matched to an application; attach them by hand."
-msgstr[0] "%(count)d bir uygulama ile eşlenemez; el ile ekleyin."
-msgstr[1] "%(count)d bir uygulama ile eşlenemez; el ile ekleyin."
+msgstr[0] "%(count)d ileti bir başvuruyla eşleştirilemedi; elle bağlayın."
+msgstr[1] "%(count)d ileti bir başvuruyla eşleştirilemedi; elle bağlayın."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "%(count)d message could not be read and was skipped."
 msgid_plural "%(count)d messages could not be read and were skipped."
-msgstr[0] "%(count)d mesajlar okunamadı ve atıldı."
-msgstr[1] "%(count)d mesajlar okunamadı ve atıldı."
+msgstr[0] "%(count)d ileti okunamadı ve atlandı."
+msgstr[1] "%(count)d ileti okunamadı ve atlandı."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "A message with no subject"
-msgstr "Hiçbir konuyla ilgili bir mesaj"
+msgstr "Konusu olmayan bir ileti"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "a rejection"
-msgstr "bir reddedilme"
+msgstr "bir ret"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "a reply to a message already matched"
-msgstr "bir mesaja bir cevap zaten eşleşti"
+msgstr "zaten eşleştirilmiş bir iletiye yanıt"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an acknowledgement"
-msgstr "bir kabul"
+msgstr "bir alındı bildirimi"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "An app password wherever the server offers one; Gmail requires it with two-factor authentication on. Stored encrypted."
-msgstr "Sunucunun bir tane sunduğu bir uygulama şifresi; Gmail bunu iki faktörlü kimlik doğrulama ile gerektirir. Storedcrypt."
+msgstr "Sunucu sunuyorsa bir uygulama parolası; Gmail, iki faktörlü kimlik doğrulama açıkken bunu zorunlu tutar. Şifrelenmiş olarak saklanır."
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an assessment"
 msgstr "bir değerlendirme"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an invitation"
 msgstr "bir davet"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an offer"
 msgstr "bir teklif"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "Could not reach the server. Check the address, the port and the security."
-msgstr "Sunucuya ulaşamadı. adresi kontrol edin, liman ve güvenlik."
+msgstr "Sunucuya ulaşılamadı. Adresi, bağlantı noktasını ve güvenlik ayarını kontrol edin."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Flag it with %(keyword)s"
-msgstr "%(keyword)s"
+msgstr "%(keyword)s ile işaretle"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means every recent message is read again; nothing is suggested twice either way."
-msgstr "Flagging çoğu müşteride görünmez ve her geçiş kısa tutar. Posta kutusunu terk etmek, her son mesajın tekrar okunduğu anlamına gelir; hiçbir şey iki kez de önerilmez."
+msgstr "İşaretleme çoğu e-posta istemcisinde görünmez ve her geçişi kısa tutar. Posta kutusuna dokunmamak, son iletilerin her seferinde yeniden okunması demektir; her iki durumda da hiçbir şey iki kez önerilmez."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Folder to read"
-msgstr "Folder okumak için"
+msgstr "Okunacak klasör"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "For example imap.example.org."
-msgstr "Örneğin, hayal.örnek.org."
+msgstr "Örneğin imap.example.org."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "From"
-msgstr "From"
+msgstr "Gönderen"
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Give a number of days between 1 and %(max)d."
 msgstr "1 ile %(max)d arasında bir gün sayısı girin."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Give a port between 1 and 65535, or leave it empty."
-msgstr "1 ve 65535 arasında bir liman verin veya boş bırakın."
+msgstr "1 ile 65535 arasında bir bağlantı noktası girin ya da boş bırakın."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "How many days of mail a pass considers."
-msgstr "Kaç gün posta bir geçiş göz önüne alındığında."
+msgstr "Bir geçişin kaç günlük postaya baktığı."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Leave the mailbox untouched"
-msgstr "Posta kutusunu terk et"
+msgstr "Posta kutusuna dokunma"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Left empty: 993 with TLS, 143 with STARTTLS."
-msgstr "Sol boş: 993 ile TLS, 143 ile YouTubeTLS."
+msgstr "Boş bırakılırsa: TLS ile 993, STARTTLS ile 143."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Look back"
-msgstr "Bak geri dön"
+msgstr "Geriye bakış süresi"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Mailbox (IMAP)"
-msgstr "Mailbox (IMAP)"
+msgstr "Posta kutusu (IMAP)"
 
 #: src/postulo_imap/sync.py
 #, fuzzy
 msgid "Matched by"
-msgstr "Tarafından"
+msgstr "Eşleşme ölçütü"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Move it to a subfolder"
-msgstr "Onu alt bir seviyeye taşıyın"
+msgstr "Bir alt klasöre taşı"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Name a subfolder other than the folder being read."
-msgstr "Klasörün okunmasından başka bir alt kater adı."
+msgstr "Okunan klasörden farklı bir alt klasör adı girin."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Name the folder to read. Postulo never reads the inbox."
-msgstr "Okumak için klasörün adı. Postulo asla inbox okur."
+msgstr "Okunacak klasörün adını girin. Postulo gelen kutusunu asla okumaz."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Name the subfolder to move messages to."
-msgstr "Mesajları hareket etmek için alt kater adı."
+msgstr "İletilerin taşınacağı alt klasörün adını girin."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "nothing yet"
 msgstr "henüz hiçbir şey yok"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Once read"
-msgstr "Bir kez oku"
+msgstr "Okunduktan sonra"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "One folder, never the inbox. Make a rule on your mail server that files recruiter mail here; Postulo reads nothing else. Every message it reads is flagged or moved afterwards, whether or not it was recognised."
-msgstr "Bir klasör, asla inbox. Posta sunucunuzda bu dosyaların işe alındığı bir kural yapın; Postulo başka bir şey okumaz. Okuduğunuz her mesaj daha sonra bayraklanır ya da taşındı."
+msgstr "Tek bir klasör, asla gelen kutusu değil. Posta sunucunuzda işe alım uzmanlarından gelen postaları buraya dosyalayan bir kural oluşturun; Postulo başka hiçbir şeyi okumaz. Okuduğu her ileti, tanınsın ya da tanınmasın, ardından işaretlenir ya da taşınır."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Password or app password"
-msgstr "Şifre veya uygulama şifresi"
+msgstr "Parola ya da uygulama parolası"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Port"
-msgstr "Port"
+msgstr "Bağlantı noktası"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Postulo never reads the inbox. Name the folder your mail rule files jobs mail into."
-msgstr "Postulo asla inbox okur. Posta kural dosyaları iş postanızı girin."
+msgstr "Postulo gelen kutusunu asla okumaz. Posta kuralınızın iş postalarını dosyaladığı klasörün adını girin."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Recognised"
-msgstr "Tanıklıklar"
+msgstr "Tanınan"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Security"
-msgstr "Güvenlik Güvenliği"
+msgstr "Güvenlik"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Server"
-msgstr "Server"
+msgstr "Sunucu"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "Sign-in refused. Check the username and the password."
-msgstr "Sign-in reddetti. Kullanıcı ve şifreyi kontrol edin."
+msgstr "Giriş reddedildi. Kullanıcı adını ve parolayı kontrol edin."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Signed in, but there is no folder called “%(folder)s”."
-msgstr "Oturum açıldı, ancak “%(folder)s” adında bir klasör yok."
+msgstr "Giriş yapıldı, ancak “%(folder)s” adında bir klasör yok."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Signed in, but this server cannot move messages. Choose to flag them instead."
-msgstr "Kayıt olun ama bu sunucu mesajları hareket edemez. Bunun yerine onları bayraklayın."
+msgstr "Giriş yapıldı, ancak bu sunucu iletileri taşıyamıyor. Bunun yerine işaretlemeyi seçin."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Signed in. %(count)d message in “%(folder)s” is waiting to be read."
 msgid_plural "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
-msgstr[0] "Kayıt olun. %(count)d “%(folder)s içindeki mesajlar okunur."
-msgstr[1] "Kayıt olun. %(count)d “%(folder)s içindeki mesajlar okunur."
+msgstr[0] "Giriş yapıldı. “%(folder)s” klasöründe okunmayı bekleyen %(count)d ileti var."
+msgstr[1] "Giriş yapıldı. “%(folder)s” klasöründe okunmayı bekleyen %(count)d ileti var."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "STARTTLS (port 143)"
-msgstr "YouTubeTLS (port 143)"
+msgstr "STARTTLS (bağlantı noktası 143)"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Subfolder"
-msgstr "Subfolder"
+msgstr "Alt klasör"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the address of a contact"
-msgstr "bir iletişim adresi"
+msgstr "bir kişinin adresi"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the company’s name in the message"
-msgstr "şirketin adı mesajda"
+msgstr "iletideki şirket adı"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy, python-format
+#, python-format
 msgid "The folder “%(folder)s” could not be opened."
-msgstr "Klasörü %(folder)s açılamaz."
+msgstr "“%(folder)s” klasörü açılamadı."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The mailbox refused the search."
 msgstr "Posta kutusu aramayı reddetti."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The mailbox refused to hand over the messages."
-msgstr "Posta kutusu mesajların üstesinden gelmeye reddetti."
+msgstr "Posta kutusu iletileri vermeyi reddetti."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The mailbox refused to look for the folder."
-msgstr "Posta kutusu klasörü aramaya reddetti."
+msgstr "Posta kutusu klasörü aramayı reddetti."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The messages were read but could not be flagged; the next pass will read them again."
-msgstr "Mesajlar okunmuştu ama bayraklanamadı; sonraki geçiş tekrar okuyacak."
+msgstr "İletiler okundu ama işaretlenemedi; bir sonraki geçişte yeniden okunacaklar."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy, python-format
+#, python-format
 msgid "The messages were read but could not be moved to “%(folder)s”; the next pass will read them again."
 msgstr "İletiler okundu ancak “%(folder)s” klasörüne taşınamadı; bir sonraki geçişte yeniden okunacaklar."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The messages were read, but this server cannot move them; the next pass will read them again."
-msgstr "Mesajlar okundu, ancak bu sunucu onları hareket edemez; bir sonraki geçiş onları tekrar okuyacak."
+msgstr "İletiler okundu, ancak bu sunucu onları taşıyamıyor; bir sonraki geçişte yeniden okunacaklar."
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the role’s title in the message"
-msgstr "mesajın başlığı mesajda"
+msgstr "iletideki pozisyon adı"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the sender’s web domain"
-msgstr "gönderenin web domaini"
+msgstr "gönderenin web alan adı"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "This folder does not keep flags of its own, so every message of the look-back is read again on each pass."
-msgstr "Bu klasör kendi bayraklarını tutmaz, bu yüzden her geçişin her mesajı tekrar okunur."
+msgstr "Bu klasör kendi işaretlerini tutmuyor, bu yüzden geriye bakış süresindeki her ileti her geçişte yeniden okunur."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "TLS (port 993)"
-msgstr "TLS (port 993)"
+msgstr "TLS (bağlantı noktası 993)"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Used only when messages are moved. Created if missing."
-msgstr "Yalnızca mesajlar taşındığında kullanılır. Eğer eksik olursa yaratın."
+msgstr "Yalnızca iletiler taşındığında kullanılır. Yoksa oluşturulur."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Username"
-msgstr "Username"
+msgstr "Kullanıcı adı"

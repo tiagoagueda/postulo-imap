@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-23 12:47+0000\n"
+"PO-Revision-Date: 2026-10-25 02:02+0000\n"
 "Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -15,294 +15,244 @@ msgstr ""
 "X-Generator: postulo-messages\n"
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "%(count)d could not be matched to an application; attach it by hand."
 msgid_plural "%(count)d could not be matched to an application; attach them by hand."
-msgstr[0] "%(count)d无法与应用程序匹配;用手附."
+msgstr[0] "有%(count)d封无法匹配到申请；请手动关联。"
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "%(count)d message could not be read and was skipped."
 msgid_plural "%(count)d messages could not be read and were skipped."
-msgstr[0] "%(count)d信件无法被读取并被跳过."
+msgstr[0] "有%(count)d封邮件无法读取，已跳过。"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "A message with no subject"
-msgstr "无主题的信息"
+msgstr "无主题的邮件"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "a rejection"
-msgstr "拒绝"
+msgstr "拒信"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "a reply to a message already matched"
-msgstr "对已匹配的信件的答复"
+msgstr "对已匹配邮件的回复"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an acknowledgement"
-msgstr "承认"
+msgstr "确认收到"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "An app password wherever the server offers one; Gmail requires it with two-factor authentication on. Stored encrypted."
-msgstr "服务器提供一个的应用程序密码; Gmail 需要它带有两个因素的认证 。 存储加密."
+msgstr "服务器提供应用专用密码时请使用它；开启双重验证后，Gmail 必须使用应用专用密码。加密存储。"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an assessment"
-msgstr "评估"
+msgstr "测评"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an invitation"
 msgstr "邀请"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an offer"
-msgstr "提议"
+msgstr "录用通知"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "Could not reach the server. Check the address, the port and the security."
-msgstr "无法到达服务器 。 检查地址,端口和保安."
+msgstr "无法连接服务器。请检查地址、端口和安全设置。"
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Flag it with %(keyword)s"
-msgstr "用 %(keyword)s 标记它"
+msgstr "用%(keyword)s标记"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means every recent message is read again; nothing is suggested twice either way."
-msgstr "旗法在大多数客户端中是隐形的,并保持了每个传入的短. 将邮箱置之不理意味着每个最近的消息都会再次被读取;无论哪种方式,都没有任何建议."
+msgstr "标记在大多数邮件客户端中不可见，并能让每轮读取保持简短。保持邮箱不变意味着每封近期邮件都会被再次读取；无论哪种方式，都不会重复给出建议。"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Folder to read"
-msgstr "要读的文件夹"
+msgstr "要读取的文件夹"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "For example imap.example.org."
-msgstr "例如: imap.example.org. 互联网档案馆的存檔,存档日期2013-12-21."
+msgstr "例如 imap.example.org。"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "From"
-msgstr "从"
+msgstr "发件人"
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Give a number of days between 1 and %(max)d."
-msgstr "给出从1到%(max)d的若干天."
+msgstr "请填写 1 到%(max)d之间的天数。"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Give a port between 1 and 65535, or leave it empty."
-msgstr "给予1至65535之间的一端口,或者留空."
+msgstr "请填写 1 到 65535 之间的端口，或留空。"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "How many days of mail a pass considers."
-msgstr "多少天的邮件 通行证考虑."
+msgstr "每轮读取考虑多少天内的邮件。"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Leave the mailbox untouched"
-msgstr "不动邮箱"
+msgstr "保持邮箱不变"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Left empty: 993 with TLS, 143 with STARTTLS."
-msgstr "左出空:993与TLS,143与STARTLS."
+msgstr "留空时：TLS 使用 993，STARTTLS 使用 143。"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Look back"
-msgstr "回头看"
+msgstr "回溯天数"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Mailbox (IMAP)"
-msgstr "邮箱( IMAP)"
+msgstr "邮箱（IMAP）"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Matched by"
-msgstr "匹配者为"
+msgstr "匹配依据"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Move it to a subfolder"
-msgstr "移动到子文件夹"
+msgstr "移到子文件夹"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Name a subfolder other than the folder being read."
-msgstr "除正在读取的文件夹外, 指定一个子文件夹 ."
+msgstr "请指定一个不同于所读取文件夹的子文件夹。"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Name the folder to read. Postulo never reads the inbox."
-msgstr "指定要读取的文件夹 。 Postulo从来不读收件箱."
+msgstr "请指定要读取的文件夹。Postulo 从不读取收件箱。"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Name the subfolder to move messages to."
-msgstr "指定要移动信件的子文件夹 ."
+msgstr "请指定要将邮件移入的子文件夹。"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "nothing yet"
-msgstr "还没有"
+msgstr "尚无"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Once read"
-msgstr "一经阅读"
+msgstr "读取后"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "One folder, never the inbox. Make a rule on your mail server that files recruiter mail here; Postulo reads nothing else. Every message it reads is flagged or moved afterwards, whether or not it was recognised."
-msgstr "一个文件夹,从收件箱。 在您的邮件服务器上设定一条规则, 将文件招聘者邮件发送到此地; Postulo 不读其它文件 。 它所宣读的每条信息都会被标出或移动,无论是否得到承认."
+msgstr "只读取一个文件夹，绝不读取收件箱。请在邮件服务器上设置规则，将招聘人员的邮件归入此处；Postulo 不读取其他任何内容。它读取的每封邮件之后都会被标记或移走，无论是否被识别。"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Password or app password"
-msgstr "密码或应用程序密码"
+msgstr "密码或应用专用密码"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Port"
 msgstr "端口"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Postulo never reads the inbox. Name the folder your mail rule files jobs mail into."
-msgstr "Postulo从来不读收件箱. 将您的邮件规则文件邮件输入文件夹 ."
+msgstr "Postulo 从不读取收件箱。请指定你的邮件规则用来存放求职邮件的文件夹。"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Recognised"
-msgstr "已确认"
+msgstr "已识别"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Security"
-msgstr "警卫"
+msgstr "安全性"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Server"
 msgstr "服务器"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "Sign-in refused. Check the username and the password."
-msgstr "签字拒绝。 检查用户名和密码 ."
+msgstr "登录被拒绝。请检查用户名和密码。"
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Signed in, but there is no folder called “%(folder)s”."
-msgstr "已签字,但没有名为“%(folder)s”的文件夹."
+msgstr "已登录，但没有名为“%(folder)s”的文件夹。"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Signed in, but this server cannot move messages. Choose to flag them instead."
-msgstr "已签名, 但此服务器无法移动信件 。 选择标记它们."
+msgstr "已登录，但此服务器无法移动邮件。请改为选择标记邮件。"
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Signed in. %(count)d message in “%(folder)s” is waiting to be read."
 msgid_plural "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
-msgstr[0] "在%(count)d电文中署名的“%(folder)s”正在等待阅读."
+msgstr[0] "已登录。“%(folder)s”中有%(count)d封邮件等待读取。"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "STARTTLS (port 143)"
-msgstr "STATLS(143港)"
+msgstr "STARTTLS（端口 143）"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Subfolder"
 msgstr "子文件夹"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the address of a contact"
-msgstr "联系人地址"
+msgstr "联系人的地址"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the company’s name in the message"
-msgstr "信息中公司名称"
+msgstr "邮件中的公司名称"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy, python-format
+#, python-format
 msgid "The folder “%(folder)s” could not be opened."
 msgstr "无法打开文件夹“%(folder)s”。"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The mailbox refused the search."
-msgstr "邮箱拒绝搜索."
+msgstr "邮箱拒绝了搜索。"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The mailbox refused to hand over the messages."
-msgstr "邮箱拒绝交出信件."
+msgstr "邮箱拒绝交出邮件。"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The mailbox refused to look for the folder."
-msgstr "邮箱拒绝查找文件夹."
+msgstr "邮箱拒绝查找该文件夹。"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The messages were read but could not be flagged; the next pass will read them again."
-msgstr "信件已经宣读,但无法标出;下个通行证将再次宣读."
+msgstr "邮件已读取，但无法标记；下一轮会再次读取。"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy, python-format
+#, python-format
 msgid "The messages were read but could not be moved to “%(folder)s”; the next pass will read them again."
-msgstr "邮件已读取，但无法移至“%(folder)s”；下一轮将再次读取这些邮件。"
+msgstr "邮件已读取，但无法移至“%(folder)s”；下一轮会再次读取。"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The messages were read, but this server cannot move them; the next pass will read them again."
-msgstr "信件被读取了,但此服务器无法移动;下一张通行证将再次读取."
+msgstr "邮件已读取，但此服务器无法移动邮件；下一轮会再次读取。"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the role’s title in the message"
-msgstr "信息中的角色标题"
+msgstr "邮件中的职位名称"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the sender’s web domain"
-msgstr "发送者的网络域"
+msgstr "发件人的网站域名"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "This folder does not keep flags of its own, so every message of the look-back is read again on each pass."
-msgstr "此文件夹不保留自有的旗帜, 因此每个回放消息都会在每道通道上再次被读取 ."
+msgstr "此文件夹不保存自己的标记，因此回溯期内的每封邮件在每轮都会被再次读取。"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "TLS (port 993)"
-msgstr "TLS (端口 993)"
+msgstr "TLS（端口 993）"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Used only when messages are moved. Created if missing."
-msgstr "只在信件被移动时使用 。 缺失时创建 ."
+msgstr "仅在移动邮件时使用。不存在时会自动创建。"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Username"
 msgstr "用户名"

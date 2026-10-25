@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-23 11:33+0000\n"
+"PO-Revision-Date: 2026-10-24 22:19+0000\n"
 "Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Albanian <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/sq/>\n"
 "Language: sq\n"
@@ -15,297 +15,250 @@ msgstr ""
 "X-Generator: postulo scripts/messages.py\n"
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "%(count)d could not be matched to an application; attach it by hand."
 msgid_plural "%(count)d could not be matched to an application; attach them by hand."
-msgstr[0] "%(count)d nuk mund të krahasohet me një aplikativ; bashkangjiteni me dorë."
-msgstr[1] "%(count)d nuk mund të korrespondohet me një aplikativ; bashkangjitini me dorë."
+msgstr[0] "%(count)d nuk mund të përputhej me një aplikim; bashkëngjiteni me dorë."
+msgstr[1] "%(count)d nuk mund të përputheshin me një aplikim; bashkëngjitini me dorë."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "%(count)d message could not be read and was skipped."
 msgid_plural "%(count)d messages could not be read and were skipped."
-msgstr[0] "Mesazhi %(count)d nuk mund të lexohet dhe është anashkaluar."
-msgstr[1] "%(count)d mesazhe nuk mund të lexohen dhe u anashkaluan."
+msgstr[0] "%(count)d mesazh nuk mund të lexohej dhe u anashkalua."
+msgstr[1] "%(count)d mesazhe nuk mund të lexoheshin dhe u anashkaluan."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "A message with no subject"
 msgstr "Një mesazh pa subjekt"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "a rejection"
 msgstr "një refuzim"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "a reply to a message already matched"
-msgstr "një përgjigje për mesazhin aktual"
+msgstr "një përgjigje për një mesazh tashmë të përputhur"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an acknowledgement"
-msgstr "një njohje"
+msgstr "një konfirmim marrjeje"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "An app password wherever the server offers one; Gmail requires it with two-factor authentication on. Stored encrypted."
-msgstr "Një fjalëkalim aplikativi kudo që serveri ofron një; Gmail kërkon që ai të ketë një autentifikimi me dy gjëndje. I koduar."
+msgstr "Një fjalëkalim aplikacioni kudo që serveri e ofron; Gmail e kërkon kur është aktiv vërtetimi me dy faktorë. Ruhet i enkriptuar."
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an assessment"
 msgstr "një vlerësim"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an invitation"
 msgstr "një ftesë"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an offer"
 msgstr "një ofertë"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "Could not reach the server. Check the address, the port and the security."
-msgstr "E pamundur hyrja në server. Kontrollo adresën, portin dhe sigurinë."
+msgstr "Serveri nuk u arrit. Kontrolloni adresën, portën dhe sigurinë."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Flag it with %(keyword)s"
-msgstr "Flamur atë me %(keyword)s"
+msgstr "Shënoje me %(keyword)s"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means every recent message is read again; nothing is suggested twice either way."
-msgstr "Në shumicën e klientëve, bërja e flamurëve është e padukshme dhe e mban secilin të shkurtër. Lënia e mailbox e paprekur do të thotë që çdo mesazh i fundit të lexohet përsëri; asgjë nuk sugjerohet dy herë në të dyja mënyrat."
+msgstr "Shënimi me flamur është i padukshëm në shumicën e klientëve dhe e mban të shkurtër çdo kalim. Nëse kutia postare lihet e paprekur, çdo mesazh i kohëve të fundit lexohet sërish; në të dyja rastet, asgjë nuk sugjerohet dy herë."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Folder to read"
-msgstr "Kartelë për tu lexuar"
+msgstr "Dosja për t'u lexuar"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "For example imap.example.org."
-msgstr "P.sh. iplam.org."
+msgstr "P.sh. imap.example.org."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "From"
 msgstr "Nga"
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Give a number of days between 1 and %(max)d."
 msgstr "Jepni një numër ditësh midis 1 dhe %(max)d."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Give a port between 1 and 65535, or leave it empty."
-msgstr "Jep një port midis 1 dhe 65535, ose lëre bosh."
+msgstr "Jepni një portë midis 1 dhe 65535, ose lëreni bosh."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "How many days of mail a pass considers."
-msgstr "Sa ditë postë merr në konsideratë."
+msgstr "Sa ditë postë merr parasysh një kalim."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Leave the mailbox untouched"
-msgstr "Largohu nga mailbox i paprekur"
+msgstr "Lëre kutinë postare të paprekur"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Left empty: 993 with TLS, 143 with STARTTLS."
-msgstr "Majtas bosh: 993 me TLS, 143 me STARTT."
+msgstr "Nëse lihet bosh: 993 me TLS, 143 me STARTTLS."
 
 #: src/postulo_imap/sync.py
 #, fuzzy
 msgid "Look back"
-msgstr "Shiko mbrapa"
+msgstr "Periudha e kontrollit"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Mailbox (IMAP)"
-msgstr "Mailbox (IMAP)"
+msgstr "Kutia postare (IMAP)"
 
 #: src/postulo_imap/sync.py
 #, fuzzy
 msgid "Matched by"
-msgstr "Korrispondon me"
+msgstr "Përputhur sipas"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Move it to a subfolder"
-msgstr "Lëvize atë në një nënfolës"
+msgstr "Zhvendose në një nëndosje"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Name a subfolder other than the folder being read."
-msgstr "Përmend një nën-kartelë tjetër nga sa po lexohet kartela."
+msgstr "Jepni një nëndosje tjetër nga dosja që lexohet."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Name the folder to read. Postulo never reads the inbox."
-msgstr "Shtoje kartelën për të lexuar. Populo nuk e lexon kurrë kutinë."
+msgstr "Jepni emrin e dosjes për t'u lexuar. Postulo nuk e lexon kurrë kutinë hyrëse."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Name the subfolder to move messages to."
-msgstr "Shkruaj një nën-kartelë ku duhen dërguar mesazhe."
+msgstr "Jepni emrin e nëndosjes ku do të zhvendosen mesazhet."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "nothing yet"
 msgstr "ende asgjë"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Once read"
-msgstr "Lexim"
+msgstr "Pasi lexohet"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "One folder, never the inbox. Make a rule on your mail server that files recruiter mail here; Postulo reads nothing else. Every message it reads is flagged or moved afterwards, whether or not it was recognised."
-msgstr "Një kartelë, kurrë në kuti. Vendos një rregull në serverin tënd mail që do të regjistrojë postën këtu; Postulo nuk lexon asgjë tjetër. Çdo mesazh që lexon, lëviz ose lëviz, nëse është apo jo i njohur."
+msgstr "Një dosje, kurrë kutia hyrëse. Krijoni një rregull në serverin tuaj të postës që i vendos këtu emailet e rekrutuesve; Postulo nuk lexon asgjë tjetër. Çdo mesazh që lexon shënohet me flamur ose zhvendoset më pas, qoftë i njohur apo jo."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Password or app password"
-msgstr "Fjalëkalimi apo fjalëkalimi i aplikativit"
+msgstr "Fjalëkalim ose fjalëkalim aplikacioni"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Port"
 msgstr "Porta"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Postulo never reads the inbox. Name the folder your mail rule files jobs mail into."
-msgstr "Populo nuk e lexon kurrë kutinë. Përmend kartelën në të cilën do të vendoseni postën."
+msgstr "Postulo nuk e lexon kurrë kutinë hyrëse. Jepni emrin e dosjes ku rregulli juaj i postës vendos emailet për punë."
 
 #: src/postulo_imap/sync.py
 #, fuzzy
 msgid "Recognised"
-msgstr "Njohur"
+msgstr "Të njohura"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Security"
 msgstr "Siguria"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Server"
 msgstr "Serveri"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "Sign-in refused. Check the username and the password."
-msgstr "Nënshkrimi refuzoi. Kontrollo emrin e përdoruesit dhe fjalëkalimin."
+msgstr "Hyrja u refuzua. Kontrolloni emrin e përdoruesit dhe fjalëkalimin."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Signed in, but there is no folder called “%(folder)s”."
-msgstr "Nënshkruar, por nuk ka asnjë kartelë të quajtur %(folder)s."
+msgstr "Hyrja u krye, por nuk ka asnjë dosje të quajtur “%(folder)s”."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Signed in, but this server cannot move messages. Choose to flag them instead."
-msgstr "Firmosur në, por ky server nuk mund të lëvizë mesazhet. Zgjidhni t'i lironi."
+msgstr "Hyrja u krye, por ky server nuk mund të zhvendosë mesazhe. Zgjidhni t'i shënoni me flamur."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Signed in. %(count)d message in “%(folder)s” is waiting to be read."
 msgid_plural "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
-msgstr[0] "U hyt. %(count)d mesazh në “%(folder)s” pret të lexohet."
-msgstr[1] "U hyt. %(count)d mesazhe në “%(folder)s” presin të lexohen."
+msgstr[0] "Hyrja u krye. %(count)d mesazh në “%(folder)s” pret të lexohet."
+msgstr[1] "Hyrja u krye. %(count)d mesazhe në “%(folder)s” presin të lexohen."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "STARTTLS (port 143)"
 msgstr "STARTTLS (port 143)"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Subfolder"
-msgstr "Nënfolës"
+msgstr "Nëndosja"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the address of a contact"
-msgstr "adresën e një kontakti"
+msgstr "adresa e një kontakti"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the company’s name in the message"
-msgstr "emri në mesazh"
+msgstr "emri i kompanisë në mesazh"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy, python-format
+#, python-format
 msgid "The folder “%(folder)s” could not be opened."
 msgstr "Dosja “%(folder)s” nuk mund të hapej."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The mailbox refused the search."
-msgstr "Mailbox refuzoi kërkimin."
+msgstr "Kutia postare e refuzoi kërkimin."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The mailbox refused to hand over the messages."
-msgstr "Mailbox refuzoi të dorëzojë mesazhet."
+msgstr "Kutia postare refuzoi të dorëzojë mesazhet."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The mailbox refused to look for the folder."
-msgstr "Mailbox nuk pranoi të kërkojë kartelën."
+msgstr "Kutia postare refuzoi të kërkojë dosjen."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The messages were read but could not be flagged; the next pass will read them again."
-msgstr "Mesazhet u lexuan, por nuk mund të kontrollohen; pasazhi tjetër do t'i lexojë përsëri."
+msgstr "Mesazhet u lexuan, por nuk mund të shënoheshin me flamur; kalimi i radhës do t'i lexojë sërish."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy, python-format
+#, python-format
 msgid "The messages were read but could not be moved to “%(folder)s”; the next pass will read them again."
-msgstr "Mesazhet u lexuan, por nuk mund të lëvizeshin në %(folder)s; passa tjetër do t'i lexojë ato përsëri."
+msgstr "Mesazhet u lexuan, por nuk mund të zhvendoseshin te “%(folder)s”; kalimi i radhës do t'i lexojë sërish."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The messages were read, but this server cannot move them; the next pass will read them again."
-msgstr "Mesazhet u lexuan, por ky server nuk mund të lëvizë; pasazhi në vazhdim do t'i lexojë përsëri."
+msgstr "Mesazhet u lexuan, por ky server nuk mund t'i zhvendosë; kalimi i radhës do t'i lexojë sërish."
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the role’s title in the message"
-msgstr "titulli i faqes në mesazh"
+msgstr "titulli i pozicionit në mesazh"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the sender’s web domain"
-msgstr "rrjeti"
+msgstr "domeni i uebit i dërguesit"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "This folder does not keep flags of its own, so every message of the look-back is read again on each pass."
-msgstr "Kjo kartelë nuk i mban flamujt e saj, kështu që çdo mesazh i kërkimit është lexuar përsëri në çdo pass."
+msgstr "Kjo dosje nuk ruan flamuj të vetët, prandaj çdo mesazh i periudhës së kontrollit lexohet sërish në çdo kalim."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "TLS (port 993)"
 msgstr "TLS (porta 993)"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Used only when messages are moved. Created if missing."
-msgstr "Përdoret vetëm kur dërgohen mesazhe. Krijuar nëse mungon."
+msgstr "Përdoret vetëm kur zhvendosen mesazhet. Krijohet nëse mungon."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Username"
-msgstr "Përdoruesi"
+msgstr "Emri i përdoruesit"

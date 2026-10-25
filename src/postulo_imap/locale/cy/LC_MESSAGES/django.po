@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-22 21:51+0000\n"
+"PO-Revision-Date: 2026-10-24 21:02+0000\n"
 "Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Welsh <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/cy/>\n"
 "Language: cy\n"
@@ -15,125 +15,106 @@ msgstr ""
 "X-Generator: postulo scripts/messages.py\n"
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "%(count)d could not be matched to an application; attach it by hand."
 msgid_plural "%(count)d could not be matched to an application; attach them by hand."
-msgstr[0] "Doedd dim modd cyfateb %(count)d i gais; atodwch hi â llaw."
-msgstr[1] "Doedd dim modd cyfateb %(count)d i gais; atodwch nhw â llaw."
-msgstr[2] "Doedd dim modd cyfateb %(count)d i gais; atodwch nhw â llaw."
-msgstr[3] "Doedd dim modd cyfateb %(count)d i gais; atodwch nhw â llaw."
+msgstr[0] "Nid oedd modd cyfateb %(count)d i gais; atodwch hi â llaw."
+msgstr[1] "Nid oedd modd cyfateb %(count)d i gais; atodwch nhw â llaw."
+msgstr[2] "Nid oedd modd cyfateb %(count)d i gais; atodwch nhw â llaw."
+msgstr[3] "Nid oedd modd cyfateb %(count)d i gais; atodwch nhw â llaw."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "%(count)d message could not be read and was skipped."
 msgid_plural "%(count)d messages could not be read and were skipped."
-msgstr[0] "Doedd dim modd darllen %(count)d neges, felly cafodd ei hepgor."
-msgstr[1] "Doedd dim modd darllen %(count)d neges, felly cawson nhw eu hepgor."
-msgstr[2] "Doedd dim modd darllen %(count)d o negeseuon, felly cawson nhw eu hepgor."
-msgstr[3] "Doedd dim modd darllen %(count)d o negeseuon, felly cawson nhw eu hepgor."
+msgstr[0] "Nid oedd modd darllen %(count)d neges, felly cafodd ei hepgor."
+msgstr[1] "Nid oedd modd darllen %(count)d neges, felly cawsant eu hepgor."
+msgstr[2] "Nid oedd modd darllen %(count)d neges, felly cawsant eu hepgor."
+msgstr[3] "Nid oedd modd darllen %(count)d neges, felly cawsant eu hepgor."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "A message with no subject"
 msgstr "Neges heb bwnc"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "a rejection"
 msgstr "gwrthodiad"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "a reply to a message already matched"
 msgstr "ateb i neges sydd eisoes wedi'i chyfateb"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an acknowledgement"
 msgstr "cydnabyddiaeth"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "An app password wherever the server offers one; Gmail requires it with two-factor authentication on. Stored encrypted."
 msgstr "Cyfrinair ap lle bynnag mae'r gweinydd yn cynnig un; mae Gmail yn mynnu un pan fydd dilysu dau ffactor ymlaen. Wedi'i storio wedi'i amgryptio."
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an assessment"
 msgstr "asesiad"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an invitation"
 msgstr "gwahoddiad"
 
 #: src/postulo_imap/classifying.py
-#, fuzzy
 msgid "an offer"
 msgstr "cynnig"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "Could not reach the server. Check the address, the port and the security."
 msgstr "Ni ellid cyrraedd y gweinydd. Gwiriwch y cyfeiriad, y porth a'r diogelwch."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Flag it with %(keyword)s"
 msgstr "Ei fflagio gyda %(keyword)s"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means every recent message is read again; nothing is suggested twice either way."
 msgstr "Mae fflagio'n anweledig yn y rhan fwyaf o raglenni e-bost ac yn cadw pob rhediad yn fyr. Mae gadael y blwch post yn ddigyffwrdd yn golygu bod pob neges ddiweddar yn cael ei darllen eto; nid oes dim yn cael ei awgrymu ddwywaith y naill ffordd na'r llall."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Folder to read"
-msgstr "Ffolder i'w ddarllen"
+msgstr "Ffolder i'w darllen"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "For example imap.example.org."
 msgstr "Er enghraifft imap.example.org."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "From"
 msgstr "Oddi wrth"
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Give a number of days between 1 and %(max)d."
 msgstr "Rhowch nifer o ddyddiau rhwng 1 a %(max)d."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Give a port between 1 and 65535, or leave it empty."
 msgstr "Rhowch borth rhwng 1 a 65535, neu gadewch ef yn wag."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "How many days of mail a pass considers."
 msgstr "Sawl diwrnod o bost y mae rhediad yn eu hystyried."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Leave the mailbox untouched"
 msgstr "Gadael y blwch post yn ddigyffwrdd"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Left empty: 993 with TLS, 143 with STARTTLS."
 msgstr "Os caiff ei adael yn wag: 993 gyda TLS, 143 gyda STARTTLS."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Look back"
 msgstr "Edrych yn ôl"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Mailbox (IMAP)"
 msgstr "Blwch post (IMAP)"
 
@@ -143,54 +124,44 @@ msgid "Matched by"
 msgstr "Cyfatebwyd gan"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Move it to a subfolder"
 msgstr "Ei symud i is-ffolder"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Name a subfolder other than the folder being read."
 msgstr "Enwch is-ffolder heblaw'r ffolder sy'n cael ei darllen."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Name the folder to read. Postulo never reads the inbox."
-msgstr "Enwch y ffolder i'w ddarllen. Nid yw Postulo byth yn darllen y mewnflwch."
+msgstr "Enwch y ffolder i'w darllen. Nid yw Postulo byth yn darllen y mewnflwch."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Name the subfolder to move messages to."
-msgstr "Enwch yr is-ffolder i symud negeseuon iddo."
+msgstr "Enwch yr is-ffolder i symud negeseuon iddi."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "nothing yet"
 msgstr "dim byd eto"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Once read"
 msgstr "Ar ôl ei darllen"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "One folder, never the inbox. Make a rule on your mail server that files recruiter mail here; Postulo reads nothing else. Every message it reads is flagged or moved afterwards, whether or not it was recognised."
-msgstr "Un ffolder, byth y mewnflwch. Gwnewch reol ar eich gweinydd e-bost sy'n ffeilio post recriwtwyr yma; dyw Postulo ddim yn darllen dim byd arall. Caiff pob neges y mae'n ei darllen ei fflagio neu ei symud wedyn, p'un a gafodd ei hadnabod ai peidio."
+msgstr "Un ffolder, byth y mewnflwch. Gwnewch reol ar eich gweinydd e-bost sy'n ffeilio post recriwtwyr yma; nid yw Postulo yn darllen dim byd arall. Caiff pob neges y mae'n ei darllen ei fflagio neu ei symud wedyn, p'un a gafodd ei hadnabod ai peidio."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Password or app password"
 msgstr "Cyfrinair neu gyfrinair ap"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Port"
 msgstr "Porth"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Postulo never reads the inbox. Name the folder your mail rule files jobs mail into."
-msgstr "Dyw Postulo byth yn darllen y mewnflwch. Enwch y ffolder y mae eich rheol e-bost yn ffeilio post swyddi iddi."
+msgstr "Nid yw Postulo byth yn darllen y mewnflwch. Enwch y ffolder y mae eich rheol e-bost yn ffeilio post swyddi iddi."
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -198,120 +169,101 @@ msgid "Recognised"
 msgstr "Adnabuwyd"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Security"
 msgstr "Diogelwch"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Server"
 msgstr "Gweinydd"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "Sign-in refused. Check the username and the password."
 msgstr "Gwrthodwyd mewngofnodi. Gwiriwch yr enw defnyddiwr a'r cyfrinair."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Signed in, but there is no folder called “%(folder)s”."
 msgstr "Wedi mewngofnodi, ond nid oes ffolder o'r enw “%(folder)s”."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Signed in, but this server cannot move messages. Choose to flag them instead."
-msgstr "Wedi mewngofnodi, ond all y gweinydd hwn ddim symud negeseuon. Dewiswch eu fflagio yn lle hynny."
+msgstr "Wedi mewngofnodi, ond ni all y gweinydd hwn symud negeseuon. Dewiswch eu fflagio yn lle hynny."
 
 #: src/postulo_imap/sync.py
-#, fuzzy, python-format
+#, python-format
 msgid "Signed in. %(count)d message in “%(folder)s” is waiting to be read."
 msgid_plural "Signed in. %(count)d messages in “%(folder)s” are waiting to be read."
 msgstr[0] "Wedi mewngofnodi. Mae %(count)d neges yn “%(folder)s” yn aros i gael ei darllen."
 msgstr[1] "Wedi mewngofnodi. Mae %(count)d neges yn “%(folder)s” yn aros i gael eu darllen."
-msgstr[2] "Wedi mewngofnodi. Mae %(count)d o negeseuon yn “%(folder)s” yn aros i gael eu darllen."
-msgstr[3] "Wedi mewngofnodi. Mae %(count)d o negeseuon yn “%(folder)s” yn aros i gael eu darllen."
+msgstr[2] "Wedi mewngofnodi. Mae %(count)d neges yn “%(folder)s” yn aros i gael eu darllen."
+msgstr[3] "Wedi mewngofnodi. Mae %(count)d neges yn “%(folder)s” yn aros i gael eu darllen."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "STARTTLS (port 143)"
 msgstr "STARTTLS (porth 143)"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Subfolder"
 msgstr "Is-ffolder"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the address of a contact"
 msgstr "cyfeiriad cyswllt"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the company’s name in the message"
 msgstr "enw'r cwmni yn y neges"
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy, python-format
+#, python-format
 msgid "The folder “%(folder)s” could not be opened."
 msgstr "Ni ellid agor y ffolder “%(folder)s”."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The mailbox refused the search."
 msgstr "Gwrthododd y blwch post y chwiliad."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The mailbox refused to hand over the messages."
 msgstr "Gwrthododd y blwch post drosglwyddo'r negeseuon."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The mailbox refused to look for the folder."
 msgstr "Gwrthododd y blwch post chwilio am y ffolder."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The messages were read but could not be flagged; the next pass will read them again."
-msgstr "Cafodd y negeseuon eu darllen ond doedd dim modd eu fflagio; bydd y rownd nesaf yn eu darllen eto."
+msgstr "Cafodd y negeseuon eu darllen ond nid oedd modd eu fflagio; bydd y rhediad nesaf yn eu darllen eto."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy, python-format
+#, python-format
 msgid "The messages were read but could not be moved to “%(folder)s”; the next pass will read them again."
-msgstr "Cafodd y negeseuon eu darllen ond doedd dim modd eu symud i “%(folder)s”; bydd y rownd nesaf yn eu darllen eto."
+msgstr "Cafodd y negeseuon eu darllen ond nid oedd modd eu symud i “%(folder)s”; bydd y rhediad nesaf yn eu darllen eto."
 
 #: src/postulo_imap/mailbox.py
-#, fuzzy
 msgid "The messages were read, but this server cannot move them; the next pass will read them again."
-msgstr "Cafodd y negeseuon eu darllen, ond all y gweinydd hwn ddim eu symud; bydd y rownd nesaf yn eu darllen eto."
+msgstr "Cafodd y negeseuon eu darllen, ond ni all y gweinydd hwn eu symud; bydd y rhediad nesaf yn eu darllen eto."
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the role’s title in the message"
 msgstr "teitl y rôl yn y neges"
 
 #: src/postulo_imap/matching.py
-#, fuzzy
 msgid "the sender’s web domain"
 msgstr "parth gwe'r anfonwr"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "This folder does not keep flags of its own, so every message of the look-back is read again on each pass."
-msgstr "Dyw'r ffolder hon ddim yn cadw ei fflagiau ei hun, felly caiff pob neges yn y cyfnod edrych yn ôl ei darllen eto bob rownd."
+msgstr "Nid yw'r ffolder hon yn cadw ei fflagiau ei hun, felly caiff pob neges yn y cyfnod edrych yn ôl ei darllen eto ar bob rhediad."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "TLS (port 993)"
 msgstr "TLS (porth 993)"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Used only when messages are moved. Created if missing."
-msgstr "Dim ond pan symudir negeseuon y caiff ei ddefnyddio. Caiff ei greu os yw ar goll."
+msgstr "Dim ond pan symudir negeseuon y caiff ei defnyddio. Caiff ei chreu os yw ar goll."
 
 #: src/postulo_imap/sync.py
-#, fuzzy
 msgid "Username"
 msgstr "Enw defnyddiwr"
