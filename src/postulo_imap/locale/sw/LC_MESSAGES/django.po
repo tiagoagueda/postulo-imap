@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-23 12:47+0000\n"
+"PO-Revision-Date: 2026-11-01 14:35+0000\n"
 "Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Swahili <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/sw/>\n"
 "Language: sw\n"
@@ -18,15 +18,15 @@ msgstr ""
 #, fuzzy, python-format
 msgid "%(count)d could not be matched to an application; attach it by hand."
 msgid_plural "%(count)d could not be matched to an application; attach them by hand."
-msgstr[0] "%(count)d haikuweza kufanana na maombi; kuunganisha kwa mkono."
-msgstr[1] "Wala hakuweka mkono wake wa kuume juu ya madhabahu."
+msgstr[0] "%(count)d haikuweza kulinganishwa na ombi; iambatishe mwenyewe."
+msgstr[1] "%(count)d hazikuweza kulinganishwa na maombi; ziambatishe mwenyewe."
 
 #: src/postulo_imap/sync.py
 #, fuzzy, python-format
 msgid "%(count)d message could not be read and was skipped."
 msgid_plural "%(count)d messages could not be read and were skipped."
-msgstr[0] "Hata hivyo, ujumbe huo haukuweza kusomwa na kutupiliwa mbali."
-msgstr[1] "Hata hivyo, ujumbe huo haukuweza kusomwa na kutupiliwa mbali."
+msgstr[0] "Ujumbe %(count)d haukuweza kusomwa na umerukwa."
+msgstr[1] "Jumbe %(count)d hazikuweza kusomwa na zimerukwa."
 
 #: src/postulo_imap/sync.py
 #, fuzzy
