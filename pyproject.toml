@@ -1,6 +1,6 @@
 [project]
 name = "postulo-imap"
-version = "0.3.0"
+version = "0.5.0"
 description = "Read one folder of a mailbox over IMAP and suggest what it says happened: acknowledgements, rejections, interview invitations, assessments, offers. Nothing is written on a guess."
 readme = "README.md"
 requires-python = ">=3.12.4"
@@ -45,12 +45,9 @@ dev = [
     # "whatever `main` is today": a plugin tested against tomorrow's core is not tested
     # against the core anybody is running (postulo-imap#1).
     #
-    # A commit rather than `v0.3.0` or the `0.3.0` branch, for now, because neither exists
-    # in a usable form: there is no 0.3.0 tag, and the `0.3.0` branch is a snapshot from
-    # before the work converged back onto `main` — it has neither the destination guard
-    # this plugin now connects through (postulo/postulo#215) nor the catalogue tool the
-    # tests call. This becomes `@v0.3.0` the day that tag is made.
-    "postulo @ git+https://source.tiagoagueda.com/postulo/postulo.git@a8467ab21fac7e16c4a6faf825413e42381656e5",
+    # The core's release tag, never a branch: a plugin release moves it to the tag of the
+    # Postulo it is released beside (postulo/postulo#1090).
+    "postulo @ git+https://source.tiagoagueda.com/postulo/postulo.git@v0.5.0",
     "pytest>=8.3",
     "pytest-django>=4.14",
     "ruff>=0.16",
