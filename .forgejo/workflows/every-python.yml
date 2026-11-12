@@ -1,0 +1,81 @@
+# The tests on the Pythons a pull request does not test (postulo-imap#14).
+#
+# `ci.yml` runs the tests on the newest Python alone, on every push and pull request.
+# `requires-python` admits 3.12 and 3.13 as well, and a plugin is installed into the core's
+# environment on whichever of the three it runs, so those two run here instead, the way the
+# Postulo repository's own `every-python.yml` does (postulo/postulo#713, #1137): weekly, and
+# by themselves on a push to `main` that changes `pyproject.toml` (the version, the declared
+# Pythons, the dependencies) or `uv.lock` (the Postulo this plugin is tested against). A
+# release changes the version, so its merge runs these legs on the commit that is tagged.
+# Pull requests and other branches never: that keeps a pull request as long as it was.
+#
+# A workflow of its own rather than a matrix in `ci.yml`, because this Forgejo expands a
+# matrix before it knows the event, and fails a job whose `if` is false instead of skipping
+# it; the Postulo repository's `every-python.yml` says more. The shared action of
+# postulo/postulo#1170 is to replace this file with the one every plugin uses.
+name: Every Python
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - pyproject.toml
+      - uv.lock
+  schedule:
+    # Mondays, after the Postulo repository's own weekly runs.
+    - cron: "17 7 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  # Kept in step with `ci.yml`, whose comment says why both are pinned.
+  UV_VERSION: "0.12.17"
+  UV_INSTALLER_SHA256: "37b82230b28617c6c24fa52364fa28aa37f2aa40c114809a623f6b064a9730e5"
+
+jobs:
+  test:
+    name: "Test (Python ${{ matrix.python-version }})"
+    runs-on: ubuntu-latest
+    container:
+      # Node, because Forgejo runs `actions/checkout` as JavaScript inside this container;
+      # uv brings its own Python. `ci.yml` says more about why.
+      image: node:22-bookworm
+    strategy:
+      fail-fast: false
+      matrix:
+        # Every Python `requires-python` admits but the newest, which `ci.yml` runs on
+        # every push and pull request.
+        python-version: ["3.12", "3.13"]
+
+    # Only what depends on the interpreter: the lint, the audit and the catalogue checks
+    # read the same on every Python and stay in `ci.yml`.
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Install WeasyPrint's libraries
+        # Postulo's settings import its PDF backend, which loads Pango.
+        run: |
+          apt-get update
+          apt-get install -y --no-install-recommends libpango-1.0-0 libpangoft2-1.0-0 libharfbuzz0b libfontconfig1
+          rm -rf /var/lib/apt/lists/*
+
+      - name: Install uv
+        run: |
+          curl -LsSf "https://astral.sh/uv/${UV_VERSION}/install.sh" -o /tmp/uv-install.sh
+          echo "${UV_INSTALLER_SHA256}  /tmp/uv-install.sh" | sha256sum -c -
+          sh /tmp/uv-install.sh
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+
+      - name: Install the plugin, Postulo and the test tools
+        run: uv sync --locked --python "${{ matrix.python-version }}"
+
+      - name: Compile the catalogues
+        # The tests read compiled catalogues, and the .mo files are not committed.
+        run: uv run postulo-messages compile
+
+      - name: Test
+        run: uv run pytest
