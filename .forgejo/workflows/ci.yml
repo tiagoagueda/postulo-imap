@@ -1,5 +1,12 @@
 # Runs the plugin's tests inside a real Postulo, fetched from its repository by uv.
 #
+# What runs is the shared plugin CI, Postulo/plugin-ci (postulo/postulo#1170): one action
+# every plugin calls, holding the pinned uv, uv's cache, the lint, the catalogue checks, the
+# tests and the dependency audit, so a change to the plugin CI is made once rather than in
+# every repository. Its README lists the inputs. It is named by its full address because a
+# bare name resolves against the instance's default actions host, not this one, and by its
+# major tag, `v1`, which the plugin-ci repository moves forward with every compatible release.
+#
 # The job image is Node rather than Python, which looks backwards and is not: Forgejo runs
 # `actions/checkout` as JavaScript *inside the job container*, so a container without
 # `node` fails the checkout before a single step of this file runs — which is what every
@@ -9,25 +16,21 @@
 #
 # `runs-on` must name a label the runner actually advertises. A label no runner has does
 # not fail the job: it queues for ever, which looks exactly like CI passing.
+#
+# No `permissions:` block: this Forgejo does not support the field and warns that it is
+# ignored. Every job here only reads the repository, which is what a job has without asking.
+#
+# Time limits sit on steps: the runner honours a step's `timeout-minutes` and ignores a
+# job's. The numbers are generous; they are there to end a hang, not to time a run.
 name: CI
 
 on:
+  # No `tags:` here: a tag is a commit `main` already tested, and `release.yml` is the one
+  # workflow a tag starts (postulo/postulo#1170, PC6). The weekly look at the advisories is
+  # `weekly.yml`, which runs the audit alone.
   push:
     branches: [main]
-    tags: ["v*"]
   pull_request:
-
-# Every job here only reads the repository.
-permissions:
-  contents: read
-
-env:
-  # One version of uv, and the sha256 of that version's install.sh, checked before it is
-  # run: the script is the trust root for the uv binary it fetches, and `curl | sh` ran
-  # whatever the address answered (postulo/postulo#790, postulo-imap#24). Bump the two
-  # together, as the Postulo repository's `ci.yml` does.
-  UV_VERSION: "0.12.17"
-  UV_INSTALLER_SHA256: "37b82230b28617c6c24fa52364fa28aa37f2aa40c114809a623f6b064a9730e5"
 
 jobs:
   test:
@@ -44,62 +47,33 @@ jobs:
           persist-credentials: false
           # The whole history: the translation guard reads every commit it is given.
           fetch-depth: 0
+        timeout-minutes: 5
 
-      - name: Install WeasyPrint's libraries
-        # Postulo's settings import its PDF backend, which loads Pango.
-        run: |
-          apt-get update
-          apt-get install -y --no-install-recommends libpango-1.0-0 libpangoft2-1.0-0 libharfbuzz0b libfontconfig1
-          rm -rf /var/lib/apt/lists/*
+      - name: Install, lint, check the catalogues and test
+        # WeasyPrint's libraries, uv (pinned, its installer checked by sha256,
+        # postulo-imap#24), `uv sync --locked --python 3.14`, ruff, the catalogue checks and
+        # guard, Weblate's gate on its own pull request, the tests.
+        uses: https://source.tiagoagueda.com/Postulo/plugin-ci@v1
+        timeout-minutes: 30
 
-      - name: Install uv
-        run: |
-          curl -LsSf "https://astral.sh/uv/${UV_VERSION}/install.sh" -o /tmp/uv-install.sh
-          echo "${UV_INSTALLER_SHA256}  /tmp/uv-install.sh" | sha256sum -c -
-          sh /tmp/uv-install.sh
-          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+  audit:
+    name: Audit the locked dependencies
+    # The lock rather than an installed environment, without Postulo (a git dependency, not
+    # on PyPI; the core audits its own lock), `--strict` so that a dependency that cannot be
+    # looked up still fails. A job of its own, out of `test`, so that it needs no install and
+    # `weekly.yml` can run it alone.
+    runs-on: ubuntu-latest
+    container:
+      image: node:22-bookworm
 
-      - name: Install the plugin, Postulo and the test tools
-        # --locked: the lock names the Postulo this plugin is released beside, and a lock
-        # that no longer matches pyproject.toml is a resolution nobody reviewed.
-        run: uv sync --locked --python 3.14
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+        timeout-minutes: 5
 
       - name: Audit the Python dependencies
-        # The lock rather than the installed environment: Postulo is a git dependency, not on
-        # PyPI, so it is left out of the export (the core's own audit does the same for
-        # itself). `--strict` keeps a dependency that cannot be looked up a failure.
-        run: |
-          uv export --no-emit-project --no-emit-package postulo --all-groups \
-            --format requirements-txt --no-hashes > /tmp/locked-requirements.txt
-          uv run --with pip-audit==2.10.1 pip-audit --strict --progress-spinner off \
-            -r /tmp/locked-requirements.txt
-
-      - name: Lint
-        run: |
-          uv run ruff check --output-format=full .
-          uv run ruff format --check .
-
-      - name: Check the catalogues and refuse translations written outside Weblate
-        # Postulo's own catalogue tool, installed with Postulo as a dev dependency; no GNU
-        # gettext in the image. The catalogues are in Weblate's layout, so its pull requests
-        # pass `extract --check` unchanged; `guard` refuses a commit that writes, changes or
-        # reviews a translation unless Weblate made it (postulo/postulo#706). The .mo files
-        # are not committed: `compile` writes them for the tests and for the wheel.
-        env:
-          BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
-        run: |
-          git config --global --add safe.directory "$GITHUB_WORKSPACE"
-          uv run postulo-messages extract --check
-          uv run postulo-messages check
-          uv run postulo-messages guard --base "$BASE"
-          uv run postulo-messages compile
-
-      - name: Weblate's pull request leaves French and Portuguese complete
-        # A commit adds a string with an empty slot; Weblate drafts it by machine, and its
-        # pull request brings the drafts in. A draft counts (postulo/postulo#347).
-        if: github.head_ref == 'weblate'
-        run: uv run postulo-messages gate fr-FR pt-PT
-
-      - name: Test
-        run: uv run pytest
-
+        uses: https://source.tiagoagueda.com/Postulo/plugin-ci@v1
+        with:
+          mode: audit
+        timeout-minutes: 15
