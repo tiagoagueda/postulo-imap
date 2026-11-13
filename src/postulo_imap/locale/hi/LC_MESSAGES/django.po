@@ -70,8 +70,8 @@ msgid "Flag it with %(keyword)s"
 msgstr "%(keyword)s से फ़्लैग करें"
 
 #: src/postulo_imap/sync.py
-msgid "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means every recent message is read again; nothing is suggested twice either way."
-msgstr "ज़्यादातर क्लाइंट में फ़्लैग दिखाई नहीं देता और इससे हर बार की जांच छोटी रहती है। मेलबॉक्स को ज्यों का त्यों छोड़ने पर हाल के सभी मैसेज फिर से पढ़े जाते हैं; दोनों ही तरह से कोई सुझाव दो बार नहीं दिया जाता।"
+msgid "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means a pass reads only the messages that arrived since the last one; nothing is suggested twice either way."
+msgstr ""
 
 #: src/postulo_imap/sync.py
 msgid "Folder to read"
@@ -245,8 +245,8 @@ msgid "the sender’s web domain"
 msgstr "भेजने वाले का वेब डोमेन"
 
 #: src/postulo_imap/sync.py
-msgid "This folder does not keep flags of its own, so every message of the look-back is read again on each pass."
-msgstr "यह फ़ोल्डर अपने फ़्लैग नहीं रखता, इसलिए “कितने दिन पीछे देखें” की अवधि का हर मैसेज हर बार फिर से पढ़ा जाता है।"
+msgid "This folder does not keep flags of its own, so Postulo remembers where the last pass stopped instead of flagging what it read."
+msgstr ""
 
 #: src/postulo_imap/sync.py
 msgid "TLS (port 993)"

@@ -70,8 +70,8 @@ msgid "Flag it with %(keyword)s"
 msgstr "Contrassegnalo con %(keyword)s"
 
 #: src/postulo_imap/sync.py
-msgid "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means every recent message is read again; nothing is suggested twice either way."
-msgstr "Il contrassegno è invisibile nella maggior parte dei client e mantiene breve ogni passaggio. Lasciare intatta la casella significa rileggere ogni messaggio recente; in entrambi i casi nulla viene suggerito due volte."
+msgid "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means a pass reads only the messages that arrived since the last one; nothing is suggested twice either way."
+msgstr ""
 
 #: src/postulo_imap/sync.py
 msgid "Folder to read"
@@ -245,8 +245,8 @@ msgid "the sender’s web domain"
 msgstr "il dominio web del mittente"
 
 #: src/postulo_imap/sync.py
-msgid "This folder does not keep flags of its own, so every message of the look-back is read again on each pass."
-msgstr "Questa cartella non conserva contrassegni propri, quindi ogni messaggio del periodo a ritroso viene riletto a ogni passaggio."
+msgid "This folder does not keep flags of its own, so Postulo remembers where the last pass stopped instead of flagging what it read."
+msgstr ""
 
 #: src/postulo_imap/sync.py
 msgid "TLS (port 993)"

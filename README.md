@@ -43,7 +43,7 @@ Then, under **Settings → Connections → Add a connection**, choose *Mailbox (
 | Username, password | An app password wherever the server offers one. Gmail requires one with two-factor authentication on. Stored encrypted. |
 | Folder to read | *Jobs*, or whatever you called it. |
 | Once read | Flag with `$Postulo` (default, invisible in most clients), move to a subfolder, or leave the mailbox completely untouched. |
-| Look back | How many days a pass considers, 1 to 3650. Thirty by default. |
+| Look back | How many days a pass considers, 1 to 3650. Thirty by default. Where the mailbox is left untouched, or the folder keeps no flags, only the first pass reads the whole look-back: lengthening it later does not reach back for mail already passed over, and changing it starts the reading again, as any edit to the connection does. |
 | Run | Every 15 minutes to once a day, honoured by the scheduler; *Sync now* runs at once. |
 
 Press *Test*: it signs in and says how many messages are waiting.
@@ -83,8 +83,12 @@ Not the body, beyond that excerpt, and no attachments.
 **What is transferred**: a pass asks the server for 25 messages at a time, learns each one's
 size first, and takes a message above a megabyte as its headers and the first 64 KiB of its
 text only, so attachments are not downloaded and a folder's size does not set the memory a
-pass needs. When you leave the mailbox untouched, a message already suggested is recognised
-from its `Message-ID` header and not downloaded again. A message the plugin cannot read is
+pass needs. When you leave the mailbox untouched, or the folder keeps no flags of ours, the
+plugin remembers the folder's `UIDVALIDITY` and the last UID it read (Postulo keeps this
+between passes), and the next pass asks only for messages above it; if the server changes
+`UIDVALIDITY` the folder was rebuilt and the look-back is read again, where a message already
+suggested is recognised from its `Message-ID` header and not downloaded again. A pass cut
+short remembers only what it read to the end, so the next one resumes there. A message the plugin cannot read is
 counted in the connection's notes, flagged with the rest, and does not stop the pass.
 
 ## Adding a language

@@ -31,6 +31,7 @@ from postulo.plugins.api import (
     SyncReport,
     TestResult,
     suggest,
+    sync_state,
 )
 
 from . import __version__, classifying, mailbox
@@ -63,6 +64,25 @@ def _folder(config: dict) -> str:
             )
         )
     return folder
+
+
+def _last_uid(state: dict, folder: str, uidvalidity: int | None) -> int | None:
+    """The last UID an earlier pass read in this folder, if its UIDs still mean the same.
+
+    ``None`` when nothing was kept, when it was kept for another folder, or when the folder's
+    UIDVALIDITY has changed (RFC 3501 2.3.1.1): every UID is then new, and the look-back is
+    read as it was before there was a bookmark.
+    """
+    last = state.get("last_uid")
+    if (
+        state.get("folder") != folder
+        or state.get("uidvalidity") != uidvalidity
+        or isinstance(last, bool)
+        or not isinstance(last, int)
+        or last < 0
+    ):
+        return None
+    return last
 
 
 class ImapSync:
@@ -132,8 +152,8 @@ class ImapSync:
                 help=str(
                     _(
                         "Flagging is invisible in most clients and keeps each pass short. Leaving "
-                        "the mailbox untouched means every recent message is read again; nothing "
-                        "is suggested twice either way."
+                        "the mailbox untouched means a pass reads only the messages that arrived "
+                        "since the last one; nothing is suggested twice either way."
                     )
                 ),
             ),
@@ -271,12 +291,21 @@ class ImapSync:
                 report.notes.append(
                     str(
                         _(
-                            "This folder does not keep flags of its own, so every message of the "
-                            "look-back is read again on each pass."
+                            "This folder does not keep flags of its own, so Postulo remembers "
+                            "where the last pass stopped instead of flagging what it read."
                         )
                     )
                 )
-            uids = box.unread_uids(since_days=mailbox.days_of(config), use_keyword=use_keyword)
+            # Where a pass that flags nothing left off (postulo-imap#34): the folder's UIDVALIDITY
+            # and the last UID read. Moving messages away needs no bookmark, and the keyword is
+            # its own.
+            tracks = not use_keyword and how != MARK_MOVE and box.uidvalidity is not None
+            after_uid = (
+                _last_uid(sync_state(connection), folder, box.uidvalidity) if tracks else None
+            )
+            uids = box.unread_uids(
+                since_days=mailbox.days_of(config), use_keyword=use_keyword, after_uid=after_uid
+            )
         except MailboxError as error:
             return SyncReport(error=str(error))
         applications = list(
@@ -334,6 +363,15 @@ class ImapSync:
                 box.move(done, str(config.get("move_to") or "Jobs/Read"))
         except MailboxError as error:
             report.notes.append(str(error))
+
+        if tracks and done:
+            # Only batches read to the end: a pass cut short resumes where it stopped. With
+            # nothing read the state is left as it is.
+            report.state = {
+                "folder": folder,
+                "uidvalidity": box.uidvalidity,
+                "last_uid": max(done),
+            }
 
         if unmatched:
             report.notes.append(

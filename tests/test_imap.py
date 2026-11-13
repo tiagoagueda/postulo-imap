@@ -99,6 +99,11 @@ class FakeIMAP:
         #: What the server says it can do, and what it says about the folder it selected.
         self.capabilities = {"MOVE", "UIDPLUS"}
         self.permanent_flags: tuple[bytes, ...] | None = None
+        #: What SELECT says about the folder's UIDs (RFC 3501 2.3.1.1); a test changes it to
+        #: pretend the folder was rebuilt. ``None`` leaves it out of the answer.
+        self.uidvalidity: int | None = 1_700_000_000
+        #: Every SEARCH, as the criteria it was given.
+        self.searches: list[list] = []
         self.copied: list[tuple[list[int], str]] = []
         FakeIMAP.instances.append(self)
 
@@ -135,6 +140,9 @@ class FakeIMAP:
             raise ValueError(f"[NONEXISTENT] Unknown Mailbox: {name}")
         self.selected, self.readonly = name, readonly
         answer = {b"EXISTS": len(self.folders[name])}
+        if self.uidvalidity is not None:
+            answer[b"UIDVALIDITY"] = self.uidvalidity
+            answer[b"UIDNEXT"] = max(self.folders[name], default=0) + 1
         if self.permanent_flags is not None:
             answer[b"PERMANENTFLAGS"] = self.permanent_flags
         return answer
@@ -154,7 +162,17 @@ class FakeIMAP:
         messages = self.folders[self.selected]
         exclude_keyword = None
         since = None
+        wanted = None
         rest = list(criteria)
+        self.searches.append(list(criteria))
+        if rest[:1] == ["UID"]:
+            # `n:*` as RFC 3501 6.4.8 has it: the highest UID is always in the range, even
+            # when it is below n.
+            low = int(rest[1].split(":")[0])
+            wanted = {uid for uid in messages if uid >= low} or (
+                {max(messages)} if messages else set()
+            )
+            rest = rest[2:]
         if rest[:2] == ["NOT", "KEYWORD"]:
             exclude_keyword = rest[2]
             rest = rest[3:]
@@ -162,6 +180,8 @@ class FakeIMAP:
             since = rest[1]
         found = []
         for uid, message in messages.items():
+            if wanted is not None and uid not in wanted:
+                continue
             if exclude_keyword and exclude_keyword in message["flags"]:
                 continue
             if since and message["date"] < since:

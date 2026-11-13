@@ -70,9 +70,8 @@ msgid "Flag it with %(keyword)s"
 msgstr "Оны %(keyword)s жалаушасымен белгілеу"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
-msgid "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means every recent message is read again; nothing is suggested twice either way."
-msgstr "Жалаушалар көптеген клиенттерде көрінбейді және әр өтуді қысқа етеді. Пошта жәшігіне тиіспесе, соңғы хаттардың бәрі қайта оқылады; екі жағдайда да ештеңе екі рет ұсынылмайды."
+msgid "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means a pass reads only the messages that arrived since the last one; nothing is suggested twice either way."
+msgstr ""
 
 #: src/postulo_imap/sync.py
 msgid "Folder to read"
@@ -248,8 +247,8 @@ msgid "the sender’s web domain"
 msgstr "жіберушінің веб-домені"
 
 #: src/postulo_imap/sync.py
-msgid "This folder does not keep flags of its own, so every message of the look-back is read again on each pass."
-msgstr "Бұл қалта өз жалаушаларын сақтамайды, сондықтан артқа қарау кезеңіндегі әр хат әр өтуде қайта оқылады."
+msgid "This folder does not keep flags of its own, so Postulo remembers where the last pass stopped instead of flagging what it read."
+msgstr ""
 
 #: src/postulo_imap/sync.py
 msgid "TLS (port 993)"

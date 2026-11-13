@@ -325,6 +325,9 @@ class Mailbox:
         self.folder = folder
         #: Whether the folder keeps keywords of its own, as far as it said. Unknown is yes.
         self.keeps_keywords = True
+        #: The folder's UIDVALIDITY as it said so on selecting it, or ``None`` when it did
+        #: not say. The UIDs below it mean something only while this stays the same.
+        self.uidvalidity: int | None = None
 
     def exists(self, folder: str | None = None) -> bool:
         try:
@@ -341,6 +344,8 @@ class Mailbox:
             raise MailboxError(
                 str(_("The folder “%(folder)s” could not be opened.")) % {"folder": self.folder}
             ) from error
+        validity = answer.get(b"UIDVALIDITY") if isinstance(answer, dict) else None
+        self.uidvalidity = int(validity) if isinstance(validity, int) else None
         permanent = answer.get(b"PERMANENTFLAGS") if isinstance(answer, dict) else None
         if permanent:
             # RFC 3501 §6.3.1: ``\*`` says a client may create new keywords. A folder without
@@ -348,23 +353,37 @@ class Mailbox:
             self.keeps_keywords = b"\\*" in permanent or KEYWORD.encode() in permanent
 
     def unread_uids(
-        self, *, since_days: int = DEFAULT_SINCE_DAYS, use_keyword: bool = True
+        self,
+        *,
+        since_days: int = DEFAULT_SINCE_DAYS,
+        use_keyword: bool = True,
+        after_uid: int | None = None,
     ) -> list[int]:
         """Messages worth looking at: not yet marked, and recent enough.
 
         With the keyword in use, "not yet marked" is exactly that. Without it — read-only
         mode, or a server that refuses keywords — every recent message is read again, and
         nothing is filed twice because a suggestion is keyed on the message's identifier.
+
+        With ``after_uid`` -- the last UID an earlier pass read, of this same UIDVALIDITY --
+        only messages above it are asked for. ``n:*`` always includes the highest UID in the
+        folder, even when that is below ``n`` (RFC 3501 6.4.8), so an answer is cut to what is
+        really above it.
         """
         since = (dt.datetime.now(dt.UTC) - dt.timedelta(days=since_days)).date()
         criteria: list = ["SINCE", since]
         if use_keyword:
             criteria = ["NOT", "KEYWORD", KEYWORD, *criteria]
+        if after_uid is not None:
+            criteria = ["UID", f"{after_uid + 1}:*", *criteria]
         try:
-            return sorted(self.client.search(criteria))
+            found = sorted(self.client.search(criteria))
         except Exception as error:
             logger.info("The mailbox refused the search: %s", error)
             raise MailboxError(str(_("The mailbox refused the search."))) from error
+        if after_uid is not None:
+            found = [uid for uid in found if uid > after_uid]
+        return found
 
     @staticmethod
     def batches(uids: list[int]) -> Iterator[list[int]]:

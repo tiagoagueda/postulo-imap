@@ -45,9 +45,10 @@ dev = [
     # "whatever `main` is today": a plugin tested against tomorrow's core is not tested
     # against the core anybody is running (postulo-imap#1).
     #
-    # The core's release tag, never a branch: a plugin release moves it to the tag of the
-    # Postulo it is released beside (postulo/postulo#1090).
-    "postulo @ git+https://source.tiagoagueda.com/postulo/postulo.git@v0.5.0",
+    # A commit of the core while the next release is not tagged: this one holds the state a
+    # sync keeps between runs (postulo/postulo#1165). Never a branch; a plugin release moves
+    # it to the tag of the Postulo it is released beside (postulo/postulo#1090).
+    "postulo @ git+https://source.tiagoagueda.com/postulo/postulo.git@87cb1d4f7471bbcddf7a290146d934da93ce6ac4",
     "pytest>=8.3",
     "pytest-django>=4.14",
     "ruff>=0.16",

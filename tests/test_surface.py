@@ -54,6 +54,7 @@ def test_the_surface_is_what_this_plugin_actually_uses():
         "approve_host",
         "language_match",
         "suggest",
+        "sync_state",
     ],
 )
 def test_every_name_this_plugin_needs_is_promised(name: str):

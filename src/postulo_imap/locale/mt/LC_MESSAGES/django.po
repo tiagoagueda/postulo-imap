@@ -75,8 +75,8 @@ msgid "Flag it with %(keyword)s"
 msgstr "Immarkah b'%(keyword)s"
 
 #: src/postulo_imap/sync.py
-msgid "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means every recent message is read again; nothing is suggested twice either way."
-msgstr "L-immarkar ma jidhirx fil-biċċa l-kbira tal-klijenti u jżomm kull tħaddima qasira. Jekk il-kaxxa tal-posta titħalla kif inhi, kull messaġġ riċenti jinqara mill-ġdid; fiż-żewġ każi xejn ma jiġi ssuġġerit darbtejn."
+msgid "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means a pass reads only the messages that arrived since the last one; nothing is suggested twice either way."
+msgstr ""
 
 #: src/postulo_imap/sync.py
 msgid "Folder to read"
@@ -252,9 +252,8 @@ msgid "the sender’s web domain"
 msgstr "id-dominju tal-web tal-mittent"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
-msgid "This folder does not keep flags of its own, so every message of the look-back is read again on each pass."
-msgstr "Dan il-folder ma jżommx flags tiegħu, għalhekk kull messaġġ fil-perjodu ta' “Ħares lura” jerġa' jinqara f'kull tħaddima."
+msgid "This folder does not keep flags of its own, so Postulo remembers where the last pass stopped instead of flagging what it read."
+msgstr ""
 
 #: src/postulo_imap/sync.py
 msgid "TLS (port 993)"

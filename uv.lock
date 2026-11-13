@@ -887,7 +887,7 @@ wheels = [
 [[package]]
 name = "postulo"
 version = "0.5.0"
-source = { git = "https://source.tiagoagueda.com/postulo/postulo.git?rev=v0.5.0#f0461985a1cde87e566001bbf9944e6ca539ea81" }
+source = { git = "https://source.tiagoagueda.com/postulo/postulo.git?rev=87cb1d4f7471bbcddf7a290146d934da93ce6ac4#87cb1d4f7471bbcddf7a290146d934da93ce6ac4" }
 dependencies = [
     { name = "babel" },
     { name = "cryptography" },
@@ -935,7 +935,7 @@ requires-dist = [{ name = "imapclient", specifier = ">=3.0" }]
 
 [package.metadata.requires-dev]
 dev = [
-    { name = "postulo", git = "https://source.tiagoagueda.com/postulo/postulo.git?rev=v0.5.0" },
+    { name = "postulo", git = "https://source.tiagoagueda.com/postulo/postulo.git?rev=87cb1d4f7471bbcddf7a290146d934da93ce6ac4" },
     { name = "pytest", specifier = ">=8.3" },
     { name = "pytest-django", specifier = ">=4.14" },
     { name = "ruff", specifier = ">=0.16" },

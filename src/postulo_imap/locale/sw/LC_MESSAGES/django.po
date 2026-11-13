@@ -79,9 +79,8 @@ msgid "Flag it with %(keyword)s"
 msgstr "Iwekee alama %(keyword)s"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
-msgid "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means every recent message is read again; nothing is suggested twice either way."
-msgstr "Bendera ni asiyeonekana katika wateja wengi na anaendelea kila kupita mfupi. Kuacha sanduku la barua bila kuguswa inamaanisha kila ujumbe wa hivi karibuni unasomwa tena; hakuna kinachopendekezwa mara mbili kwa njia yoyote."
+msgid "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means a pass reads only the messages that arrived since the last one; nothing is suggested twice either way."
+msgstr ""
 
 #: src/postulo_imap/sync.py
 #, fuzzy
@@ -291,9 +290,8 @@ msgid "the sender’s web domain"
 msgstr "domain ya mtumiaji"
 
 #: src/postulo_imap/sync.py
-#, fuzzy
-msgid "This folder does not keep flags of its own, so every message of the look-back is read again on each pass."
-msgstr "Folder hii haina kuweka bendera yake mwenyewe, hivyo kila ujumbe wa kuangalia-nyuma ni kusoma tena juu ya kila kupita."
+msgid "This folder does not keep flags of its own, so Postulo remembers where the last pass stopped instead of flagging what it read."
+msgstr ""
 
 #: src/postulo_imap/sync.py
 #, fuzzy

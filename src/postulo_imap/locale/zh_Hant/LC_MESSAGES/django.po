@@ -72,8 +72,8 @@ msgid "Flag it with %(keyword)s"
 msgstr "以 %(keyword)s 標記"
 
 #: src/postulo_imap/sync.py
-msgid "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means every recent message is read again; nothing is suggested twice either way."
-msgstr "標記在多數郵件軟體中看不到，且能讓每一輪讀取保持簡短。若不變動信箱，每一輪都會重新讀取所有近期郵件；無論哪種方式，都不會重複提供建議。"
+msgid "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means a pass reads only the messages that arrived since the last one; nothing is suggested twice either way."
+msgstr ""
 
 #: src/postulo_imap/sync.py
 msgid "Folder to read"
@@ -247,8 +247,8 @@ msgid "the sender’s web domain"
 msgstr "寄件者的網域"
 
 #: src/postulo_imap/sync.py
-msgid "This folder does not keep flags of its own, so every message of the look-back is read again on each pass."
-msgstr "此資料夾不保存自己的標記，因此每一輪都會重新讀取回溯期間內的每封郵件。"
+msgid "This folder does not keep flags of its own, so Postulo remembers where the last pass stopped instead of flagging what it read."
+msgstr ""
 
 #: src/postulo_imap/sync.py
 msgid "TLS (port 993)"
