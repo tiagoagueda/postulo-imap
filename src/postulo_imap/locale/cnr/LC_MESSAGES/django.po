@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-24 23:26+0000\n"
+"PO-Revision-Date: 2026-11-14 10:50+0000\n"
 "Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Montenegrin <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/cnr/>\n"
 "Language: cnr\n"
@@ -73,7 +73,7 @@ msgstr "Označi zastavicom %(keyword)s"
 
 #: src/postulo_imap/sync.py
 msgid "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means a pass reads only the messages that arrived since the last one; nothing is suggested twice either way."
-msgstr ""
+msgstr "Označavanje zastavicom nije vidljivo u većini klijenata i skraćuje svaki prolaz. Ako se sanduče ostavi netaknuto, prolaz čita samo poruke koje su stigle od prethodnog; u oba slučaja ništa se ne predlaže dvaput."
 
 #: src/postulo_imap/sync.py
 msgid "Folder to read"
@@ -249,7 +249,7 @@ msgstr "veb-domen pošiljaoca"
 
 #: src/postulo_imap/sync.py
 msgid "This folder does not keep flags of its own, so Postulo remembers where the last pass stopped instead of flagging what it read."
-msgstr ""
+msgstr "Ova fascikla ne čuva sopstvene zastavice, pa Postulo umjesto označavanja pročitanog pamti dokle je stigao posljednji prolaz."
 
 #: src/postulo_imap/sync.py
 msgid "TLS (port 993)"

@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-25 02:53+0000\n"
+"PO-Revision-Date: 2026-11-14 10:49+0000\n"
 "Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Chinese (Traditional Han script) <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/zh_Hant/>\n"
 "Language: zh_Hant\n"
@@ -72,8 +72,9 @@ msgid "Flag it with %(keyword)s"
 msgstr "以 %(keyword)s 標記"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means a pass reads only the messages that arrived since the last one; nothing is suggested twice either way."
-msgstr ""
+msgstr "多數用戶端看不到標幟，而且能讓每一輪讀取更短。不更動信箱表示每一輪只讀取自上一輪以來送達的郵件；不論哪種方式，都不會重複建議同一封郵件。"
 
 #: src/postulo_imap/sync.py
 msgid "Folder to read"
@@ -248,7 +249,7 @@ msgstr "寄件者的網域"
 
 #: src/postulo_imap/sync.py
 msgid "This folder does not keep flags of its own, so Postulo remembers where the last pass stopped instead of flagging what it read."
-msgstr ""
+msgstr "此資料夾不保存自己的標幟，因此 Postulo 會記住上一輪停在哪裡，而不是標幟已讀取的郵件。"
 
 #: src/postulo_imap/sync.py
 msgid "TLS (port 993)"

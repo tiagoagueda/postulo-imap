@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-24 01:46+0000\n"
+"PO-Revision-Date: 2026-11-14 10:49+0000\n"
 "Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Hungarian <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/hu/>\n"
 "Language: hu\n"
@@ -71,7 +71,7 @@ msgstr "Megjelölés ezzel: %(keyword)s"
 
 #: src/postulo_imap/sync.py
 msgid "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means a pass reads only the messages that arrived since the last one; nothing is suggested twice either way."
-msgstr ""
+msgstr "A megjelölést a legtöbb levelezőprogram nem mutatja, és rövidre fogja az egyes köröket. Ha a postafiókot érintetlenül hagyja, a kör csak az előző óta érkezett üzeneteket olvassa; egyik esetben sem javasol semmit kétszer."
 
 #: src/postulo_imap/sync.py
 msgid "Folder to read"
@@ -246,7 +246,7 @@ msgstr "a feladó webes domainje"
 
 #: src/postulo_imap/sync.py
 msgid "This folder does not keep flags of its own, so Postulo remembers where the last pass stopped instead of flagging what it read."
-msgstr ""
+msgstr "Ez a mappa nem tart saját jelölőket, ezért a Postulo megjegyzi, hol állt meg az előző kör, ahelyett hogy megjelölné az elolvasott üzeneteket."
 
 #: src/postulo_imap/sync.py
 msgid "TLS (port 993)"

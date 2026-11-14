@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-31 00:04+0000\n"
+"PO-Revision-Date: 2026-11-14 10:49+0000\n"
 "Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Bengali <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/bn/>\n"
 "Language: bn\n"
@@ -71,7 +71,7 @@ msgstr "%(keyword)s দিয়ে চিহ্নিত করুন"
 
 #: src/postulo_imap/sync.py
 msgid "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means a pass reads only the messages that arrived since the last one; nothing is suggested twice either way."
-msgstr ""
+msgstr "বেশির ভাগ ক্লায়েন্টে ফ্ল্যাগ চোখে পড়ে না এবং এতে প্রতিটি পাস ছোট থাকে। মেলবক্স অপরিবর্তিত রাখলে প্রতিটি পাস শুধু গত পাসের পরে আসা বার্তাগুলো পড়ে; দুই ক্ষেত্রেই কিছু দুবার প্রস্তাব করা হয় না।"
 
 #: src/postulo_imap/sync.py
 msgid "Folder to read"
@@ -246,7 +246,7 @@ msgstr "প্রেরকের ওয়েব ডোমেইন"
 
 #: src/postulo_imap/sync.py
 msgid "This folder does not keep flags of its own, so Postulo remembers where the last pass stopped instead of flagging what it read."
-msgstr ""
+msgstr "এই ফোল্ডার নিজের ফ্ল্যাগ রাখে না, তাই পড়া বার্তায় ফ্ল্যাগ দেওয়ার বদলে Postulo মনে রাখে গত পাস কোথায় থেমেছিল।"
 
 #: src/postulo_imap/sync.py
 msgid "TLS (port 993)"

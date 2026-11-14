@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-24 22:19+0000\n"
+"PO-Revision-Date: 2026-11-14 10:49+0000\n"
 "Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Albanian <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/sq/>\n"
 "Language: sq\n"
@@ -71,7 +71,7 @@ msgstr "Shënoje me %(keyword)s"
 
 #: src/postulo_imap/sync.py
 msgid "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means a pass reads only the messages that arrived since the last one; nothing is suggested twice either way."
-msgstr ""
+msgstr "Shënimi me flamur nuk duket në shumicën e klientëve dhe e mban çdo kalim të shkurtër. Kur kutia postare lihet e paprekur, një kalim lexon vetëm mesazhet që kanë mbërritur që nga kalimi i fundit; në të dyja rastet, asgjë nuk sugjerohet dy herë."
 
 #: src/postulo_imap/sync.py
 msgid "Folder to read"
@@ -249,7 +249,7 @@ msgstr "domeni i uebit i dërguesit"
 
 #: src/postulo_imap/sync.py
 msgid "This folder does not keep flags of its own, so Postulo remembers where the last pass stopped instead of flagging what it read."
-msgstr ""
+msgstr "Kjo dosje nuk mban flamuj të vetët, ndaj Postulo-ja kujton ku ka ndalur kalimi i fundit, në vend që të shënojë me flamur atë që ka lexuar."
 
 #: src/postulo_imap/sync.py
 msgid "TLS (port 993)"

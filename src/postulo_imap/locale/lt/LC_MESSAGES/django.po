@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-24 01:46+0000\n"
+"PO-Revision-Date: 2026-11-14 10:49+0000\n"
 "Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Lithuanian <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/lt/>\n"
 "Language: lt\n"
@@ -73,7 +73,7 @@ msgstr "Pažymėti vėliavėle %(keyword)s"
 
 #: src/postulo_imap/sync.py
 msgid "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means a pass reads only the messages that arrived since the last one; nothing is suggested twice either way."
-msgstr ""
+msgstr "Žymėjimas vėliavėle daugumoje klientų nematomas ir leidžia kiekvieną peržiūrą atlikti greitai. Palikus pašto dėžutę nepakeistą, peržiūros metu skaitomi tik nuo ankstesnės peržiūros gauti laiškai; abiem atvejais niekas nesiūlomas du kartus."
 
 #: src/postulo_imap/sync.py
 msgid "Folder to read"
@@ -249,7 +249,7 @@ msgstr "siuntėjo žiniatinklio domenas"
 
 #: src/postulo_imap/sync.py
 msgid "This folder does not keep flags of its own, so Postulo remembers where the last pass stopped instead of flagging what it read."
-msgstr ""
+msgstr "Šis aplankas nesaugo savų vėliavėlių, todėl Postulo prisimena, kur sustojo paskutinė peržiūra, užuot pažymėjusi perskaitytus laiškus vėliavėle."
 
 #: src/postulo_imap/sync.py
 msgid "TLS (port 993)"

@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-24 03:42+0000\n"
+"PO-Revision-Date: 2026-11-14 10:48+0000\n"
 "Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Czech <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/cs/>\n"
 "Language: cs\n"
@@ -74,7 +74,7 @@ msgstr "Označit příznakem %(keyword)s"
 
 #: src/postulo_imap/sync.py
 msgid "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means a pass reads only the messages that arrived since the last one; nothing is suggested twice either way."
-msgstr ""
+msgstr "Příznaky nejsou ve většině klientů vidět a zkracují každý průchod. Když se schránka nechá beze změny, průchod čte jen zprávy, které dorazily od posledního; v obou případech se nic nenavrhuje dvakrát."
 
 #: src/postulo_imap/sync.py
 msgid "Folder to read"
@@ -250,7 +250,7 @@ msgstr "webová doména odesílatele"
 
 #: src/postulo_imap/sync.py
 msgid "This folder does not keep flags of its own, so Postulo remembers where the last pass stopped instead of flagging what it read."
-msgstr ""
+msgstr "Tato složka si nevede vlastní příznaky, takže si Postulo místo označování přečteného příznakem pamatuje, kde poslední průchod skončil."
 
 #: src/postulo_imap/sync.py
 msgid "TLS (port 993)"

@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-24 01:51+0000\n"
+"PO-Revision-Date: 2026-11-14 10:49+0000\n"
 "Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Italian <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/it/>\n"
 "Language: it\n"
@@ -70,8 +70,9 @@ msgid "Flag it with %(keyword)s"
 msgstr "Contrassegnalo con %(keyword)s"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means a pass reads only the messages that arrived since the last one; nothing is suggested twice either way."
-msgstr ""
+msgstr "Il contrassegno è invisibile nella maggior parte dei client e mantiene breve ogni passaggio. Lasciare la casella intatta significa che un passaggio legge solo i messaggi arrivati dall'ultimo; in entrambi i casi nulla viene suggerito due volte."
 
 #: src/postulo_imap/sync.py
 msgid "Folder to read"
@@ -245,8 +246,9 @@ msgid "the sender’s web domain"
 msgstr "il dominio web del mittente"
 
 #: src/postulo_imap/sync.py
+#, fuzzy
 msgid "This folder does not keep flags of its own, so Postulo remembers where the last pass stopped instead of flagging what it read."
-msgstr ""
+msgstr "Questa cartella non conserva contrassegni propri, quindi Postulo ricorda dove si è fermato l'ultimo passaggio invece di contrassegnare ciò che ha letto."
 
 #: src/postulo_imap/sync.py
 msgid "TLS (port 993)"

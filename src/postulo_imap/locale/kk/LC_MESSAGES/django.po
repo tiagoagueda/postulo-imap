@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-25 04:04+0000\n"
+"PO-Revision-Date: 2026-11-14 10:50+0000\n"
 "Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Kazakh <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/kk/>\n"
 "Language: kk\n"
@@ -71,7 +71,7 @@ msgstr "Оны %(keyword)s жалаушасымен белгілеу"
 
 #: src/postulo_imap/sync.py
 msgid "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means a pass reads only the messages that arrived since the last one; nothing is suggested twice either way."
-msgstr ""
+msgstr "Жалауша көптеген клиенттерде көрінбейді және әр шолуды қысқа етеді. Пошта жәшігін өзгертпей қалдырсаңыз, шолу соңғы шолудан кейін келген хаттарды ғана оқиды; екі жағдайда да ештеңе екі рет ұсынылмайды."
 
 #: src/postulo_imap/sync.py
 msgid "Folder to read"
@@ -248,7 +248,7 @@ msgstr "жіберушінің веб-домені"
 
 #: src/postulo_imap/sync.py
 msgid "This folder does not keep flags of its own, so Postulo remembers where the last pass stopped instead of flagging what it read."
-msgstr ""
+msgstr "Бұл қалта өз жалаушаларын сақтамайды, сондықтан Postulo оқығанын жалаушамен белгілеудің орнына соңғы шолудың қай жерде тоқтағанын есте сақтайды."
 
 #: src/postulo_imap/sync.py
 msgid "TLS (port 993)"

@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-24 02:04+0000\n"
+"PO-Revision-Date: 2026-11-14 10:48+0000\n"
 "Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: German <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/de/>\n"
 "Language: de\n"
@@ -71,7 +71,7 @@ msgstr "Mit %(keyword)s markieren"
 
 #: src/postulo_imap/sync.py
 msgid "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means a pass reads only the messages that arrived since the last one; nothing is suggested twice either way."
-msgstr ""
+msgstr "Das Markieren ist in den meisten Clients unsichtbar und hält jeden Durchgang kurz. Wird das Postfach nicht angetastet, liest ein Durchgang nur die Nachrichten, die seit dem letzten eingetroffen sind; in beiden Fällen wird nichts doppelt vorgeschlagen."
 
 #: src/postulo_imap/sync.py
 msgid "Folder to read"
@@ -246,7 +246,7 @@ msgstr "die Webdomain des Absenders"
 
 #: src/postulo_imap/sync.py
 msgid "This folder does not keep flags of its own, so Postulo remembers where the last pass stopped instead of flagging what it read."
-msgstr ""
+msgstr "Dieser Ordner führt keine eigenen Markierungen, daher merkt sich Postulo, wo der letzte Durchgang aufgehört hat, statt das Gelesene zu markieren."
 
 #: src/postulo_imap/sync.py
 msgid "TLS (port 993)"

@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postulo-imap\n"
-"PO-Revision-Date: 2026-10-24 03:57+0000\n"
+"PO-Revision-Date: 2026-11-14 10:48+0000\n"
 "Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Finnish <https://translate.tiagoagueda.com/projects/postulo/plugin-imap/fi/>\n"
 "Language: fi\n"
@@ -71,7 +71,7 @@ msgstr "Merkitse lipulla %(keyword)s"
 
 #: src/postulo_imap/sync.py
 msgid "Flagging is invisible in most clients and keeps each pass short. Leaving the mailbox untouched means a pass reads only the messages that arrived since the last one; nothing is suggested twice either way."
-msgstr ""
+msgstr "Liputus ei näy useimmissa sähköpostiohjelmissa, ja se pitää jokaisen kierroksen lyhyenä. Jos postilaatikkoon ei kosketa, kierros lukee vain viestit, jotka ovat saapuneet edellisen jälkeen; kumpaakaan tapaa käytettäessä samaa ei ehdoteta kahdesti."
 
 #: src/postulo_imap/sync.py
 msgid "Folder to read"
@@ -246,7 +246,7 @@ msgstr "lähettäjän verkkotunnus"
 
 #: src/postulo_imap/sync.py
 msgid "This folder does not keep flags of its own, so Postulo remembers where the last pass stopped instead of flagging what it read."
-msgstr ""
+msgstr "Tämä kansio ei pidä omia lippuja, joten Postulo muistaa, mihin edellinen kierros jäi, sen sijaan että liputtaisi lukemansa viestit."
 
 #: src/postulo_imap/sync.py
 msgid "TLS (port 993)"
